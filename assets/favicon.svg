@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-<rect width="64" height="64" rx="10" fill="#0b2a47"/>
-<rect x="4" y="4" width="56" height="56" rx="9" fill="none" stroke="#d4af37" stroke-width="4"/>
-<circle cx="32" cy="32" r="22" fill="#fff8e1" stroke="#d4af37" stroke-width="2"/>
-<text x="32" y="38" text-anchor="middle" font-size="15" font-weight="900" fill="#0b2a47" font-family="Arial,sans-serif">POPC</text>
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="32" fill="#D4AF37"/>
+  
+  <!-- Letter 'P' in bold, modern style -->
+  <path d="M 20 16 L 20 48 L 26 48 L 26 35 L 38 35 C 44 35 48 31 48 25.5 C 48 20 44 16 38 16 Z M 26 22 L 36 22 C 39.5 22 42 23.5 42 25.5 C 42 27.5 39.5 29 36 29 L 26 29 Z" fill="#1a1a1a"/>
 </svg>

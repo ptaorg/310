@@ -1,209 +1,62 @@
+// Legal Evidence Data
+const lawData = {
+    'personal-info': {
+        title: '個人情報保護法 第69条',
+        body: `<p>公立学校は行政機関等に該当します。</p>
+               <div class="law-quote">行政機関等の長等は、法令に基づく場合を除き、利用目的以外の目的のために、保有個人情報を自ら利用し、又は提供してはならない。</div>
+               <p><a href="https://laws.e-gov.go.jp/law/415AC0000000057" target="_blank" class="egov-link">e-Govで詳しく見る</a></p>`
+    },
+    'local-public-service': {
+        title: '地方公務員法 第30条',
+        body: `<p>教職員の服務の根本原則です。</p>
+               <div class="law-quote">すべて職員は、全体の奉仕者として公共の利益のために勤務し、且つ、職務の遂行に当つては、全力を挙げてこれに専念しなければならない。</div>
+               <p><a href="https://laws.e-gov.go.jp/law/325AC0000000261" target="_blank" class="egov-link">e-Govで詳しく見る</a></p>`
+    },
+    'school-edu': {
+        title: '学校教育法 第137条',
+        body: `<p>学校施設の目的外利用に関する規定です。</p>
+               <div class="law-quote">学校教育上支障のない限り、学校施設を、社会教育その他公共の福祉のために利用させることができる。</div>
+               <!-- 調査中：特定の任意団体への独占的利用の可否については慎重な議論が必要です。 -->
+               <p><a href="https://laws.e-gov.go.jp/law/322AC0000000026" target="_blank" class="egov-link">e-Govで詳しく見る</a></p>`
+    }
+};
 
-//===============================================================
-// debounce関数
-//===============================================================
-function debounce(func, wait) {
-    var timeout;
-    return function() {
-        var context = this, args = arguments;
-        var later = function() {
-            timeout = null;
-            func.apply(context, args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
+// Modal Logic
+const modal = document.getElementById('lawModal');
+const modalBody = document.getElementById('modalBody');
+const modalClose = document.getElementById('modalClose');
+
+document.querySelectorAll('.open-evidence').forEach(btn => {
+    btn.onclick = () => {
+        const key = btn.getAttribute('data-law');
+        const data = lawData[key];
+        if (data) {
+            modalBody.innerHTML = `<h2>${data.title}</h2>${data.body}`;
+            modal.style.display = 'flex';
+        }
     };
+});
+
+if(modalClose) {
+    modalClose.onclick = () => modal.style.display = 'none';
 }
 
+window.onclick = (e) => {
+    if (e.target == modal) modal.style.display = 'none';
+};
 
-//===============================================================
-// メニュー関連
-//===============================================================
+// Hamburger logic
+const hamburger = document.getElementById('hamburger');
+const mobileOverlay = document.getElementById('mobileOverlay');
+if(hamburger) {
+    hamburger.onclick = () => mobileOverlay.style.display = 'flex';
+    document.getElementById('closeOverlay').onclick = () => mobileOverlay.style.display = 'none';
+}
 
-// 変数でセレクタを管理
-var $menubar = $('#menubar');
-var $menubarHdr = $('#menubar_hdr');
-
-// menu
-$(window).on("load resize", debounce(function() {
-    if(window.innerWidth < 900) {	// ここがブレイクポイント指定箇所です
-        // 小さな端末用の処理
-        $('body').addClass('small-screen').removeClass('large-screen');
-        $menubar.addClass('display-none').removeClass('display-block');
-        $menubarHdr.removeClass('display-none ham').addClass('display-block');
-    } else {
-        // 大きな端末用の処理
-        $('body').addClass('large-screen').removeClass('small-screen');
-        $menubar.addClass('display-block').removeClass('display-none');
-        $menubarHdr.removeClass('display-block').addClass('display-none');
-
-        // ドロップダウンメニューが開いていれば、それを閉じる
-        $('.ddmenu_parent > ul').hide();
-    }
-}, 10));
-
-$(function() {
-
-    // ハンバーガーメニューをクリックした際の処理
-    $menubarHdr.click(function() {
-        $(this).toggleClass('ham');
-        if ($(this).hasClass('ham')) {
-            $menubar.addClass('display-block');
-        } else {
-            $menubar.removeClass('display-block');
-        }
+// e-Gov linker (auto-adds icons)
+document.addEventListener('DOMContentLoaded', () => {
+    const egovLinks = document.querySelectorAll('.egov-link');
+    egovLinks.forEach(link => {
+        link.innerHTML += ' ↗';
     });
-
-    // アンカーリンクの場合にメニューを閉じる処理
-    $menubar.find('a[href*="#"]').click(function() {
-        $menubar.removeClass('display-block');
-        $menubarHdr.removeClass('ham');
-    });
-
-    // ドロップダウンの親liタグ（空のリンクを持つaタグのデフォルト動作を防止）
-	$menubar.find('a[href=""]').click(function() {
-		return false;
-	});
-
-	// ドロップダウンメニューの処理
-    $menubar.find('li:has(ul)').addClass('ddmenu_parent');
-    $('.ddmenu_parent > a').addClass('ddmenu');
-
-// タッチ開始位置を格納する変数
-var touchStartY = 0;
-
-// タッチデバイス用
-$('.ddmenu').on('touchstart', function(e) {
-    // タッチ開始位置を記録
-    touchStartY = e.originalEvent.touches[0].clientY;
-}).on('touchend', function(e) {
-    // タッチ終了時の位置を取得
-    var touchEndY = e.originalEvent.changedTouches[0].clientY;
-    
-    // タッチ開始位置とタッチ終了位置の差分を計算
-    var touchDifference = touchStartY - touchEndY;
-    
-    // スクロール動作でない（差分が小さい）場合にのみドロップダウンを制御
-    if (Math.abs(touchDifference) < 10) { // 10px以下の移動ならタップとみなす
-        var $nextUl = $(this).next('ul');
-        if ($nextUl.is(':visible')) {
-            $nextUl.stop().hide();
-        } else {
-            $nextUl.stop().show();
-        }
-        $('.ddmenu').not(this).next('ul').hide();
-        return false; // ドロップダウンのリンクがフォローされるのを防ぐ
-    }
-});
-
-    //PC用
-    $('.ddmenu_parent').hover(function() {
-        $(this).children('ul').stop().show();
-    }, function() {
-        $(this).children('ul').stop().hide();
-    });
-
-    // ドロップダウンをページ内リンクで使った場合に、ドロップダウンを閉じる
-    $('.ddmenu_parent ul a').click(function() {
-        $('.ddmenu_parent > ul').hide();
-    });
-
-});
-
-
-//===============================================================
-// 小さなメニューが開いている際のみ、body要素のスクロールを禁止。
-//===============================================================
-$(function() {
-  function toggleBodyScroll() {
-    // 条件をチェック
-    if ($('#menubar_hdr').hasClass('ham') && !$('#menubar_hdr').hasClass('display-none')) {
-      // #menubar_hdr が 'ham' クラスを持ち、かつ 'display-none' クラスを持たない場合、スクロールを禁止
-      $('body').css({
-        overflow: 'hidden',
-        height: '100%'
-      });
-    } else {
-      // その他の場合、スクロールを再び可能に
-      $('body').css({
-        overflow: '',
-        height: ''
-      });
-    }
-  }
-
-  // 初期ロード時にチェックを実行
-  toggleBodyScroll();
-
-  // クラスが動的に変更されることを想定して、MutationObserverを使用
-  const observer = new MutationObserver(toggleBodyScroll);
-  observer.observe(document.getElementById('menubar_hdr'), { attributes: true, attributeFilter: ['class'] });
-});
-
-
-//===============================================================
-// スムーススクロール（※バージョン2024-1）※通常タイプ
-//===============================================================
-$(function() {
-    // ページ上部へ戻るボタンのセレクター
-    var topButton = $('.pagetop');
-    // ページトップボタン表示用のクラス名
-    var scrollShow = 'pagetop-show';
-
-    // スムーススクロールを実行する関数
-    // targetにはスクロール先の要素のセレクターまたは'#'（ページトップ）を指定
-    function smoothScroll(target) {
-        // スクロール先の位置を計算（ページトップの場合は0、それ以外は要素の位置）
-        var scrollTo = target === '#' ? 0 : $(target).offset().top;
-        // アニメーションでスムーススクロールを実行
-        $('html, body').animate({scrollTop: scrollTo}, 500);
-    }
-
-    // ページ内リンクとページトップへ戻るボタンにクリックイベントを設定
-    $('a[href^="#"], .pagetop').click(function(e) {
-        e.preventDefault(); // デフォルトのアンカー動作をキャンセル
-        var id = $(this).attr('href') || '#'; // クリックされた要素のhref属性を取得、なければ'#'
-        smoothScroll(id); // スムーススクロールを実行
-    });
-
-    // スクロールに応じてページトップボタンの表示/非表示を切り替え
-    $(topButton).hide(); // 初期状態ではボタンを隠す
-    $(window).scroll(function() {
-        if($(this).scrollTop() >= 300) { // スクロール位置が300pxを超えたら
-            $(topButton).fadeIn().addClass(scrollShow); // ボタンを表示
-        } else {
-            $(topButton).fadeOut().removeClass(scrollShow); // それ以外では非表示
-        }
-    });
-
-    // ページロード時にURLのハッシュが存在する場合の処理
-    if(window.location.hash) {
-        // ページの最上部に即時スクロールする
-        $('html, body').scrollTop(0);
-        // 少し遅延させてからスムーススクロールを実行
-        setTimeout(function() {
-            smoothScroll(window.location.hash);
-        }, 10);
-    }
-});
-
-
-//===============================================================
-// 汎用開閉処理
-//===============================================================
-$(function() {
-	$('.openclose').next().hide();
-	$('.openclose').click(function() {
-		$(this).next().slideToggle();
-		$('.openclose').not(this).next().slideUp();
-	});
-});
-
-
-
-//===============================================================
-// h2の中に下線用のスタイルを作る
-//===============================================================
-$(function() {
-	$('main h2').wrapInner('<span class="uline">');
 });
