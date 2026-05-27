@@ -1,0 +1,2789 @@
+
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="assets/favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<meta charset="utf-8"/>
+<meta content="#0b2a4a" name="theme-color"/>
+<title>教育委員会の回答集｜地方別一覧と回答全文 | PTA適正化推進委員会</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="全国の教育委員会への照会結果を、地図、地方別の文字一覧、自治体別アコーディオンの回答全文で確認するページです。" name="description"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.5.4/vegas.min.css" rel="stylesheet"/>
+<link href="css/style.css" rel="stylesheet"/>
+<link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet"/>
+</head>
+<body>
+<div id="container">
+<header>
+<div id="logo"><a href="index.html"><span class="site-title">PTA適正化推進委員会</span><span class="site-subtitle">任意加入・法令遵守・透明な会計へ</span></a></div>
+<ul class="btn">
+<li><a href="documents.html">資料を見る</a></li>
+<li><a href="support.html">寄付・応援</a></li>
+</ul>
+</header>
+<div id="menubar">
+<nav>
+<ul>
+<li><a href="index.html">ホーム</a></li>
+<li><a href="about.html">委員会について</a></li>
+<li><a href="guidebook.html">ガイドブック</a></li>
+<li><a href="parents.html">保護者向け</a></li>
+<li><a href="officers.html">PTA役員向け</a></li>
+<li><a href="schools.html">学校関係者向け</a></li>
+<li><a href="boards.html">教育委員会向け</a></li>
+<li><a href="laws.html">法令・資料</a>
+<ul>
+<li><a href="laws.html">法令・一次資料</a></li>
+<li><a href="documents.html">資料室</a></li>
+<li><a href="article-pta-legal-structure.html">論考・研究ノート</a></li>
+<li><a href="board-responses.html">教育委員会の回答集</a></li><li><a href="yokohama-notice-1965.html">横浜市教委通知1965号</a></li>
+</ul></li>
+<li><a href="support.html">応援</a></li>
+<li><a href="contact.html">お問い合わせ</a></li>
+</ul>
+</nav>
+</div>
+<div class="page-title">
+<div>
+<p class="eyebrow">Board Responses Full Text</p>
+<h1>教育委員会の回答集</h1>
+</div>
+</div>
+<nav aria-label="回答集ページ内メニュー" class="board-mini-nav">
+<a href="#board-map">地図</a>
+<a href="#municipality-index">自治体一覧</a>
+<a href="#responses-full">回答全文</a>
+<a href="data/pta-responses-source.xlsx">元データ</a>
+</nav>
+<main class="board-full-page">
+<section class="lead-section intro-panel board-full-intro">
+<h2>地図、地方別一覧、回答全文で確認するページ</h2>
+<p>このページは、全国の教育委員会等から得た回答を、<strong>地図</strong>、<strong>地方別の文字一覧</strong>、<strong>自治体別アコーディオンの回答全文</strong>で確認するページです。要約カード型の表示はやめ、読む順番が分かる構成にしています。</p>
+<p class="source-note-inline">出典データ：pta-responses-source.xlsx（公開用・全文反映） ／ 元ブック：<a href="data/pta-responses-source.xlsx">data/pta-responses-source.xlsx</a>。ただし、各回答の原本PDF・メール本文・添付資料との最終照合は、公開前監査事項として残します。</p>
+<div class="board-full-stats"><span>自治体索引：76</span><span>回答本文：111</span><span>A：54件</span><span>B：18件</span><span>C：17件</span><span>D：8件</span><span>E：8件</span><span>F：0件</span><span>G：6件</span></div>
+</section>
+<section class="map-section board-map-only">
+<h2>全国回答マップ</h2>
+<p>地図上の点を押すと、該当自治体の全文欄へ移動します。</p>
+<div aria-label="教育委員会回答マップ" id="board-map"></div>
+</section>
+<section class="municipality-jump" id="municipality-index"><h2>自治体一覧（地方別）</h2><p>地方ごとに自治体名だけを並べています。自治体名を押すと、下の回答全文アコーディオンへ移動します。</p><div class="region-index-block"><h3>北海道・東北</h3><ul class="region-text-list"><li><a href="#muni-3">三戸町</a><span class="index-meta">A / 全文 1件</span></li><li><a href="#muni-10">仙台市</a><span class="index-meta">A / 全文 1件</span></li><li><a href="#muni-17">只見町</a><span class="index-meta">A / 全文 1件</span></li><li><a href="#muni-28">宮城県大崎市</a><span class="index-meta">A / 全文 1件</span></li><li><a href="#muni-29">宮城県白石市</a><span class="index-meta">A, B, C, G / 全文 4件</span></li><li><a href="#muni-30">富岡町</a><span class="index-meta">C / 全文 1件</span></li><li><a href="#muni-37">岩手県九戸村</a><span class="index-meta">A / 全文 1件</span></li><li><a href="#muni-57">福島県国見町</a><span class="index-meta">A / 全文 1件</span></li><li><a href="#muni-58">秋田市</a><span class="index-meta">G / 全文 1件</span></li><li><a href="#muni-69">青森県横浜町</a><span class="index-meta">A, C / 全文 2件</span></li><li><a href="#muni-72">須賀川市</a><span class="index-meta">A, B, C / 全文 3件</span></li></ul></div><div class="region-index-block"><h3>関東</h3><ul class="region-text-list"><li><a href="#muni-2">さくら市</a><span class="index-meta">A / 全文 1件</span></li><li><a href="#muni-5">三鷹市</a><span class="index-meta">D / 全文 1件</span></li><li><a href="#muni-6">下妻市</a><span class="index-meta">A / 全文 1件</span></li><li><a href="#muni-13">利根町</a><span class="index-meta">A / 全文 1件</span></li><li><a href="#muni-15">千葉県鴨川市</a><span class="index-meta">A / 全文 1件</span></li><li><a href="#muni-16">厚木市</a><span class="index-meta">D / 全文 1件</span></li><li><a href="#muni-21">多摩市</a><span class="index-meta">A / 全文 1件</span></li><li><a href="#muni-31">寒川町</a><span class="index-meta">C / 全文 1件</span></li><li><a href="#muni-38">川口市</a><span class="index-meta">A, E / 全文 2件</span></li><li><a href="#muni-39">川崎市</a><span class="index-meta">B, D / 全文 2件</span></li><li><a href="#muni-40">平塚市</a><span class="index-meta">A / 全文 1件</span></li><li><a href="#muni-41">座間市</a><span class="index-meta">C / 全文 1件</span></li><li><a href="#muni-47">日光市</a><span class="index-meta">A, B, C, D, E / 全文 5件</span></li><li><a href="#muni-48">東京都</a><span class="index-meta">B / 全文 1件</span></li><li><a href="#muni-49">東京都町田市</a><span class="index-meta">A, B, E / 全文 3件</span></li><li><a href="#muni-51">東秩父村</a><span class="index-meta">A / 全文 1件</span></li><li><a href="#muni-52">横浜市</a><span class="index-meta">D / 全文 1件</span></li><li><a href="#muni-54">海老名市</a><span class="index-meta">A, G / 全文 2件</span></li><li><a href="#muni-56">相模原市</a><span class="index-meta">A, B, C, E / 全文 4件</span></li><li><a href="#muni-60">茅ヶ崎市</a><span class="index-meta">G / 全文 1件</span></li><li><a href="#muni-73">高根沢町</a><span class="index-meta">C / 全文 1件</span></li></ul></div><div class="region-index-block"><h3>中部</h3><ul class="region-text-list"><li><a href="#muni-7">中央市</a><span class="index-meta">A, C / 全文 2件</span></li><li><a href="#muni-26">安曇野市</a><span class="index-meta">A / 全文 1件</span></li><li><a href="#muni-33">山中湖村</a><span class="index-meta">C / 全文 1件</span></li><li><a href="#muni-34">山梨県鳴沢村</a><span class="index-meta">C / 全文 1件</span></li><li><a href="#muni-35">岐阜県東白川村</a><span class="index-meta">A / 全文 1件</span></li><li><a href="#muni-43">愛知県</a><span class="index-meta">A, B / 全文 2件</span></li><li><a href="#muni-44">愛知県愛西市</a><span class="index-meta">B, C / 全文 2件</span></li><li><a href="#muni-45">愛知県犬山市</a><span class="index-meta">A, B / 全文 2件</span></li><li><a href="#muni-46">愛知県豊橋市</a><span class="index-meta">A / 全文 1件</span></li><li><a href="#muni-59">粟島浦村</a><span class="index-meta">A / 全文 1件</span></li><li><a href="#muni-61">茅野市</a><span class="index-meta">A / 全文 1件</span></li><li><a href="#muni-63">蒲郡市</a><span class="index-meta">A / 全文 1件</span></li><li><a href="#muni-65">豊田市</a><span class="index-meta">A / 全文 1件</span></li><li><a href="#muni-67">長野県</a><span class="index-meta">A, B / 全文 2件</span></li><li><a href="#muni-70">静岡市</a><span class="index-meta">D / 全文 1件</span></li><li><a href="#muni-71">静岡県磐田市</a><span class="index-meta">D / 全文 1件</span></li><li><a href="#muni-75">魚沼市</a><span class="index-meta">A / 全文 1件</span></li></ul></div><div class="region-index-block"><h3>近畿</h3><ul class="region-text-list"><li><a href="#muni-4">三重県</a><span class="index-meta">A, B / 全文 2件</span></li><li><a href="#muni-8">亀岡市</a><span class="index-meta">A / 全文 1件</span></li><li><a href="#muni-9">京都市</a><span class="index-meta">A / 全文 1件</span></li><li><a href="#muni-11">兵庫県</a><span class="index-meta">A, B / 全文 2件</span></li><li><a href="#muni-12">兵庫県西脇市</a><span class="index-meta">A, E / 全文 2件</span></li><li><a href="#muni-20">堺市</a><span class="index-meta">G / 全文 1件</span></li><li><a href="#muni-23">大阪市</a><span class="index-meta">A / 全文 1件</span></li><li><a href="#muni-24">大阪府</a><span class="index-meta">A / 全文 1件</span></li><li><a href="#muni-25">姫路市</a><span class="index-meta">A / 全文 1件</span></li><li><a href="#muni-27">宝塚市</a><span class="index-meta">A / 全文 1件</span></li><li><a href="#muni-32">尼崎市</a><span class="index-meta">A / 全文 1件</span></li><li><a href="#muni-50">東大阪市</a><span class="index-meta">A / 全文 1件</span></li><li><a href="#muni-53">橋本市</a><span class="index-meta">A / 全文 1件</span></li><li><a href="#muni-62">茨木市</a><span class="index-meta">A, E / 全文 2件</span></li><li><a href="#muni-64">西宮市</a><span class="index-meta">A, B, D, E / 全文 4件</span></li><li><a href="#muni-66">野洲市</a><span class="index-meta">C / 全文 1件</span></li><li><a href="#muni-68">門真市</a><span class="index-meta">A / 全文 1件</span></li><li><a href="#muni-74">高槻市</a><span class="index-meta">B / 全文 1件</span></li></ul></div><div class="region-index-block"><h3>中国・四国</h3><ul class="region-text-list"><li><a href="#muni-1">いの町</a><span class="index-meta">A / 全文 1件</span></li><li><a href="#muni-19">土佐清水市</a><span class="index-meta">B / 全文 1件</span></li><li><a href="#muni-36">岡山市</a><span class="index-meta">A / 全文 1件</span></li><li><a href="#muni-42">徳島市</a><span class="index-meta">A, B, C, E / 全文 4件</span></li></ul></div><div class="region-index-block"><h3>九州・沖縄</h3><ul class="region-text-list"><li><a href="#muni-14">北九州市</a><span class="index-meta">C / 全文 1件</span></li><li><a href="#muni-18">嘉麻市</a><span class="index-meta">C / 全文 1件</span></li><li><a href="#muni-22">大分県</a><span class="index-meta">A, B, G / 全文 3件</span></li><li><a href="#muni-55">玉名市</a><span class="index-meta">A / 全文 1件</span></li><li><a href="#muni-76">鹿児島市</a><span class="index-meta">A / 全文 1件</span></li></ul></div></section>
+<section class="responses-full-section" id="responses-full"><h2>回答全文</h2><p>全文は自治体ごとのアコーディオンに収納しています。必要な自治体だけ開いて確認してください。</p><div class="accordion-tools"><button class="open-all-responses" type="button">すべて開く</button><button class="close-all-responses" type="button">すべて閉じる</button></div><h3 class="response-region-heading">北海道・東北</h3><details class="municipality-accordion" id="muni-3"><summary><span class="muni-summary-name">三戸町</span><span class="muni-summary-meta">A / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>入会意思確認</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><details class="response-accordion" id="record-3-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>入会意思確認</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><pre class="response-body">三戸町教育委員会
+
+１　PTAの入会契約の成立要件に関する法的見解について
+→　PTAは任意団体であるため、入会について、保護者の入会意思の確認は必要であると考えます。
+２　学校によるPTA会費の徴収の徴収行為が無権代理に該当するかについて
+→　無権代理に該当すると考えます。
+３　入会申込書による保護者および教職員の明確な意思確認の必要性について
+→　PTA組織は任意団体であるため、入会申込書による明確な同意・意思確認は必要であると考えます。
+４　個人情報保護法に基づく児童名簿・連絡個票の利用目的逸脱について
+→　個人情報については、個人情報保護法の規定に基づいて適正に取り扱うことが求められると考えます。
+５　PTAの運用に関する教育委員会の是正指導責任について
+６　任意加入・法令遵守が確保されるまでの暫定的措置に関する方針について
+→　教育委員会では、会費徴収や学校施設使用を含めたPTAの運営が適正に行われるよう、指導・支援を行っていきたいと考えております。(問５・６)</pre></details></div></details><details class="municipality-accordion" id="muni-10"><summary><span class="muni-summary-name">仙台市</span><span class="muni-summary-meta">A / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教委指導・是正</span><span>判断留保・仮定回答不可</span></div><details class="response-accordion" id="record-9-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">2025-06-12</span></summary><div class="record-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教委指導・是正</span><span>判断留保・仮定回答不可</span></div><pre class="response-body">このたびは、
+
+1.PTA
+会員資格の取得について
+保護者の明示的な入会同意（入会申込書の提出など）がない状況で、「みなし加入」または「オプトアウト方式」によって
+PTA
+会員とする取り扱いについて、契約法（民法、消費者契約法）上の有効性に関する教育委員会の見解をお伺いします。また、適法な会員資格取得のために必要な手続きと、市として各学校への指導方針についてご教示ください。
+【回答】
+保護者の入会の同意に係る取扱いの法的な有効性について判断する立場にありませんが、
+PTA
+入会は保護者の意思により行われているものと認識しております。
+教育委員会は、
+PTA
+に対して、直接、指導・監督する立場にありませんが、保護者の意に反した強制的な加入とならないよう学校に周知を行っており、引き続き随時注意喚起してまいります。
+
+2.PTA会費の徴収についてPTAと学校間における正式な業務委託契約なしに、学校がPTA会費を徴収する行為について、無権代理に該当する可能性を含め、教育委員会の法的見解をお伺いします。また、会費徴収業務の適法性を確保するための市としての指導・管理体制、および保護者の同意がない状況で会費が徴収された場合の責任の所在についてご教示ください。
+【回答】
+学校がPTA会費を徴収する行為の法的な有効性について判断する立場にありませんが、本来、PTA
+が徴収すべき会費を学校が徴収する場合には、業務委任契約が交わされているものと考えております。
+教育委員会としましては、学校に対し、PTA会費徴収事務等に係る業務委任契約の締結について周知を行っており、引き続き随時注意を喚起してまいります。
+個別の事案に係る責任の所在等は、それぞれの態様により判断されるものと考えます。
+
+3.
+個人情報の利用について
+学校が保有する生徒・保護者の個人情報（名簿等）を、PTAの会費徴収目的で使用することについて、個人情報保護法における「目的外利用」に該当するか否かに関する教育委員会の見解をお伺いします。また、PTAが学校の保有する個人情報を利用する場合に必要な手続きや保護者の同意、市としての指導・指針についてご教示ください。
+【回答】
+PTA会費の徴収等に必要な個人情報については、会員の同意に基づいてPTAにより収集・作成されるものと認識しております。
+教育委員会としましては、学校に対し、PTA会費の徴収を学校が行う場合には、PTA
+から提供された名簿等により行うよう周知を行っており、引き続き随時注意を喚起してまいります。</pre></details></div></details><details class="municipality-accordion" id="muni-17"><summary><span class="muni-summary-name">只見町</span><span class="muni-summary-meta">A / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>会計・監査</span><span>教委指導・是正</span><span class="flag">添付資料確認推奨</span></div><details class="response-accordion" id="record-14-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">2025-08-28</span></summary><div class="record-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>会計・監査</span><span>教委指導・是正</span><span class="flag">添付資料確認推奨</span></div><pre class="response-body">【照会】PTA入会手続き等の法的見解について
+
+日頃より大変お世話になっております。
+表題の件につきましては別添（以下）のとおりです。
+
+７　教　　号　　外
+令和７年８月２８日
+
+只見町教育委員会教育長
+（　公　印　省　略　）
+
+ＰＴＡ入会手続き等の法的見解について（回答）
+
+令和７年８月２日（土）に照会依頼がありましたこのことにつきまして、下記のとおり回答いたします。
+記
+１　ＰＴＡの入会契約の成立要件に関する法的見解について
+【回答】入学と同時に保護者の同意なくＰＴＡに自動的に入会したとみなす「みなし入会」方式について、法的根拠はないと判断します。
+
+２　学校によるＰＴＡ会費の徴収行為が無権代理に該当するかについて
+【回答】学校がＰＴＡの代理人として保護者から会費を徴収している場合で、ＰＴＡから正式な代理兼の授与がないときには、民法第１１３条の無権代理行為に該当する場合があると判断します。ただし、ＰＴＡの会費徴収が「契約」ではなく、あくまで内部規約に基づく任意団体の活動と考えると、実務上は学校が便宜上の取次ぎや集金補助をしている状態であるとみることもでき、その場合は民法第１１３条の適用対象外と判断します。
+
+３　入会申込書による保護者および教職員の明確な意思確認の必要性について
+【回答】ＰＴＡに加入する際には、保護者・教職員の自由意思に基づいた「入会申込書」等による明確な意思確認が必要であり、その整備や運用改善は必要と判断します。
+
+４　個人情報保護法に基づく児童名簿・連絡個票の利用目的逸脱について
+【回答】学校が、保護者の同意なく児童名簿・連絡個票を利用し代理的にＰＴＡ会費を徴収することは、利用目的逸脱及び第三者提供に該当し、個人情報保護法に違反する違法性がある行為と判断します。是正の必要性があり、保護者から明示的な同意を取得する必要があると判断します。今後の対応として、ＰＴＡ入会申込時に、個人情報の利用目的として「会費徴収連絡等にしようすること」を明記し、同意を得ることが考えられます。
+５　ＰＴＡの運用に関する教育委員会の是正指導責任について
+【回答】公立学校の設置者として、市町村教育委員会はＰＴＡのような任意団体に対して直接的な統制権限は持ちませんが、学校施設の利用やＰＴＡ会費徴収のように学校と密接に関わる運用については、適切な指導・助言・是正を行う行政的責任があると判断します。
+
+６　任意加入・法令遵守が確保されるまでの暫定的措置に関する方針について
+【回答】ＰＴＡが、任意加入や個人情報の保護等の任意団体としての原則を守らず、学校や教職員が違法、不適切な活動に関与している場合、学校・教育委員会は施設提供や会費徴収支援といった協力を一時的に停止し、是正を促す措置を講じることは、法的に可能かつ正当であると判断します。只見町教育委員会としては、全国でも有数の豪雪地帯であり、冬季に備える冬囲いや遊具の収納、春季に行う冬囲いの解除や遊具の設定等の地域性が強い作業が必要です。また、少子化により保護者の減少によるＰＴＡ活動の負担増加等の問題も同時に抱えています。学校教育活動を円滑に進めるためには保護者及び地域の協力体制が必要不可欠であり、法と人権の原則に沿った健全な運営体制を整備するよう、学校とＰＴＡに要請をする方針です。</pre></details></div></details><details class="municipality-accordion" id="muni-28"><summary><span class="muni-summary-name">宮城県大崎市</span><span class="muni-summary-meta">A / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><details class="response-accordion" id="record-22-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><pre class="response-body">【宮城県大崎市教育委員会】PTA入会手続き等の法的見解について（回答）
+
+1. PTAの入会契約の成立要件に関する法的見解について
+PTA入会に際しては，加入の申込みを明示的に行う機会を保護者に提供し，入会の可否を選択できる旨を明確に伝え，強制加入の誤解を生じさせない配慮を徹底することが必要だと考えます。また，PTAに加入しない保護者や児童生徒に対して，不利益な扱いがないよう，配慮することも大切だと考えています。
+
+2. 学校によるPTA会費の徴収行為が無権代理に該当するかについて
+学校がPTAからの明示的な委任を受けずにPTA会費を徴収する行為は，民法上の「無権代理」に該当する可能性が高いと考えます。そのため，学校がPTA会費徴収を行う場合は，PTAとの間で明確な委任契約等を締結し，根拠を文書化する等の対応が必要だと考えます。
+
+3. 入会申込書による保護者および教職員の明確な意思確認の必要性について
+PTAは，保護者・教職員の自発的な参加と協力によって成り立つ組織です。「入会手続き」において，自由な意思に基づいた明確な同意を形式的にも実質的にも確保することが大切だと考えております。
+
+4. 個人情報保護法に基づく児童名簿‧連絡個票の利用目的逸脱について
+PTA関連目的で個人情報を利用する場合には，学校とは別の目的であることを明記し，利用・提供についての同意書を別途取得するなどの対応が必要と考えます。個人情報保護法を遵守した学校運営を徹底することを最優先とし，今後も各学校に対して必要な指導・助言等を継続して行ってまいります。
+
+5. PTAの運用に関する教育委員会の是正指導責任について
+PTAは，本来，保護者・教職員が対等な立場で協力し合い，教育を支える自発的な組織であります。その信頼性と法的安定性を保つためには，教育委員会による法令遵守の観点からの是正指導も大切だと考えます。教育委員会は，PTAの自律的な活動を尊重しつつも，運用の適正化に向けた支援を行っていきたいと考えております。
+
+６．任意加入・法令遵守が確保されるまでの暫定的措置に関する方針について
+教育委員会は，PTAの自主性・公益性を尊重しつつも，その運営が任意加入・法令遵守・個人情報保護・中立性・公平性の原則に基づいてなされなければならないと考えます。暫定措置は，あくまで混乱を避けつつ適正化を実現するための過渡的措置であり，最終的には全ての学校・PTAにおいて，法的に適正な制度と運用が確立されるよう対応してまいります。</pre></details></div></details><details class="municipality-accordion" id="muni-29"><summary><span class="muni-summary-name">宮城県白石市</span><span class="muni-summary-meta">A, B, C, G / 全文 4件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>入会意思確認</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>会計・監査</span><span>教委指導・是正</span><span>回答未了・延長</span><span class="flag">回答日未確認</span><span class="flag">本文短文・原資料確認</span><span class="flag">回答未了・延長等</span><span class="flag">添付資料確認推奨</span></div><details class="response-accordion" id="record-23-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>入会意思確認</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>会計・監査</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><pre class="response-body">【宮城県白石市教育委員会】照会内容の回答
+
+1. PTA の入会契約の成立要件に関する法的見解について
+〇PTA は、任意団体であり、その加入に関しては保護者が意思表示することで入会す るものであると考えます。
+2. 学校による PTA 会費の徴収行為が無権代理に該当するかについて
+〇学校と PTA との間で委任契約を結んだ上で PTA 業務を行うべきものと考えます。 また、会費等の徴収を行う際に法令等の違反があれば、是正されるべきと考えます。
+3. 入会申込書による保護者および教職員の明確な意思確認の必要性について
+〇申込書や同意書等による意思表示の確認を行っていない場合には、是正していくべ きであると考えます。
+4. 個人情報保護法に基づく児童名簿・連絡個票の利用目的逸脱について
+〇違法な運用等は是正されるべきであると認識しております。個人情報の扱いについ て各学校に対し随時指導しています。
+5. PTA の運用に関する教育委員会の是正指導責任について
+〇PTA と学校は本来協力関係にあり、児童生徒の健全育成に連携して取り組むべきで あると考えます。学校に対しては不適切な運用がないよう指導していきます。
+6. 任意加入・法令遵守が確保されるまでの暫定的措置に関する方針について
+〇法令違反はあってはならないものです。各校の状況を把握し、不適切な運用等がな いよう指導していきます。
+7. PTA は社会教育関係団体であり、学校とは別団体であると認識しております。一方 で現場では、学校が PTA 入会勧誘の支援、会費徴収の代行、会計管理等に関与してい る事例も見受けられます。これらが業務時間内に行われる場合、公務か、または職務 専念義務の免除（職専免）かが問題となり得ます。つきましては、貴委員会管轄内で の取扱いについて該当するものに[ ✔]をお願いいたします。
+☑ 5. その他（具体的に:現在、状況確認中であり、対応を検討し、指示していく予定 である）
+８、上記が「1. 関与が全くない」以外の場合の根拠
+■ 回答様式（このまま引用・記入・返信可）
+【自治体名／教育委員会名】： 白石市教育委員会
+【ご担当部署／ご担当者名】：[省略]
+（質問７）該当する選択肢に[image: ✔]
+☑ 5（その他：現在、状況確認中であり、対応を検討し、指示していく予定である）</pre></details><details class="response-accordion" id="record-5-B"><summary><span class="response-title">B:追加7-8 / 追加質問7-8</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>入会意思確認</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>会計・監査</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><pre class="response-body">【宮城県白石市教育委員会】照会内容の回答
+
+1. PTA の入会契約の成立要件に関する法的見解について
+〇PTA は、任意団体であり、その加入に関しては保護者が意思表示することで入会す るものであると考えます。
+2. 学校による PTA 会費の徴収行為が無権代理に該当するかについて
+〇学校と PTA との間で委任契約を結んだ上で PTA 業務を行うべきものと考えます。 また、会費等の徴収を行う際に法令等の違反があれば、是正されるべきと考えます。
+3. 入会申込書による保護者および教職員の明確な意思確認の必要性について
+〇申込書や同意書等による意思表示の確認を行っていない場合には、是正していくべ きであると考えます。
+4. 個人情報保護法に基づく児童名簿・連絡個票の利用目的逸脱について
+〇違法な運用等は是正されるべきであると認識しております。個人情報の扱いについ て各学校に対し随時指導しています。
+5. PTA の運用に関する教育委員会の是正指導責任について
+〇PTA と学校は本来協力関係にあり、児童生徒の健全育成に連携して取り組むべきで あると考えます。学校に対しては不適切な運用がないよう指導していきます。
+6. 任意加入・法令遵守が確保されるまでの暫定的措置に関する方針について
+〇法令違反はあってはならないものです。各校の状況を把握し、不適切な運用等がな いよう指導していきます。
+7. PTA は社会教育関係団体であり、学校とは別団体であると認識しております。一方 で現場では、学校が PTA 入会勧誘の支援、会費徴収の代行、会計管理等に関与してい る事例も見受けられます。これらが業務時間内に行われる場合、公務か、または職務 専念義務の免除（職専免）かが問題となり得ます。つきましては、貴委員会管轄内で の取扱いについて該当するものに[ ✔]をお願いいたします。
+☑ 5. その他（具体的に:現在、状況確認中であり、対応を検討し、指示していく予定 である）
+８、上記が「1. 関与が全くない」以外の場合の根拠
+■ 回答様式（このまま引用・記入・返信可）
+【自治体名／教育委員会名】： 白石市教育委員会
+【ご担当部署／ご担当者名】：[省略]
+（質問７）該当する選択肢に[image: ✔]
+☑ 5（その他：現在、状況確認中であり、対応を検討し、指示していく予定である）</pre></details><details class="response-accordion" id="record-4-C"><summary><span class="response-title">C:要望書 / 要望書4項目</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>回答未了・延長</span><span class="flag">回答日未確認</span><span class="flag">本文短文・原資料確認</span><span class="flag">回答未了・延長等</span></div><pre class="response-body">【宮城県白石市教育委員会】要望書への回答
+
+1月６日に送付されました、要望書につきまして、回答が遅れており、たいへん申し訳ありません。
+
+市教育委員会内部での手続きが遅れておりまして、返答まで、いま少し時間をいただけないでしょうか。</pre></details><details class="response-accordion" id="record-3-G"><summary><span class="response-title">G:延長等 / 延長等</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>回答未了・延長</span><span class="flag">回答日未確認</span><span class="flag">添付資料確認推奨</span><span class="flag">回答未了・延長等</span></div><pre class="response-body">【宮城県白石市教育委員会】照会内容の回答
+
+[宛名省略]には、以前よりPTAに関する照会をいただいており、回答が遅れ、たいへん申し訳ありません。
+本日、別添にて、回答を送付させていただきます。
+また、本照会及び回答とは別に、要望書もいただいておりましたが、そちらについても、現在、内容を確認中です
+。
+回答が準備でき次第お届けしたいと思いますので、今しばらく、お待ち願いたいと思います。</pre></details></div></details><details class="municipality-accordion" id="muni-30"><summary><span class="muni-summary-name">富岡町</span><span class="muni-summary-meta">C / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>入会意思確認</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><details class="response-accordion" id="record-5-C"><summary><span class="response-title">C:要望書 / 要望書4項目</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>入会意思確認</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><pre class="response-body">【富岡町教育委員会】公立学校におけるPTA運営の適正化について（回答）
+
+1. PTAの任意加入制に関する周知と入会意思確認の徹底
+当町におきましては、震災後、町に学校を再開してから間もないこともあり、PTAを設立しておりませんので、加入の周知及び意思確認は行っておりません。
+
+2. 学校徴収金とPTA会費の混同回避および公費負担すべき項目の整理
+１の理由により、ＰＴＡ会費は徴収しておりません。
+
+3. 個人情報保護法に基づく適切な名簿提供の運用
+１の理由により、名簿提供は行っておりません。
+
+上記理由によりまして、現時点におきまして貴委員会様のご要望にありました
+対応方針につきましては、対応予定はございません。</pre></details></div></details><details class="municipality-accordion" id="muni-37"><summary><span class="muni-summary-name">岩手県九戸村</span><span class="muni-summary-meta">A / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>教委指導・是正</span><span>回答未了・延長</span><span class="flag">回答日未確認</span><span class="flag">回答未了・延長等</span></div><details class="response-accordion" id="record-27-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>教委指導・是正</span><span>回答未了・延長</span><span class="flag">回答日未確認</span><span class="flag">回答未了・延長等</span></div><pre class="response-body">【岩手県九戸村教育委員会】PTA入会手続き等の法的見解に関するご照会6 項目について
+
+いつも大変お世話になっております。
+
+ご照会のありました表題の件について回答いたします。
+回答が遅くなり申し訳ございませんでした。
+
+今後ともどうぞよろしくお願い申し上げます。
+PTA 入会手続き等の法的見解に関する照会（６項目）
+照会事項①
+PTA の入会契約の成立要件に関する法的見解について
+保護者の明示的な申込み意思表示と PTA の承諾がないまま、学校側が児童の入学をもって一律に「会 員」とみなす運用が多くの学校で行われています。このような「みなし入会」方式について、民法第 522 条お よび消費者契約法に照らし、契約が成立していると判断される法的根拠があるか、教育委員会としての見 解をお示しください。
+【回答】
+民法第 522 条は、契約の成立には当事者双方の意思表示の合致が必要であると定めており、契約 自由の原則に基づき、いかなる者も自らの意思によらずして契約関係に拘束されないという私法上の大 原則です。一方、消費者契約法第２条第２項においては、「「事業者」とは、法人その他の団体及び 事業として又は事業のために契約の当事者となる場合における個人」と定義されており、消費者庁によ る条文解釈において、この「事業者」には PTA も含まれるということが明示されています。
+よって、児童生徒の入学をもって、一律に保護者を PTA 会員とみなすといういわゆる「みなし入会」方 式は、保護者の明示的な入会の意思表示が存在しないため、民法上の契約成立要件を満たすとは言 い難いと考えられます。
+
+照会事項②
+学校による PTA 会費の徴収行為が無権代理に該当するかについて
+学校が PTA との間で PTA 会費の徴収業務に関する準委任契約を結ばずに、慣例的に児童名簿等を 用いて会費を代行徴収しているケースがあります。学校が正式な代理権を持たずに PTA の業務を代行して いる場合、民法第 113 条に基づく無権代理に該当すると考えられますが、教育委員会はこの点をどのよう に評価していますか。
+【回答】
+民法第 113 条の「無権代理」は、本来代理権を持たない者が、他者の代理人として行為を行うことで あり、本人の追認がない限りその法的効果は生じないものとされています。
+学校が PTA に代わって会費を徴収する行為が、仮に保護者から見れば PTA への支払いとして行わ れていても、学校が PTA から明確な代理権を得ていない場合は、この「無権代理」に該当するものと推 量されることから、是正が必要であると考えます。
+
+照会事項③
+入会申込書による保護者および教職員の明確な意思確認の必要性について
+PTA が任意加入団体である以上、契約の成立には個別の申込書や同意書による明示的な加入意思 の確認が必要と考えられます。現在多くの学校で申込書を徴収していない状況について、教育委員会とし て是正の必要性を認識されていますか。
+【回答】
+PTA への加入は、会員となる保護者各人の自由意思に基づくべきものであり、この原則は尊重しなけ ればならないと考えています。この原則に鑑みれば、PTA への加入は、民法上の契約に準ずるものとし て、入会申込書や同意書といった明確な形での意思確認が不可欠であるというご指摘は、まさにその通 りであると認識しています。
+明確な意思確認手続きをとらない「みなし加入」方式は、任意加入団体としての透明性や適正な運 営を確保するうえでも是正が必要であると考えます。
+
+照会事項④
+個人情報保護法に基づく児童名簿·連絡個票の利用目的逸脱について
+PTA が入会申込書を取得しておらず、申し込んだ保護者·教職員が誰であるかを特定·管理していない 状態で、学校が児童名簿や連絡個票を用いて PTA 会費の徴収等を行っている実態が、多くの学校で確認 されています。これらの名簿情報は、本来、入学手続きや教育活動のために学校が収集したものであり、保 護者の同意なく PTA という外部団体の金銭徴収業務に転用することは、個人情報保護法第 69 条(利用 目的の制限)に違反するおそれがあります。加えて、PTA 自身が会員の氏名を把握していない状態で、学 校が本人同意なしに代理徴収的な行為をしていることは、情報主体(保護者)の権利を大きく侵害する状 況であると考えます。貴教育委員会として、このような運用の違法性または法令抵触の可能性に対する 認識、および是正の必要性や今後の対応方針について、どのようにお考えでしょうか。明確なご所見をお示 しください。
+【回答】
+個人情報保護法第 69 条は、個人情報を取り扱う事業者は、あらかじめ特定された利用目的の達 成に必要な範囲を超えて個人情報を取り扱ってはならないと定めています。
+学校が児童名簿や連絡個票を収集する目的は、入学手続きや教育活動の円滑な実施にあり、そ の利用目的は限定されています。その一方で PTA は学校とは異なる独立した任意団体であり、学校が 保護者の同意なく、本来の教育目的とは異なる PTA の会費徴収業務などにこれらの名簿情報を転用 することは、個人情報保護法に抵触することから適切ではないと考えます。
+保護者の同意を得ない転用がある場合は、是正が必要であり、運用改善に努めてまいります。
+
+照会事項⑤
+PTA の運用に関する教育委貝会の是正指導責任について
+学校が PTA と一体的に関与し、会費徴収や施設使用を支援している実態を踏まえれば、PTA の違法 または不適切な運用が学校教育の一環と認定される可能性があります。地方教育行政法第 23 条に基 づき、教育委員会が是正指導を行う責任があるとお考えでしょうか。
+【回答】
+任意団体である PTA の運用に関して、教育委員会が是正指導の責任を負うべきとの考えには議論 の余地もあろうかと考えますが、学校が PTA と密接に関わっている現状を踏まえれば、PTA の活動が実 質的に学校教育活動の一環と見なされている可能性は十分にあると考えます。仮に PTA の運用に社 会通念上不適切な、または法令に違反するような事態が生じた場合、学校教育全体への信頼を損な うことにもつながりかねません。
+教育委員会とてしは、学校が PTA と健全な協力関係を築きつつも、それぞれの組織としての独立性 と透明性を保ち、適正な運営が図られるよう、今後も学校への指導・助言を行うとともに、必要であれば 是正指導を行っていくべきだと考えています。
+
+照会事項⑥
+任意加入·法令遵守が確保されるまでの暫定的措置に関する方針について
+PTA が保護者の意思確認を適切に行わず、会員名簿すら把握しないまま会費徴収や施設利用を継続 している状態は、法令違反の感念が濃厚です。教育委員会として、是正がなされるまでの間、学校による 施設提供や会費徴収への協力を停止する措置を講じる予定はありますか。
+【回答】
+学校による施設提供や会費徴収への協力を停止する措置を講ずる予定はありません。しかしながら、 学校が運営に関わる以上法令遵守は欠かせないことから、現状を的確に把握したうえで、是正すべき 点については助言・指導を行っていきたいと考えています。
+学校教育現場において、PTA と学校は重要なパートナーでもあることから、その活動が停滞することは 教育委員会としても避けたいと考えており、引き続き学校と連携し、子どもたちのより良い学びと成長のた め、全ての関係者が協力し合える環境を構築していくことが重要と捉えております。
+PTA については、その自律性を尊重しつつも、子どもたちや保護者の権利保護の観点から好ましくな い状況があるのであれば必要に応じて指導を強化し、その上でなお是正すべき点がある場合において は、学校による協力体制のあり方について見直しを検討していきたいと考えています。</pre></details></div></details><details class="municipality-accordion" id="muni-57"><summary><span class="muni-summary-name">福島県国見町</span><span class="muni-summary-meta">A / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>入会意思確認</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><details class="response-accordion" id="record-42-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>入会意思確認</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><pre class="response-body">PTA入会手続き等に関する照会への回答について
+
+1．PTAの入会契約の成立要件に関する法的見解
+PTAは任意加入団体であり、保護者の加入は本人の自由意思に基づくべきものであると認識しております。そのため、入会にあたっては、明示的な意思表示の確認が望ましいと考えており、現行の運用については各学校を通じて実態を把握し、必要に応じて改善を促すことを検討いたします。
+
+2．学校によるPTA会費徴収と無権代理該当性について
+学校がPTA会費を徴収する場合は、適切な手続きと明確な委任関係の確認が必要と認識しております。現状の契約・委任手続きの有無について調査を行い、必要があれば整理・明文化を進めてまいります。
+
+3．入会申込書等による意思確認の必要性
+保護者・教職員の加入意思を明確に把握することは、契約の適正化やトラブル防止に資するものと考えます。各学校における申込書運用の状況を確認し、改善が必要と判断される場合は、申込書等による意思確認を推奨いたします。
+
+4．個人情報の利用目的逸脱について
+学校が収集した児童名簿や連絡先情報は、本来の教育目的に沿って適切に利用されるべきものであり、目的外利用は避ける必要があります。PTA会費徴収等に関する個人情報保護法第69条（利用及び提供の制限）の取扱い状況について、関係法令に照らして点検を行い、適正な運用を図るよう指導いたします。
+
+5．教育委員会の是正指導責任について
+教育委員会は、地方教育行政の組織及び運営に関する法律に基づき、所轄学校に対する管理・監督の責務を有しております。PTAの運営が学校教育活動に影響を及ぼす場合は、法令遵守と適正な運営を確保するための助言や指導を行うことが適切であると考えております。
+
+6．任意加入・法令遵守が確保されるまでの暫定的措置について
+施設利用や会費徴収への協力停止といった措置については、実態調査および関係者との協議を経たうえで、必要性と妥当性を慎重に検討いたします。現段階では直ちに一律の停止を行う予定はありませんが、改善が求められる事案については個別に対応を検討します。
+
+当委員会としては、PTAが長年にわたり保護者と教職員が協働し、児童生徒の健やかな成長や学校教育活動の充実に寄与してきた重要な役割を高く評価しております。今後もその意義と存在を尊重しつつ、法令遵守と運営の透明性の確保に向け、学校・保護者・地域が協働できる環境づくりを推進してまいります。
+本件につきましては、貴委員会からの照会を踏まえ、事実関係の調査および関係法令の確認を行いながら、必要な改善措置を講じてまいります。今後とも児童生徒の健やかな成長と教育環境の充実に向け、保護者・地域・学校が連携できる体制づくりを進めてまいります。</pre></details></div></details><details class="municipality-accordion" id="muni-58"><summary><span class="muni-summary-name">秋田市</span><span class="muni-summary-meta">G / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>教職員関与・服務</span><span>回答未了・延長</span><span class="flag">回答日未確認</span><span class="flag">本文短文・原資料確認</span><span class="flag">回答未了・延長等</span></div><details class="response-accordion" id="record-5-G"><summary><span class="response-title">G:延長等 / 延長等</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>教職員関与・服務</span><span>回答未了・延長</span><span class="flag">回答日未確認</span><span class="flag">本文短文・原資料確認</span><span class="flag">回答未了・延長等</span></div><pre class="response-body">秋田市では令和７年１２月を目処に、秋田市小中学校長会、秋田市ＰＴＡ連合会および秋田市教育委員会でＰＴＡに関するガイドラインを作成する予定です。</pre></details></div></details><details class="municipality-accordion" id="muni-69"><summary><span class="muni-summary-name">青森県横浜町</span><span class="muni-summary-meta">A, C / 全文 2件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>PTA任意団体</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><details class="response-accordion" id="record-51-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>PTA任意団体</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><pre class="response-body">（青森県横浜町） 【再送】公立学校におけるPTA業務の適正化に関する再照会および緊急提言の送付について
+
+お疲れ様です。
+このことについて、よろしくお願いします。
+
+青森県横浜町教育委員会
+1について
+PTA は任意団体でありますが、 全国的に戦後学校教育の向上を目的に保護者・教職員・
+地域が協力していこうという趣旨で組織され今日に至っている団体と思っています。
+法的根拠と改めて問われることについては、設置や組織編成等に法的根拠はないが長年
+の一般慣習で全国の学校で作られ活動している任意団体との認識になります。
+2について
+学校一任というのは、PTAはあくまで任意団体なので、「子どものよりよい育成のために
+教育環境等の整備や改善に協力しようね」 という思いを理解していただける方々によっ
+て自由意志で構成・活動しているので、 法的な視点から考えたことはありません。
+3について
+PTA加入は強制ではなく退会も可能なので、 法的な視点から考えたことはありません。
+4について
+学校における児童生徒やその保護者、地域の方々の情報は基本的に 「個人情報」であり、
+厳正な取り扱いを指示しています。 現在 PTA間でそれらがやり取りされているなどのこ
+とはありません。
+5について
+校務上不適切な運用と判断される事柄や事案についてはその内容等によって様々あり、
+事案によって教育委員会の判断で是正指導等監督権行使を考えることになります。
+6について
+PTA についての何らかの公式見解が監督官庁から発出された場合には、教育委員会とし
+て適切に対応するということです。
+7について
+現状当町の PTA活動に問題点は無いと認識しているので、その組織や運営等に教育委員
+会として関与していないということです。</pre></details><details class="response-accordion" id="record-15-C"><summary><span class="response-title">C:要望書 / 要望書4項目</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>PTA任意団体</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><pre class="response-body">（青森県横浜町） 【再送】公立学校におけるPTA業務の適正化に関する再照会および緊急提言の送付について
+
+お疲れ様です。
+このことについて、よろしくお願いします。
+
+青森県横浜町教育委員会
+1について
+PTA は任意団体でありますが、 全国的に戦後学校教育の向上を目的に保護者・教職員・
+地域が協力していこうという趣旨で組織され今日に至っている団体と思っています。
+法的根拠と改めて問われることについては、設置や組織編成等に法的根拠はないが長年
+の一般慣習で全国の学校で作られ活動している任意団体との認識になります。
+2について
+学校一任というのは、PTAはあくまで任意団体なので、「子どものよりよい育成のために
+教育環境等の整備や改善に協力しようね」 という思いを理解していただける方々によっ
+て自由意志で構成・活動しているので、 法的な視点から考えたことはありません。
+3について
+PTA加入は強制ではなく退会も可能なので、 法的な視点から考えたことはありません。
+4について
+学校における児童生徒やその保護者、地域の方々の情報は基本的に 「個人情報」であり、
+厳正な取り扱いを指示しています。 現在 PTA間でそれらがやり取りされているなどのこ
+とはありません。
+5について
+校務上不適切な運用と判断される事柄や事案についてはその内容等によって様々あり、
+事案によって教育委員会の判断で是正指導等監督権行使を考えることになります。
+6について
+PTA についての何らかの公式見解が監督官庁から発出された場合には、教育委員会とし
+て適切に対応するということです。
+7について
+現状当町の PTA活動に問題点は無いと認識しているので、その組織や運営等に教育委員
+会として関与していないということです。</pre></details></div></details><details class="municipality-accordion" id="muni-72"><summary><span class="muni-summary-name">須賀川市</span><span class="muni-summary-meta">A, B, C / 全文 3件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>会計・監査</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><details class="response-accordion" id="record-52-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>会計・監査</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><pre class="response-body">【緊急提言】公立学校におけるPTA業務の適正化に関する再照会および緊急提言の送付について（回答）
+
+1.  PTAの入会契約の成立要件に関する法的見解について
+保護者の明示的な申込み意思表示とPTAの承諾がないまま、学校側が児童の入学をもって一律に「会員」とみなす運用が多くの学校で行われています。このような「みなし入会」方式について、民法第522条および消費者契約法に照らし、契約が成立していると判断される法的根拠があるか、教育委員会としての見解をお示しください
+
+（回答）
+・入会についての法的な根拠はないため、強制的な入会や退会を認めないというような運用はあってはならないと考えます。
+
+2.  学校によるPTA会費の徴収行為が無権代理に該当するかについて
+学校がPTAとの間でPTA会費の徴収業務に関する準委任契約を結ばずに、慣例的に児童名簿等を用いて会費を代行徴収しているケースがあります。学校が正式な代理権を持たずにPTAの業務を代行している場合、民法第113条に基づく無権代理に該当すると考えられますが、教育委員会はこの点をどのように評価していますか。
+
+（回答）
+・会員の意向に反して会費の徴収を行っている行為は考えにくいですが、加入についての明確な入会の意思確認や承諾がない場合は無効と考えます。
+
+3.  入会申込書による保護者および教職員の明確な意思確認の必要性について
+PTAが任意加入団体である以上、契約の成立には個別の申込書や同意書による明示的な加入意思の確認が必要と考えられます。現在多くの学校で申込書を徴収していない状況について、教育委員会として是正の必要性を認識されていますか。
+
+（回答）
+・入会にあたっては、なんらかの方法による意思確認が必要と考えます。
+
+4.  個人情報保護法に基づく児童名簿・連絡個票の利用目的逸脱について
+PTAが入会申込書を取得しておらず、申し込んだ保護者・教職員が誰であるかを特定・管理していない状態で、学校が児童名簿や連絡個票を用いてPTA会費の徴収等を行っている実態が、多くの学校で確認されています。これらの名簿情報は、本来、入学手続きや教育活動のために学校が収集したものであり、保護者の同意なくPTAという外部団体の金銭徴収業務に転用することは、個人情報保護法第69条（利用目的の制限）に違反するおそれがあります。加えて、PTA自身が会員の氏名を把握していない状態で、学校が本人同意なしに代理徴収的な行為をしていることは、情報主体（保護者）の権利を大きく侵害する状況であると考えます。貴教育委員会として、このような運用の違法性または法令抵触の可能性に対する認識、および是正の必要性や今後の対応方針について、どのようにお考えでしょうか。明確なご所見をお示しください。
+
+（回答）
+・会員の同意を得ずに保有する個人情報を提供する行為は、同法に抵触する可能性があると考えます。
+
+5.  PTAの運用に関する教育委員会の是正指導責任について
+学校がPTAと一体的に関与し、会費徴収や施設使用を支援している実態を踏まえれば、PTAの違法または不適切な運用が学校教育の一環と認定される可能性があります。地方教育行政法に基づき、教育委員会が是正指導を行う責任があるとお考えでしょうか。
+
+（回答）
+・円滑な学校運営や教育行政運営を進めるために、PTAは重要な役割を担う組織として確立されていると思いますが、不適切な運用があれば是正指導を行う必要はあると考えます。
+
+6.  任意加入・法令遵守が確保されるまでの暫定的措置に関する方針について
+PTAが保護者の意思確認を適切に行わず、会員名簿すら把握しないまま会費徴収や施設利用を継続している状態は、法令違反の懸念が濃厚です。教育委員会として、是正がなされるまでの間、学校による施設提供や会費徴収への協力を停止する措置を講じる予定はあります。
+
+（回答）
+・明確に法令違反であることが立証されるまでは、協力を停止する措置を講じることは考えていません。
+
+7.  PTAは社会教育関係団体であり、学校とは別団体であると認識しております。一方で現場では、学校がPTA入会勧誘の支援、会費徴収の代行、会計管理等に関与している事例も見受けられます。これらが業務時間内に行われる場合、公務か、または職務専念義務の免除（職専免）かが問題となり得ます。つきましては、貴委員会管轄内での取扱いについて該当するものに[cid:ii_mjoq8w651]をお願いいたします。
+
+（回答）
+・□ 1. 関与は全くない
+
+以上のとおりとなります、よろしくお願いいたします。</pre></details><details class="response-accordion" id="record-17-B"><summary><span class="response-title">B:追加7-8 / 追加質問7-8</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>会計・監査</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><pre class="response-body">【緊急提言】公立学校におけるPTA業務の適正化に関する再照会および緊急提言の送付について（回答）
+
+1.  PTAの入会契約の成立要件に関する法的見解について
+保護者の明示的な申込み意思表示とPTAの承諾がないまま、学校側が児童の入学をもって一律に「会員」とみなす運用が多くの学校で行われています。このような「みなし入会」方式について、民法第522条および消費者契約法に照らし、契約が成立していると判断される法的根拠があるか、教育委員会としての見解をお示しください
+
+（回答）
+・入会についての法的な根拠はないため、強制的な入会や退会を認めないというような運用はあってはならないと考えます。
+
+2.  学校によるPTA会費の徴収行為が無権代理に該当するかについて
+学校がPTAとの間でPTA会費の徴収業務に関する準委任契約を結ばずに、慣例的に児童名簿等を用いて会費を代行徴収しているケースがあります。学校が正式な代理権を持たずにPTAの業務を代行している場合、民法第113条に基づく無権代理に該当すると考えられますが、教育委員会はこの点をどのように評価していますか。
+
+（回答）
+・会員の意向に反して会費の徴収を行っている行為は考えにくいですが、加入についての明確な入会の意思確認や承諾がない場合は無効と考えます。
+
+3.  入会申込書による保護者および教職員の明確な意思確認の必要性について
+PTAが任意加入団体である以上、契約の成立には個別の申込書や同意書による明示的な加入意思の確認が必要と考えられます。現在多くの学校で申込書を徴収していない状況について、教育委員会として是正の必要性を認識されていますか。
+
+（回答）
+・入会にあたっては、なんらかの方法による意思確認が必要と考えます。
+
+4.  個人情報保護法に基づく児童名簿・連絡個票の利用目的逸脱について
+PTAが入会申込書を取得しておらず、申し込んだ保護者・教職員が誰であるかを特定・管理していない状態で、学校が児童名簿や連絡個票を用いてPTA会費の徴収等を行っている実態が、多くの学校で確認されています。これらの名簿情報は、本来、入学手続きや教育活動のために学校が収集したものであり、保護者の同意なくPTAという外部団体の金銭徴収業務に転用することは、個人情報保護法第69条（利用目的の制限）に違反するおそれがあります。加えて、PTA自身が会員の氏名を把握していない状態で、学校が本人同意なしに代理徴収的な行為をしていることは、情報主体（保護者）の権利を大きく侵害する状況であると考えます。貴教育委員会として、このような運用の違法性または法令抵触の可能性に対する認識、および是正の必要性や今後の対応方針について、どのようにお考えでしょうか。明確なご所見をお示しください。
+
+（回答）
+・会員の同意を得ずに保有する個人情報を提供する行為は、同法に抵触する可能性があると考えます。
+
+5.  PTAの運用に関する教育委員会の是正指導責任について
+学校がPTAと一体的に関与し、会費徴収や施設使用を支援している実態を踏まえれば、PTAの違法または不適切な運用が学校教育の一環と認定される可能性があります。地方教育行政法に基づき、教育委員会が是正指導を行う責任があるとお考えでしょうか。
+
+（回答）
+・円滑な学校運営や教育行政運営を進めるために、PTAは重要な役割を担う組織として確立されていると思いますが、不適切な運用があれば是正指導を行う必要はあると考えます。
+
+6.  任意加入・法令遵守が確保されるまでの暫定的措置に関する方針について
+PTAが保護者の意思確認を適切に行わず、会員名簿すら把握しないまま会費徴収や施設利用を継続している状態は、法令違反の懸念が濃厚です。教育委員会として、是正がなされるまでの間、学校による施設提供や会費徴収への協力を停止する措置を講じる予定はあります。
+
+（回答）
+・明確に法令違反であることが立証されるまでは、協力を停止する措置を講じることは考えていません。
+
+7.  PTAは社会教育関係団体であり、学校とは別団体であると認識しております。一方で現場では、学校がPTA入会勧誘の支援、会費徴収の代行、会計管理等に関与している事例も見受けられます。これらが業務時間内に行われる場合、公務か、または職務専念義務の免除（職専免）かが問題となり得ます。つきましては、貴委員会管轄内での取扱いについて該当するものに[cid:ii_mjoq8w651]をお願いいたします。
+
+（回答）
+・□ 1. 関与は全くない
+
+以上のとおりとなります、よろしくお願いいたします。</pre></details><details class="response-accordion" id="record-16-C"><summary><span class="response-title">C:要望書 / 要望書4項目</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>会計・監査</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><pre class="response-body">【緊急提言】公立学校におけるPTA業務の適正化に関する再照会および緊急提言の送付について（回答）
+
+1.  PTAの入会契約の成立要件に関する法的見解について
+保護者の明示的な申込み意思表示とPTAの承諾がないまま、学校側が児童の入学をもって一律に「会員」とみなす運用が多くの学校で行われています。このような「みなし入会」方式について、民法第522条および消費者契約法に照らし、契約が成立していると判断される法的根拠があるか、教育委員会としての見解をお示しください
+
+（回答）
+・入会についての法的な根拠はないため、強制的な入会や退会を認めないというような運用はあってはならないと考えます。
+
+2.  学校によるPTA会費の徴収行為が無権代理に該当するかについて
+学校がPTAとの間でPTA会費の徴収業務に関する準委任契約を結ばずに、慣例的に児童名簿等を用いて会費を代行徴収しているケースがあります。学校が正式な代理権を持たずにPTAの業務を代行している場合、民法第113条に基づく無権代理に該当すると考えられますが、教育委員会はこの点をどのように評価していますか。
+
+（回答）
+・会員の意向に反して会費の徴収を行っている行為は考えにくいですが、加入についての明確な入会の意思確認や承諾がない場合は無効と考えます。
+
+3.  入会申込書による保護者および教職員の明確な意思確認の必要性について
+PTAが任意加入団体である以上、契約の成立には個別の申込書や同意書による明示的な加入意思の確認が必要と考えられます。現在多くの学校で申込書を徴収していない状況について、教育委員会として是正の必要性を認識されていますか。
+
+（回答）
+・入会にあたっては、なんらかの方法による意思確認が必要と考えます。
+
+4.  個人情報保護法に基づく児童名簿・連絡個票の利用目的逸脱について
+PTAが入会申込書を取得しておらず、申し込んだ保護者・教職員が誰であるかを特定・管理していない状態で、学校が児童名簿や連絡個票を用いてPTA会費の徴収等を行っている実態が、多くの学校で確認されています。これらの名簿情報は、本来、入学手続きや教育活動のために学校が収集したものであり、保護者の同意なくPTAという外部団体の金銭徴収業務に転用することは、個人情報保護法第69条（利用目的の制限）に違反するおそれがあります。加えて、PTA自身が会員の氏名を把握していない状態で、学校が本人同意なしに代理徴収的な行為をしていることは、情報主体（保護者）の権利を大きく侵害する状況であると考えます。貴教育委員会として、このような運用の違法性または法令抵触の可能性に対する認識、および是正の必要性や今後の対応方針について、どのようにお考えでしょうか。明確なご所見をお示しください。
+
+（回答）
+・会員の同意を得ずに保有する個人情報を提供する行為は、同法に抵触する可能性があると考えます。
+
+5.  PTAの運用に関する教育委員会の是正指導責任について
+学校がPTAと一体的に関与し、会費徴収や施設使用を支援している実態を踏まえれば、PTAの違法または不適切な運用が学校教育の一環と認定される可能性があります。地方教育行政法に基づき、教育委員会が是正指導を行う責任があるとお考えでしょうか。
+
+（回答）
+・円滑な学校運営や教育行政運営を進めるために、PTAは重要な役割を担う組織として確立されていると思いますが、不適切な運用があれば是正指導を行う必要はあると考えます。
+
+6.  任意加入・法令遵守が確保されるまでの暫定的措置に関する方針について
+PTAが保護者の意思確認を適切に行わず、会員名簿すら把握しないまま会費徴収や施設利用を継続している状態は、法令違反の懸念が濃厚です。教育委員会として、是正がなされるまでの間、学校による施設提供や会費徴収への協力を停止する措置を講じる予定はあります。
+
+（回答）
+・明確に法令違反であることが立証されるまでは、協力を停止する措置を講じることは考えていません。
+
+7.  PTAは社会教育関係団体であり、学校とは別団体であると認識しております。一方で現場では、学校がPTA入会勧誘の支援、会費徴収の代行、会計管理等に関与している事例も見受けられます。これらが業務時間内に行われる場合、公務か、または職務専念義務の免除（職専免）かが問題となり得ます。つきましては、貴委員会管轄内での取扱いについて該当するものに[cid:ii_mjoq8w651]をお願いいたします。
+
+（回答）
+・□ 1. 関与は全くない
+
+以上のとおりとなります、よろしくお願いいたします。</pre></details></div></details><h3 class="response-region-heading">関東</h3><details class="municipality-accordion" id="muni-2"><summary><span class="muni-summary-name">さくら市</span><span class="muni-summary-meta">A / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><details class="response-accordion" id="record-2-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><pre class="response-body">1. PTAの入会契約の成立要件に関する法的見解について
+貴委員会からの問いかけについて、明確な意思表示がないま「みなし入会」とされる現状については、
+契約の成立要件を満たしていない可能性が高いと理解しております。
+この点について、教育委員会としても法令遵守を徹底する観点から、
+より多くの検討を行う必要があると認識しております。
+
+2. 無権代理のケースに関する評価
+学校がPTA会費の徴収を代行する場合、適切な委任契約がない限り、
+無権代理に該当する恐れがあるとのご指摘は、極めて重要です。この点についても、
+教育委員会内での議論を通じて、適切な方針を検討する必要があります。
+
+3. 明確な意思確認の必要性について
+PTAが任意加入団体であることを踏まえ、個別に申込書を徴収する必要性に関しても、
+教育的観点から是正が求められる状態と捉えております。
+
+4. 個人情報保護法に基づく適正な利用について
+PTAが情報収集を行う際の適正な運用について、教育委員会としても今後の対応を検討し、
+指導が必要であるとの認識を持っております。
+
+5. 是正指導の責任について
+PTAの運用が学校教育の一環として認められる場合、教育委員会の是正指導責任が生じるとのご指摘は、
+今後の方針形成において重要な要素となると考えております。
+
+6. 暫定的措置について
+PTAが法令に則った運用を行うまでの間、行政としてどのような措置が適当か、
+引き続き議論を重ねてまいります。
+
+貴重なご意見をいただき、誠にありがとうございました。これらの問題に対し、
+教育委員会として早急に取り組むことが求められていると察しております。
+
+引き続き、どうぞよろしくお願い申し上げます。</pre></details></div></details><details class="municipality-accordion" id="muni-5"><summary><span class="muni-summary-name">三鷹市</span><span class="muni-summary-meta">D / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>会費徴収・委任契約</span></div><details class="response-accordion" id="record-1-D"><summary><span class="response-title">D:実態調査 / 実態調査7項目</span><span class="response-date">2026-03-31</span></summary><div class="record-tags"><span>会費徴収・委任契約</span></div><pre class="response-body">PTA
+
+問１～５及び７
+
+三鷹市の公立学校においては、
+PTA
+会費については
+PTA
+による自主徴収をお願いしています。
+
+問６
+
+公立学校と
+PTA
+との関係について法令等による位置づけがあるとの認識はありません。
+
+どうぞよろしくお願いいたします。</pre></details></div></details><details class="municipality-accordion" id="muni-6"><summary><span class="muni-summary-name">下妻市</span><span class="muni-summary-meta">A / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>みなし加入否定・注意</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>学校施設利用</span><span>教委指導・是正</span><span>判断留保・仮定回答不可</span><span class="flag">回答日未確認</span></div><details class="response-accordion" id="record-5-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>みなし加入否定・注意</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>学校施設利用</span><span>教委指導・是正</span><span>判断留保・仮定回答不可</span><span class="flag">回答日未確認</span></div><pre class="response-body">【茨城県下妻市】PTA入会手続き等の法的見解について照会に対する回答について（送付）
+
+お問い合わせいただきました件につきまして、下妻市教育委員会として見解を取りまとめた上、次のとおり回答させていただきます。
+
+【回答】
+
+１．ＰＴＡの入会契約の有効性の是非は、個別に判断する必要があると考えております。したがいまして、本市教育委員会は、「みなし入会」方式による契約の有効性について、一律の判断を示しておりません。なお、PTAの入会の有効性について、当事者から相談があった場合は、その都度対応してまいります。
+
+２．学校によるPTA会費の徴収行為の適法性の有無は、個別に判断する必要があると考えております。したがいまして、本市教育委員会は、「学校によるPTA会費の徴収行為が無権代理に該当するか否か」について、一律の判断を示しておりません。なお、そのような案件に関し争いが生じた場合は、必要に応じ学校に対し、助言や指導を行ってまいります。
+
+３．PTAへの入会は、口頭による申込みでも有効に成立するものと解しております。一方で、そのような手続きにおいては、当事者の申込みの意思が確認できる書類等を残すことが望ましいとも考えております。したがいまして、PTAへの入会手続においては、当事者の入会の意思が確認できる書類等を作成するよう、PTAに対し必要な情報を提供してまいります。
+
+４．学校が保有する個人情報は、個人情報保護法をはじめとする関係法令に基づき、適正に取り扱われるべきものであると考えております。一方で、そのような案件における違法性の有無は、個別に判断する必要があると考えております。いずれにしましても、学校において個人情報の適正な利用が図られるよう、必要に応じ学校に対し、助言や指導を行ってまいります。
+
+５．各市立学校のPTAは、市PTA連絡協議会に加盟しており、当該協議会は、本市が補助金を交付している団体です。したがいまして、当該協議会に対し、団体の適正な運用に努めるよう、以前から助言や指導を行っております。
+
+６．個別に判断した結果、違法行為又は違法行為と判断されるおそれのある行為が確認されたPTAがあった場合は、その状況が解消されるまで、当該PTAの会費徴収や学校施設の利用に協力しないよう、学校に通知してまいります。</pre></details></div></details><details class="municipality-accordion" id="muni-13"><summary><span class="muni-summary-name">利根町</span><span class="muni-summary-meta">A / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>入会意思確認</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><details class="response-accordion" id="record-12-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>入会意思確認</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><pre class="response-body">(茨城県利根町教育委員会）PTA入会に関する法的見解・照会６項目の回答について
+
+1. PTA の入会契約の成立要件に関する法的見解について
+→ PTA の入会に関しましては、学校から PTA の入会について説明をし、書面等 による保護者の意思表示を確認し、PTA の承諾によって入会契約が成立するも のと考えております。
+2. 学校による PTA 会費の徴収行為が無権代理に該当するかについて →学校が正式な代理権を持たずに PTA の業務を代行している場合は無権代理に 該当すると考えております。学校が PTA と PTA 会費の徴収業務の準委任契約 を結び、正式な代理権を持って PTA の業務を代行するものと考えております。
+3. 入会申込書による保護者および教職員の明確な意思確認の必要性について →契約の成立には、申込書や同意書等の加入意思の確認が必要と考えております。 申込書や同意書の徴収していない場合は、是正の必要性を伝え、指導、助言を 行っていきたいと考えております。
+4. 個人情報保護法に基づく児童名簿・連絡個票の利用目的逸脱について →学校が正式な代理権を持たずに、保護者の同意なく児童生徒の名簿等の個人情 報を PTA で使用することは適切ではないと考えております。個人情報を適切 に管理するように指導、助言を行っていきたいと考えております。
+5. PTA の運用に関する教育委員会の是正指導責任について
+→学校が会費徴収や施設試用について、不適切な運用をしている場合は、是正指 導をする必要があると考えております。
+6. 任意加入・法令遵守が確保されるまでの暫定的措置に関する方針について →法令違反が懸念されるときは、学校による施設提供や会費徴収への協力を停止 する措置を講ずることもあることを伝え、指導、助言を行っていきたいと考え ております。
+利根町教育委員会
+指導課 石井</pre></details></div></details><details class="municipality-accordion" id="muni-15"><summary><span class="muni-summary-name">千葉県鴨川市</span><span class="muni-summary-meta">A / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>教委指導・是正</span></div><details class="response-accordion" id="record-13-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">2025-08-04</span></summary><div class="record-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>教委指導・是正</span></div><pre class="response-body">ＰＴＡ入会手続き等の法的見解に係る照会事項６点について（回答）
+
+ＰＴＡ入会手続き等の法的見解に係る照会事項６点について（回答）
+
+令和７年８月４日付けで照会のあった標記の件につきまして、下記のとおり回答いたします。
+
+記
+
+１　ＰＴＡの入会契約の成立要件に関する法的見解について
+昨年度より、入会には、申込書による同意を求めるよう指導してきました。
+しかし、全校で書面による同意確認が取れていない状況です。
+「みなし入会」方式については、民法第522条および消費者契約法に照らし、契約が成立しているか疑義があると考えておりますので引き続き、指導して参ります。
+
+２　学校によるＰＴＡ会費の徴収行為が無権代理に該当するかについて
+本年度、会費の徴収につきましては、ＰＴＡ会長名で周知しております。
+しかし、徴収業務につきましては、正式な準委任契約を結ぶまではいたっておりません。
+正式な委任を受けて実施すべきと考えておりますので、指導していきます。
+
+３　入会申込書による保護者および教職員の明確な意思確認の必要性について
+１にも記載のありますとおり、疑義があると考えておりますので、是正に向けて指導して参ります。
+
+４　個人情報保護法に基づく児童名簿・連絡個票の利用目的逸脱について
+学校が本人の同意なしに児童名簿・連絡個票記載の情報を利用して代理徴収を行うことは、個人情報保護法に違反するおそれがあると認識しています。
+学校で使用している名簿等の違法利用がないよう、また、個人情報を適性に管理し、扱うことなどを指導していきます。
+
+５　ＰＴＡの運用に関する教育委員会の是正指導責任について
+会費徴収や施設使用について不適切な運用が無いよう、教育委員会が是正指導を行っていきたいと考えております。
+
+６　任意加入・法令遵守が確保されるまでの暫定的措置に関する方針について
+法令違反の状態であると懸念される場合は、教育委員会として、是正するよう指導していきます。</pre></details></div></details><details class="municipality-accordion" id="muni-16"><summary><span class="muni-summary-name">厚木市</span><span class="muni-summary-meta">D / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>教職員関与・服務</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><details class="response-accordion" id="record-2-D"><summary><span class="response-title">D:実態調査 / 実態調査7項目</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>教職員関与・服務</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><pre class="response-body">【神奈川県厚木市回答】公立学校におけるPTA 会費等徴収事務の適正化に関する実態調査
+
+問1：PTA会費徴収事務への教職員の関与について
+【回答】法的位置付けはなく、慣例的に行われているものと認識しております。PTAが独自に徴収することが最もふさわしい方法であると考えております。
+
+問2：事務の性質について
+PTA会費徴収事務について、教育委員会として以下のいずれに該当する事務として整理されているかご教示ください。
+▢学校の校務（公務）として行われる事務 ・▢PTA の事務を補助する協力行為 ・▢保護者からの依頼に基づく事務補助 ・▢その他（具体的にご説明ください）
+【回答】学校のPTA会費徴収事務については、PTAの事務を補助する協力行為と捉えております。
+
+問3：公的資源の利用根拠について
+PTA会費徴収に際して、学校名義の口座、学校徴収金管理システム、事務機器、教職員の労務等の公的資源が利用されている場合、
+その利用を可能とする法令、条例、規則、要綱、通知等の根拠が存在する場合は、その名称および該当部分をご教示ください。
+（※明文化された根拠が存在しない場合は「なし（慣例による運用）」等とご回答ください）
+【回答】ありません（慣例による運用）
+
+問4：事故発生時の責任主体について
+PTA 会費徴収に関して、以下のような事故が発生した場合の責任主体について、教育委員会としての整理をご教示ください。
+・口座振替設定ミスによる誤徴収 ・PTA 会費の二重徴収 ・徴収した現金の紛失 ・PTA への送金処理ミス ・PTA 会費の不正使用が判明した場合
+それぞれについて、想定される責任主体をご教示ください。（▢学校長、▢教育委員会、▢PTA、▢その他、あるいは個別判断等）
+【回答】
+・口座振替設定ミスによる誤徴収 ・PTA 会費の二重徴収 ・徴収した現金の紛失
+→委託契約を結んで学校が代行している場合は学校長、そうでない場合（委託契約なく学校が代行している、またはPTAが独自に徴収している）はPTAが責任主体になると考えます。
+・PTAへの送金処理ミス →委託契約有の場合は学校長、無の場合はPTAが責任主体になると考えます。
+・PTA会費の不正使用が判明した場合 →PTAが責任主体になると考えます。
+
+問5：責任分担を明記した文書について
+*PTA会費徴収事務について、学校とPTA の責任分担を整理した文書（協定書、覚書、要綱、通知等）が存在する場合は、その文書名をご教示ください。
+【回答】現在、各学校において、そのような文書は存在していないものと認識しています。
+
+問6：学校とPTA の関係性の位置付けについて
+*教育委員会として、公立学校とPTA との関係について制度上どのように位置付けているかご説明ください。（例：学校外部団体、教育活動協力団体など）
+【回答】学校と連携してこどもたちの健やかな成長を支える社会教育団体と認識しております。
+
+問7：今後の行政運用について
+*上記の制度整理を踏まえ、現在学校が関与しているPTA 会費徴収の仕組みについて、今後の行政運用として以下のいずれの方向性を想定されているかご教示ください。 ▢現行の学校関与を継続する（委任契約等による継続を含む） ▢PTAによる自主徴収への移行を検討する▢制度の見直しを検討している（具体的にご説明ください）▢その他（具体的にご説明ください）
+【回答】PTA会費は、PTAによる自主徴収が正しい徴収方法であるという周知を図っていきます。
+
+以上となります。</pre></details></div></details><details class="municipality-accordion" id="muni-21"><summary><span class="muni-summary-name">多摩市</span><span class="muni-summary-meta">A / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>会計・監査</span><span>教委指導・是正</span><span class="flag">回答日未確認</span><span class="flag">地教行法条文番号要確認</span></div><details class="response-accordion" id="record-15-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>会計・監査</span><span>教委指導・是正</span><span class="flag">回答日未確認</span><span class="flag">地教行法条文番号要確認</span></div><pre class="response-body">【回答】PTA入会手続き等の法的見解について照会事項６点
+
+1.  PTAの入会契約の成立要件に関する法的見解について
+保護者の明示的な申込み意思表示とPTAの承諾がないまま、学校側が児童の入学をもって一律に「会員」とみなす運用が多くの学校で行われています。このような「みなし入会」方式について、民法第522条および消費者契約法に照らし、契約が成立していると判断される法的根拠があるか、教育委員会としての見解をお示しください。
+【回答】
+PTAは任意の団体であることから、入会について、各保護者の入会の意思を確認することは必要であると考えます。
+
+2.  学校によるPTA会費の徴収行為が無権代理に該当するかについて
+学校がPTAとの間でPTA会費の徴収業務に関する準委任契約を結ばずに、慣例的に児童名簿等を用いて会費を代行徴収しているケースがあります。学校が正式な代理権を持たずにPTAの業務を代行している場合、民法第113条に基づく無権代理に該当すると考えられますが、教育委員会はこの点をどのように評価していますか。
+【回答】
+多摩市公立学校における私費負担金会計取扱要綱では、私費会計を徴収する場合は、委任等に基づき徴収するものと定めていることから、委任が必要であると考えます。
+
+3.  入会申込書による保護者および教職員の明確な意思確認の必要性について
+PTAが任意加入団体である以上、契約の成立には個別の申込書や同意書による明示的な加入意思の確認が必要と考えられます。現在多くの学校で申込書を徴収していない状況について、教育委員会として是正の必要性を認識されていますか。
+【回答】１の回答のとおりです。
+
+4.  個人情報保護法に基づく児童名簿・連絡個票の利用目的逸脱について
+PTAが入会申込書を取得しておらず、申し込んだ保護者・教職員が誰であるかを特定・管理していない状態で、学校が児童名簿や連絡個票を用いてPTA会費の徴収等を行っている実態が、多くの学校で確認されています。これらの名簿情報は、本来、入学手続きや教育活動のために学校が収集したものであり、保護者の同意なくPTAという外部団体の金銭徴収業務に転用することは、個人情報保護法第69条（利用目的の制限）に違反するおそれがあります。加えて、PTA自身が会員の氏名を把握していない状態で、学校が本人同意なしに代理徴収的な行為をしていることは、情報主体（保護者）の権利を大きく侵害する状況であると考えます。貴教育委員会として、このような運用の違法性または法令抵触の可能性に対する認識、および是正の必要性や今後の対応方針について、どのようにお考えでしょうか。明確なご所見をお示しください。
+【回答】個人情報の取扱いについては、PTAに関わる内容に限らず、学校に対して適切に対応するように指導しており、引き続き指導してまいります。
+
+5.  PTAの運用に関する教育委員会の是正指導責任について
+学校がPTAと一体的に関与し、会費徴収や施設使用を支援している実態を踏まえれば、PTAの違法または不適切な運用が学校教育の一環と認定される可能性があります。地方教育行政法第10条に基づき、教育委員会が是正指導を行う責任があるとお考えでしょうか。
+6.  任意加入・法令遵守が確保されるまでの暫定的措置に関する方針について
+PTAが保護者の意思確認を適切に行わず、会員名簿すら把握しないまま会費徴収や施設利用を継続している状態は、法令違反の懸念が濃厚です。教育委員会として、是正がなされるまでの間、学校による施設提供や会費徴収への協力を停止する措置を講じる予定はありますか。
+【回答】
+会費徴収・施設使用が適正に行われるように各校に対して指導してまいります。
+
+各校及び各PTAの実態に応じた適正な運営が行われるよう、指導等について努めてまいります。</pre></details></div></details><details class="municipality-accordion" id="muni-31"><summary><span class="muni-summary-name">寒川町</span><span class="muni-summary-meta">C / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>入会意思確認</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>教委指導・是正</span></div><details class="response-accordion" id="record-6-C"><summary><span class="response-title">C:要望書 / 要望書4項目</span><span class="response-date">2026-01-27</span></summary><div class="record-tags"><span>入会意思確認</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>教委指導・是正</span></div><pre class="response-body">公立学校におけるPTA運営に関する要望書について（回答）
+
+標記の件について回答いたします。
+
+令和 8 年 1 月 27 日
+寒川町教育委員会教育長 花山 尚人
+公立学校における PTA 運営に関する要望書について（回答）
+令和 8 年 1 月 1 日付で依頼がありました標記の件について、下記のとおり回答いたします。
+記
+＜要望事項 1＞
+学校において、PTA 入会が任意であることが明確に説明され、保護者の意思確認が適切な形で 行われるよう、必要な指導または通知を行うこと。
+＜回答＞
+PTA の加入には、保護者の意思確認が必要であると考えており、教職員と保護者に PTA 加入 における留意点を通知しております。
+＜要望事項 2＞
+学校による PTA 会費の徴収・集金への関与について、その可否および取扱いを整理し、学校現 場において誤解が生じないよう運用の明確化を図ること。
+＜回答＞
+PTA 会費の徴収には、学校の保有する個人情報の取り扱いと同様、保護者の同意が必要であり、 学校現場では適正に取り扱うよう指導しています。
+＜要望事項 3＞
+学校が保有する児童・保護者に関する個人情報の取扱いについて、PTA との関係も含めて整理 し、適正な管理が確保されるよう周知すること。
+＜回答＞
+学校保有の個人情報は、保護者の同意のもと使用するべきであると考えるため、個人情報の取 り扱いについて適正に管理するよう指導しております。
+＜要望事項 4＞
+教職員の PTA 活動への関与について、職務との区別が明確になるよう整理を行い、学校現場に 過度な負担や誤解が生じないよう配慮すること。
+＜回答＞
+PTA 活動の現状を把握し、学校業務と区別する必要がある活動については、指導してまいりま す。</pre></details></div></details><details class="municipality-accordion" id="muni-38"><summary><span class="muni-summary-name">川口市</span><span class="muni-summary-meta">A, E / 全文 2件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>教委指導・是正</span><span class="flag">地教行法条文番号要確認</span></div><details class="response-accordion" id="record-28-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">2025-08-08</span></summary><div class="record-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>教委指導・是正</span><span class="flag">地教行法条文番号要確認</span></div><pre class="response-body">ホームページからのお問い合わせについて
+
+日頃から市政にご理解を賜り、厚くお礼申し上げます。
+また、この度はご意見をいただきありがとうございます。
+
+【4．照会事項　７点】について、回答いたします。
+
+【回答】
+１ みなし入会や抱き合わせ徴収が民法、消費者契約法、個人情報保護法に違反する可能性について、どのように評価されますか。
+→PTAは任意加入団体のため、入会や会費の支払い、個人情報の取扱いの方法について、対象となるご家庭の意思が十分に反映されていなかったり、適正に取り扱われていなかったりする場合、法令に違反する可能性があると考えます。
+
+２ これらの運用が学校教育法第137条の「学校教育上の支障」に該当する可能性について、どのように判断されますか。
+→PTAが学校施設等を利用して会員の募集、会費の集金等を行う際、学校とその方法について十分調整せずに行った場合、教育上の支障にあたる可能性があると考えます。
+
+３ 学校とPTAの密接な関与性（施設利用、会費徴収代行、公文書管理等）を踏まえ、教育委員会がPTAの不適切な運用を是正する指導を行う責任があると考えますか。
+→PTAの求めに応じ、専門的技術的指導又は助言をするべきと考えます。
+
+４ 社会教育法第12条を根拠に指導を回避することが、地方教育行政法第10条の監督義務に適合するかどうか、どのようにお考えですか。
+→PTAは公の支配に属さない社会教育関係団体の１つであると考えます。
+
+５ PTAの任意加入性を明確化し、明示的な入会申込書を導入するよう学校に指導する予定はありますか。
+→市内の全校長が参加する会議の場で、PTAの加入は任意である旨周知しております。今後についても検討しております。
+
+６ 個人情報の適正な取り扱いや無権代理行為の排除を含め、PTAの運用を法令遵守とするための学校への具体的な指導方針をどのように検討されていますか。
+
+７ PTAの運営が法令遵守されるまで、PTAへの施設利用許可や会費徴収協力を停止する指導を行う予定はありますか。
+→ありません。
+
+以上、ご理解の程お願い申し上げます。</pre></details><details class="response-accordion" id="record-2-E"><summary><span class="response-title">E:137条 / 学校教育法137条照会</span><span class="response-date">2025-08-08</span></summary><div class="record-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>教委指導・是正</span><span class="flag">地教行法条文番号要確認</span></div><pre class="response-body">ホームページからのお問い合わせについて
+
+日頃から市政にご理解を賜り、厚くお礼申し上げます。
+また、この度はご意見をいただきありがとうございます。
+
+【4．照会事項　７点】について、回答いたします。
+
+【回答】
+１ みなし入会や抱き合わせ徴収が民法、消費者契約法、個人情報保護法に違反する可能性について、どのように評価されますか。
+→PTAは任意加入団体のため、入会や会費の支払い、個人情報の取扱いの方法について、対象となるご家庭の意思が十分に反映されていなかったり、適正に取り扱われていなかったりする場合、法令に違反する可能性があると考えます。
+
+２ これらの運用が学校教育法第137条の「学校教育上の支障」に該当する可能性について、どのように判断されますか。
+→PTAが学校施設等を利用して会員の募集、会費の集金等を行う際、学校とその方法について十分調整せずに行った場合、教育上の支障にあたる可能性があると考えます。
+
+３ 学校とPTAの密接な関与性（施設利用、会費徴収代行、公文書管理等）を踏まえ、教育委員会がPTAの不適切な運用を是正する指導を行う責任があると考えますか。
+→PTAの求めに応じ、専門的技術的指導又は助言をするべきと考えます。
+
+４ 社会教育法第12条を根拠に指導を回避することが、地方教育行政法第10条の監督義務に適合するかどうか、どのようにお考えですか。
+→PTAは公の支配に属さない社会教育関係団体の１つであると考えます。
+
+５ PTAの任意加入性を明確化し、明示的な入会申込書を導入するよう学校に指導する予定はありますか。
+→市内の全校長が参加する会議の場で、PTAの加入は任意である旨周知しております。今後についても検討しております。
+
+６ 個人情報の適正な取り扱いや無権代理行為の排除を含め、PTAの運用を法令遵守とするための学校への具体的な指導方針をどのように検討されていますか。
+
+７ PTAの運営が法令遵守されるまで、PTAへの施設利用許可や会費徴収協力を停止する指導を行う予定はありますか。
+→ありません。
+
+以上、ご理解の程お願い申し上げます。</pre></details></div></details><details class="municipality-accordion" id="muni-39"><summary><span class="muni-summary-name">川崎市</span><span class="muni-summary-meta">B, D / 全文 2件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>入会意思確認</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>会計・監査</span><span>教委指導・是正</span></div><details class="response-accordion" id="record-6-B"><summary><span class="response-title">B:追加7-8 / 追加質問7-8</span><span class="response-date">2021-11-16</span></summary><div class="record-tags"></div><pre class="response-body">ご質問の回答につきまして
+
+改めて以下のとおり回答します。
+
+令和３年１１月１６日の川崎市教育委員会臨時会会議録４頁にある
+瀬川庶務課担当課長の「それを受けてやるときには校務として、
+公務員の公務ではなくて、学校の校務として、」の発言の趣旨は、
+会議の場において教育委員の質問に口頭で回答するに当たり、
+「校務」と同音である「公務」と教育委員に勘違いされないよう、
+補足的に説明したものです。
+
+「公務ではない非公務の校務として位置付ける」という趣旨で
+説明したものではありません。</pre></details><details class="response-accordion" id="record-3-D"><summary><span class="response-title">D:実態調査 / 実態調査7項目</span><span class="response-date">2025-04-30</span></summary><div class="record-tags"><span>入会意思確認</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>会計・監査</span><span>教委指導・是正</span></div><pre class="response-body">■問1：PTA会費徴収事務への教職員の関与について
+PTAは任意加入の私的団体であり、PTA会費はPTAの私会計として管理される資金であると理解しております。その前提において、公立学校の教職員が勤務時間中にPTA会費徴収事務に関与することについて、教育委員会としてはどのような法的位置付けのもとで実施されていると整理されていますでしょうか。（※現時点で明確な整理に至っていない場合は、「未整理」等とご回答いただいて構いません）
+
+本市では川崎市立小学校及び中学校の管理運営に関する規則、川崎市立高等学校の管理運営に関する規則、川崎市立特別支援学校の管理運営に関する規則及び川崎市立学校におけるPTAの会費の取扱等に関する要綱によりPTA会費の収納等に関する事務について校務として定めており、PTA代表者から市への委任に基づき、学校がPTA会費の収納等を処理できるものとしています。
+
+■問2：事務の性質について
+PTA会費徴収事務について、教育委員会として以下のいずれに該当する事務として整理されているかご教示ください。
+
+▢学校の校務（公務）として行われる事務・▢PTAの事務を補助する協力行為・▢保護者からの依頼に基づく事務補助・▢その他（具体的にご説明ください）
+
+PTA代表者から市への委任に基づき、学校の校務として行われる事務として整理しています。
+
+■問3：公的資源の利用根拠について
+PTA会費徴収に際して、学校名義の口座、学校徴収金管理システム、事務機器、教職員の労務等の公的資源が利用されている場合、その利用を可能とする法令、条例、規則、要綱、通知等の根拠が存在する場合は、その名称および該当部分をご教示ください。（※明文化された根拠が存在しない場合は「なし（慣例による運用）」等とご回答ください）
+
+問１のとおり本市ではPTA会費徴収の事務を校務として位置付けているため公的資源の利用は可能としています。
+
+■問4：事故発生時の責任主体について
+PTA会費徴収に関して、以下のような事故が発生した場合の責任主体について、教育委員会としての整理をご教示ください。・口座振替設定ミスによる誤徴収・PTA会費の二重徴収・徴収した現金の紛失・PTAへの送金処理ミス・PTA会費の不正使用が判明した場合それぞれについて、想定される責任主体をご教示ください。（▢学校長、▢教育委員会、▢PTA、▢その他、あるいは個別判断等）
+
+事故の発生原因により対応が異なると考えますので、個別判断となります。
+
+■問5：責任分担を明記した文書について
+PTA会費徴収事務について、学校とPTAの責任分担を整理した文書（協定書、覚書、要綱、通知等）が存在する場合は、その文書名をご教示ください。
+
+責任分担を整理した文書はありません。
+
+■問6：学校とPTAの関係性の位置付けについて
+教育委員会として、公立学校とPTAとの関係について制度上どのように位置付けているかご説明ください。（例：学校外部団体、教育活動協力団体など）
+
+ＰＴＡは、社会教育法に位置付けられた社会教育関係団体と捉えています。
+
+■問7：今後の行政運用について
+上記の制度整理を踏まえ、現在学校が関与しているPTA会費徴収の仕組みについて、今後の行政運用として以下のいずれの方向性を想定されているかご教示ください。
+
+▢現行の学校関与を継続する（委任契約等による継続を含む） ▢PTAによる自主徴収への移行を検討する ▢制度の見直しを検討している （具体的にご説明ください）▢その他（具体的にご説明ください）
+
+現行の学校関与を継続する（委任契約等による継続を含む）
+
+上記のお問合せに加え、１月にご質問いただいた件につきまして、遅くなり大変恐縮ではございますが、以下のとおり回答いたします。
+
+■質問１
+ＰＴＡの会費の徴収業務の「校務」としての位置付けについて（委任の妥当性、地方公務員法３５条との整合）
+
+本市では、先にお伝えさせていただいたとおり、
+川崎市立小学校及び中学校の管理運営に関する規則、
+川崎市立高等学校の管理運営に関する規則、
+川崎市立特別支援学校の管理運営に関する規則、
+川崎市立学校におけるＰＴＡの会費の取扱等に関する要綱により
+ＰＴＡの代表者から学校が委任を受けることで、
+校務として学校がＰＴＡ会費の収納等を行うことを定めています。
+
+一方、地方公務員法３５条では、職務に専念する義務について定められていますが、同条は職務専念義務の例外（業務時間内に職務以外を行うこと）について、法律や条例に特別の定めが必要であることを示すものです。元々職務ではないこと（例えば、ＰＴＡの会費の収納業務）を職務（校務）に位置付けることについて、何かを定めているものではありません。
+
+このため、ＰＴＡから委任を受けた会費の収納等の業務を、規則などで「校務」として位置付けることは、同第３５条に抵触するものではありません。
+
+また、ＰＴＡから委任を受けた会費の収納等の業務が「校務」である以上、これらの業務への従事は職務専念義務違反には当たらないと考えています。
+
+■質問２
+学校で私費であるＰＴＡ会費を取り扱うことについて（地方自治法第２１０条、第２３５条の４第２項との整合）
+
+地方自治法第２１０条では、一会計年度における一切の収入及び支出について歳入歳出予算に編入することが定められており、令和７年４月３０日付文科省通知では、学校徴収金の公会計化等の取組の推進について考え方が示されています。
+
+学校が収納するＰＴＡ会費は、委任契約に基づく、市とは別団体からの預り金であり、公金に該当しない私費に当たると認識しています。このため、同第２１０条に定められた歳入歳出予算へ編入する必要がなく、文科省からも通知に記載された公会計化を求める対象ではないと説明を受けています。
+
+また、同第２３５条の４第２項では、地方公共団体の所有に属しない現金について、法律又は政令の規定がなければ保管することができないと定められています。
+
+ＰＴＡ会費は私費に当たるものですが、「保管」については明確な定義はなく、会費の収納に伴い学校の口座に預けられていたとしても、必要以上に学校の占有下に置かず、速やかにＰＴＡ口座への振込処理等をしていれば、「保管」に当たらないものと考えています。
+
+■質問３
+学校が保護者等から個人情報を取得するときの対応について（第三者提供における同意取得のあり方）
+
+学校が個人情報を取得する場合は、個人情報の保護に関する法律に基づき、学校運営や教育活動に必要な情報のみを取得しています。取得にあたっては、利用目的を明示して、保護者の方からの直接取得することとしています。また、利用にあたっては、目的の範囲内でのみ利用することとし、目的外利用や同意のない第三者提供は行わないようにしています。
+
+■質問４
+他都市（横浜市等）の先行事例との比較検討について
+
+他都市の先行事例として、横浜市の取組について、ヒアリングを行いました。
+定期的にＰＴＡ活動と学校の適切な関わり等に関して、学校への通知による周知・啓発を行っており、直近では入会届による意思確認や、学校納入金とあわせたＰＴＡ会費納入にあたり保護者への意思確認が必要であることを改めて通知したと伺っています。こうした他都市事例を参考にしてまいります。</pre></details></div></details><details class="municipality-accordion" id="muni-40"><summary><span class="muni-summary-name">平塚市</span><span class="muni-summary-meta">A / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>入会意思確認</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><details class="response-accordion" id="record-29-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>入会意思確認</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><pre class="response-body">【神奈川県平塚市】ＰＴＡ入会に関する法的見解・照会６項目について(回答)
+
+いつもお世話になっております。お問い合わせいただいた件について、回答に時間を要したことをお詫び申し上げます。次のとおり回答いたします。
+１ ＰＴＡの入会契約の成立要件に関する法的見解について
+回答：入会に際しては、明確な入会の意思表示が必要であると考えます。
+２ 学校によるＰＴＡ会費の徴収行為が無権代理に該当するかについて
+回答：学校がＰＴＡの代理として会費徴収業務を行う場合には、業務委託契約を結び代理権を有することを明確にしておく必要があると考えます。書面契約を取り交わさなくても、ＰＴＡと学校とのやり取りの中で同意を得てＰＴＡの要請に応じて学校が会費徴収を行っているのであれば、契約が生じていると見なすことはできると考えますが、書面契約などで契約の有無を明確にしておくことが望ましいと考えます。
+３ 入会申込書による保護者および教職員の明確な意思確認の必要性について
+回答：民法では「契約の成立には、法令に特別の定めがある場合を除き、書面の作成その他の方式を具備することを要しない」とあるため、書面を取得することは必要不可欠ではありませんが、明確な意思表示を確認するための手段として書面を取得することが望ましいと考えます。
+４　個人情報保護法に基づく児童名簿·連絡個票の利用目的逸脱について
+回答：保護者の同意のない個人情報の利用は、望ましくないと考えます。研究会等の機を捉え、個人情報の適正な管理について指導、助言しておりますが、引き続き、個人情報保護の観点から周知に努めます。
+５ ＰＴＡの運用に関する教育委員会の是正指導責任について
+回答：ＰＴＡ活動の実態を踏まえて、必要に応じて、指導・助言をしてまいります。
+６ 任意加入·法令遵守が確保されるまでの暫定的措置に関する方針について
+回答：ＰＴＡ活動の実態を踏まえて、必要に応じて、指導・助言をしてまいります。
+以上となります。よろしくお願いいたします。
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝</pre></details></div></details><details class="municipality-accordion" id="muni-41"><summary><span class="muni-summary-name">座間市</span><span class="muni-summary-meta">C / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>教委指導・是正</span><span class="flag">回答日未確認</span><span class="flag">添付資料確認推奨</span></div><details class="response-accordion" id="record-9-C"><summary><span class="response-title">C:要望書 / 要望書4項目</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>教委指導・是正</span><span class="flag">回答日未確認</span><span class="flag">添付資料確認推奨</span></div><pre class="response-body">【座間市回答】公立学校におけるPTA運営の適正化について
+
+この度は、本市教育委員会にご要望いただき、ありがとうございます。
+標記の件につきまして、別添のとおり回答を作成いたしましたので、
+
+１、学校においてPTA入会が任意であることが明確に説明さて、保護者の意志確認が適切な形で行われるよう、必要な指導または通知を行うこと。
+１、有
+２、無
+３、－
+１について、神奈川県教育委員会教育局生涯学習部生涯学習課長から発出された「PTAの加入における留意について（通知）」を各学校に周知しております。
+
+２、学校によるPTA会費の徴収・集金への関与について、その可否および取扱いを整理し、学校現場において誤解が生じないよう運用の明確化に図ること。
+１、有
+２、無
+３、－
+２について、各学校集金方法の違いはあるものの、PTA役員等が直接回収しており、学校現場において、誤解が生じないよう運用しております。
+
+３、学校が保有する児童・保護者に関する個人情報の取扱いについて、PTAとの関係も含めて整理し、適正な管理が確保される周知すること。
+１、有
+２、無
+３、－
+３について、現状PTAが独自に児童等の情報収集をしております。個人情報の取扱いについても、引き続き適正な管理に努めるよう周知して参ります。
+
+４、教職員のPTA活動への関与について、職務との区別が明確になるよう整理を行い、学校現場に過度な負担や誤解が生じないよう配慮すること。
+１、有
+２、無
+３、－
+４について、休日の活動については任意で参加する場合がございます。引き続き、職務との区別の明確化に努めるよう周知して参ります。</pre></details></div></details><details class="municipality-accordion" id="muni-47"><summary><span class="muni-summary-name">日光市</span><span class="muni-summary-meta">A, B, C, D, E / 全文 5件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>会計・監査</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><details class="response-accordion" id="record-34-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>会計・監査</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><pre class="response-body">【回答】ＰＴＡ入会手続き等の法的見解（追加分）について（栃木県日光市）
+
+このたびお問い合わせいただきましたPTAに関する追加の質問（質問7～8、および照会その2）につきまして、遅くなりましたが、以下のとおり回答させていただきます。
+
+【追加質問　７・８】の回答について
+
+■【質問7】学校とPTAの独立性に関する運用状況
+✔2. 線引きを明確化し、限定的な範囲で「公務として」扱う
+
+■【質問8】「関与は全くない」以外の場合の根拠
+文部科学省通知において、PTAは社会教育関係団体であり、学校運営上不可欠な活動であると位置付けられていることから、学校教育活動支援に必要不可欠な事項に限定しています。
+
+【照会その2】に関する回答（７項目）について
+
+（1）学校施設利用許可と条件設定に関する方針
+学校施設の使用許可を出すにあたり、「教育上の支障」の有無を総合的に判断する必要がると考えます。
+
+（2）学校による一斉配布・回収の可否と代替手順
+学校経由での一括配布や提出回収は、特定の団体活動が学校教育活動と混同されるリスクや保護者に対する圧力を生む可能性があると考えます。そのため、役割分担の明確化や適切な手順について検討する必要があると考えます。
+
+個人情報保護法（第16条および第23条）では、個人情報の利用目的は取得時に特定された利用目的の範囲内に留めなければならないとされているため、学校が保有する名簿や連絡先情報をPTA入会や会費徴収等に使用することは、本人（保護者）の「特定の同意」を経ることが必要であり、同意しない場合には、それを理由に不利益を課すことのないようにする必要があると考えます。
+
+（4）学校による会費等の代行徴収の位置付け
+学校がPTA会費等の徴収を代行する場合、PTAと学校間での委任契約、公金と私金の会計処理の明確化、保護者に対する運用方法の説明、苦情処理体制および透明性の確保などが必要だと考えます。
+
+（5）みなし入会・非会員への金銭選択様式の運用評価
+「みなし入会」の禁止と退会自由の原則を周知し、保護者の意思に基づく手続きの導入指導や、中立性の確保に寄与する方針を示す必要があると考えます。
+
+（6）是正完了までの暫定措置
+学校を介した入会意思確認や会費徴収、学校施設利用許可や学校職員の関与条件など適切な運用について指導してまいります。
+
+（7）教職員の勤務時間内PTA関与
+PTA内部業務は校務ではありませんが、学校業務の一環として関与させる場合は、職務命令または職務専念義務免除の手続きが必要と考えます。
+今後の課題として、勤務時間内のPTA業務従事に関する方針整備を進めるとともに、勤務条件や代替手続きについても整理いたします。
+
+教育委員会として、これらの課題を十分に認識しつつ、関係者と協議し対応を進めてまいります。</pre></details><details class="response-accordion" id="record-11-B"><summary><span class="response-title">B:追加7-8 / 追加質問7-8</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>会計・監査</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><pre class="response-body">【回答】ＰＴＡ入会手続き等の法的見解（追加分）について（栃木県日光市）
+
+このたびお問い合わせいただきましたPTAに関する追加の質問（質問7～8、および照会その2）につきまして、遅くなりましたが、以下のとおり回答させていただきます。
+
+【追加質問　７・８】の回答について
+
+■【質問7】学校とPTAの独立性に関する運用状況
+✔2. 線引きを明確化し、限定的な範囲で「公務として」扱う
+
+■【質問8】「関与は全くない」以外の場合の根拠
+文部科学省通知において、PTAは社会教育関係団体であり、学校運営上不可欠な活動であると位置付けられていることから、学校教育活動支援に必要不可欠な事項に限定しています。
+
+【照会その2】に関する回答（７項目）について
+
+（1）学校施設利用許可と条件設定に関する方針
+学校施設の使用許可を出すにあたり、「教育上の支障」の有無を総合的に判断する必要がると考えます。
+
+（2）学校による一斉配布・回収の可否と代替手順
+学校経由での一括配布や提出回収は、特定の団体活動が学校教育活動と混同されるリスクや保護者に対する圧力を生む可能性があると考えます。そのため、役割分担の明確化や適切な手順について検討する必要があると考えます。
+
+個人情報保護法（第16条および第23条）では、個人情報の利用目的は取得時に特定された利用目的の範囲内に留めなければならないとされているため、学校が保有する名簿や連絡先情報をPTA入会や会費徴収等に使用することは、本人（保護者）の「特定の同意」を経ることが必要であり、同意しない場合には、それを理由に不利益を課すことのないようにする必要があると考えます。
+
+（4）学校による会費等の代行徴収の位置付け
+学校がPTA会費等の徴収を代行する場合、PTAと学校間での委任契約、公金と私金の会計処理の明確化、保護者に対する運用方法の説明、苦情処理体制および透明性の確保などが必要だと考えます。
+
+（5）みなし入会・非会員への金銭選択様式の運用評価
+「みなし入会」の禁止と退会自由の原則を周知し、保護者の意思に基づく手続きの導入指導や、中立性の確保に寄与する方針を示す必要があると考えます。
+
+（6）是正完了までの暫定措置
+学校を介した入会意思確認や会費徴収、学校施設利用許可や学校職員の関与条件など適切な運用について指導してまいります。
+
+（7）教職員の勤務時間内PTA関与
+PTA内部業務は校務ではありませんが、学校業務の一環として関与させる場合は、職務命令または職務専念義務免除の手続きが必要と考えます。
+今後の課題として、勤務時間内のPTA業務従事に関する方針整備を進めるとともに、勤務条件や代替手続きについても整理いたします。
+
+教育委員会として、これらの課題を十分に認識しつつ、関係者と協議し対応を進めてまいります。</pre></details><details class="response-accordion" id="record-12-C"><summary><span class="response-title">C:要望書 / 要望書4項目</span><span class="response-date">2026-01-01</span></summary><div class="record-tags"><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>教委指導・是正</span></div><pre class="response-body">公立学校におけるPTA運営の適正化に関する要望書に関する回答（栃木県日光市）
+
+日光市教育委員会
+
+令和8年1月1日付『公立学校におけるPTA運営の適正化に関する要望書』について、現時点での当市の対応状況と今後の方針について回答いたします。
+当市教育委員会といたしまして、公立学校におけるPTAの運営の適正化は、保護者、教職員、児童生徒のより良い学校環境づくりのため必要な課題と認識しております。
+しかしながら、現時点では、貴要望書に記載の諸課題（PTA入会の任意性の周知、会費徴収方法、個人情報取扱い、教職員の関与の整理等）について、具体的な検討や協議及び新たな措置は行えていない状況です。
+今後は、各学校現場の実態把握や運営状況の確認を進め、課題の整理・改善について協議を行う予定です。
+以上、回答とさせていただきます。</pre></details><details class="response-accordion" id="record-4-D"><summary><span class="response-title">D:実態調査 / 実態調査7項目</span><span class="response-date">2026-03-13</span></summary><div class="record-tags"><span>会費徴収・委任契約</span><span>教職員関与・服務</span></div><pre class="response-body">【回答】公立学校におけるPTA会費等徴収事務の適正化に関する実態調査
+
+令和8年３月１３日付にてご照会のありました『公立学校におけるPTA会費等徴収事務の適正化に関する実態調査』について回答いたします。
+当市教育委員会といたしましては、公立学校におけるPTAの運営の適正化は、保護者、教職員、児童生徒のより良い学校環境づくりのため必要な課題と認識しております。
+しかしながら、現時点では、課題の明確な整理や具体的な協議、検討には至っていない状況です。
+今後は、各学校現場の実態把握や運営状況の確認を進め、課題の整理・改善について検討を行う予定です。
+以上、回答とさせていただきます。
+
+令和８年３月３１日
+日光市教育委員会</pre></details><details class="response-accordion" id="record-4-E"><summary><span class="response-title">E:137条 / 学校教育法137条照会</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>会計・監査</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><pre class="response-body">【回答】ＰＴＡ入会手続き等の法的見解（追加分）について（栃木県日光市）
+
+このたびお問い合わせいただきましたPTAに関する追加の質問（質問7～8、および照会その2）につきまして、遅くなりましたが、以下のとおり回答させていただきます。
+
+【追加質問　７・８】の回答について
+
+■【質問7】学校とPTAの独立性に関する運用状況
+✔2. 線引きを明確化し、限定的な範囲で「公務として」扱う
+
+■【質問8】「関与は全くない」以外の場合の根拠
+文部科学省通知において、PTAは社会教育関係団体であり、学校運営上不可欠な活動であると位置付けられていることから、学校教育活動支援に必要不可欠な事項に限定しています。
+
+【照会その2】に関する回答（７項目）について
+
+（1）学校施設利用許可と条件設定に関する方針
+学校施設の使用許可を出すにあたり、「教育上の支障」の有無を総合的に判断する必要がると考えます。
+
+（2）学校による一斉配布・回収の可否と代替手順
+学校経由での一括配布や提出回収は、特定の団体活動が学校教育活動と混同されるリスクや保護者に対する圧力を生む可能性があると考えます。そのため、役割分担の明確化や適切な手順について検討する必要があると考えます。
+
+個人情報保護法（第16条および第23条）では、個人情報の利用目的は取得時に特定された利用目的の範囲内に留めなければならないとされているため、学校が保有する名簿や連絡先情報をPTA入会や会費徴収等に使用することは、本人（保護者）の「特定の同意」を経ることが必要であり、同意しない場合には、それを理由に不利益を課すことのないようにする必要があると考えます。
+
+（4）学校による会費等の代行徴収の位置付け
+学校がPTA会費等の徴収を代行する場合、PTAと学校間での委任契約、公金と私金の会計処理の明確化、保護者に対する運用方法の説明、苦情処理体制および透明性の確保などが必要だと考えます。
+
+（5）みなし入会・非会員への金銭選択様式の運用評価
+「みなし入会」の禁止と退会自由の原則を周知し、保護者の意思に基づく手続きの導入指導や、中立性の確保に寄与する方針を示す必要があると考えます。
+
+（6）是正完了までの暫定措置
+学校を介した入会意思確認や会費徴収、学校施設利用許可や学校職員の関与条件など適切な運用について指導してまいります。
+
+（7）教職員の勤務時間内PTA関与
+PTA内部業務は校務ではありませんが、学校業務の一環として関与させる場合は、職務命令または職務専念義務免除の手続きが必要と考えます。
+今後の課題として、勤務時間内のPTA業務従事に関する方針整備を進めるとともに、勤務条件や代替手続きについても整理いたします。
+
+教育委員会として、これらの課題を十分に認識しつつ、関係者と協議し対応を進めてまいります。</pre></details></div></details><details class="municipality-accordion" id="muni-48"><summary><span class="muni-summary-name">東京都</span><span class="muni-summary-meta">B / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>教職員関与・服務</span><span>会計・監査</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><details class="response-accordion" id="record-12-B"><summary><span class="response-title">B:追加7-8 / 追加質問7-8</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>教職員関与・服務</span><span>会計・監査</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><pre class="response-body">【東京都教育庁回答】【追加照会】PTA入会に関する法的見解についての追加質問のお願い（【PTA担当課】様）
+
+PTA
+適正化推進委員会
+
+10
+月にご照会いただきました標記の件について、
+
+検討に時間がかかり、申し訳ございませんでした。
+
+ご照会事項２点について、次のとおり回答させていただきますので、
+
+内容をご確認くださいますようお願いいたします。
+
+１　 学校と
+PTA
+の独立性に関する貴委員会の整理・運用状況について
+
+(1)
+ご照会
+
+PTA
+は社会教育関係団体であり、学校とは別団体であると認識しております。
+
+一方で現場では、学校が
+PTA
+入会勧誘の支援、会費徴収の代行、会計管理等に関与している事例も見受けられます。
+
+これらが業務時間内に行われる場合、公務か、または職務専念義務の免除（職専免）かが問題となり得ます。
+
+つきましては、貴委員会管轄内での取扱いについて該当するものに
+✔
+をお願いいたします。
+
+(2)
+
+1.
+関与は全くない
+
+2.
+線引きを明確化し、限定的な範囲で「公務として」扱う
+
+3.
+「職専免」として扱う
+
+4.
+特に決めていない
+
+✔
+5.
+その他（教育委員会規則において、
+PTA
+会費の収納に関する事務処理等を職務と位置付けている。）
+
+２　上記１の根拠について
+
+(1)
+ご照会
+
+上記の２～５に該当する場合、市民の税金または教職員の公的時間を用いて第三者団体である
+PTA
+に関与することになります。
+
+その適法性および運用根拠（例：法令・条例・規則・通知・通達・内規・答申・監査結果等）がございましたら、以下の形式でご教示ください。
+
+(2)
+
+・根拠の区分：規則
+
+・名称：東京都立学校の管理運営に関する規則</pre></details></div></details><details class="municipality-accordion" id="muni-49"><summary><span class="muni-summary-name">東京都町田市</span><span class="muni-summary-meta">A, B, E / 全文 3件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>学校施設利用</span><span class="flag">回答日未確認</span><span class="flag">本文短文・原資料確認</span></div><details class="response-accordion" id="record-35-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>学校施設利用</span><span class="flag">回答日未確認</span><span class="flag">本文短文・原資料確認</span></div><pre class="response-body">町田市≪PTA入会に関する法的見解についての追加質問≫及び≪学校教育法第137条に基づく学校施設利用許可およびPTA入会・会費事務等に関する照会（７項目）≫（回答）</pre></details><details class="response-accordion" id="record-13-B"><summary><span class="response-title">B:追加7-8 / 追加質問7-8</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>学校施設利用</span><span class="flag">回答日未確認</span><span class="flag">本文短文・原資料確認</span></div><pre class="response-body">町田市≪PTA入会に関する法的見解についての追加質問≫及び≪学校教育法第137条に基づく学校施設利用許可およびPTA入会・会費事務等に関する照会（７項目）≫（回答）</pre></details><details class="response-accordion" id="record-5-E"><summary><span class="response-title">E:137条 / 学校教育法137条照会</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>学校施設利用</span><span class="flag">回答日未確認</span><span class="flag">本文短文・原資料確認</span></div><pre class="response-body">町田市≪PTA入会に関する法的見解についての追加質問≫及び≪学校教育法第137条に基づく学校施設利用許可およびPTA入会・会費事務等に関する照会（７項目）≫（回答）</pre></details></div></details><details class="municipality-accordion" id="muni-51"><summary><span class="muni-summary-name">東秩父村</span><span class="muni-summary-meta">A / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><details class="response-accordion" id="record-37-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><pre class="response-body">kyouiku
+
+1. PTA の入会契約の成立要件に関する法的見解について
+保護者の明示的な申込み意思表示と PTA の承諾がないまま、学校側が児童の 入学をもって一律に「会員」とみなす運用が多くの学校で行われています。この ような「みなし入会」方式について、民法第 522 条および消費者契約法に照ら し、契約が成立していると判断される法的根拠があるか、教育委員会としての見 解をお示しください。
+→PTA は任意加入の団体であり、入会においては、学校児童の保護者の自由意思に基 づくものと思います。そのため、「みなし入会」は、民法５２２条における保護者の入 会の意思がない場合は、成立しないと想定されます。
+2. 学校による PTA 会費の徴収行為が無権代理に該当するかについて 学校が PTA との間で PTA 会費の徴収業務に関する準委任契約を結ばずに、 慣例的に児童名簿等を用いて会費を代行徴収しているケースがあります。学校 が正式な代理権を持たずに PTA の業務を代行している場合、民法第 113 条に基 づく無権代理に該当すると考えられますが、教育委員会はこの点をどのように 評価していますか。
+→学校と PTA の両者で、明確な委任関係がないとするならば、学校が PTA 会費を徴収 する事は、無権代理に該当すると想定されます。そのような場合は、是正する必要があ ると考えます。
+3. 入会申込書による保護者および教職員の明確な意思確認の必要性について PTA が任意加入団体である以上、契約の成立には個別の申込書や同意書によ る明示的な加入意思の確認が必要と考えられます。現在多くの学校で申込書を 徴収していない状況について、教育委員会として是正の必要性を認識されてい ますか。
+→加入に対する申込書および同意書を徴収していない状況は、是正の必要性があると認 識しています。今後、是正の必要性を団体等に伝え、指導いたします。
+4. 個人情報保護法に基づく児童名簿・連絡個票の利用目的逸脱について PTA が入会申込書を取得しておらず、申し込んだ保護者・教職員が誰である かを特定・管理していない状態で、学校が児童名簿や連絡個票を用いて PTA 会 費の徴収等を行っている実態が、多くの学校で確認されています。これらの名簿 情報は、本来、入学手続きや教育活動のために学校が収集したものであり、保護 者の同意なく PTA という外部団体の金銭徴収業務に転用することは、個人情報 保護法第 69 条（利用目的の制限）に違反するおそれがあります。加えて、PTA 自身が会員の氏名を把握していない状態で、学校が本人同意なしに代理徴収的 な行為をしていることは、情報主体（保護者）の権利を大きく侵害する状況であ ると考えます。貴教育委員会として、このような運用の違法性または法令抵触の 可能性に対する認識、および是正の必要性や今後の対応方針について、どのよう にお考えでしょうか。明確なご所見をお示しください。
+→児童名簿等を PTA の会費徴収等に転用することは、「あらかじめ特定した利用目的達 成に必要な範囲」と言い切れないため、個人情報保護法６９条にある利用制限に照らす と適切ではないと考えられますので、保護者の許可なしに使用しないよう各学校へ指導 するよう努めてまいります。
+5. PTA の運用に関する教育委員会の是正指導責任について
+学校が PTA と一体的に関与し、会費徴収や施設使用を支援している実態を踏 まえれば、PTA の違法または不適切な運用が学校教育の一環と認定される可能 性があります。地方教育行政法第２３条に基づき、教育委員会が是正指導を行う 責任があるとお考えでしょうか。
+→PTA 自体は任意団体であり、地域などの自発的な組織と考えられるため、一般的に 教育委員会の所管対象外と思われますが、学校が過剰に関与している部分においては、 地方教育行政法第２３条に基づき、指導等行う必要があると考えます。
+6. 任意加入・法令遵守が確保されるまでの暫定的措置に関する方針について PTA が保護者の意思確認を適切に行わず、会員名簿すら把握しないまま会費 徴収や施設利用を継続している状態は、法令違反の懸念が濃厚です。教育委員会 として、是正がなされるまでの間、学校による施設提供や会費徴収への協力を停 止する措置を講じる予定はありますか。
+→学校が関与する以上、法令遵守は前提だと考えます。教育委員会として、徴収代行や 施設提供の支援を明確に行っている場合は、停止する措置を講じることを伝え、是正に 向けた指導を検討します。</pre></details></div></details><details class="municipality-accordion" id="muni-52"><summary><span class="muni-summary-name">横浜市</span><span class="muni-summary-meta">D / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>教職員関与・服務</span></div><details class="response-accordion" id="record-5-D"><summary><span class="response-title">D:実態調査 / 実態調査7項目</span><span class="response-date">2026-03-31</span></summary><div class="record-tags"><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>教職員関与・服務</span></div><pre class="response-body">問１：ＰＴＡ 会費徴収事務への教職員の関与について
+教職員が勤務時間中に、ＰＴＡ会費徴収事務に関与することについて、現在、その取扱いに関する検討を重ねているところです。
+また、問２および問３は、まずはこの点についての整理が前提となるため、現時点では、お答えができかねます。何卒ご容赦ください。
+
+問４：事故発生時の責任主体について
+ＰＴＡ会費徴収に関して事故が発生した場合の責任主体については、事故発生の経緯や関係者の関与状況など、個別具体的な事情に照らして、事案ごとに判断する必要があると考えます。
+
+問５：責任分担を明記した文書について
+ＰＴＡ会費徴収事務に関する学校とＰＴＡ の責任分担を整理した文書について、業務委任契約を書面で取り交わしている学校もありますが、教育委員会事務局では、文書名等の詳細までは把握していません。
+
+問６：学校とＰＴＡ の関係性の位置付けについて
+学校とＰＴＡ との関係について、ＰＴＡは、学校と密接に関わりのある任意団体のため、児童生徒の健全育成や円滑な学校運営のために、相互に連携する関係であると捉えています。
+
+問７：今後の行政運用について
+問１でも回答した通り、本件については現在、関係法令との整合性や学校現場への影響を踏まえながら具体的な対応を検討しているため、現時点では詳細をお示しできる状況にはありません。何卒ご容赦下さい。引き続き関係部署間で必要な整理を進めてまいります。
+
+どうぞよろしくお願いいたします。</pre></details></div></details><details class="municipality-accordion" id="muni-54"><summary><span class="muni-summary-name">海老名市</span><span class="muni-summary-meta">A, G / 全文 2件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>教委指導・是正</span><span>回答未了・延長</span><span class="flag">回答日未確認</span><span class="flag">本文短文・原資料確認</span><span class="flag">添付資料確認推奨</span><span class="flag">回答未了・延長等</span></div><details class="response-accordion" id="record-39-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">2025-05-21</span></summary><div class="record-tags"><span>教委指導・是正</span></div><pre class="response-body">【海老名市】8_2お問合せへの回答
+
+お問合せいただきましたPTA入会手続き等の法的見解について、回答いたします。
+
+なお、消化事項６につきましては、現時点でお問合せのような措置を行う予定はございません。
+
+今後も引き続き、学校やPTA等へ神奈川県が作成するPTAハンドブック等の周知を行い、状況に応じて必要な
+指導助言等を行ってまいりたいと考えております。</pre></details><details class="response-accordion" id="record-4-G"><summary><span class="response-title">G:延長等 / 延長等</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>回答未了・延長</span><span class="flag">回答日未確認</span><span class="flag">本文短文・原資料確認</span><span class="flag">添付資料確認推奨</span><span class="flag">回答未了・延長等</span></div><pre class="response-body">ebina-shugaku-shien
+
+表題の件について別添のとおり回答いたします。</pre></details></div></details><details class="municipality-accordion" id="muni-56"><summary><span class="muni-summary-name">相模原市</span><span class="muni-summary-meta">A, B, C, E / 全文 4件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>入会意思確認</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>教委指導・是正</span><span>回答未了・延長</span><span class="flag">添付資料確認推奨</span><span class="flag">回答日未確認</span><span class="flag">回答未了・延長等</span></div><details class="response-accordion" id="record-41-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">2025-07-04</span></summary><div class="record-tags"><span>PTA任意団体</span><span>教委指導・是正</span><span class="flag">添付資料確認推奨</span></div><pre class="response-body">【照会】ＰＴＡ入会手続き等の法的見解について照会事項６点（回答）【神奈川県相模原市教育委員会】
+
+ＰＴＡ 適正化推進委員会
+
+お問い合わせいただいた件について、相模原市教育委員会（以下「本市教育委員会」という。）としての見解等は、別添メール（令和７年７月４日付）のとおり既にお送りさせていただいている回答と重複している部分がございます。
+
+追加でお問い合わせいただいた部分について、下記の通り回答させていただきます。
+
+【回答内容】
+
+今回の照会事項６点について、「１」から「４」については、既に本市教育委員会の見解をメール（令和７年７月４日付け）にて回答（以下「既回答」という。）しておりますので、既回答を踏まえた上で、追加でいただいた照会事項「５」と「６」についての回答をさせていただきます。
+
+本市教育委員会としては、ＰＴＡは公の支配に属さない社会教育関係団体ですが、学校運営に密接に関わるものであるため、学校等と連携しながら運営するものととらえております。そのため、組織運営上の課題等に対しては必要に応じて教育委員会が助言や指導などを行う必要があると考えております。
+
+今後とも助言や指導を継続するとともに、適切な運営が図られない団体に対しては、早期の改善につながるよう、別途対応も検討するなど、ＰＴＡ運営の適正性の確保に努めてまいりたいと考えております。
+
+本市教育委員会といたしましては、今回いただいた御意見を踏まえた上で、ＰＴＡ活動の主旨を改めて認識していただくとともに、法令順守のうえで適切に運営を行っていただくよう、各学校・ＰＴＡ等へ引き続き働きかけてまいります。
+
+以上、よろしくお願い申し上げます。</pre></details><details class="response-accordion" id="record-14-B"><summary><span class="response-title">B:追加7-8 / 追加質問7-8</span><span class="response-date">2025-07-04</span></summary><div class="record-tags"><span>PTA任意団体</span><span>教委指導・是正</span><span class="flag">添付資料確認推奨</span></div><pre class="response-body">【照会】ＰＴＡ入会手続き等の法的見解について照会事項６点（回答）【神奈川県相模原市教育委員会】
+
+ＰＴＡ 適正化推進委員会
+
+お問い合わせいただいた件について、相模原市教育委員会（以下「本市教育委員会」という。）としての見解等は、別添メール（令和７年７月４日付）のとおり既にお送りさせていただいている回答と重複している部分がございます。
+
+追加でお問い合わせいただいた部分について、下記の通り回答させていただきます。
+
+【回答内容】
+
+今回の照会事項６点について、「１」から「４」については、既に本市教育委員会の見解をメール（令和７年７月４日付け）にて回答（以下「既回答」という。）しておりますので、既回答を踏まえた上で、追加でいただいた照会事項「５」と「６」についての回答をさせていただきます。
+
+本市教育委員会としては、ＰＴＡは公の支配に属さない社会教育関係団体ですが、学校運営に密接に関わるものであるため、学校等と連携しながら運営するものととらえております。そのため、組織運営上の課題等に対しては必要に応じて教育委員会が助言や指導などを行う必要があると考えております。
+
+今後とも助言や指導を継続するとともに、適切な運営が図られない団体に対しては、早期の改善につながるよう、別途対応も検討するなど、ＰＴＡ運営の適正性の確保に努めてまいりたいと考えております。
+
+本市教育委員会といたしましては、今回いただいた御意見を踏まえた上で、ＰＴＡ活動の主旨を改めて認識していただくとともに、法令順守のうえで適切に運営を行っていただくよう、各学校・ＰＴＡ等へ引き続き働きかけてまいります。
+
+以上、よろしくお願い申し上げます。</pre></details><details class="response-accordion" id="record-13-C"><summary><span class="response-title">C:要望書 / 要望書4項目</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>入会意思確認</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><pre class="response-body">【要望書（回答依頼）】公立学校におけるPTA運営の適正化について（回答）【相模原市教育委員会】
+
+お問い合わせいただいた下記【要望事項】１～４の件について、相模原市教育委員会（以下「本市教育委員会」という。）として、各所管部局の見解を取りまとめた上、下記の通り回答させていただきます。
+
+【要望事項】
+1．学校において、PTA入会が任意であることが明確に説明され、保護者の意思確認が適切な形で行われるよう、必要な指導または通知を行うこと。
+⇒本市教育委員会としては、神奈川県教育委員会作成の「PTA活動のためのハンドブック」を市内各学校やPTA（市PTA連絡協議会等を介して）へ毎年送付することで、周知を図っています。
+また、より多くの関係者にPTA活動の趣旨等をあらためて理解していただくことを目的に、上記ハンドブックを送付する際の通知本文に、「PTAは自主的な組織によって運営される任意の団体」であること、「PTAに加入するかどうかは、個人の考えや意思によるため、一人ひとりの意思を確認する」ことを留意事項として明記することで、適切な運営を行っていただくよう働きかけています。
+
+2．学校によるPTA会費の徴収・集金への関与について、その可否および取扱いを整理し、学校現場において誤解が生じないよう運用の明確化を図ること。
+⇒本市教育委員会としては、仮にPTAを事業者とみなした上で、学校がPTA会費の徴収等を行う場合においては、委任契約（黙示の合意を含む）が必要と考えます。
+PTAに対しては、学校へPTA会費の徴収等を依頼する場合は、徴収事務等を委任する旨の明確な意思確認が必要であることを、市PTA連絡協議会等を介して周知を図っているところです。
+学校に対しては、学校徴収金の考え方について通知しており、PTA会費を学校徴収金と併せて集金する場合の留意点が含まれております。今後の新たな対応については考えていません。
+
+3．学校が保有する児童・保護者に関する個人情報の取扱いについて、PTAとの関係も含めて整理し、適正な管理が確保されるよう周知すること。
+⇒本市教育委員会としては、個人情報の取扱いについて、法令に基づいた対応を行うよう市内各学校へ通知しています。
+今後、学校から保護者への通知文や個人情報の第三者提供に関する同意書の例を示す予定です。
+
+4．教職員のPTA活動への関与について、職務との区別が明確になるよう整理を行い、学校現場に過度な負担や誤解が生じないよう配慮すること。
+⇒本市教育委員会としては、教職員には職務に専念する義務が課されており、任意の団体であるPTA活動への関わりについては、加入の意思を示していることが前提であると考えます。その上で、教職員に過度な負担がかからないよう学校に対し指導・助言等を行っていきます。
+
+本市教育委員会といたしましては、今回いただいた御要望を踏まえた上で、
+ＰＴＡ活動の趣旨を改めて認識していただくとともに、法令順守の上で適切に運営を行っていただくよう、引き続き、PTAへ働きかけると共に、各学校へ指導・助言等を行ってまいります。</pre></details><details class="response-accordion" id="record-6-E"><summary><span class="response-title">E:137条 / 学校教育法137条照会</span><span class="response-date">2025-11-14</span></summary><div class="record-tags"><span>教職員関与・服務</span><span>学校施設利用</span><span>回答未了・延長</span><span class="flag">添付資料確認推奨</span><span class="flag">回答未了・延長等</span></div><pre class="response-body">【追加照会】PTA入会に関する法的見解についての追加質問のお願いへの回答（相模原市）
+
+標記の件について、回答が遅れましたこと、お詫び申し上げます。
+追加照会に次のとおり回答します。
+
+（質問７）
+・回答：５．その他（管理職が、時間外・休日に参加するPTA主催会議への出席に関して、一部「公務として」出張扱いにしているものあり。）
+
+（質問８）
+・根拠の区分：内規
+・名称：「旅費事務の手引き」
+・条項・該当箇所：校務旅行の判断基準
+・発出・決定日／所管：令和７年・相模原市教育委員会　教職員課
+・備考（運用実態、判断基準、留意事項、関連文書の有無 等）：内規のため回答なし
+・参照URLまたは添付有無：内規のため添付なし</pre></details></div></details><details class="municipality-accordion" id="muni-60"><summary><span class="muni-summary-name">茅ヶ崎市</span><span class="muni-summary-meta">G / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>学校施設利用</span><span>回答未了・延長</span><span class="flag">回答日未確認</span><span class="flag">回答未了・延長等</span></div><details class="response-accordion" id="record-6-G"><summary><span class="response-title">G:延長等 / 延長等</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>学校施設利用</span><span>回答未了・延長</span><span class="flag">回答日未確認</span><span class="flag">回答未了・延長等</span></div><pre class="response-body">【茅ヶ崎市教育委員会】PTA関連に関する回答期限の延長について
+
+先日ご照会いただきました
+①「PTA入会に関する法的見解」および
+②「学校教育法第１３７条に基づく施設利用許可及び会費事務」
+に関する照会について、現時点で庁内関係課かいと調整を行っているため
+回答が整い次第ご連絡させていただきますのでお待ちいただけますようお願いいたします。</pre></details></div></details><details class="municipality-accordion" id="muni-73"><summary><span class="muni-summary-name">高根沢町</span><span class="muni-summary-meta">C / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>タグなし</span></div><details class="response-accordion" id="record-17-C"><summary><span class="response-title">C:要望書 / 要望書4項目</span><span class="response-date">2026-01-01</span></summary><div class="record-tags"></div><pre class="response-body">（高根沢町学校教育課）要望書に対する回答について
+
+いただいた要望書について回答します。
+
+高学教第 675 号
+令和８（2026）年１月 14 日
+「公立学校におけるＰＴＡ運営の適正化に関する要望書」に対する回答について
+日頃より町教育行政にご理解ご協力を賜り御礼申し上げます。
+さて、令和８年１月１日付け「公立学校におけるＰＴＡ運営の適正化に関する要望書」 に対して、下記のとおり回答いたしますので、ご査収いただけますようお願いいたしま す。
+記
+１．回答
+（１）要望事項に関し、すでに講じている措置の有無
+無し
+（２）今後、新たに講ずる予定の有無
+無し
+（３）現時点では対応予定がない場合、その理由の概要
+どのように整理・対応すべきか調査・検討している段階であり、県教育委員会・市 町教育委員会レベルでの共通認識や整理・対応方法の標準化・統一化が必要と考えて いるが、現状、そのような整理・対応に係る見通しが立っていないため。</pre></details></div></details><h3 class="response-region-heading">中部</h3><details class="municipality-accordion" id="muni-7"><summary><span class="muni-summary-name">中央市</span><span class="muni-summary-meta">A, C / 全文 2件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>教委指導・是正</span><span>回答未了・延長</span><span class="flag">回答日未確認</span><span class="flag">添付資料確認推奨</span><span class="flag">回答未了・延長等</span><span class="flag">地教行法条文番号要確認</span></div><details class="response-accordion" id="record-6-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>教委指導・是正</span><span class="flag">回答日未確認</span><span class="flag">地教行法条文番号要確認</span></div><pre class="response-body">【照会】PTA入会手続き等の法的見解について照会事項６点の回答について
+
+1.PTAの入会契約の成立要件に関する法的見解について
+保護者の明示的な申込み意思表示とPTAの承諾がないまま、学校側が児童の入学をもって一律に「会員」とみなす運用が多くの学校で行われています。このような「みなし入会」方式について、民法第522条および消費者契約法に照らし、契約が成立していると判断される法的根拠があるか、教育委員会としての見解をお示しください。
+（回答）
+ＰＴＡへの入会の成立には、双方の意思表示の合致が必要と考えます。
+
+2.学校によるPTA会費の徴収行為が無権代理に該当するかについて
+学校がPTAとの間でPTA会費の徴収業務に関する準委任契約を結ばずに、慣例的に児童名簿等を用いて会費を代行徴収しているケースがあります。学校が正式な代理権を持たずにPTAの業務を代行している場合、民法第113条に基づく無権代理に該当すると考えられますが、教育委員会はこの点をどのように評価していますか。
+（回答）
+仮に、ＰＴＡ会費の徴収業務を学校が代行する場合には、準委任契約が必要と考えます。
+
+3.入会申込書による保護者および教職員の明確な意思確認の必要性について
+PTAが任意加入団体である以上、契約の成立には個別の申込書や同意書による明示的な加入意思の確認が必要と考えられます。現在多くの学校で申込書を徴収していない状況について、教育委員会として是正の必要性を認識されていますか。
+（回答）
+ＰＴＡの入会にあたっては、いずれかの方法による明示的な入会の意思表示が必要と考えます。
+
+4.個人情報保護法に基づく児童名簿・連絡個票の利用目的逸脱について
+PTAが入会申込書を取得しておらず、申し込んだ保護者・教職員が誰であるかを特定・管理していない状態で、学校が児童名簿や連絡個票を用いてPTA会費の徴収等を行っている実態が、多くの学校で確認されています。これらの名簿情報は、本来、入学手続きや教育活動のために学校が収集したものであり、保護者の同意なくPTAという外部団体の金銭徴収業務に転用することは、個人情報保護法第69条（利用目的の制限）に違反するおそれがあります。加えて、PTA自身が会員の氏名を把握していない状態で、学校が本人同意なしに代理徴収的な行為をしていることは、情報主体（保護者）の権利を大きく侵害する状況であると考えます。貴教育委員会として、このような運用の違法性または法令抵触の可能性に対する認識、および是正の必要性や今後の対応方針について、どのようにお考えでしょうか。明確なご所見をお示しください。
+（回答）
+学校が取得した個人情報を本人の同意なしに目的外に使用又は提供することは、個人情報保護法に違反するものと認識しています。学校が保有する個人情報については、個人情報保護法に基づく適正な取り扱いを指導しています。
+
+5.PTAの運用に関する教育委員会の是正指導責任について
+学校がPTAと一体的に関与し、会費徴収や施設使用を支援している実態を踏まえれば、PTAの違法または不適切な運用が学校教育の一環と認定される可能性があります。地方教育行政法第10条に基づき、教育委員会が是正指導を行う責任があるとお考えでしょうか。
+（回答）
+教育委員会ではＰＴＡの任意団体としての自主性を尊重しつつ、学校やＰＴＡ連合会を通じて、必要な情報の提供・助言を行っています。
+
+6.任意加入・法令遵守が確保されるまでの暫定的措置に関する方針について
+PTAが保護者の意思確認を適切に行わず、会員名簿すら把握しないまま会費徴収や施設利用を継続している状態は、法令違反の懸念が濃厚です。教育委員会として、是正がなされるまでの間、学校による施設提供や会費徴収への協力を停止する措置を講じる予定はありますか。
+（回答）
+現時点において、学校による施設提供や会費徴収への協力を停止する措置の予定はありません。</pre></details><details class="response-accordion" id="record-1-C"><summary><span class="response-title">C:要望書 / 要望書4項目</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>回答未了・延長</span><span class="flag">回答日未確認</span><span class="flag">添付資料確認推奨</span><span class="flag">回答未了・延長等</span></div><pre class="response-body">中央市教育委員会　教育総務課（LGWAN）
+
+要望書における回答を送付いたします。
+２月２０日（金）までということでこちらからご連絡させていただいていたにも
+関わらずご回答が遅れて申し訳ございませんでした。
+
+中央教第３－２号
+令 和 ８年 ３月 ５日
+中央市教育委員会
+（公印省略）
+公立学校における PTA 運営の適正化に関する要望書に対する回答について
+表題の件につきまして、現時点にて対応はしておりませんが今後の方針として別紙のとおり 回答いたします。</pre></details></div></details><details class="municipality-accordion" id="muni-26"><summary><span class="muni-summary-name">安曇野市</span><span class="muni-summary-meta">A / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>入会意思確認</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><details class="response-accordion" id="record-20-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>入会意思確認</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><pre class="response-body">安曇野市 学校教育課
+
+質問１：PTA の入会契約の成立要件に関する法的見解について
+回答：黙示の意思表示と評価できる事情がない限り、ご指摘の方式では契約が成立している と判断できないと考えます。なお、市教育委員会は、PTA が任意加入の団体であること に鑑み、入会には明示的な意思表示が必要であるとする取扱いが妥当と考えています。
+質問２：学校による PTA 会費の徴収行為が無権代理に該当するかについて 回答： PTA の各会員が他の要件を満たしている場合は、その会員との関係においては、無 権代理が成立することもあり得ると考えます。
+質問３：入会申込書による保護者および教職員の明確な意思確認の必要性について 回答：市教育委員会は、明示の意思表示に基づき入会とする取扱いが妥当であり、申込書等 の書面を徴するのが望ましいと考えております。このことは、機会を捉えて学校に周知し ております。
+質問４： 個人情報保護法に基づく児童名簿・連絡個票の利用目的逸脱について 回答：学校と PTA は別の団体であり、一方が他方の個人情報を利用する場合には、同法の 定める手続に沿う必要があると考えます。仮にこのような手続を経ずに個人情報を利用 している事例があるとすれば、個人情報保護法等に抵触するおそれがあると考えます。な お、市教育委員会では、PTA に関する場合に限らず、学校の有する個人情報を個人情報 保護法及び本市の条例・関連規則に照らして、適正に管理するよう指導しています。
+質問５：PTA の運用に関する教育委員会の是正指導責任について
+回答：PTA は市教育委員会や学校とは別の任意の団体と捉えています。しかし、活動内容 をふまえ、お互いに状況を確認し合いながら、よりよい方向を探っていくという意味で、 側面的な支援を行っています。
+質問６：任意加入・法令遵守が確保されるまでの暫定的措置に関する方針について 回答：ご指摘のような状況を把握していません。市教育委員会は、PTA の会費徴収につい て特段の協力をしておりません。</pre></details></div></details><details class="municipality-accordion" id="muni-33"><summary><span class="muni-summary-name">山中湖村</span><span class="muni-summary-meta">C / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>教職員関与・服務</span><span class="flag">回答日未確認</span></div><details class="response-accordion" id="record-7-C"><summary><span class="response-title">C:要望書 / 要望書4項目</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>教職員関与・服務</span><span class="flag">回答日未確認</span></div><pre class="response-body">教育委員会代表
+
+ご送付いただいた、要望書につきまして下記により回答いたします。
+
+ご送付いただきました要望事項の内容、また、貴委員会が作成した「私たちのPTA運営ハンドブック」等の内容について留意するとともに、教育委員会として教職員および保護者に過度な負担や誤解が生じないような運営となるよう配慮していきたいと考えます。
+
+よろしくお願いします。</pre></details></div></details><details class="municipality-accordion" id="muni-34"><summary><span class="muni-summary-name">山梨県鳴沢村</span><span class="muni-summary-meta">C / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>入会意思確認</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>教委指導・是正</span></div><details class="response-accordion" id="record-8-C"><summary><span class="response-title">C:要望書 / 要望書4項目</span><span class="response-date">2026-01-01</span></summary><div class="record-tags"><span>入会意思確認</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>教委指導・是正</span></div><pre class="response-body">公立学校におけるPTA運営の適正化について（回答）
+
+令和8年1月1日つけでいただいております掲題の件について、次のとおり回答します。
+
+〇回答
+1．学校において、PTA入会が任意であることが明確に説明され、保護者の意思確認が適切な形で行われるよう、必要な指導または通知を行うこと。
+当村にあります小学校では「任意であることの説明」及び「保護者の意思確認」を行っており、実際に加入していない保護者もいます。
+
+2．学校によるPTA会費の徴収・集金への関与について、その可否および取扱いを整理し、学校現場において誤解が生じないよう運用の明確化を図ること。
+本来PTA団体と学校とは全く異なる団体でありますが、PTAの集金を教職員が行っています。
+また、集金については、別の口座等で行うことにより、誤解が生じないような運用がされております。
+
+3.学校が保有する児童・保護者に関する個人情報の取扱いについて、PTAとの関係も含めて整理し、適正な管理が確保されるよう周知すること。
+個人情報の扱いについては毎年、入学説明会や総会のときに確認し、PTA活動への提供を含めて、同意いただける場合は承諾書を提出していただいております。
+
+４.教職員のPTA活動への関与について、職務との区別が明確になるよう整理を行い、学校現場に過度な負担や誤解が生じないよう配慮すること。
+当村のような小規模自治体では切り離すのは難しいと考えておりますが、現在年間10時間未満の時間であるため、「過度な負担」とはなっていないと考えます。</pre></details></div></details><details class="municipality-accordion" id="muni-35"><summary><span class="muni-summary-name">岐阜県東白川村</span><span class="muni-summary-meta">A / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><details class="response-accordion" id="record-25-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><pre class="response-body">【岐阜県東白川村教育委員会】PTA入会手続き等の法的見解について照会事項６点（回答）
+
+先日ご照会をいただきましたＰＴＡ入会手続き等の法的見解に係るご照会について
+東白川村教育委員会の見解と対応を次のとおり回答いたします。
+
+▼照会事項（全6項目）
+●ＰＴＡ組織への入会については、加入対象者（保護者・教職員）の入会の意思表示をもって契約が成立されるものであるとの認識でございます。しかし、現状としてはいわゆる「みなし入会」の現状が是正されているとは本村においても言い難く、ＰＴＡ組織の改革として提案・指導を行っていく計画でございます。
+
+●ご指摘のとおり無権代理に該当することとなります。学校がＰＴＡと事務運営のみならず、会費の徴収業務に関する準委任契約を締結していくことは必須事項であると捉え、教育委員会として指導してまいります。
+
+●照会１で回答いたしましたとおり、入会の意思表示をもって契約が成立されるものであるとの認識であり、恥ずかしながら現状として本村の学校ＰＴＡでは申込書を徴収しておりません。教育委員会として指導を行い、正しい入退会の手続きを経て、ＰＴＡに加入している意識をもっていただくよう是正してまいります。
+
+●個人情報の取り扱いに関しては、個人情報保護法により使用目的を明示し、その使用目的以外の使用は固く禁じるよう指導しております。個人情報の収集に際してはＰＴＡ活動に関する使用を明記の上で収集されている状況ではございますが、照会１・３における加入実態の状況を鑑みると適法性に疑われる部分もあり、更なる是正指導が必要であると認識いたしました。
+適正な運用を行うとともに外部に情報が洩れる、無断転用される事案が起きることの無いよう指導を徹底してまいります。
+
+●教育委員会には是正指導を行う責任があると考えます。
+
+●教育委員会として適正な措置が行われるよう指導を行うとともに、早急な対策について検討を行います。また、改善に非協力的な反応を示された場合においては即座に学校による施設提供や会費徴収への協力を停止することを求めてまいります。
+
+【ＰＴＡ組織の変革】
+本村においては現在、小学校と中学校を統合し義務教育学校の設立を目指しております。
+設立に関する議題の中にＰＴＡの組織改革もあることから、今回ご意見いただいた内容を特に注意し、適正な団体として組織していただくことを指導するとともに、学校も個人情報の取り扱いの徹底を始め自分たち教職員もＰＴＡ活動への協力に慣例だけで進めていくことの無いよう、関係法令を遵守しつつ皆さんが意思を持って加入し活動するＰＴＡとなるよう努めてまいります。
+
+以上を東白川村教育委員会としての回答とさせていただきます。
+
+‡東白川村教育委員会教育課‡‡‡‡‡‡‡‡‡‡‡‡‡‡
+[職名・個人名省略]
+‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡</pre></details></div></details><details class="municipality-accordion" id="muni-43"><summary><span class="muni-summary-name">愛知県</span><span class="muni-summary-meta">A, B / 全文 2件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>入会意思確認</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>会計・監査</span><span>教委指導・是正</span><span class="flag">回答日未確認</span><span class="flag">添付資料確認推奨</span></div><details class="response-accordion" id="record-31-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>入会意思確認</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>会計・監査</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><pre class="response-body">【回答】PTA入会に関する法的見解・照会６項目
+
+標記の件につきまして、以下のとおり回答いたします。
+
+1.　ＰＴＡの入会契約の成立要件に関する法的見解について
+ＰＴＡは任意団体ですので、会員となる場合には本人の明確な意思表示が必要だと考えます。
+県教育委員会としましては、県の小中学校ＰＴＡ連絡協議会、県公立高等学校ＰＴＡ連合会を通
+じて、各ＰＴＡには本人の意思表示がないまま会員となることがないよう入会の方法については
+特に留意するよう伝えております。
+
+2.　学校によるＰＴＡ会費の徴収行為が無権代理に該当するかについて
+ＰＴＡの徴収金については、校長がＰＴＡ会長から書面により会計事務の委任を受けたものに
+限るよう伝えております。
+
+3.　入会申込書による保護者および教職員の明確な意思確認の必要性について
+ＰＴＡは任意団体ですので、会員となる場合には本人の明確な意思表示が必要だと考えます。
+県教育委員会としましては、県の小中学校ＰＴＡ連絡協議会、県公立高等学校ＰＴＡ連合会を通
+じて、各ＰＴＡには本人の意思表示がないまま会員となることがないよう入会の方法については
+特に留意するよう伝えております。
+
+4.　個人情報保護法に基づく児童名簿・連絡個票の利用目的逸脱について
+本人の同意のないまま個人情報を利用することは問題であると考えます。
+県教育委員会としましては、個人情報の取り扱いについては個人情報保護法に抵触することなく
+適切に運用がなされるよう学校に伝えてまいります。
+
+5.　ＰＴＡの運用に関する教育委員会の是正指導責任について
+ＰＴＡの違法または不適切な運用が学校教育の一環と認定されないよう学校に
+指導・助言を行ってまいります。
+
+6.　任意加入・法令遵守が確保されるまでの暫定的措置に関する方針について
+県教育委員会として現時点では暫定的措置を講じる予定はありませんが、
+ＰＴＡの違法または不適切な運用がなされないよう、県の小中学校ＰＴＡ連絡協議会、
+県公立高等学校ＰＴＡ連合会を通じて、各ＰＴＡに助言を行ってまいります。</pre></details><details class="response-accordion" id="record-8-B"><summary><span class="response-title">B:追加7-8 / 追加質問7-8</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>教職員関与・服務</span><span>会計・監査</span><span>教委指導・是正</span><span class="flag">回答日未確認</span><span class="flag">添付資料確認推奨</span></div><pre class="response-body">【回答】_【追加照会】PTA入会に関する法的見解についての追加質問のお願いについて
+
+■ 回答様式（このまま引用・記入・返信可）
+
+【自治体名／教育委員会名】：愛知県教育委員会
+【ご担当部署／ご担当者名】：[省略]
+（質問７）該当する選択肢に✔
+
+（質問８）根拠等の記載
+・根拠の区分（法令／条例／規則／通知／通達／内規／答申／監査結果 等）：通知
+・名称：私費会計の会計処理基準
+・条項・該当箇所：
+第３　会計の種類等
+１　会計の種類は、次の範囲内とする。
+（２）団体徴収金（ただし、校長が当該団体の長から書面により会計事務の委任を受けたものに限る。）
+ア　ＰＴＡ会計
+・発出・決定日／所管　平成２年３月19日　／　総務課
+・備考（運用実態、判断基準、留意事項、関連文書の有無 等）：
+ＰＴＡの会計については、校長が当該ＰＴＡ会長から会計委任を受け、学校において本来業務として
+会計事務を行っている。学校が事務処理を行うに当たっては、県教育委員会が定めた、私費会計の会計
+処理基準により適切に行うこととしている。県教育委員会としては、会計委任を受けた学校が、私費会計
+の会計基準に則って適切に処理されているか確認するための指導を定期的に行っている。
+
+・参照URLまたは添付有無：なし</pre></details></div></details><details class="municipality-accordion" id="muni-44"><summary><span class="muni-summary-name">愛知県愛西市</span><span class="muni-summary-meta">B, C / 全文 2件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>入会意思確認</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>教委指導・是正</span></div><details class="response-accordion" id="record-9-B"><summary><span class="response-title">B:追加7-8 / 追加質問7-8</span><span class="response-date">2025-10-16</span></summary><div class="record-tags"></div><pre class="response-body">【回答】_【追加照会】PTA入会に関する法的見解についての追加質問について
+
+このたびはお問い合わせ（ご意見）をいただき、誠にありがとうございました。
+令和７年１０月１６日にお問い合わせ（ご意見）をいただいた件につきまして、次の通り回答いたします。
+
+【質問７：学校とＰＴＡの独立性に関する教育委員会の整理・運用状況】
+４．特に決めていない
+【質問８：上記が「１．関与が全くない」以外の場合の根拠】
+特になし
+
+※質問１～６に関しては以前回答済
+
+今後とも市政にご理解ご協力のほどよろしくお願いいたします。</pre></details><details class="response-accordion" id="record-11-C"><summary><span class="response-title">C:要望書 / 要望書4項目</span><span class="response-date">2026-01-08</span></summary><div class="record-tags"><span>入会意思確認</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>教委指導・是正</span></div><pre class="response-body">【回答】：【要望書】公立学校におけるPTA運営の適正化について
+
+このたびはお問い合わせをいただき、誠にありがとうございました。
+令和８年１月８日にお問い合わせをいただいた件につきまして、次の通り回答いたします。
+
+１．学校においてPTA入会が任意であることが明確に説明され、保護者の意思確認が適切な形で行われるよう、必要な指導または通知を行うこと。
+【回答】有：入学説明会においてPTAより説明をし、入会には同意書を提出いただいております。
+２．学校によるPTA会費の徴収・集金への関与について、その可否および取扱いを整理し、学校現場において誤解が生じないように運用の明確化を図ること。
+【回答】有：学校とPTAの間で業務委任契約を結び学校はPTA会費の徴収を行っています。
+３．学校が保有する児童・保護者に関する個人情報の取扱いについて、PTAとの関係も含めて整理し、適正な管理が確保されるよう周知すること。
+【回答】有：「個人情報保護規程」の策定を行い、PTA会員へ周知をしています。
+４.教職員のPTA活動への関与について、職務との区別が明確になるよう整理を行い、学校現場に過度な負担や誤解が生じないよう配慮すること。
+【回答】有：学校とPTAの間で業務委任契約を結び業務を行っています。
+
+今後とも市政にご理解ご協力のほどよろしくお願いいたします。</pre></details></div></details><details class="municipality-accordion" id="muni-45"><summary><span class="muni-summary-name">愛知県犬山市</span><span class="muni-summary-meta">A, B / 全文 2件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>入会意思確認</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>教委指導・是正</span><span class="flag">回答日未確認</span><span class="flag">本文短文・原資料確認</span></div><details class="response-accordion" id="record-32-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>入会意思確認</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><pre class="response-body">【愛知県犬山市　回答】 【照会】PTA入会手続き等の法的見解について照会事項６点
+
+1.  PTAの入会契約の成立要件に関する法的見解について
+PTA組織は任意団体であり、保護者の明示的な申し込みによる意思表示確認とPTAの承諾により入会契約が成立すると考えます。犬山市内の学校において明文化が進んでいない学校もあるため、指導していきます。
+
+2.　学校によるPTA会費の徴収行為が無権代理に該当するかについて
+該当すると考えます。学校がPTAとの間でPTA会費の徴収業務に関する準委任契約を結び、正式な代理権をもってPTAを運営すべきと考え、今後も各PTA団体で是正するよう指導していきます。
+
+3.　入会申込書による保護者および教職員の明確な意思確認の必要性について
+PTAが任意加入団体であるため、契約の成立には個別の申込書や同意書による明示的な加入の意思確認が必要だと考えます。しかし、市内の学校では申込書や同意書を集めていない状況であるため、市教育委員会として是正の必要性を各団体に伝え指導していきます。
+
+4.　 個人情報保護法に基づく児童名簿・連絡個票の利用目的逸脱について
+名簿作成や個人情報の取得については使用目的を明示し、その使用目的以外には個人の許可無くその情報を利用できないことを指導しております。そのため、学校で使用している名簿等の無断転用がないよう、個人情報を適正に管理して扱うことの指導を徹底していきます。
+
+5.　 PTAの運用に関する教育委員会の是正指導責任について
+会費徴収や施設使用について不適切な運用がないよう地方教育行政法第１０条に基づき、市教育委員会が是正指導を行う責任があると考えております。
+
+6.　任意加入・法令遵守が確保されるまでの暫定的措置に関する方針について
+法令違反の状態であると懸念されるうちは、教育委員会として是正がされるまでの間、学校による施設提供や会費徴収への協力をやめる措置を講じる場合もあることを伝え、法的に正しいPTA活動へ是正するよう指導して参ります。</pre></details><details class="response-accordion" id="record-10-B"><summary><span class="response-title">B:追加7-8 / 追加質問7-8</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span class="flag">回答日未確認</span><span class="flag">本文短文・原資料確認</span></div><pre class="response-body">■ 回答様式（このまま引用・記入・返信可）
+
+【自治体名／教育委員会名】：愛知県犬山市／犬山市教育委員会
+【ご担当部署／ご担当者名】：[省略]
+
+（質問７）該当する選択肢に?</pre></details></div></details><details class="municipality-accordion" id="muni-46"><summary><span class="muni-summary-name">愛知県豊橋市</span><span class="muni-summary-meta">A / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>入会意思確認</span><span>PTA任意団体</span><span>個人情報・名簿</span><span class="flag">回答日未確認</span></div><details class="response-accordion" id="record-33-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>入会意思確認</span><span>PTA任意団体</span><span>個人情報・名簿</span><span class="flag">回答日未確認</span></div><pre class="response-body">PTA入会に関する法的見解・照会６項目への回答について（豊橋市）
+
+愛知県豊橋市教育委員会です。
+
+お問い合わせをいただいておりました見出しの件につきまして、回答させていただきます。
+
+【照会】PTA 入会手続き等の法的見解についての照会事項６項目の
+教育委員会としての回答（愛知県豊橋市）
+
+①回答
+PTA は任意団体であり、加入にあたっては、関係者一人ひとりの意思が尊重されるべきと 認識しています。このことから、加入に際しては、入会意思の確認は必要であると考えます。
+
+②回答
+学校が正式な代理権を持たずにＰＴＡの業務を代行することは適切ではなく、業務委任契 約を結ぶ必要があると考えます。
+
+③回答
+PTA は任意団体であり、加入にあたっては、関係者一人ひとりの意思が尊重されるべきと 認識しています。このことから、加入に際しては、入会意思の確認は必要であると考えます。
+
+④回答
+保護者本人の同意なく PTA に個人情報の提供等をすることは適切ではないと考えます。今 後におきましても、個人情報が適正に管理されるよう対応してまいります。
+
+⑤回答
+PTA の違法または不適切な運用が学校教育の一環と認定されないよう、引き続き、対応し てまいります。
+
+⑥回答
+豊橋市立小中学校と各単位 PTA の間で、毎年、年度初めに「業務委任契約書」を作成し、 業務委任契約を結んでいるものと認識しています。また、保護者の意思確認についても、適 切に行われていくよう、あわせて体制づくりが進められていると認識しており、現時点にお いて措置を講ずる予定はありません。</pre></details></div></details><details class="municipality-accordion" id="muni-59"><summary><span class="muni-summary-name">粟島浦村</span><span class="muni-summary-meta">A / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>タグなし</span><span class="flag">回答日未確認</span></div><details class="response-accordion" id="record-43-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span class="flag">回答日未確認</span></div><pre class="response-body">回答_ 【ご回答のお願い（再送／一斉送信）】PTA入会に関する法的見解・照会６項目
+
+過日ご質問があった事案について次のとおり回答いたします。
+
+照会事項１、２、４、６については、法的（司法）判断を有する立場ではないため回答を差し控えさせていただきます。
+照会事項３については、他市町村ＰＴＡの事案（状況）について把握していないため、回答を差し控えさせていただきます。
+照会事項５については、可能性に対しての見解は回答できないものと考えます。
+
+以上です。</pre></details></div></details><details class="municipality-accordion" id="muni-61"><summary><span class="muni-summary-name">茅野市</span><span class="muni-summary-meta">A / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><details class="response-accordion" id="record-44-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><pre class="response-body">PTA入会手続き等の法的見解について照会事項６点について（回答）
+
+１ PTA の入会契約の成立要件に関する法的見解について
+保護者の明示的な申込み意思表示と PTA の承諾がないまま、学校側が児童の入学 をもって一律に「会員」とみなす運用が多くの学校で行われています。このような「みなし 入会」方式について、民法第 522 条および消費者契約法に照らし、契約が成立している と判断される法的根拠があるか、教育委員会としての見解をお示しください。
+【回答】
+PTA は任意加入の団体であり、入会においては、学校児童の保護者の自由意思に 基づくものと思います。そのため、「みなし入会」は、民法 522 条における保護者の入会 の意思がない場合は、成立しないと想定されます。
+２ 学校による PTA 会費の徴収行為が無権代理に該当するかについて 学校が PTA との間で PTA 会費の徴収業務に関する準委任契約を結ばずに、慣例 的に児童名簿等を用いて会費を代行徴収しているケースがあります。学校が正式な代理 権を持たずに PTA の業務を代行している場合、民法第 113 条に基づく無権代理に該 当すると考えられますが、教育委員会はこの点をどのように評価していますか。 【回答】
+学校と PTA の両者で、明確な委任関係がないとするならば、学校が PTA 会費を徴収 する事は、無権代理に該当すると想定されます。そのような場合は、是正する必要がある と考えます。
+３ 入会申込書による保護者および教職員の明確な意思確認の必要性について PTA が任意加入団体である以上、契約の成立には個別の申込書や同意書による明 示的な加入意思の確認が必要と考えられます。現在多くの学校で申込書を徴収していな い状況について、教育委員会として是正の必要性を認識されていますか。 【回答】
+PTA が任意加入団体であることを踏まえ、申込書を徴収する必要性に関しても、教育 的観点から是正が求められる状態と捉えております。
+４ 個人情報保護法に基づく児童名簿·連絡個票の利用目的逸脱について PTA が入会申込書を取得しておらず、申し込んだ保護者·教職員が誰であるかを特 定・管理していない状態で、学校が児童名簿や連絡個票を用いて PTA 会費の做収等を 行っている実態が、多くの学校で確認されています。これらの名簿情報は、本来、入学手 続きや教育活動のために学校が収集したものであり、保護者の同意なく PTA という外部 団体の金銭徴収業務に転用することは、個人情報保譏法第 69 条(利用目的の制限)に
+違反するおそれがあります。加えて、PTA 自身が会員の氏名を把握していない状態で、 学校が本人同意なしに代理徴収的な行為をしていることは、情報主体(保譏者)の権利を 大きく侵害する状況であると考えます。貴教育委員会として、このような運用の違法性ま たは法令抵触の可能性に対する認識、および是正の必要性や今後の対応方針につい て、どのようにお考えでしょうか。明確なご所見をお示しください。
+【回答】
+法令に基づく場合を除き、学校が保有・取得している個人情報を、利用目的の範囲外 のことに利用する場合、また、個人情報を本人以外の第三者に提供する場合、あらかじ め本人(保護者)の同意が必要であり、学校においては、個人情報の取扱いについて、十 分に配慮したうえで対応しなければいけないと考えます。
+また、PTA への入会の意思確認は、各 PTA の実態に合わせ、各 PTA において方法 を検討されるものと考えます。
+５ PTA の運用に関する教育委貝会の是正指導責任について
+学校が PTA と一体的に関与し、会費徴収や施設使用を支援している実態を踏まえれ ば、PTA の違法または不適切な運用が学校教育の一環と認定される可能性があります。 地方教育行政法第 23 条に基づき、教育委員会が是正指導を行う責任があるとお考えで しょうか。
+【回答】
+PTA は、本来、保護者と教職員が一体となって、協力し合い、教育を支える自発的な 組織であります。
+PTA 自体は任意団体であり、地域などの自発的な組織と考えられるため、一般的に教 育委員会の所管対象外と思われますが、その信頼性と法的安定性を保つためには、教 育委員会による法令遵守の観点からの是正指導も大切だと考えます。教育委員会は、 PTA の自律的な活動を尊重しつつも、必要に応じて運用の適正化に向けた指導を行っ てまいりたいと考えております。
+６ 任意加入・法令遵守が確保されるまでの暫定的措置に関する方針について PTA が保護者の意思確認を適切に行わず、会員名簿すら把握しないまま会費徴収や 施設利用を継続している状態は、法令違反の懸念が濃厚です。教育委員会として、是正 がなされるまでの間、学校による施設提供や会費徴収への協力を停止する措置を講じる 予定はありますか。
+【回答】
+PTA 活動が適正に行われることは学校運営上重要であると認識しています。PTA が 保護者の意思確認を行わないことや会員名簿の管理も不十分なまま会費徴収や施設利 用を継続している状況が確認された場合には、個別の状況を確認の上、必要に応じて適 切な対応を検討していきます。</pre></details></div></details><details class="municipality-accordion" id="muni-63"><summary><span class="muni-summary-name">蒲郡市</span><span class="muni-summary-meta">A / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span></div><details class="response-accordion" id="record-46-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">2025-09-21</span></summary><div class="record-tags"><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span></div><pre class="response-body">1 PTAは任意団体であり、その入退会は会負の意志で決められるべきものと考えます。
+従って、児童·生徒の入学と同時にPTA~の自動的加入、全旨加入を前提とした「みな
+し入会」は適切ではないと認識しています。PTA団体には、任意加入の説明と加入意思
+の確認が必要であると考えます。
+
+2 PTA会費徴収や預貯金通帳の保皆など、PTAに関する業務の一部を学校に委任し
+ている場合には、業務委託契約(準委任契約)を作成するなど、PTAから学校へ委任内
+容を明確にしておく事が必要であると考え史す。
+あらかじめ「PTA会費の引き落としを学校に委託するごとに同意する」ごとにっいて、
+入会時など保護者の蕴認を取る心要があると考えます。
+
+3 1の後段での回答のとおり、PTA団体には、任意加入の説明と加入意思の蕴認が必要
+であると考えます。
+
+4 学校の保有する個人情報をPTAに提供する場合には、事前に保護者の同意を得た上
+で個人情報を提供するごとが原則であると認識しております。
+
+5 PTAは、保護者と教職負がともに協力して、子どもたらのために学校全体の教育活動
+を豊かにするごとを目的として活動する団体であると考えております。その活動の意義を
+ご埋解いただいたうえで参加いただきたいと考えており、その運用に関しては適切な運用
+がされるべきものと認識しています。PTAは、公の支配に属とない団体で自立した運営が
+求められているため、教育委員会といたしましては、団体育成の観点でPTA活動を支援し
+ているとごろです。必要に応じて適切な運用がなされるよう注意を促してまいります。
+
+6 PTAの活動は、学校や地域において全児·全生徒の健キかな成長のために必要な教
+育行政~の協力活動を行うごとであり、社会教育行政~の協力活動を行っているものと考
+えます。また、PTAは、学校と京庭、地域社会をっなぐ中核的な役割を担っている面もあ
+り、直ちに協力停止措置を講じるという考えはありません。改善すべき点があれば必要な改
+善を求めたうえで状況に応じて判断してまいります。</pre></details></div></details><details class="municipality-accordion" id="muni-65"><summary><span class="muni-summary-name">豊田市</span><span class="muni-summary-meta">A / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>会計・監査</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><details class="response-accordion" id="record-48-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>会計・監査</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><pre class="response-body">※個人情報保護のため、宛先を非表示（ＢＣＣ）にて送信しています。
+
+１ PTAの入会契約の成立要件に関する法的見解について
+（照会事項）保護者の明示的な申込み意思表示とPTAの承諾がないまま、学校側が児童の入学 をもって一律に「会員」とみなす運用が多くの学校で行われています。このような「みなし 入会」方式について、民法第５２２条および消費者契約法に照らし、契約が成立していると 判断される法的根拠があるか、教育委員会としての見解をお示しください。
+（回答）PTAは、任意加入の団体であるため、入会については各保護者の意思で決められるも のです。したがって、各保護者の入会の意思を確認することが必要と考えます。
+２ 学校によるPTA会費の徴収行為が無権代理に該当するかについて
+（照会事項）学校がPTAとの間でPTA会費の徴収業務に関する準委任契約を結ばずに、慣例的 に児童名簿等を用いて会費を代行徴収しているケースがあります。学校が正式な代理権を持 たずにPTAの業務を代行している場合、民法第１１３条に基づく無権代理に該当すると考え られますが、教育委員会はこの点をどのように評価していますか。
+（回答）学校に委任する事務の範囲及び権限を明らかにし、学校とPTAの間で委任契約を締結 することが必要と考えます。
+３ 入会申込書による保護者および教職員の明確な意思確認の必要性について （照会事項）PTAが任意加入団体である以上、契約の成立には個別の申込書や同意書による明 示的な加入意思の確認が必要と考えられます。現在多くの学校で申込書を徴収していない状 況について、教育委員会として是正の必要性を認識されていますか。
+（回答）個別の意思確認が必要であるため、適正な入会手続を行うよう改善要請をしていま す。
+４ 個人情報保護法に基づく児童名簿・連絡個票の利用目的逸脱について （照会事項）PTAが入会申込書を取得しておらず、申し込んだ保護者・教職員が誰であるかを 特定・管理していない状態で、学校が児童名簿や連絡個票を用いてPTA会費の徴収等を行っ ている実態が、多くの学校で確認されています。これらの名簿情報は、本来、入学手続きや 教育活動のために学校が収集したものであり、保護者の同意なくPTAという外部団体の金銭 徴収業務に転用することは、個人情報保護法第６９条（利用目的の制限）に違反するおそれ があります。加えて、PTA自身が会員の氏名を把握していない状態で、学校が本人同意なし に代理徴収的な行為をしていることは、情報主体（保護者）の権利を大きく侵害する状況で あると考えます。貴教育委員会として、このような運用の違法性または法令抵触の可能性に 対する認識、および是正の必要性や今後の対応方針について、どのようにお考えでしょう か。明確なご所見をお示しください。
+（回答）学校からPTAへの個人情報の提供は、個人情報の保護に関する法律の上では、目的外 提供に当たるため、あらかじめ本人の同意を得るよう改善要請をしています。
+５ PTAの運用に関する教育委員会の是正指導責任について
+（照会事項）学校がPTAと一体的に関与し、会費徴収や施設使用を支援している実態を踏まえ れば、PTAの違法または不適切な運用が学校教育の一環と認定される可能性があります。地 方教育行政法に基づき、教育委員会が是正指導を行う責任があるとお考えでしょうか。
+（回答）違法又は不適切な運用がなされないよう、必要な情報提供又は助言を行う必要がある と考えます。
+６ 任意加入・法令遵守が確保されるまでの暫定的措置に関する方針について （照会事項）PTAが保護者の意思確認を適切に行わず、会員名簿すら把握しないまま会費徴収 や施設利用を継続している状態は、法令違反の懸念が濃厚です。教育委員会として、是正が なされるまでの間、学校による施設提供や会費徴収への協力を停止する措置を講じる予定は ありますか。
+（回答）法令違反に該当する事実があれば、適切に対応して参ります。
+７ 学校と PTA の独立性に関する貴委員会の整理・運用状況
+（照会事項）PTA は社会教育関係団体であり、学校とは別団体であると認識しております。一 方で現場では、学校が PTA 入会勧誘の支援、会費徴収の代行、会計管理等に関与している事 例も見受けられます。これらが業務時間内に行われる場合、公務か、または職務専念義務の 免除（職専免）かが問題となり得ます。つきましては、貴委員会管轄内での取扱いについて該 当するものに✔をお願いいたします。
+（回答）特に定めていません（４）。
+８ 上記が「1. 関与が全くない」以外の場合の根拠
+（照会事項）上記２〜５に該当する場合、市民の税金または教職員の公的時間を用いて第三者 団体である PTA に関与することになります。その適法性および運用根拠（例︓法令・条例・ 規則・通知・通達・内規・答申・監査結果等）がございましたら、以下の形式でご教示くださ い。
+（回答）法令等は特にありません。</pre></details></div></details><details class="municipality-accordion" id="muni-67"><summary><span class="muni-summary-name">長野県</span><span class="muni-summary-meta">A, B / 全文 2件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>タグなし</span><span class="flag">回答日未確認</span><span class="flag">本文短文・原資料確認</span><span class="flag">添付資料確認推奨</span></div><details class="response-accordion" id="record-49-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span class="flag">回答日未確認</span><span class="flag">本文短文・原資料確認</span></div><pre class="response-body">PTA入会に関する法的見解・照会６項目に対する回答
+
+ご査収のほどお願い申し上げます。</pre></details><details class="response-accordion" id="record-16-B"><summary><span class="response-title">B:追加7-8 / 追加質問7-8</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span class="flag">回答日未確認</span><span class="flag">添付資料確認推奨</span></div><pre class="response-body">PTA入会に関する法的見解についての追加質問に対する回答
+
+標記の件につきまして、回答いたします。
+ご査収のほどお願い申し上げます。
+
+ご照会いただいた事項につきましては、以下の通り、回答いたします。 ⑦ 3. 「職専免」として扱う
+⑧ 別添１ 職務に専念する義務の特例に関する条例（長野県） 昭和 26 年３月 30 日条例第 3 号</pre></details></div></details><details class="municipality-accordion" id="muni-70"><summary><span class="muni-summary-name">静岡市</span><span class="muni-summary-meta">D / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>会費徴収・委任契約</span><span>教職員関与・服務</span><span class="flag">回答日未確認</span></div><details class="response-accordion" id="record-7-D"><summary><span class="response-title">D:実態調査 / 実態調査7項目</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>会費徴収・委任契約</span><span>教職員関与・服務</span><span class="flag">回答日未確認</span></div><pre class="response-body">【回答】公立学校におけるPTA会費等徴収事務の適正化に関する実態調査のお願い(再)
+
+「公立学校におけるPTA会費等徴収事務の適正化に関する実態調査」について、
+次のとおり回答いたします。
+
+*【照会事項】*
+*問1:PTA会費徴収事務への教職員の関与について*
+（回答）
+PTA会費は学校徴収金から除外しており、勤務時間中における教職員の関与は
+ありません。
+
+*問2:事務の性質について*
+（回答）
+教育委員会として携わっておらず、公務として取り扱っておりません。
+
+*問3:公的資源の利用根拠について*
+（回答）
+なし（公的資源は利用していません）
+
+*問4:事故発生時の責任主体について*
+（回答）
+PTA
+
+*問5:責任分担を明記した文書について*
+（回答）
+公務として扱っていないため、ありません。
+
+*問6:学校とPTAの関係性の位置付けについて*
+（回答）
+制度上の規定はありません。
+
+*問7:今後の行政運用について*
+（回答）
+公務外であるため関与していません。</pre></details></div></details><details class="municipality-accordion" id="muni-71"><summary><span class="muni-summary-name">静岡県磐田市</span><span class="muni-summary-meta">D / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>会費徴収・委任契約</span><span>教職員関与・服務</span><span class="flag">回答日未確認</span></div><details class="response-accordion" id="record-8-D"><summary><span class="response-title">D:実態調査 / 実態調査7項目</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>会費徴収・委任契約</span><span>教職員関与・服務</span><span class="flag">回答日未確認</span></div><pre class="response-body">＠教育総務課
+
+問１　PTA会費徴収事務への教職員の関与について
+回答　未整理
+問２　事務の性質について
+回答　PTAの事務を補助する協力行為
+問３　公的資源の利用根拠について
+回答　​​​​なし（慣例による運用）
+問４　事故発生時の責任主体について
+回答　PTA会長
+問５　責任分担を明記した文書について
+回答　なし
+問６　学校とPTAの関係性の位置づけについて
+回答　教育活動協力団体
+問７　今後の行政運用について</pre></details></div></details><details class="municipality-accordion" id="muni-75"><summary><span class="muni-summary-name">魚沼市</span><span class="muni-summary-meta">A / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>入会意思確認</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><details class="response-accordion" id="record-53-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>入会意思確認</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><pre class="response-body">【回答・新潟県魚沼市】PTA入会に関する法的見解・照会６項目
+
+1.PTAの入会契約の成立要件に関する法的見解について
+→ PTAの入会には、保護者の申込みとPTAの承諾が望ましいと考えます。
+
+2.学校によるPTA会費の徴収行為が無権代理に該当するかについて
+→ 無権代理に該当すると考えます。
+
+3.入会申込書による保護者および教職員の明確な意思確認の必要性について
+→ 入会申込書の提出が望ましいと考えます。
+
+4.個人情報保護法に基づく児童名簿・連絡個票の利用目的逸脱について
+→ 個人情報を収集する際は、利用目的を明示し、目的外での使用とならないよう指導していきたいと思います。
+→ PTA会費の徴収等に利用する場合は、同意書を提出してもらうよう指導していきたいと思います。
+
+5.PTAの運用に関する教育委員会の是正指導責任について
+→ PTAが適切に運営されるよう指導していきたいと思います。
+
+6.任意加入・法令遵守が確保されるまでの暫定的措置に関する方針について
+→ PTAが学校施設を利用するためにも、PTAの適切な運用について指導していきたいと思います。
+
+以上、御確認ください。</pre></details></div></details><h3 class="response-region-heading">近畿</h3><details class="municipality-accordion" id="muni-4"><summary><span class="muni-summary-name">三重県</span><span class="muni-summary-meta">A, B / 全文 2件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>入会意思確認</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>教職員関与・服務</span><span>会計・監査</span><span>教委指導・是正</span><span>判断留保・仮定回答不可</span><span class="flag">回答日未確認</span></div><details class="response-accordion" id="record-4-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>入会意思確認</span><span>会費徴収・委任契約</span><span>教委指導・是正</span><span>判断留保・仮定回答不可</span><span class="flag">回答日未確認</span></div><pre class="response-body">【三重県】（回答）「PTA入会に関する法的見解・照会６項目」について
+
+A1
+：本県の県立学校においては、入学に際し、保護者に対して入会案内及び入会書を配付して、入会書を提出していただいた方々をPTA会員としていると認識しているため、ご質問のような事態は想定していません。
+
+A2:
+本県の県立学校においては、PTAの経費に係る収納（収納依頼を含む）に関する事務を、PTAから委任されています。そのため、ご質問のような事態は想定していません。
+
+A3: A1のとおりです。
+
+A4: A1のとおり、本県の県立学校においては、入会書を取得しています。したがって、入会書を取得していない事例の違法性について、回答する立場にありませんので、回答は控えさせていただきます。
+
+A5: A1からA4
+までのとおり、本県の県立学校においては、ご質問者が懸念されているような事態は存在しません。したがって、仮定を前提としたご質問には回答できませんが、いずれにせよ違法な事態が存在する場合には、法令にのっとった適法な活動に是正される必要があると考えます。
+
+A6: A5のとおりです。
+
+以上です。</pre></details><details class="response-accordion" id="record-1-B"><summary><span class="response-title">B:追加7-8 / 追加質問7-8</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>教職員関与・服務</span><span>会計・監査</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><pre class="response-body">【三重県】PTA入会に関する法的見解についての追加質問の回答について
+
+Q7．学校と PTA の独立性に関する貴委員会の整理・運用状況
+
+PTA は社会教育関係団体であり、学校とは別団体であると認識しております。一 方で現場では、学校が PTA 入会勧誘の支援、会費徴収の代行、会計管理等に関与し ている事例も見受けられます。
+これらが業務時間内に行われる場合、公務か、または職務専念義務の免除（職専 免）かが問題となり得ます。
+つきましては、貴委員会管轄内での取扱いについて該当するものに✔をお願いい たします。
+A7. 2. 線引きを明確化し、限定的な範囲で「公務として」扱う
+Q8．上記が「1. 関与が全くない」以外の場合の根拠
+
+上記２〜５に該当する場合、市民の税金または教職員の公的時間を用いて第三者 団体である PTA に関与することになります。
+その適法性および運用根拠（例：法令・条例・規則・通知・通達・内規・答申・ 監査結果等）がございましたら、以下の形式でご教示ください。
+A8. 根拠は次のとおり
+・平成 24 年 3 月 27 日付け 三重県教育委員会教育長通知 「学校諸費等に関する取 扱い要領の制定等について（教委第 20－402 号）」
+・学校諸費等に関する取扱い要領（平成 24 年 4 月 1 日施行）</pre></details></div></details><details class="municipality-accordion" id="muni-8"><summary><span class="muni-summary-name">亀岡市</span><span class="muni-summary-meta">A / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>入会意思確認</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><details class="response-accordion" id="record-7-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>入会意思確認</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><pre class="response-body">【亀岡市回答】PTA入会手続き等の法的見解について照会事項６点
+
+1.  PTAの入会契約の成立要件に関する法的見解について
+PTAは社会教育法に規定される社会教育関係団体の一つであり、任意団体であると定義されます。児童生徒の入学をもって自動的にPTAに入会したとみなす運用は、保護者の明確な申し込みとそれに対するPTAの承認が得られているとはいえず、従って民法第522条及び消費者契約法に基づいた契約関係が成立しているとはいえないと考えます。
+
+2.  学校によるPTA会費の徴収行為が無権代理に該当するかについて
+PTA会費の徴収を学校が業務の範囲の中で代理する場合、任意団体であるPTAの会員会費を学校が徴収することに関して会員の同意と、PTAと学校の間で徴収事務に関する委託契約が締結されていることが必要と考えています。
+
+3.  入会申込書による保護者および教職員の明確な意思確認の必要性について
+PTAへの入退会及び、一連の事務手続きに関する個人情報の取り扱い、会費の代理徴収等への同意については、明示的な意思表示ができる体制が整備されていることが必要と考えます。意思確認が行われていなかったり、十分でない場合は、教育委員会としてはこれを是正する必要性を認識しており、現在、各校PTAにおいて改善の取り組みを進めています。
+
+4.  個人情報保護法に基づく児童名簿・連絡個票の利用目的逸脱について
+取得した個人情報は、個人情報保護法第69条によって利用目的が制限されており、明確なPTA加入意思に基づいた個人の同意を得ることなく他の目的に用いることは適正な運用とはいえないと考えています。従って、本来、学校が教育活動のために取得した個人情報をPTA会費徴収等に目的転用する場合、同意を得ることが前提となり、十分に行われていない場合、教育委員会としてはこれを是正する必要性を認識しており、現在、各校及び各校PTAにおいて改善の取り組みを進めています。
+
+5.  PTAの運用に関する教育委員会の是正指導責任について
+PTAの活動は学校と密接に連携し、学校教育において大きな役割を果たすものであり、適正な運用が行われていることが不可欠です。教育委員会としては、PTA活動の妥当性、法令順守が図られるために助言や行政的指導を行うことが必要と考えています。
+
+6.  任意加入・法令遵守が確保されるまでの暫定的措置に関する方針について
+現在、教育委員会としては、適正な運用が行われている状態の実現に向けて、法令を遵守することを前提とした事務改善が進められていくことが第一として捉えております。学校施設利用の許可は、施設管理責任者である学校長の裁量によるものですが、PTAの活動が適正に行われていることを前提として、施設利用等のあり方について検討していくことは必要と考えています。</pre></details></div></details><details class="municipality-accordion" id="muni-9"><summary><span class="muni-summary-name">京都市</span><span class="muni-summary-meta">A / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><details class="response-accordion" id="record-8-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><pre class="response-body">【回答】PTA入会手続き等の法的見解について
+
+１．PTAの入会契約の成立要件に関する法的見解について
+本市では、ＰＴＡの自動加入や強制加入とならないよう、教育委員会から学校園に対して、
+ＰＴＡ入会は任意であることを保護者に説明のうえ、本人から書面で入会届を提出いただく
+ことにより加入の意思確認を行うよう学校に依頼しています。
+
+２．学校によるPTA会費の徴収行為が無権代理に該当するかについて
+本市でのＰＴＡ会費の徴収につきましては、保護者への説明と保護者による手続き（同意）
+に基づき、学用品費など他の学校預り金と同様の取扱いとしており、慣例的に児童名簿等を
+用いて会費を代行徴収しているケースはございません。本市に生じていない状況に関して見解
+を述べることは控えさせていただきます。
+
+３．入会申込書による保護者および教職員の明確な意思確認の必要性について
+保護者の明示的な加入意思の確認は必要と考えており、上記回答１の内容のとおり、保護者
+に対してＰＴＡ入会の意思確認を行うよう学校に依頼しています。
+
+４．個人情報保護法に基づく児童名簿・連絡個票の利用目的逸脱について
+１の回答のとおり、本市では、ＰＴＡへの入会に当たっては、入会の意思を示していただく
+ようにしています。また、個人情報につきましては、本人から収集することや利用目的を明示
+することなど適切に取り扱うよう学校園に依頼しています。
+
+５．PTAの運用に関する教育委員会の是正指導責任について
+ＰＴＡの運用に関しましては、社会教育法第１１条に基づき、社会教育団体の求めに応じて
+専門的技術的指導又は助言を行うことが考えられます。また、ＰＴＡは、教職員も加入すること
+が多いことや学校と連携して活動することから、学校への指導等を通じて、ＰＴＡにも働きかけ
+を行うことはあり得るものと考えています。
+
+６．任意加入・法令遵守が確保されるまでの暫定的措置に関する方針について
+京都市ＰＴＡ連絡協議会が実施している「ＰＴＡに関する調査」によると、すべての市立学校園
+のＰＴＡで入会の意思確認が行われており、上記のとおり個人情報の収集、管理等が適正に行われるよう依頼もしているところ、各校園のＰＴＡでは適正な運営が行われていると認識しております。</pre></details></div></details><details class="municipality-accordion" id="muni-11"><summary><span class="muni-summary-name">兵庫県</span><span class="muni-summary-meta">A, B / 全文 2件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>入会意思確認</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><details class="response-accordion" id="record-10-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>入会意思確認</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><pre class="response-body">【回答】PTA入会手続き等の法的見解について照会事項６点＋追加２点について
+
+(1)PTAの入会契約の成立要件に関する法的見解について
+
+保護者の明示的な申込み意思表示とPTAの承諾がないまま、学校側が児童の入学をもって一律に「会員」とみなす運用については慣例的に行われてきましたが、PTAは任意団体であり、入退会については自由であるため、不適切であると考えます。
+
+(2)学校によるPTA会費の徴収行為が無権代理に該当するかについて
+
+学校がPTAから会費徴収等の事務処理の委任を受ける場合は、書面による委任状を徴取することが必要であると考えます。
+
+(3)入会申込書による保護者および教職員の明確な意思確認の必要性について
+
+書面等による入会届を整備し、入会の意思確認が必要であると考えます。
+
+(4)個人情報保護法に基づく児童名簿・連絡個票の利用目的逸脱について
+
+本県では、PTA等の学校関係団体に関する保護者等からの会費徴収及び個人情報等について、以下のとおり適切に取り扱うよう県立学校に求めています。
+
+①学校関係団体から会費徴収等の事務処理の委任を受ける場合は、必ず書面による委任状を徴取すること
+
+②委任により会費を徴収する場合、学校関係団体において入会の意思確認が行われ、徴収方法等について保護者等の同意を得て作成された入会者一覧等を徴取し、確認を行うこと
+
+③学校が取得した個人情報を学校関係団体に提供することは個人情報保護法上の第三者提供にあたるため、本人の同意なしに学校関係団体に名簿を提供しないなど、同法の規定に基づき適正に取り扱うこと
+
+(5)PTAの運用に関する教育委員会の是正指導責任について
+
+教育委員会は、所管する学校に対して、県民の誤解を招くことがないようPTAに関する適切な対応を求める必要があると考えます。
+
+(6)任意加入・法令遵守が確保されるまでの暫定的措置に関する方針について
+
+所管する学校に対して、県民の誤解を招くことがないようPTAに関する適切な対応を引き続き求め周知徹底に努めるとともに、改善が図られない際には、今後の対応を適宜検討する必要があると考えます。
+
+(7) 学校とPTAの独立性に関する貴委員会の整理・運用状況
+
+教育委員会では、「３．「職専免」として扱う」と考えます。条件は、「学校の教員がやむを得ず代理徴収事務に従事する場合」としており、兼職従事の申請をすることとしています。
+
+(8) 上記が「1. 関与が全くない」以外の場合の根拠
+
+根拠については、以下の条例と規則を回答します。
+
+職員の職務に専念する義務の特例に関する条例 (昭和38年４月１日条例第33号)
+
+職務に専念する義務の特例に関する規則 （昭和39年７月17日人事委員会規則第11号）</pre></details><details class="response-accordion" id="record-2-B"><summary><span class="response-title">B:追加7-8 / 追加質問7-8</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>入会意思確認</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><pre class="response-body">【回答】PTA入会手続き等の法的見解について照会事項６点＋追加２点について
+
+(1)PTAの入会契約の成立要件に関する法的見解について
+
+保護者の明示的な申込み意思表示とPTAの承諾がないまま、学校側が児童の入学をもって一律に「会員」とみなす運用については慣例的に行われてきましたが、PTAは任意団体であり、入退会については自由であるため、不適切であると考えます。
+
+(2)学校によるPTA会費の徴収行為が無権代理に該当するかについて
+
+学校がPTAから会費徴収等の事務処理の委任を受ける場合は、書面による委任状を徴取することが必要であると考えます。
+
+(3)入会申込書による保護者および教職員の明確な意思確認の必要性について
+
+書面等による入会届を整備し、入会の意思確認が必要であると考えます。
+
+(4)個人情報保護法に基づく児童名簿・連絡個票の利用目的逸脱について
+
+本県では、PTA等の学校関係団体に関する保護者等からの会費徴収及び個人情報等について、以下のとおり適切に取り扱うよう県立学校に求めています。
+
+①学校関係団体から会費徴収等の事務処理の委任を受ける場合は、必ず書面による委任状を徴取すること
+
+②委任により会費を徴収する場合、学校関係団体において入会の意思確認が行われ、徴収方法等について保護者等の同意を得て作成された入会者一覧等を徴取し、確認を行うこと
+
+③学校が取得した個人情報を学校関係団体に提供することは個人情報保護法上の第三者提供にあたるため、本人の同意なしに学校関係団体に名簿を提供しないなど、同法の規定に基づき適正に取り扱うこと
+
+(5)PTAの運用に関する教育委員会の是正指導責任について
+
+教育委員会は、所管する学校に対して、県民の誤解を招くことがないようPTAに関する適切な対応を求める必要があると考えます。
+
+(6)任意加入・法令遵守が確保されるまでの暫定的措置に関する方針について
+
+所管する学校に対して、県民の誤解を招くことがないようPTAに関する適切な対応を引き続き求め周知徹底に努めるとともに、改善が図られない際には、今後の対応を適宜検討する必要があると考えます。
+
+(7) 学校とPTAの独立性に関する貴委員会の整理・運用状況
+
+教育委員会では、「３．「職専免」として扱う」と考えます。条件は、「学校の教員がやむを得ず代理徴収事務に従事する場合」としており、兼職従事の申請をすることとしています。
+
+(8) 上記が「1. 関与が全くない」以外の場合の根拠
+
+根拠については、以下の条例と規則を回答します。
+
+職員の職務に専念する義務の特例に関する条例 (昭和38年４月１日条例第33号)
+
+職務に専念する義務の特例に関する規則 （昭和39年７月17日人事委員会規則第11号）</pre></details></div></details><details class="municipality-accordion" id="muni-12"><summary><span class="muni-summary-name">兵庫県西脇市</span><span class="muni-summary-meta">A, E / 全文 2件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>教委指導・是正</span><span class="flag">回答日未確認</span><span class="flag">地教行法条文番号要確認</span></div><details class="response-accordion" id="record-11-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>教委指導・是正</span><span class="flag">回答日未確認</span><span class="flag">地教行法条文番号要確認</span></div><pre class="response-body">【情報提供】兵庫県西脇市教育委員会の回答
+
+1. PTAの入会契約の成立要件に関する法的見解について
+
+PTAは任意加入の団体であり、保護者個人の自由な意思に基づいて加入するものです。
+
+入会には、保護者の方の明確な申し込みの意思表示と、PTAの承諾が必要です。
+
+ご指摘の、保護者の意思確認をせずに児童・生徒の入学をもって自動的に会員とする、いわゆる「みなし入会」方式では、契約が成立しているとは判断できません。
+
+2. 学校によるPTA会費の徴収行為が無権代理に該当するかについて
+
+学校がPTA会費を徴収する行為は、原則としてPTAとの間で代理権に関する契約（委任契約など）を締結した上で行われるべきものと考えます。
+
+契約関係のない状態で学校が代行徴収を行うことは、法的な問題を生じさせる可能性があると認識しています。
+
+3. 入会申込書による保護者および教職員の明確な意思確認の必要性について
+
+PTAが任意加入の団体である以上、入会手続きにおいては、保護者の方の明確な入会意思を確認することが不可欠です。書面による入会申込書や同意書は、その意思を確実に確認できる一つの有効な方法ですが、これに限定されるものではありません。
+
+例えば、新学期当初の保護者会等の場で、PTAの活動内容や会費、入退会は任意である旨を明確に説明し、その場で口頭による入会意思を確認する方法や、PTAのウェブサイトや専用システムを通じて、入会に関する説明を十分に行った上で、保護者が自らの意思で入会の意思表示を行う電子フォームを導入する方法も考えられます。ただし、口頭の場合、確認の記録を適切に残す必要があります。
+
+どのような方法を採用するにしても、重要なのは、保護者の方が入会を強制されていると感じることなく、PTAの活動内容や入会に伴う会費や役員活動などを十分に理解した上で、自らの自由な意思で入会を選択できるよう配慮することが必要と考えます。
+
+本市としましては、各学校やPTAに対し、地域の実情に応じた柔軟な方法を取り入れつつ、保護者の明確な意思確認が確実に行われるよう指導してまいります。
+
+4. 個人情報保護法に基づく児童名簿・連絡個票の利用目的逸脱について
+
+児童・生徒の個人情報は、学校教育の目的にのみ使用されるべきものです。
+
+保護者の同意なく、PTA会費の徴収といった目的外に利用することは、個人情報保護法に抵触する可能性があると認識しています。
+
+引き続き、PTAの活動への情報提供に関して、保護者の明確な同意を得るよう学校を指導してまいります。
+
+5. PTAの運用に関する教育委員会の是正指導責任について
+
+ご指摘の通り、地方教育行政法第10条に基づき、教育委員会は所轄する学校に対する管理・監督義務を負っています。
+
+一方で、PTAは「学校教育法第137条」に基づき、学校の設置者である教育委員会の管理する施設を使用する機会が認められている任意団体です。
+
+PTA活動は学校教育活動とは区別されるべきものですが、学校施設の使用や教職員が運営に関与している実態を踏まえると、学校教育に支障をきたす可能性は否定できません。
+
+PTAの運営が学校教育に支障をきたすような不適切な状況にあると判断される場合、その是正について、教育委員会が学校に指導を行うことは、不当な干渉にはあたらないものと認識しております。
+
+6. 任意加入・法令遵守が確保されるまでの暫定的措置に関する方針について
+
+PTAの運営に関して、保護者の権利を保護し、法令遵守を確保することは、学校と教育委員会の責務です。
+
+入会手続きや個人情報の取り扱いなど、PTAの運営が適正に行われているかを確認し、必要に応じて学校と連携しながら改善を促します。</pre></details><details class="response-accordion" id="record-1-E"><summary><span class="response-title">E:137条 / 学校教育法137条照会</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>教委指導・是正</span><span class="flag">回答日未確認</span><span class="flag">地教行法条文番号要確認</span></div><pre class="response-body">【情報提供】兵庫県西脇市教育委員会の回答
+
+1. PTAの入会契約の成立要件に関する法的見解について
+
+PTAは任意加入の団体であり、保護者個人の自由な意思に基づいて加入するものです。
+
+入会には、保護者の方の明確な申し込みの意思表示と、PTAの承諾が必要です。
+
+ご指摘の、保護者の意思確認をせずに児童・生徒の入学をもって自動的に会員とする、いわゆる「みなし入会」方式では、契約が成立しているとは判断できません。
+
+2. 学校によるPTA会費の徴収行為が無権代理に該当するかについて
+
+学校がPTA会費を徴収する行為は、原則としてPTAとの間で代理権に関する契約（委任契約など）を締結した上で行われるべきものと考えます。
+
+契約関係のない状態で学校が代行徴収を行うことは、法的な問題を生じさせる可能性があると認識しています。
+
+3. 入会申込書による保護者および教職員の明確な意思確認の必要性について
+
+PTAが任意加入の団体である以上、入会手続きにおいては、保護者の方の明確な入会意思を確認することが不可欠です。書面による入会申込書や同意書は、その意思を確実に確認できる一つの有効な方法ですが、これに限定されるものではありません。
+
+例えば、新学期当初の保護者会等の場で、PTAの活動内容や会費、入退会は任意である旨を明確に説明し、その場で口頭による入会意思を確認する方法や、PTAのウェブサイトや専用システムを通じて、入会に関する説明を十分に行った上で、保護者が自らの意思で入会の意思表示を行う電子フォームを導入する方法も考えられます。ただし、口頭の場合、確認の記録を適切に残す必要があります。
+
+どのような方法を採用するにしても、重要なのは、保護者の方が入会を強制されていると感じることなく、PTAの活動内容や入会に伴う会費や役員活動などを十分に理解した上で、自らの自由な意思で入会を選択できるよう配慮することが必要と考えます。
+
+本市としましては、各学校やPTAに対し、地域の実情に応じた柔軟な方法を取り入れつつ、保護者の明確な意思確認が確実に行われるよう指導してまいります。
+
+4. 個人情報保護法に基づく児童名簿・連絡個票の利用目的逸脱について
+
+児童・生徒の個人情報は、学校教育の目的にのみ使用されるべきものです。
+
+保護者の同意なく、PTA会費の徴収といった目的外に利用することは、個人情報保護法に抵触する可能性があると認識しています。
+
+引き続き、PTAの活動への情報提供に関して、保護者の明確な同意を得るよう学校を指導してまいります。
+
+5. PTAの運用に関する教育委員会の是正指導責任について
+
+ご指摘の通り、地方教育行政法第10条に基づき、教育委員会は所轄する学校に対する管理・監督義務を負っています。
+
+一方で、PTAは「学校教育法第137条」に基づき、学校の設置者である教育委員会の管理する施設を使用する機会が認められている任意団体です。
+
+PTA活動は学校教育活動とは区別されるべきものですが、学校施設の使用や教職員が運営に関与している実態を踏まえると、学校教育に支障をきたす可能性は否定できません。
+
+PTAの運営が学校教育に支障をきたすような不適切な状況にあると判断される場合、その是正について、教育委員会が学校に指導を行うことは、不当な干渉にはあたらないものと認識しております。
+
+6. 任意加入・法令遵守が確保されるまでの暫定的措置に関する方針について
+
+PTAの運営に関して、保護者の権利を保護し、法令遵守を確保することは、学校と教育委員会の責務です。
+
+入会手続きや個人情報の取り扱いなど、PTAの運営が適正に行われているかを確認し、必要に応じて学校と連携しながら改善を促します。</pre></details></div></details><details class="municipality-accordion" id="muni-20"><summary><span class="muni-summary-name">堺市</span><span class="muni-summary-meta">G / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>教職員関与・服務</span><span>回答未了・延長</span><span class="flag">回答日未確認</span><span class="flag">回答未了・延長等</span></div><details class="response-accordion" id="record-1-G"><summary><span class="response-title">G:延長等 / 延長等</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>教職員関与・服務</span><span>回答未了・延長</span><span class="flag">回答日未確認</span><span class="flag">回答未了・延長等</span></div><pre class="response-body">堺市教育委員会　地域教育振興課です。
+
+市内公立学校におけるPTA（保護者と教職員による会）の入会手続きに関する法的問題と、それに対する教育委員会の見解および対応方針についての照会につきまして、その内容を確認しまして、各学校園への現状確認を行ったうえでの回答が必要であると考えています。
+
+現在、学校閉庁日の期間と重なっていることもあり、学校閉庁日後に各学校園への現状確認を行い、回答したいと考えています。
+
+このため、2週間を目途とした回答ができず、誠に申し訳ございません。回答が遅くなりますことをご容赦ください。</pre></details></div></details><details class="municipality-accordion" id="muni-23"><summary><span class="muni-summary-name">大阪市</span><span class="muni-summary-meta">A / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>会計・監査</span><span>教委指導・是正</span><span class="flag">回答日未確認</span><span class="flag">添付資料確認推奨</span></div><details class="response-accordion" id="record-17-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>会計・監査</span><span>教委指導・是正</span><span class="flag">回答日未確認</span><span class="flag">添付資料確認推奨</span></div><pre class="response-body">件名：大阪市PTA運営に関するご指摘と改善要望について
+大阪市教育委員会事務局
+生涯学習部 生涯学習担当
+平素より教育行政にご尽力いただき、ありがとうございます。貴委員会が公開されている「PTA活動の手引き」および令和5年度調査に関するご説明を拝読し、PTA運営の現状について理解を深めました。しかしながら、いくつかの点において、法的な観点および保護者の権利擁護の観点から問題があると考え、以下にご指摘と改善要望を申し述べさせていただきます。ご検討のほど、よろしくお願い申し上げます。
+1. 任意加入の原則とその実効性について
+ご説明では、450団体のうち436団体が説明会や書面で入会の趣旨説明を行い、加入の意思がない保護者の希望を確認しているとのことですが、この対応がPTAの任意加入を担保するものとは到底言えません。多くの自治体で同様の指針が公開されていますが、実際には説明会や書面配布だけでは、保護者が任意加入の事実を十分に理解し、自由な意思決定を行う環境が整っていないことが指摘されています。
+特に、「加入の意思がない方の希望を聞く」という対応は、いわゆる「オプトアウト方式」に該当します。これは、消費者契約法（第4条：不当な勧誘行為の禁止）、個人情報保護法（第16条：利用目的の通知・同意）、および民法（第96条：意思表示の自由）の観点から問題があります。PTAへの加入は契約行為であり、申込人の明示的な意思表示（オプトイン）とPTA側の明確な受諾に基づくべきです。現行の運用では、保護者が自動的に会員として扱われる可能性が高く、任意加入の原則が形骸化していると言わざるを得ません。
+：
+すべてのPTA団体において、入会申込書による明示的な同意（オプトイン）を必須とする運用を徹底してください。また、入会を希望しない保護者が不利益を被らないよう、明確なガイドラインを策定・周知してください。
+2. PTA会費の徴収方法について
+PTA会費が口座振替等で一括徴収され、学校徴収金に準じた対応がなされているとのことですが、PTA会費は私費会計であり、公的性格を持つ学校徴収金と同等に扱うことは不適切です。学校長がPTA会費の徴収事務に関与する場合、準委任契約がない限り、民法第113条（無権代理）の問題が生じる可能性があります。さらに、このような徴収方法は、保護者に対し「PTA会費は支払うべきもの」との誤認を与え、任意加入の原則を損なう恐れがあります。
+：
+PTA会費の徴収は、学校徴収金と明確に分離し、PTAが直接管理する私費会計として扱うことを徹底してください。また、保護者に対して、PTA会費が任意加入に基づくものであることを明確に説明する書面を配布するよう義務付けてください。
+3. 入会申込書の取得状況について
+令和5年度調査において、450団体のうち205団体のみが入会申込書を取得しているとのことです。これは、半数以上のPTA団体において、入会手続きが適切に行われておらず、入学と同時に自動的に会員扱いされている実態を示しています。これは、任意加入の原則に反する重大な問題です。保護者の明示的な同意なく会員として扱うことは、契約の自由を侵害し、消費者保護の観点からも看過できません。
+：
+すべてのPTA団体において、入会申込書の取得を必須とする指導を徹底してください。また、入会手続きが適切に行われているかを定期的に監査し、結果を公開することで透明性を確保してください。
+4. 個人情報の取り扱いについて
+個人情報の取り扱いに関し、必要最小限の情報収集と同意の取得を周知しているとのことですが、PTAが自動的に保護者の個人情報を取得・利用しているケースが散見されます。これは個人情報保護法に抵触する可能性があります。特に、加入意思がない保護者の情報がPTAに提供されることは、不当な利用目的に該当する恐れがあります。
+：
+個人情報の取得・利用について、PTA加入前に保護者から明示的な同意を得るプロセスを確立してください。また、学校からPTAへの個人情報提供について、保護者の同意を前提とするルールを明確化してください。
+5. 教育委員会の役割と指導について
+PTAが任意団体であるため、教育委員会が直接是正指導を行えないとの立場は理解いたします。しかし、学校施設を利用し、学校長を通じて運営されるPTAの活動は、教育委員会の監督下にある学校運営と密接に関連しています。現状の「学校長を通じた周知」に留まらず、より積極的な指導が必要です。明らかな法令違反が認められる場合の対応も、学校長との連携に依存するだけでは不十分です。
+：
+教育委員会として、PTAの任意加入原則および法令遵守を徹底するための具体的なガイドラインを策定し、学校長およびPTA役員向けの研修を実施してください。また、違反が確認された場合の是正手順を明確化し、保護者が不利益を被らないよう監督責任を果たしてください。
+以上の通り、大阪市のPTA運営には、保護者の権利を十分に尊重しない運用実態が認められます。任意加入の原則、個人情報の保護、契約行為の適法性を確保するため、早急な改善が必要です。保護者が自由な意思決定を行える環境を整備し、PTA活動がより透明で公正なものとなるよう、貴委員会の積極的な対応を強く求めます。
+【情報提供】
+他自治体の回答例
+1．大阪市茨木市　PDF
+2．福島県三春町　PDF
+3．消費者庁PTA入会に関する見解
+https://sites.google.com/view/ptatekiseika/%E3%83%9B%E3%83%BC%E3%83%A0/%E6%B6%88%E8%B2%BB%E8%80%85%E5%BA%81pta%E5%85%A5%E4%BC%9A%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E8%A6%8B%E8%A7%A3?authuser=0</pre></details></div></details><details class="municipality-accordion" id="muni-24"><summary><span class="muni-summary-name">大阪府</span><span class="muni-summary-meta">A / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>会計・監査</span><span>教委指導・是正</span></div><details class="response-accordion" id="record-18-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">2025-08-20</span></summary><div class="record-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>会計・監査</span><span>教委指導・是正</span></div><pre class="response-body">大阪府教育庁　市町村教育室
+
+1. PTA入会手続きに関する要式契約の誤解と消費者契約法の軽視
+貴庁回答では、PTA入会について「オプトアウト方式」（入会しない旨の連絡がないことを入会の意思表示とみなす）が、民法第522条の「申込みと承諾」に該当し、契約として成立するとされています。しかし、民法第522条第2項は、契約の成立に書面等の特定の方式を要しない（不要式契約の原則）を定めるものであり、契約成立には依然として双方の明確な意思表示（民法第521条・第522条第1項）が必要です。「オプトアウト方式」は、保護者の積極的な承諾を欠く黙示の同意に基づくものであり、要式契約（特定の方式が必要な契約）の要件を誤解し、消費者契約法第3条・第4条が求める明確な同意を軽視する解釈です。この方式は、保護者の意思を証明する客観的証拠を欠き、契約の無効や取消しのリスクを招きます。
+2. PTA会費徴収における委任契約の曖昧さと無権代理のリスク
+貴庁回答では、学校によるPTA会費徴収を「一種の委任契約（民法第643条）」と認識し、PTAからの委任状提出を指導するとされています。しかし、委任契約の締結事実やその内容（例：書面による契約、委任の範囲）が明確でなく、無権代理（民法第113条）に該当する可能性が解消されていません。また、会費徴収の前提となるPTA会員資格が「オプトアウト方式」で取得されている場合、保護者の同意を欠く無効な契約に基づく徴収となり、返還義務や損害賠償責任が生じるリスクがあります。貴庁の指導は、消費者契約法の趣旨（消費者の明確な同意の必要性）を軽視し、委任契約の要件を曖昧に扱う誤解が見られます。
+3. 学校名簿の目的外利用と個人情報保護法の誤適用
+貴庁回答では、PTA会費徴収を「個人情報取扱事務」に登録し、学校納付金と同等に扱うことで個人情報の利用が「目的の範囲内」とされています。しかし、PTAは任意加入の民間団体であり、学校の教育目的とは独立した組織です。教育目的で収集した個人情報をPTAの会費徴収に利用することは、個人情報保護法第69条の「目的外利用」に該当する可能性が高く、貴庁の登録に基づく解釈は同法の趣旨を誤解しています。また、保護者の同意取得が「オプトアウト方式」で行われている場合、個人情報保護法第16条（第三者提供の制限）や第23条（同意の取得）の要件を満たさず、違法な個人情報利用となるリスクがあります。
+4. 全体的な誤解と指導の不十分さ
+貴庁回答は、要式契約と不要式契約の区別を誤解し、「オプトアウト方式」を広く容認することで、保護者の明確な意思表示を求める民法及び消費者契約法の趣旨を軽視しています。さらに、個人情報保護法の適用において、PTAを学校と同等の公的機関とみなす誤解や、保護者の同意取得手続きの実効性を欠く指導方針が見られます。これらの誤解は、保護者の権利を侵害し、法的紛争（例：契約無効、会費返還請求、個人情報漏洩）を招くリスクを増大させます。
+【再照会事項】
+「オプトアウト方式」の法的有効性と要式契約の誤解
+貴庁が「オプトアウト方式」を民法第522条の「申込みと承諾」に該当すると判断する根拠を、要式契約と不要式契約の区別、消費者契約法第3条・第4条の要件を踏まえ、判例や学説を参照して具体的にご教示ください。貴庁回答に要式契約の誤解があるか否か、明確にご回答ください。
+委任契約の要件と無権代理のリスク
+学校がPTA会費徴収を行う際の委任契約の具体的な要件（例：書面による契約、委任の範囲、保護者への説明義務）を、貴庁の指導基準としてご教示ください。また、「オプトアウト方式」に基づく無効な会員資格で徴収された会費について、無権代理（民法第113条）や消費者契約法違反による返還義務・損害賠償責任のリスクをどのように認識していますか？
+個人情報利用の適法性と同意取得
+PTA会費徴収目的での個人情報利用が、個人情報保護法第69条の「利用目的の範囲内」に該当する法的根拠を、PTAが任意加入団体である点を踏まえて具体的にご教示ください。また、保護者の同意取得を「オプトアウト方式」で行う場合、それが同法第16条・第23条の「本人の同意」に適合する理由を、判例や学説に基づきご説明くだい。
+適法性確保のための指導体制
+以下の点について、貴庁の具体的な指導方針（例：手続きの基準、監査頻度、違反時の是正措置）をご教示ください：
+PTA入会における保護者の書面による明確な同意の取得
+学校とPTA間の委任契約の締結とその検証
+個人情報の目的外利用防止のための保護者への説明と同意取得手続き
+現行運用実態の調査と是正
+現在、「オプトアウト方式」による入会手続き、委任契約のない会費徴収、または同意のない個人情報利用を行っている学校が存在する場合、貴庁としてその実態を調査し、適法な運用への是正を指導する予定はありますか？ 調査方法、スケジュール、違反時の対応策（例：保護者への通知、会費返還、個人情報利用の停止）をご教示ください。なお、弊会としましてもこれらの事項に対して、大阪府に対して行政文書開示請求を並行して行っていく事を申し添えます。
+保護者の権利保護と救済措置
+保護者の同意なくPTA会員として扱われた、会費を徴収された、または個人情報が目的外利用された場合、誰（学校、PTA、教育委員会）が責任を負い、どのような救済措置（例：返還手続き、個人情報利用の停止、損害賠償）を講じる予定か、貴庁の指導方針を具体的にご教示ください。
+【補足】
+PTA入会、会費徴収、個人情報利用は、保護者の任意の意思と権利保護を最優先に扱うべき事項です。貴庁の指導が、要式契約の誤解や消費者契約法・個人情報保護法の趣旨を軽視する運用を助長せず、法令遵守と保護者の信頼確保を徹底するものとなるよう、明確かつ具体的な見解を求めます。
+【情報提供】
+消費者庁　PTA入会契約に関する見解　令和７年７月２4日聴取
+URL
+https://sites.google.com/view/ptatekiseika/%E3%83%9B%E3%83%BC%E3%83%A0/%E6%B6%88%E8%B2%BB%E8%80%85%E5%BA%81pta%E5%85%A5%E4%BC%9A%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E8%A6%8B%E8%A7%A3?authuser=0
+2025年8月20日(水) 11:54 市町村教育　地域教育振興課 &lt;
+
+このたびは、お問い合わせいただいてから回答までの期間を要しましたことに、
+
+まずはお詫びいたします。
+
+さて、令和７年５月19日にお問い合わせいただいた内容につきまして、
+
+以下のとおり回答いたします。
+
+【法的問題点】
+
+PTA入会手続きの不備：
+
+保護者の明示的な入会申込書等の提出がないにもかかわらず、
+
+「みなし加入」あるいは「オプトアウト方式」（特段の拒否がなければ自動的に会員とする）によって、
+
+保護者をPTA会員として扱う事例が複数確認されています。
+
+PTAへの入会は、保護者とPTAとの間の契約関係に基づく加入行為（双務契約）であると解され、
+
+保護者による明確な意思表示（承諾）がなければ契約は成立しません
+
+（民法第521条・第522条、消費者契約法第３条・第４条）。
+
+保護者の明示的な同意がない「みなし加入」は、民法第522条の契約成立要件を欠き、
+
+契約として無効である可能性が高いです。
+
+【照会事項】
+
+PTA会員資格の取得について：
+
+保護者の明示的な入会同意（入会申込書の提出など）がない状況で、
+
+「みなし加入」または「オプトアウト方式」によってPTA会員とする取り扱いについて、
+
+契約法（民法、消費者契約法）上の有効性に関する教育委員会の見解をお伺いします。
+
+また、適法な会員資格取得のために必要な手続きと、
+
+市として各学校への指導方針についてご教示ください。
+
+（回答）
+
+PTAへの入会は、契約行為に当たりますので、
+
+民法第521条・522条及び消費者契約法第３条・第４条に基づく対応が求められるものと
+
+認識しています。
+
+よって、大阪府教育庁としては、「適法な会員資格取得のために必要な手続き」として、
+
+PTAから保護者に対し、PTAの目的や意義、PTA活動の内容、PTA会費の金額や徴収方法、
+
+PTAへの入会は任意であることなどを、文書又は口頭により説明したうえ、
+
+入会に係る意思を確認する必要があり、その説明内容に保護者が同意した場合、
+
+入会が成立するものと認識しています。
+
+ただし、民法第522条第１項には、
+
+契約の成立条件として「申込みと承諾による成立」が規定されていますが、
+
+その「申込みと承諾」の方法については具体的に定められておらず、
+
+お問合せの「オプトアウト方式」など、保護者から入会しない旨の連絡がないことをもって
+
+入会の意思表示があったものとみなす意思確認の方法についても、
+
+民法第522条の「申込みと承諾」に該当し、契約として成立するものと認識しています。
+
+また、民法第522条第２項には、
+
+「契約の成立には、法令に特別の定めがある場合を除き、
+
+書面の作成その他の方式を具備することを要しない」と規定されているため、
+
+入会しない場合のみ期限までに口頭で申し出る方法についても、
+
+契約として成立するものと認識しています。
+
+なお、府教育庁としては、令和６年10月９日付けで府立学校校長・准校長あて発出した
+
+通知のQ＆Aにおいて、以下の記載をしています。
+
+Q１－２　学校関係団体が行う入会意思の確認の方法については、どのようなものがありますか。
+
+A１－２　まず、合格者説明会や新入生保護者説明会、学年集会などにおいて、
+
+学校関係団体（会長等）から会員になる資格を持つ本人
+
+（例：PTAの場合は保護者、同窓会の場合は生徒）に対し、
+
+学校関係団体の活動の目的や意義、及び学校関係団体への入会は任意であることについて、
+
+文書又は口頭により説明される必要があります。
+
+そのうえで、学校関係団体により入会意思の確認が行われますが、
+
+その方法については次のような方法が考えられます。
+
+①文書により、本人からの回答を求める場合
+
+当該団体の会員になる資格を持つ本人から、「入会届」を提出してもらう。
+
+②口頭により、本人からの回答を求める場合
+
+「学校関係団体の活動に係るご協力のお願い」などと題して、
+
+学校関係団体がその会員になる資格を持つ本人あてに発出した文書において、
+
+「入会されない場合は、○月○日までに□□までご連絡ください」と記載しておき、
+
+入会を希望しない本人からの申出を受け付ける（この場合、申出を記録・保管しておく）。
+
+各学校関係団体の実情に合わせ、どのような方法で入会意思の確認を行うか、
+
+各学校関係団体において決定される必要があります。
+
+【法的問題点】
+
+PTA会費徴収の違法性：
+
+PTAと学校間で会費徴収に関する委任契約が締結されていないにもかかわらず、
+
+学校がPTAの代理として会費徴収業務を行っている事例が報告されています。
+
+PTAからの明確な代理権限（委任契約等）がないにもかかわらず、
+
+学校が第三者から金銭（会費）を徴収する行為は、
+
+民法第113条以下に定める「無権代理」行為に該当し、無効となる可能性があります。
+
+徴収した会費が、保護者の同意に基づかない不当な支払いである場合、
+
+返還義務や損害賠償義務が発生するおそれがあります。
+
+【照会事項】
+
+PTA会費の徴収について：
+
+PTAと学校間における正式な業務委託契約なしに、学校がPTA会費を徴収する行為について、
+
+無権代理に該当する可能性を含め、教育委員会の法的見解をお伺いします。
+
+また、会費徴収業務の適法性を確保するための市としての指導・管理体制、
+
+および保護者の同意がない状況で会費が徴収された場合の責任の所在についてご教示ください。
+
+（回答）
+
+PTA等、学校関係団体の会計事務（会費徴収を含む）を学校が行うことの法的性質については、
+
+保護者等から学校（校長）が、その目的にしたがって管理・執行を任された
+
+一種の委任契約（民法第643条）であると認識しています。
+
+したがって、受任者である学校は、委任の本旨に従い、善良な管理者の注意をもって
+
+事務を処理する必要があり、また、その監督責任は、教育委員会も負うものであると考えています。
+
+府教育庁では、学校が団体の会計事務を行う場合は、委任関係の有無を明確にするため、
+
+団体から委任状を提出させるよう指導しているとともに、
+
+適宜、委任状の提出状況を確認することとしています。
+
+なお、学校がPTAからの委任を受けてPTA会費を徴収するにあたっては、
+
+PTAにおいて、その会員になる資格を持つ本人に対し、
+
+入会の意思確認（オプトアウト方式によることも含めて）が適切に行われているものと認識しています。
+
+【法的問題点】
+
+学校名簿の目的外利用：
+
+任意加入団体であるPTAの会費徴収目的で使用している事例が複数確認されています。
+
+学校が教育目的で収集・保有する個人情報を、別団体であるPTAの業務のため使用することは、
+
+個人情報保護法第69条（利用及び提供の制限）における
+
+「目的外利用」に該当するのではないかと懸念されます。
+
+【照会事項】
+
+個人情報の利用について：
+
+学校が保有する生徒・保護者の個人情報（名簿等）を、PTAの会費徴収目的で使用することについて、
+
+個人情報保護法における「目的外利用」に該当するか否かに関する教育委員会の見解をお伺いします。
+
+また、PTAが学校の保有する個人情報を利用する場合に必要な手続きや保護者の同意、
+
+市としての指導・指針についてご教示ください。
+
+（回答）
+
+府立学校において、学校納付金等徴収に係る事務は個人情報取扱事務として登録されており、
+
+PTA会費を含めた府立学校納付金等の徴収を目的に
+
+府立学校在籍生徒の個人情報を取り扱うことが明示されています。
+
+これに基づき、各校が保有する生徒の個人情報を、
+
+PTAからの委任を受けて会費を学校納付金等として徴収する際に使用していることから、
+
+目的の範囲内で行っていると認識しています。
+
+なお、学校は、個人情報取扱事務として登録されていない利用目的で、
+
+その保有する生徒・保護者の個人情報をPTAのために利用する場合、
+
+PTAに提供する個人情報の内容と提供の目的について、あらかじめ本人に説明し、
+
+その同意を得ておく必要があります。
+
+それを前提にすると、学校が保有する生徒・保護者の個人情報を、
+
+本人の同意を得ることなくPTAにおいて使用した場合、
+
+個人情報保護法第69条における「目的外利用」に該当すると認識しています。
+
+質問者様におかれましては、今後も学校関係団体の活動にご理解ご協力を賜りますよう</pre></details></div></details><details class="municipality-accordion" id="muni-25"><summary><span class="muni-summary-name">姫路市</span><span class="muni-summary-meta">A / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>教職員関与・服務</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><details class="response-accordion" id="record-19-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>教職員関与・服務</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><pre class="response-body">照会の回答について（姫路市生涯学習課）
+
+照会のありました６項目のうち、
+生涯学習課では、１、３、５について回答いたします。
+ＰＴＡは社会教育法第10条に規定する社会教育関係団体であり、子どもたちのため「より安全で、より良い環境づくり」に取り組む、保護者及び教職員で構成される団体であると考えております。
+ＰＴＡは任意の団体であり、その入会には加入意思の確認が必要であるという認識は持っております。「みなし入会」について、個々の単位ＰＴＡの状況を把握しているわけではありませんが、みなし入会が適切な状態であるとは考えておりませんので、姫路市連合ＰＴＡ協議会事務局に対し、各単位ＰＴＡに対して入会の意思確認をするよう、令和７年２月に社会教育法第11条第１項による助言を行いました。強制力をもった是正指導ではございませんが、今後とも姫路市連合ＰＴＡ協議会と対話を重ね、各単位ＰＴＡにおける入会の意思確認の実施につながるようすすめてまいります。
+今後、ＰＴＡの入会に関する問題について、この状態が改善されるには時間が必要かと存じますが、当課として可能な範囲でできる内容で対処したく考えております。</pre></details></div></details><details class="municipality-accordion" id="muni-27"><summary><span class="muni-summary-name">宝塚市</span><span class="muni-summary-meta">A / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><details class="response-accordion" id="record-21-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><pre class="response-body">m-takarazuka0119
+
+１、PTAの入会契約の成立要件に関する法的見解について
+（回答）慣例的に「みなし入会」方式が存在していることもあるかもしれませんが、あくまで保護者からの正式な申し込みやPTA側の承諾をもって入会が成立するものと考えています。
+
+２、学校によるPTA会費の徴収行為が無権代理に該当するかについて
+（回答）学校側でPTA会費を代行徴収する場合は、民法第113条に基づく無権代理に該当しないよう、代理権をもつ必要があると考えます。
+
+３、入会申込書による保護者および教職員の明確な意思確認の必要性について
+（回答）前述のとおり、入会申込書等における保護者からの正式な意思確認を経て入会が成立するものと考えております。当市では各校PTAにおいて入会申込書を徴収するようになってきていると聞いています。
+
+４、個人情報保護法に基づく児童名簿・連絡個票の利用目的逸脱について
+（回答）個人情報保護法第69条において利用目的は制限されていますので、保護者の意思確認をせずに他の目的に利用することは適切ではないと認識しております。
+
+５、PTAの運用に関する教育委員会の是正指導責任について
+（回答）学校がPTAと一体的に関与し、違法または不適切な運用が見受けられる場合は学校へ是正を求めます。またPTAへは社会教育法第11条に基づいた対応をすることもあると考えます。
+
+６、任意加入・法令遵守が確保されるまでの暫定的措置に関する方針について
+（回答）学校による施設提供や会費徴収への協力については学校長の裁量となります。教育委員会としても法令を遵守していく必要があると考えます。
+
+以上、宜しくお願いいたします。</pre></details></div></details><details class="municipality-accordion" id="muni-32"><summary><span class="muni-summary-name">尼崎市</span><span class="muni-summary-meta">A / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>回答未了・延長</span><span class="flag">回答日未確認</span><span class="flag">回答未了・延長等</span></div><details class="response-accordion" id="record-24-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>回答未了・延長</span><span class="flag">回答日未確認</span><span class="flag">回答未了・延長等</span></div><pre class="response-body">（尼崎市）【回答期限延長願い】PTA入会に関する法的見解・照会６項目について
+
+ご照会いただいております「PTA入会に関する法的見解・照会６項目」につきまして、現在、関係部署間において、
+
+今月中には照会いただいております項目につきましてご回答させていただきますので、ご理解いただければと存じます。
+
+お手数をおかけいたしますが、よろしくお願いいたします。</pre></details></div></details><details class="municipality-accordion" id="muni-50"><summary><span class="muni-summary-name">東大阪市</span><span class="muni-summary-meta">A / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教委指導・是正</span></div><details class="response-accordion" id="record-36-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">2025-08-22</span></summary><div class="record-tags"><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教委指導・是正</span></div><pre class="response-body">【東大阪市教育委員会回答】PTA入会手続き等の法的見解について照会事項６点
+
+ご照会いただきました、標記の件につきまして回答いたします。
+
+東大阪教委政第1130号
+令和７年８月２２日
+
+東大阪市教育委員会
+教育次長　永吉　勝則
+
+「照会事項」について（回答）
+
+令和７年８月５日付けで提出のありました標記の件につきましては、下記のとおり回答いたします。
+
+記
+
+ＰＴＡへの入会につきましては、加入は任意であり、本人の意思に基づくものであるため、書面等による手続きで加入にかかる意思を確認する必要があると考えております。また、会費の徴収につきまして学校が行う場合は委任を受けた徴収であることを明確にしておく必要があると考えております。
+個人情報につきましては、ＰＴＡ活動に限らず、その利用目的を明確にしたうえで本人の同意を得て、その範囲内で利用することが可能であると認識しており、保有する情報を本人の同意なく、他に提供することは個人情報保護法の観点から適切ではないと考えております。
+本市教育委員会といたしましては学校に対して必要に応じ適正な対応をとるよう適宜指導してまいります。
+
+ご多用とは思いますが、確認のほどよろしくお願いします。</pre></details></div></details><details class="municipality-accordion" id="muni-53"><summary><span class="muni-summary-name">橋本市</span><span class="muni-summary-meta">A / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><details class="response-accordion" id="record-38-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><pre class="response-body">PTA入会に関する照会について
+
+照会のありました件につきまして、以下のとおり回答します。
+
+ＰＴＡの入会につきましては、加入は任意であり、本人の意思に基づくものであるため、書面等による手続きで加入にかかる意思を確認する必要があると考えております。
+また、会費の徴収につきまして、学校が行う場合は委任を受けた徴収である必要があると考えております。
+個人情報につきましては、その利用目的を明確にしたうえで本人の同意を得て、その範囲内で利用することが可能であると認識しており、保有する情報を本人の同意なく、
+他に提供することは個人情報保護法の観点から適切ではないと考えております。
+本市教育委員会といたしましては、市立小中学校に対して必要に応じて適正な対応をとるよう、指導及び助言をしてまいります。</pre></details></div></details><details class="municipality-accordion" id="muni-62"><summary><span class="muni-summary-name">茨木市</span><span class="muni-summary-meta">A, E / 全文 2件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>入会意思確認</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><details class="response-accordion" id="record-45-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>入会意思確認</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><pre class="response-body">【照会】PTA運営の適正化に関する指導の実効性確保について
+
+（ご担当[省略]
+（ご担当[省略]
+時下ますますご清栄のこととお慶び申し上げます。
+さて、2025年8月15日付で貴委員会よりいただいた「PTA入会手続き等の法的見解について」のご回答（以下「貴回答」）につきまして、誠にありがとうございました。
+貴回答に示された、PTAの任意加入の徹底、個人情報の適正な取り扱い、そして不適切な運用に対する教育委員会の指導・助言責任を明確にする方針は、PTA活動の健全化に向けた重要な指針であると認識しております。
+しかしながら、この指導方針が各学校の現場において、いかにして実効性を担保されるのかという点について、深刻な懸念を抱いております。
+当方が把握する限り、市内の一部の学校では、「学校はPTAとは一切関係ない」という立場のもと、PTAが作成・配付する文書（入会案内、規約、議事録等）を学校側が一切取得・保管しないという運用がなされています。現に、PTA関連文書の情報公開請求に対して、学校が文書を保有していないことを理由に「不存在」の決定がなされた事例があります。
+この運用は、以下の点で貴回答の方針と重大な矛盾を生じさせると考えます。
+貴回答では、不適切な運用に対して教育委員会が「指導及び助言を行ってまいります」とし、甚だしい場合には「施設提供や会費徴収への協力を停止する措置を講じる場合がある」と明記されています。
+しかし、学校がPTAの活動実態を把握するためのいかなる文書も持たないとすれば、そもそも「不適切な運用」の発生を検知すること自体が不可能です。
+これでは、貴委員会が掲げる指導監督責任は、事実上「絵に描いた餅」となり、その実効性は失われてしまいます。
+そもそも、学校がPTAに対して施設利用等の便宜を図る法的根拠は、学校教育法第137条が「学校教育上支障のない限り、…学校の施設を社会教育その他公共のために、利用させることができる」と定めている点にあります。
+条文の趣旨に鑑みれば、施設利用を許可する学校（およびその監督機関である教育委員会）には、利用団体であるPTAの活動が、法令を遵守し、その公共性を維持していることを確認する責務が付随すると解釈するのが相当です。
+PTAの活動内容を一切確認せず、その実態を把握しないまま施設利用の便宜を図り続けることは、この確認責務を放棄するに等しい行為と言わざるを得ません。
+以上の問題認識に基づき、PTA運営の適正化に関する指導の実効性を確保するため、下記の事項について貴委員会の明確なご見解を伺いたく、照会いたします。
+【照会事項】
+1．貴委員会が貴回答で示した指導・助言の実効性を担保するためには、学校がPTAの運営状況（規約、事業計画、入会申込書の様式・運用状況等がわかる文書）を、定期的かつ確実に把握することが不可欠と考えます。
+その具体的な手段として、学校がPTAに対し、それら関係文書の提出を求めるよう指導するお考えはありますでしょうか。
+2．貴回答にある「不適切な状態であると懸念される学校」を、貴委員会は具体的にどのような手法で発見・認定するのでしょうか。学校がPTAに関する情報を保有しない現状において、その発見・認定プロセスと客観的な基準についてご教示ください。
+3．学校教育法第137条に基づき学校施設の利用を許可するにあたり、学校長には、利用団体であるPTAの活動が法令を遵守し公共性を有するものであることを、提出された文書等に基づき確認する義務があると解すべきと考えますが、この点に関する貴委員会の法的な見解をお示しください。
+ご多忙の折、誠に恐縮ではございますが、２週間を目処に文書等にてご回答賜りますよう、よろしくお願い申し上げます。</pre></details><details class="response-accordion" id="record-7-E"><summary><span class="response-title">E:137条 / 学校教育法137条照会</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>入会意思確認</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><pre class="response-body">【照会】PTA運営の適正化に関する指導の実効性確保について
+
+（ご担当[省略]
+（ご担当[省略]
+時下ますますご清栄のこととお慶び申し上げます。
+さて、2025年8月15日付で貴委員会よりいただいた「PTA入会手続き等の法的見解について」のご回答（以下「貴回答」）につきまして、誠にありがとうございました。
+貴回答に示された、PTAの任意加入の徹底、個人情報の適正な取り扱い、そして不適切な運用に対する教育委員会の指導・助言責任を明確にする方針は、PTA活動の健全化に向けた重要な指針であると認識しております。
+しかしながら、この指導方針が各学校の現場において、いかにして実効性を担保されるのかという点について、深刻な懸念を抱いております。
+当方が把握する限り、市内の一部の学校では、「学校はPTAとは一切関係ない」という立場のもと、PTAが作成・配付する文書（入会案内、規約、議事録等）を学校側が一切取得・保管しないという運用がなされています。現に、PTA関連文書の情報公開請求に対して、学校が文書を保有していないことを理由に「不存在」の決定がなされた事例があります。
+この運用は、以下の点で貴回答の方針と重大な矛盾を生じさせると考えます。
+貴回答では、不適切な運用に対して教育委員会が「指導及び助言を行ってまいります」とし、甚だしい場合には「施設提供や会費徴収への協力を停止する措置を講じる場合がある」と明記されています。
+しかし、学校がPTAの活動実態を把握するためのいかなる文書も持たないとすれば、そもそも「不適切な運用」の発生を検知すること自体が不可能です。
+これでは、貴委員会が掲げる指導監督責任は、事実上「絵に描いた餅」となり、その実効性は失われてしまいます。
+そもそも、学校がPTAに対して施設利用等の便宜を図る法的根拠は、学校教育法第137条が「学校教育上支障のない限り、…学校の施設を社会教育その他公共のために、利用させることができる」と定めている点にあります。
+条文の趣旨に鑑みれば、施設利用を許可する学校（およびその監督機関である教育委員会）には、利用団体であるPTAの活動が、法令を遵守し、その公共性を維持していることを確認する責務が付随すると解釈するのが相当です。
+PTAの活動内容を一切確認せず、その実態を把握しないまま施設利用の便宜を図り続けることは、この確認責務を放棄するに等しい行為と言わざるを得ません。
+以上の問題認識に基づき、PTA運営の適正化に関する指導の実効性を確保するため、下記の事項について貴委員会の明確なご見解を伺いたく、照会いたします。
+【照会事項】
+1．貴委員会が貴回答で示した指導・助言の実効性を担保するためには、学校がPTAの運営状況（規約、事業計画、入会申込書の様式・運用状況等がわかる文書）を、定期的かつ確実に把握することが不可欠と考えます。
+その具体的な手段として、学校がPTAに対し、それら関係文書の提出を求めるよう指導するお考えはありますでしょうか。
+2．貴回答にある「不適切な状態であると懸念される学校」を、貴委員会は具体的にどのような手法で発見・認定するのでしょうか。学校がPTAに関する情報を保有しない現状において、その発見・認定プロセスと客観的な基準についてご教示ください。
+3．学校教育法第137条に基づき学校施設の利用を許可するにあたり、学校長には、利用団体であるPTAの活動が法令を遵守し公共性を有するものであることを、提出された文書等に基づき確認する義務があると解すべきと考えますが、この点に関する貴委員会の法的な見解をお示しください。
+ご多忙の折、誠に恐縮ではございますが、２週間を目処に文書等にてご回答賜りますよう、よろしくお願い申し上げます。</pre></details></div></details><details class="municipality-accordion" id="muni-64"><summary><span class="muni-summary-name">西宮市</span><span class="muni-summary-meta">A, B, D, E / 全文 4件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>教職員関与・服務</span><span>学校施設利用</span><span>会計・監査</span><span>教委指導・是正</span><span>判断留保・仮定回答不可</span><span class="flag">回答日未確認</span><span class="flag">本文短文・原資料確認</span></div><details class="response-accordion" id="record-47-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span class="flag">回答日未確認</span><span class="flag">本文短文・原資料確認</span></div><pre class="response-body">照会その2　回答（2）ここです
+
+（お問合せ）教委　地域学校協働課</pre></details><details class="response-accordion" id="record-15-B"><summary><span class="response-title">B:追加7-8 / 追加質問7-8</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span class="flag">回答日未確認</span><span class="flag">本文短文・原資料確認</span></div><pre class="response-body">照会その2　回答（2）ここです
+
+（お問合せ）教委　地域学校協働課</pre></details><details class="response-accordion" id="record-6-D"><summary><span class="response-title">D:実態調査 / 実態調査7項目</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>教職員関与・服務</span><span>会計・監査</span><span>教委指導・是正</span><span>判断留保・仮定回答不可</span><span class="flag">回答日未確認</span></div><pre class="response-body">PTA 適正化推進委員会
+平素より、市の教育行政にご理解とご支援を賜りありがとうございます。
+照会事項につきまして、以下のとおり回答いたします。
+【問１】：PTA 会費徴収事務への教職員の関与について
+PTA は任意加入の私的団体であり、PTA 会費は PTA の私会計として管理される資金であると理解しており ます。その前提において、公立学校の教職員が勤務時間中に PTA 会費徴収事務に関与することについて、教 育委員会としてはどのような法的位置付けのもとで実施されていると整理されていますでしょうか。（※現時 点で明確な整理に至っていない場合は、「未整理」等とご回答いただいて構いません）
+【回答１】
+教職員が、PTA 会費の徴収・集金に関与する場合や、教職員自身が PTA の「会員」として活動する場合にお いて、校務と私的な活動とが混同されないよう明確に区別する必要性を認識しております。教職員が勤務時間 中に PTA 会費徴収事務に関与することについては、従事者の「兼職」を本市教育委員会が認めた上で、勤務 時間中に従事する場合は、従事者が職務専念義務の免除申請を所属長に行うことで従事できる方向で考えてお ります。
+【問２】：事務の性質について
+PTA 会費徴収事務について、教育委員会として以下のいずれに該当する事務として整理されているかご教示 ください。
+学校の校務（公務）として行われる事務 ・PTA の事務を補助する協力行為 ・保護者からの依頼に基づく事 務補助 ・その他（具体的にご説明ください）
+【回答２】
+その他（各学校の単位 PTA と学校長の間で締結された業務委任契約に基づき、PTA の事務を行うものであり、 学校の校務[公務]として行われる事務ではありません。）
+【問３】：公的資源の利用根拠について
+PTA 会費徴収に際して、学校名義の口座、学校徴収金管理システム、事務機器、教職員の労務等の公的資源が 利用されている場合、その利用を可能とする法令、条例、規則、要綱、通知等の根拠が存在する場合は、その 名称および該当部分をご教示ください。（※明文化された根拠が存在しない場合は「なし（慣例による運用）」 等とご回答ください）
+【回答３】
+口座や徴収システムの利用については、「西宮市立学校園徴収金及び学校園経由支給金取扱規程」第 9 条及 び第 10 条を根拠としております。教職員の労務については、本市教育委員会の規定に基づき、従事者となる 教職員が所属長へ職務専念義務の免除申請を行い、承認を得たうえで従事する方向で整理しております。 （参考）
+○西宮市立学校園徴収金及び学校園経由支給金取扱規程
+（徴収）
+第９条 徴収は、金融機関からの口座振替によることを原則とする。
+（ＰＴＡ会費等の徴収）
+第１０条 徴収金の集金方法を利用して会費等を徴収するものは、ＰＴＡ（育友会、保護者会等をいう。以下 同じ。）とする。
+【問 4】：事故発生時の責任主体について
+PTA 会費徴収に関して、以下のような事故が発生した場合の責任主体について、教育委員会としての整理を ご教示ください。 ・口座振替設定ミスによる誤徴収・PTA 会費の二重徴収 ・徴収した現金の紛失 ・PTA へ の送金処理ミス ・PTA 会費の不正使用が判明した場合それぞれについて、想定される責任主体をご教示くだ さい。（学校長、教育委員会、PTA、その他、あるいは個別判断等）
+【回答４】
+事故発生時の責任主体については、その事故の状況により、原則個別に判断することとなります。
+【問５】：責任分担を明記した文書について
+PTA 会費徴収事務について、学校と PTA の責任分担を整理した文書（協定書、覚書、要綱、通知等）が存 在する場合は、その文書名をご教示ください。
+【回答５】
+各学校と PTA との間で締結している「業務委任契約書」及び「覚書」になります。
+【問６】：学校と PTA の関係性の位置付けについて
+教育委員会として、公立学校と PTA との関係について制度上どのように位置付けているかご説明ください。 （例：学校外部団体、教育活動協力団体など）
+【回答６】
+ＰＴＡは任意の社会教育関係団体で学校の内部組織ではありませんが、学校と連携・協力し、子供たちの教 育のために活動している団体と位置づけています。
+【問７】：今後の行政運用について*
+上記の制度整理を踏まえ、現在学校が関与している PTA 会費徴収の仕組みについて、今後の行政運用として 以下のいずれの方向性を想定されているかご教示ください。
+現行の学校関与を継続する（委任契約等による継続を含む） PTA による自主徴収への移行を検討する 制度 の見直しを検討している。（具体的にご説明ください）その他（具体的にご説明ください） 【回答７】
+当面は現行の学校関与（委託契約に基づく徴収事務の代行）を継続いたします。しかしながら、教職員の働 き方改革（校務負担の軽減）や、PTA が任意加入の団体であるという本来の趣旨を踏まえ、将来的には各 PTA による自主徴収への移行や、より適切な事務のあり方について研究・検討を進めてまいりたいと考えておりま す。</pre></details><details class="response-accordion" id="record-8-E"><summary><span class="response-title">E:137条 / 学校教育法137条照会</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>学校施設利用</span><span class="flag">回答日未確認</span><span class="flag">本文短文・原資料確認</span></div><pre class="response-body">照会その2　回答（2）ここです
+
+（お問合せ）教委　地域学校協働課</pre></details></div></details><details class="municipality-accordion" id="muni-66"><summary><span class="muni-summary-name">野洲市</span><span class="muni-summary-meta">C / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>入会意思確認</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><details class="response-accordion" id="record-14-C"><summary><span class="response-title">C:要望書 / 要望書4項目</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>入会意思確認</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><pre class="response-body">Re：【要望書（回答依頼）】公立学校におけるPTA運営の適正化について
+
+1. PTAの任意加入制に関する周知と入会意思確認の徹底
+2. 学校徴収金とPTA会費の混同回避および公費負担すべき項目の整理
+3. 個人情報保護法に基づく適切な名簿提供の運用
+
+つきましては、本要望書に対する貴自治体の現在の取り組み状況や、今後の対応方針について、差し違えない範囲でご教示いただけますと幸いです。
+
+子どもたちのためのより良い教育環境づくりのため、ご理解とご協力を賜りますようお願い申し上げます。</pre></details></div></details><details class="municipality-accordion" id="muni-68"><summary><span class="muni-summary-name">門真市</span><span class="muni-summary-meta">A / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>入会意思確認</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><details class="response-accordion" id="record-50-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>入会意思確認</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><pre class="response-body">PTAは任意加入の団体であり、加入は保護者の自由な意思に基づくものであるべきと考えております。そのため、PTAへの入会に際しては、書面等による明示的な加入意思の確認が適切であると認識しております。また、学校がPTA会費の徴収に関与する場合は、あくまでPTAとの間で委任関係に基づくものであり、その権限や手続きについては明確にしておくことが適切であると認識しております。
+
+個人情報の取り扱いについては、PTA活動に限らず、その利用目的を明確にし、本人の同意を得たうえで、当該目的の範囲内で利用することが求められます。学校においても、個人情報保護法の趣旨を踏まえ、適切に取り扱うことが重要であると考えております。
+
+本市教育委員会といたしましては、PTAの運用が法令および関連規定に適合するよう、各学校に対し、任意加入の原則の周知徹底、加入手続きの明確化、個人情報の適正な取り扱い、ならびに委任契約の明文化を指導してまいります。また、必要に応じて運用の見直しを促し、保護者の権利保護と学校教育の信頼維持に努めてまいります。</pre></details></div></details><details class="municipality-accordion" id="muni-74"><summary><span class="muni-summary-name">高槻市</span><span class="muni-summary-meta">B / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>教職員関与・服務</span><span>教委指導・是正</span></div><details class="response-accordion" id="record-18-B"><summary><span class="response-title">B:追加7-8 / 追加質問7-8</span><span class="response-date">2025-10-16</span></summary><div class="record-tags"><span>教職員関与・服務</span><span>教委指導・是正</span></div><pre class="response-body">【追加照会】PTA入会に関する法的見解についての追加質問のお願い（回答）
+
+平素より本市教育行政にご理解・ご協力をいただき、ありがとうございます。
+
+令和７年１０月１６日付けでのＰＴＡに関するお問合せにつきましては、同年５月２３日付け及び同年８月２２日付けで回答した部分以外について回答させていただきます。
+
+教職員が、ＰＴＡの立場として行う業務については、勤務時間外に行うよう指導しています。</pre></details></div></details><h3 class="response-region-heading">中国・四国</h3><details class="municipality-accordion" id="muni-1"><summary><span class="muni-summary-name">いの町</span><span class="muni-summary-meta">A / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><details class="response-accordion" id="record-1-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><pre class="response-body">【回答：高知県いの町】PTA入会に関する法的見解・照会６項目
+
+1.PTA の入会契約の成立要件に関する法的見解について
+保護者の明示的な申込み意思表示と PTA の承諾がないまま、学校側が児童の入学 をもって一律に「会員」とみなす運用が多くの学校で行われています。このような 「みなし入会」方式について、民法第 522 条および消費者契約法に照らし、契約が 成立していると判断される法的根拠があるか、教育委員会としての見解をお示しく ださい。
+→PTA の加入は任意であるため、加入については、民法第 522 条の規定に照らして、 当事者間の意思の合致が必要であり、また消費者契約法の観点からも、契約の成立 や効力については、保護者の意思表示の有無、契約内容の明確性が必要と考えます。   意思の合致については、PTA 活動が長年にわたり地域社会と連携して行われてき た背景や、保護者の理解と協力のもとで成り立っているという実情もございますが、 入会契約の成立要件としては、書面をもって明確な加入の意思を確認する必要があ ると考えます。
+
+2.学校による PTA 会費の徴収行為が無権代理に該当するかについて  学校が PTA との間で PTA 会費の徴収業務に関する準委任契約を結ばずに、慣例的 に児童名簿等を用いて会費を代行徴収しているケースがあります。学校が正式な代 理権を持たずに PTA の業務を代行している場合、民法第 113 条に基づく無権代理に 該当すると考えられますが、教育委員会はこの点をどのように評価していますか。 →民法第 113 条に定める無権代理の該当判断について、学校と PTA との間に明確な 契約関係が存在するか否か、また学校と PTA 相互の認識がどうなっているか等をし っかり確認したうえで評価する必要があると考えます。
+
+3.入会申込書による保護者および教職員の明確な意思確認の必要性について  PTA が任意加入団体である以上、契約の成立には個別の申込書や同意書による明 示的な加入意思の確認が必要と考えられます。現在多くの学校で申込書を徴収して いない状況について、教育委員会として是正の必要性を認識されていますか。 →ご指摘のとおり PTA は任意加入の団体であり、加入に際しては本人の意思が尊重 されるべきであるとの認識です。
+その意思の確認方法については、申込書・同意書に限らず、口頭での確認や説明 資料の配布など、様々な形態が取られている場合もあると承知しております。   ただ、上記「1.」でも回答したとおり、書面で明確な意思表示を確認するのこと が必要であると考えます。
+
+4.個人情報保護法に基づく児童名簿・連絡個票の利用目的逸脱について  PTA が入会申込書を取得しておらず、申し込んだ保護者・教職員が誰であるかを 特定・管理していない状態で、学校が児童名簿や連絡個票を用いて PTA 会費の徴収 等を行っている実態が、多くの学校で確認されています。これらの名簿情報は、本 来、入学手続きや教育活動のために学校が収集したものであり、保護者の同意なく PTA という外部団体の金銭徴収業務に転用することは、個人情報保護法第 69 条（利 用目的の制限）に違反するおそれがあります。加えて、PTA 自身が会員の氏名を把 握していない状態で、学校が本人同意なしに代理徴収的な行為をしていることは、 情報主体（保護者）の権利を大きく侵害する状況であると考えます。貴教育委員会 として、このような運用の違法性または法令抵触の可能性に対する認識、および是 正の必要性や今後の対応方針について、どのようにお考えでしょうか。明確なご所 見をお示しください。
+→個人情報保護法第 69 条における「利用目的の制限」に関しては、情報の取得時 に示された目的の範囲内での利用が原則とされていますので、保護者の意向を尊重 し、情報の取り扱いに関する説明や同意の取得といった対応が必要であると考えま す。
+この回答内容を踏まえ、学校に対し必要な指導をしていく必要があると考えてい ます。
+
+5.PTA の運用に関する教育委員会の是正指導責任について
+学校が PTA と一体的に関与し、会費徴収や施設使用を支援している実態を踏まえ れば、PTA の違法または不適切な運用が学校教育の一環と認定される可能性があり ます。地方教育行政法第 10 条に基づき、教育委員会が是正指導を行う責任があると お考えでしょうか。
+→いの町教育委員会といたしましては、これまでの見解を踏まえ、学校に対して必 要に応じ適切な対応を取るよう適宜指導していく責任があると考えます。
+
+6.任意加入・法令遵守が確保されるまでの暫定的措置に関する方針について  PTA が保護者の意思確認を適切に行わず、会員名簿すら把握しないまま会費徴収 や施設利用を継続している状態は、法令違反の懸念が濃厚です。教育委員会として、 是正がなされるまでの間、学校による施設提供や会費徴収への協力を停止する措置 を講じる予定はありますか。
+→PTA が任意加入団体であることや、個人情報の適正な管理、保護者の意思確認の 重要性については、教育委員会としても十分に認識しており、各学校においても丁 寧な説明と合意形成が図られることが望ましいと考えております。
+施設提供や会費徴収への協力については、学校と PTA との連携の中で、保護者の 理解と協力のもとで、書面をもって適切に行われることが基本であり、仮に運営上 の課題がある場合には、関係者間での対話や協議を通じて改善が図られることが望 ましいと認識しております。
+なお、暫定的措置の有無や具体的な対応については、個別の状況に応じて慎重に 検討されるべき事案であり、今後、検討すべき事項と考えています。</pre></details></div></details><details class="municipality-accordion" id="muni-19"><summary><span class="muni-summary-name">土佐清水市</span><span class="muni-summary-meta">B / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>PTA任意団体</span><span>会計・監査</span><span>教委指導・是正</span><span class="flag">回答日未確認</span><span class="flag">添付資料確認推奨</span></div><details class="response-accordion" id="record-3-B"><summary><span class="response-title">B:追加7-8 / 追加質問7-8</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>PTA任意団体</span><span>会計・監査</span><span>教委指導・是正</span><span class="flag">回答日未確認</span><span class="flag">添付資料確認推奨</span></div><pre class="response-body">【回答】PTA入会に関する法的見解についての追加質問について
+
+■ 回答様式（このまま引用・記入・返信可）
+
+【自治体名／教育委員会名】：土佐清水市教育委員会
+【ご担当部署／ご担当者名】：[省略]
+
+（質問７）該当する選択肢に✔
+
+（質問８）根拠等の記載
+・根拠の区分（法令／条例／規則／通知／通達／内規／答申／監査結果 等）：補助金交付要綱
+・名称：土佐清水市社会教育団体等事業費補助金
+・条項・該当箇所：第2条（４）
+・発出・決定日／所管：
+・備考（運用実態、判断基準、留意事項、関連文書の有無 等）：
+・参照URLまたは添付有無：</pre></details></div></details><details class="municipality-accordion" id="muni-36"><summary><span class="muni-summary-name">岡山市</span><span class="muni-summary-meta">A / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>教委指導・是正</span><span class="flag">回答日未確認</span><span class="flag">地教行法条文番号要確認</span></div><details class="response-accordion" id="record-26-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>入会意思確認</span><span>みなし加入否定・注意</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>教委指導・是正</span><span class="flag">回答日未確認</span><span class="flag">地教行法条文番号要確認</span></div><pre class="response-body">２０２５年８月６日付けのお問い合わせに対する回答について
+
+1. PTAの入会契約の成立要件に関する法的見解について
+保護者の明示的な申込み意思表示とPTAの承諾がないまま、学校側が
+児童の入学をもって一律に「会員」とみなす運用が多くの学校で行われています。
+このような「みなし入会」方式について、民法第522条および消費者契約法に照らし、
+契約が成立していると判断される法的根拠があるか、教育委員会としての見解を
+お示しください。
+
+＜回答＞
+２０２５年７月１６日付けのホームページからのお問い合わせについての
+８月６日付けの回答の中でお答えしている通りです。
+
+2.学校によるPTA会費の徴収行為が無権代理に該当するかについて
+学校がPTAとの間でPTA会費の徴収業務に関する準委任契約を結ばずに、
+慣例的に児童名簿等を用いて会費を代行徴収しているケースがあります。
+学校が正式な代理権を持たずにPTAの業務を代行している場合、民法第113条に
+基づく無権代理に該当すると考えられますが、教育委員会はこの点をどのように
+評価していますか。
+
+＜回答＞
+２０２５年７月１６日付けのホームページからのお問い合わせについての
+８月６日付けの回答の中でお答えしているとおりです。
+
+3.入会申込書による保護者および教職員の明確な意思確認の必要性について
+PTAが任意加入団体である以上、契約の成立には個別の申込書や同意書による
+明示的な加入意思の確認が必要と考えられます。現在多くの学校で申込書を徴収
+していない状況について、教育委員会として是正の必要性を認識されていますか。
+
+＜回答＞
+２０２５年７月１６日付けのホームページからのお問い合わせについての
+８月６日付けの回答の中でお答えしているとおりです。
+
+4.個人情報保護法に基づく児童名簿・連絡個票の利用目的逸脱について
+PTAが入会申込書を取得しておらず、申し込んだ保護者・教職員が誰であるか
+を特定・管理していない状態で、学校が児童名簿や連絡個票を用いてPTA会費の
+徴収等を行っている実態が、多くの学校で確認されています。これらの名簿情報
+は、本来、入学手続きや教育活動のために学校が収集したものであり、保護者の
+同意なくPTAという外部団体の金銭徴収業務に転用することは、
+個人情報保護法第69条（利用目的の制限）に違反するおそれがあります。
+加えて、PTA自身が会員の氏名を把握していない状態で、学校が本人同意なしに
+代理徴収的な行為をしていることは、情報主体（保護者）の権利を大きく侵害する
+状況であると考えます。貴教育委員会として、このような運用の違法性または
+法令抵触の可能性に対する認識、および是正の必要性や今後の対応方針について、
+どのようにお考えでしょうか。明確なご所見をお示しください。
+
+＜回答＞
+２０２５年７月１６日付けのホームページからのお問い合わせについての
+８月６日付けの回答の中でお答えしているとおりです。
+
+5.PTAの運用に関する教育委員会の是正指導責任について
+学校がPTAと一体的に関与し、会費徴収や施設使用を支援している実態を踏まえれば、
+PTAの違法または不適切な運用が学校教育の一環と認定される可能性があります。
+地方教育行政法第10条に基づき、教育委員会が是正指導を行う責任があるとお考えで
+しょうか。
+
+＜回答＞
+教育委員会はPTAに対して是正指導を行う立場にはなく、PTAからの求めに応じて助言等を
+行う立場にあると考えています。
+
+6.任意加入・法令遵守が確保されるまでの暫定的措置に関する方針について
+PTAが保護者の意思確認を適切に行わず、会員名簿すら把握しないまま会費徴収や
+施設利用を継続している状態は、法令違反の懸念が濃厚です。教育委員会として、是正が
+なされるまでの間、学校による施設提供や会費徴収への協力を停止する措置を講じる予定
+はありますか。
+
+＜回答＞
+教育委員会はPTAからの求めに応じて、助言等を行う立場にあると考えており、その旨
+学校に伝えています。現時点で、ご指摘の措置を講じる予定はございません。</pre></details></div></details><details class="municipality-accordion" id="muni-42"><summary><span class="muni-summary-name">徳島市</span><span class="muni-summary-meta">A, B, C, E / 全文 4件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>みなし加入否定・注意</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>教委指導・是正</span><span>回答未了・延長</span><span class="flag">回答未了・延長等</span></div><details class="response-accordion" id="record-30-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">2025-12-26</span></summary><div class="record-tags"><span>みなし加入否定・注意</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>教委指導・是正</span><span>回答未了・延長</span><span class="flag">回答未了・延長等</span></div><pre class="response-body">【徳島市教育委員会回答】PTA入会に関する法的見解についての追加質問
+
+さて、10月16日及び同月20日付で照会のありました標題の件につきまして、回答を送付いたしますので、ご確認ください。
+
+このたびは、回答が遅くなり、申し訳ございませんでした。
+
+教学発第２０７７号
+令和７年１２月２６日
+
+徳島市教育委員会事務局
+学校教育課・社会教育課
+
+PTA入会に関する法的見解についての追加質問について（回答）
+
+令和７年１０月１６日および同月２０日付けで照会のあった件について、次のとおり回答します。
+
+【１０月１６日付け追加質問 ＰＴＡ入会手続き等の法的見解について　への回答】
+
+１　質問７
+
+「５　その他」
+徳島市では、今後のPTA運営の適正化に向けた取組の一環として、学校長とPTA団体との間で締結する（準）委任契約に基づく業務のみを「公務」として位置付けることとし、その他の業務を行う場合は、内容により「職専免」の手続きを経るか勤務時間外の対応とするよう指導する方向で検討しています。
+
+２　質問８
+
+現在は検討段階であり、運用根拠等として示すことができるものはありません。
+
+【１０月２０日付け照会その２ 学校教育法第137条に基づく学校施設利用許可および
+ＰＴＡ入会・会費事務等に関する照会（７項目）　への回答】
+
+１　学校施設利用許可と条件設定（137条）
+
+学校施設の目的外使用の許可に関する「学校教育上の支障」の有無の判断にあたっては、当該団体の利用目的、態様等を含めて判断することとなります。
+
+２　学校による一斉配布・回収の可否と代替手順
+
+他団体が、入学説明会等の機会を活用して入会案内等を行うことを許可する場合は、学校教育活動と混同され入会等について圧力が生じることのないよう、保護者への説明等に配慮が必要であると考えております。
+
+学校が保有する個人情報は、個人情報保護法に基づき適正に管理されるべきものであ
+り、これを保護者の同意なくPTAに提供することは違法であると考えています。
+このため、学校が保有する個人情報をPTA業務に使用する場合は、事前に保護者本人
+から当該使用について同意を得ておく必要があると考えています。
+
+４　学校による会費等の代行徴収の位置づけ
+
+保護者の利便性向上のために学校がPTA会費等の徴収を代行する場合は、PTAと学
+校間で（準）委任契約を締結したうえで、契約内容に基づく校務整理と保護者への説明が
+必要と考えています。
+
+５　「みなし入会」や非会員への金銭選択様式の学校経由運用の評価
+
+学校教育法第137条に基づく学校施設の目的外使用の許可にあたっては、法令の規定
+に基づき「学校教育上の支障」の有無について判断する必要があり、判断項目には、当該
+団体の利用目的、態様等が含まれるものと考えております。
+PTAの運営が適正に行われるよう、教育委員会としてあるべき方向性を示すとともに、必要に応じ学校や当該団体に対し、助言や支援を行う必要があると考えています。
+
+６　是正完了までの暫定措置
+
+教育委員会として必要な助言や指導を継続していくとともに、必要な是正措置が適切に講じられない団体に対しては、早期の是正につながるような措置も検討するなど、適切な是正指導とPTA運営の適正性の確保に努めたいと考えています。
+
+７　教職員の勤務時間内のPTA関与（公務/職専免・兼職承認）
+
+徳島市では、今後のPTA運営の適正化に向けた取組の一環として、学校長とPTA団体との間で締結する（準）委任契約に基づく業務のみを「公務」として位置付けることとし、その他の業務を行う場合は、内容により「職専免」の手続きを経るか勤務時間外の対応とするよう指導する方向で検討しています。
+
+以　上</pre></details><details class="response-accordion" id="record-7-B"><summary><span class="response-title">B:追加7-8 / 追加質問7-8</span><span class="response-date">2025-12-26</span></summary><div class="record-tags"><span>みなし加入否定・注意</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>教委指導・是正</span><span>回答未了・延長</span><span class="flag">回答未了・延長等</span></div><pre class="response-body">【徳島市教育委員会回答】PTA入会に関する法的見解についての追加質問
+
+さて、10月16日及び同月20日付で照会のありました標題の件につきまして、回答を送付いたしますので、ご確認ください。
+
+このたびは、回答が遅くなり、申し訳ございませんでした。
+
+教学発第２０７７号
+令和７年１２月２６日
+
+徳島市教育委員会事務局
+学校教育課・社会教育課
+
+PTA入会に関する法的見解についての追加質問について（回答）
+
+令和７年１０月１６日および同月２０日付けで照会のあった件について、次のとおり回答します。
+
+【１０月１６日付け追加質問 ＰＴＡ入会手続き等の法的見解について　への回答】
+
+１　質問７
+
+「５　その他」
+徳島市では、今後のPTA運営の適正化に向けた取組の一環として、学校長とPTA団体との間で締結する（準）委任契約に基づく業務のみを「公務」として位置付けることとし、その他の業務を行う場合は、内容により「職専免」の手続きを経るか勤務時間外の対応とするよう指導する方向で検討しています。
+
+２　質問８
+
+現在は検討段階であり、運用根拠等として示すことができるものはありません。
+
+【１０月２０日付け照会その２ 学校教育法第137条に基づく学校施設利用許可および
+ＰＴＡ入会・会費事務等に関する照会（７項目）　への回答】
+
+１　学校施設利用許可と条件設定（137条）
+
+学校施設の目的外使用の許可に関する「学校教育上の支障」の有無の判断にあたっては、当該団体の利用目的、態様等を含めて判断することとなります。
+
+２　学校による一斉配布・回収の可否と代替手順
+
+他団体が、入学説明会等の機会を活用して入会案内等を行うことを許可する場合は、学校教育活動と混同され入会等について圧力が生じることのないよう、保護者への説明等に配慮が必要であると考えております。
+
+学校が保有する個人情報は、個人情報保護法に基づき適正に管理されるべきものであ
+り、これを保護者の同意なくPTAに提供することは違法であると考えています。
+このため、学校が保有する個人情報をPTA業務に使用する場合は、事前に保護者本人
+から当該使用について同意を得ておく必要があると考えています。
+
+４　学校による会費等の代行徴収の位置づけ
+
+保護者の利便性向上のために学校がPTA会費等の徴収を代行する場合は、PTAと学
+校間で（準）委任契約を締結したうえで、契約内容に基づく校務整理と保護者への説明が
+必要と考えています。
+
+５　「みなし入会」や非会員への金銭選択様式の学校経由運用の評価
+
+学校教育法第137条に基づく学校施設の目的外使用の許可にあたっては、法令の規定
+に基づき「学校教育上の支障」の有無について判断する必要があり、判断項目には、当該
+団体の利用目的、態様等が含まれるものと考えております。
+PTAの運営が適正に行われるよう、教育委員会としてあるべき方向性を示すとともに、必要に応じ学校や当該団体に対し、助言や支援を行う必要があると考えています。
+
+６　是正完了までの暫定措置
+
+教育委員会として必要な助言や指導を継続していくとともに、必要な是正措置が適切に講じられない団体に対しては、早期の是正につながるような措置も検討するなど、適切な是正指導とPTA運営の適正性の確保に努めたいと考えています。
+
+７　教職員の勤務時間内のPTA関与（公務/職専免・兼職承認）
+
+徳島市では、今後のPTA運営の適正化に向けた取組の一環として、学校長とPTA団体との間で締結する（準）委任契約に基づく業務のみを「公務」として位置付けることとし、その他の業務を行う場合は、内容により「職専免」の手続きを経るか勤務時間外の対応とするよう指導する方向で検討しています。
+
+以　上</pre></details><details class="response-accordion" id="record-10-C"><summary><span class="response-title">C:要望書 / 要望書4項目</span><span class="response-date">2026-01-01</span></summary><div class="record-tags"></div><pre class="response-body">令和８年１月１日付け照会にかかる回答について
+
+令和8年１月１日付けで回答の依頼をいただいておりました、「公立学校におけるPTA運営の適正化に関する要望書並びに教育委員会としての対応方針」につきまして、徳島市教育委員会の状況を次のとおり回答いたします。
+
+１要望事項に関し、すでに講じている措置の有無
+令和８年１月、市教育委員会として「学校園管理者のためのＰＴＡ運営の手引き」を作成し、管内の市立学校（園）へ共有いたしました。
+
+２今後、新たに講ずる予定の有無
+前項の手引きは、適正化に向けた取組を早期に進めるため、作成時点における考え方等を記載した言わば「暫定版」と捉えています。
+更なる見直しが必要な部分もあると認識しておりますことから、今後においても検討を継続していく予定です。
+
+以上、よろしくお願いいたします。</pre></details><details class="response-accordion" id="record-3-E"><summary><span class="response-title">E:137条 / 学校教育法137条照会</span><span class="response-date">2025-12-26</span></summary><div class="record-tags"><span>みなし加入否定・注意</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>学校施設利用</span><span>教委指導・是正</span><span>回答未了・延長</span><span class="flag">回答未了・延長等</span></div><pre class="response-body">【徳島市教育委員会回答】PTA入会に関する法的見解についての追加質問
+
+さて、10月16日及び同月20日付で照会のありました標題の件につきまして、回答を送付いたしますので、ご確認ください。
+
+このたびは、回答が遅くなり、申し訳ございませんでした。
+
+教学発第２０７７号
+令和７年１２月２６日
+
+徳島市教育委員会事務局
+学校教育課・社会教育課
+
+PTA入会に関する法的見解についての追加質問について（回答）
+
+令和７年１０月１６日および同月２０日付けで照会のあった件について、次のとおり回答します。
+
+【１０月１６日付け追加質問 ＰＴＡ入会手続き等の法的見解について　への回答】
+
+１　質問７
+
+「５　その他」
+徳島市では、今後のPTA運営の適正化に向けた取組の一環として、学校長とPTA団体との間で締結する（準）委任契約に基づく業務のみを「公務」として位置付けることとし、その他の業務を行う場合は、内容により「職専免」の手続きを経るか勤務時間外の対応とするよう指導する方向で検討しています。
+
+２　質問８
+
+現在は検討段階であり、運用根拠等として示すことができるものはありません。
+
+【１０月２０日付け照会その２ 学校教育法第137条に基づく学校施設利用許可および
+ＰＴＡ入会・会費事務等に関する照会（７項目）　への回答】
+
+１　学校施設利用許可と条件設定（137条）
+
+学校施設の目的外使用の許可に関する「学校教育上の支障」の有無の判断にあたっては、当該団体の利用目的、態様等を含めて判断することとなります。
+
+２　学校による一斉配布・回収の可否と代替手順
+
+他団体が、入学説明会等の機会を活用して入会案内等を行うことを許可する場合は、学校教育活動と混同され入会等について圧力が生じることのないよう、保護者への説明等に配慮が必要であると考えております。
+
+学校が保有する個人情報は、個人情報保護法に基づき適正に管理されるべきものであ
+り、これを保護者の同意なくPTAに提供することは違法であると考えています。
+このため、学校が保有する個人情報をPTA業務に使用する場合は、事前に保護者本人
+から当該使用について同意を得ておく必要があると考えています。
+
+４　学校による会費等の代行徴収の位置づけ
+
+保護者の利便性向上のために学校がPTA会費等の徴収を代行する場合は、PTAと学
+校間で（準）委任契約を締結したうえで、契約内容に基づく校務整理と保護者への説明が
+必要と考えています。
+
+５　「みなし入会」や非会員への金銭選択様式の学校経由運用の評価
+
+学校教育法第137条に基づく学校施設の目的外使用の許可にあたっては、法令の規定
+に基づき「学校教育上の支障」の有無について判断する必要があり、判断項目には、当該
+団体の利用目的、態様等が含まれるものと考えております。
+PTAの運営が適正に行われるよう、教育委員会としてあるべき方向性を示すとともに、必要に応じ学校や当該団体に対し、助言や支援を行う必要があると考えています。
+
+６　是正完了までの暫定措置
+
+教育委員会として必要な助言や指導を継続していくとともに、必要な是正措置が適切に講じられない団体に対しては、早期の是正につながるような措置も検討するなど、適切な是正指導とPTA運営の適正性の確保に努めたいと考えています。
+
+７　教職員の勤務時間内のPTA関与（公務/職専免・兼職承認）
+
+徳島市では、今後のPTA運営の適正化に向けた取組の一環として、学校長とPTA団体との間で締結する（準）委任契約に基づく業務のみを「公務」として位置付けることとし、その他の業務を行う場合は、内容により「職専免」の手続きを経るか勤務時間外の対応とするよう指導する方向で検討しています。
+
+以　上</pre></details></div></details><h3 class="response-region-heading">九州・沖縄</h3><details class="municipality-accordion" id="muni-14"><summary><span class="muni-summary-name">北九州市</span><span class="muni-summary-meta">C / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>入会意思確認</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><details class="response-accordion" id="record-2-C"><summary><span class="response-title">C:要望書 / 要望書4項目</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>入会意思確認</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><pre class="response-body">公立学校におけるPTA運営の適正化に関する要望書への回答について
+
+1. PTA 入会が任意であることの説明と意思確認について
+
+【対応状況と方針】
+• すでに講じている措置： 教育委員会は、PTA が「任意加入の団体」であること を明記し、入退会が本人の意思に基づくものであることを周知するよう学校に 求めています。具体的には、入学説明会や文書配布を通じて、活動の目的や意 義を説明した上で、何らかの方法（入会申込書の提出など）で意思確認を行う 必要性を伝えています。
+• 今後、新たに講ずる予定： （一社）北九州市 PTA 協議会が作成したガイドラ イン（令和 4 年度改訂版）では、書面で加入を確認する「適正化レベル A」を 理想として掲げており、各学校の PTA がこのレベルに近づくよう、教育委員会 と連携した取組を継続しています。
+2. PTA 会費の徴収・集金への関与について
+
+【対応状況と方針】
+• すでに講じている措置： 教育委員会は、PTA 会費の徴収について以下の運用を 明確化しています。
+o PTA 会費は「校納金」ではないが、保護者の利便性のために学校が代理 徴収を行っている実態を説明すること。
+o 徴収のお知らせを配布する際は、校納金と PTA 会費を明確に区別して表 記すること。
+o 未加入者から誤って徴収しないよう、未加入の申し出先を記載するなど の配慮を行うこと。
+3. 個人情報の適正な管理と PTA との関係について
+
+【対応状況と方針】
+• すでに講じている措置： 「学校が保有している個人情報は、PTA に提供しない ことを原則とする」という方針を打ち出しています。
+o 学校（行政機関）が保有する個人情報を提供できるのは、本人の同意が ある場合に限られます。
+o PTA が名簿作成等で個人情報を必要とする場合は、PTA が直接保護者か ら同意を得る（入会申込書と兼ねる等）運用を推奨しています。
+o 学校長と PTA 会長の連名による個人情報提供の同意確認文書は、作成し ないよう指導しています。
+4. 教職員の PTA 活動への関与と職務の区別について
+
+【対応状況と方針】
+• すでに講じている措置： 教育委員会が策定した「業務改善実施計画」におい て、職務と業務外活動の区別を明確にしています。
+o PTA 活動への参加は、原則として「自己研鑽の時間その他業務外の時 間」に含まれる「在校等時間」の対象外（削除時間）として整理されて います。
+o 特に、地域住民としての立場で参加する PTA 活動などは、校務としては 扱わないよう区分されています。
+o 教職員の過度な負担を軽減するため、服務管理システムでの「削除時 間」の入力や管理職による確認を通じて、適正な勤務時間の把握に努め ています。
+• 今後、新たに講ずる予定： 学校・教育委員会・PTA 協議会・保護者の代表者等 で構成される「学校における業務改善推進拡大会議」を継続開催し、実効性の ある業務改善（活動の取捨選択や効率化）を検討していく方針です。</pre></details></div></details><details class="municipality-accordion" id="muni-18"><summary><span class="muni-summary-name">嘉麻市</span><span class="muni-summary-meta">C / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>回答未了・延長</span><span class="flag">回答日未確認</span><span class="flag">回答未了・延長等</span></div><details class="response-accordion" id="record-3-C"><summary><span class="response-title">C:要望書 / 要望書4項目</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>回答未了・延長</span><span class="flag">回答日未確認</span><span class="flag">回答未了・延長等</span></div><pre class="response-body">公立学校におけるPTA運営の適正化の要望書について
+
+平素よりお世話になっております。
+このたびは要望書をご提出いただき、ご要望の内容につきましては、
+関係部署等とも共有した上で慎重に検討を要する事項と受け止めております。
+誠に恐れ入りますが、ご指定いただいております期限内での回答は難しい状況です。</pre></details></div></details><details class="municipality-accordion" id="muni-22"><summary><span class="muni-summary-name">大分県</span><span class="muni-summary-meta">A, B, G / 全文 3件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>入会意思確認</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>会計・監査</span><span>教委指導・是正</span><span>回答未了・延長</span><span class="flag">添付資料確認推奨</span><span class="flag">回答未了・延長等</span></div><details class="response-accordion" id="record-16-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">2025-08-14</span></summary><div class="record-tags"><span>入会意思確認</span><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>教委指導・是正</span></div><pre class="response-body">回答：【ご回答のお願い（再送／一斉送信）】PTA入会に関する法的見解・照会６項目
+
+令和７年８月14日付けで貴団体から照会のあった事項について、下記のとおり回答します。
+
+大分県教育庁社会教育課
+
+記
+
+(1)　ＰＴＡの入会契約の成立要件に関する法的見解について
+（回答）
+ＰＴＡ団体組織への入会に当たっては、保護者の明示的な申込みの意思表示及びその意思表示に対する当該団体の承諾が必要なものと考えます。
+
+(2)　学校によるＰＴＡ会費の徴収行為が無権代理に該当するかについて
+（回答）
+例示のあった状況において、学校がＰＴＡ会費の徴収を代行している場合は、無権代理に該当し、適正ではないものと考えます。
+
+(3)　入会申込書による保護者および教職員の明確な意思確認の必要性について
+（回答）
+ＰＴＡ団体組織への加入に当たり、申込書や同意書による明示的な意思確認を行うことが適切と認識しています。したがって、現状、それが行われていない団体に対しては、是正の必要性を伝えるべきと考えます。
+
+(4)　個人情報保護法に基づく児童名簿・連絡個票の利用目的逸脱について
+（回答）
+学校が公用のため作成した児童生徒名簿について、保護者の同意なくＰＴＡ等任意団体に提供する行為は、個人情報保護法（平成15年法律第57号）に抵触するものと考えます。したがって、そのような行為をいまだに行っている学校があれば、速やかに是正すべきと考えます。
+なお、当県においては、学校における児童生徒等の個人情報の適正な取扱いについて、所管する全ての県立学校の校長に対して、適宜、指導を行い、事例に挙げられたような状況が生じないよう徹底を図っています。
+
+(5)　ＰＴＡの運用に関する教育委員会の是正指導責任について
+（回答）
+ＰＴＡ団体組織については、社会教育法（昭和24年法律第207号）第10条の規定により「社会教育関係団体」に該当するものであることから、同法第12条に規定する「不当に統制的支配を及ぼし、又はその事業に干渉を加えてはならない」に抵触しない限りにおいて、地方教育行政の組織及び運営に関する法律（昭和31年法律第162号）第21条第12号の規定にのっとり教育委員会が管理する権限を有すると解されます。したがって、当該団体において違法ないし不適切な運用が確認された場合には、当然に教育委員会が是正・指導を行うべきものと考えます。
+
+(6)　任意加入・法令遵守が確保されるまでの暫定的措置に関する方針について
+（回答）
+例示の状況が確認された場合は、法令にのっとった適正な形式の運営となるよう指導を行うべきものと考えます。</pre></details><details class="response-accordion" id="record-4-B"><summary><span class="response-title">B:追加7-8 / 追加質問7-8</span><span class="response-date">2025-10-16</span></summary><div class="record-tags"><span>会計・監査</span><span class="flag">添付資料確認推奨</span></div><pre class="response-body">大分県社会教育課
+
+令和７年１０月１６日付で貴団体から照会があった事項について、下記のとおり回答いたします。
+
+（質問７）該当する選択肢に
+〓
+
+（質問８）根拠等の記載
+・根拠の区分：内規
+・名称：学校私費会計取扱要領
+・条項・該当箇所：92ページから９７ページまで、９９ページから１０５ページまで
+・発出・決定日／所管：平成24年12月28（最終改訂：令和７年３月31日）／大分県教育庁教育改革・企画課
+・備考（運用実態、判断基準、留意事項、関連文書の有無 等）：なし
+・参照URLまたは添付有無：なし</pre></details><details class="response-accordion" id="record-2-G"><summary><span class="response-title">G:延長等 / 延長等</span><span class="response-date">2025-10-16</span></summary><div class="record-tags"><span>回答未了・延長</span><span class="flag">回答未了・延長等</span></div><pre class="response-body">大分県社会教育課
+
+令和７年10月16日付けで貴団体からあった追加質問について、現在、当教育委員会担当部署において、回答に当たっての作業を進めているところですが、示された期限までの回答が難しい状況です。
+つきましては、年内を目途に、準備が整い次第、回答することとしますので、その旨御了承願います。</pre></details></div></details><details class="municipality-accordion" id="muni-55"><summary><span class="muni-summary-name">玉名市</span><span class="muni-summary-meta">A / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>タグなし</span><span class="flag">回答日未確認</span><span class="flag">本文短文・原資料確認</span></div><details class="response-accordion" id="record-40-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span class="flag">回答日未確認</span><span class="flag">本文短文・原資料確認</span></div><pre class="response-body">【玉名市】PTA入会に関する質問について</pre></details></div></details><details class="municipality-accordion" id="muni-76"><summary><span class="muni-summary-name">鹿児島市</span><span class="muni-summary-meta">A / 全文 1件</span></summary><div class="municipality-accordion-body"><div class="record-tags municipality-tags"><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><details class="response-accordion" id="record-54-A"><summary><span class="response-title">A:6項目 / 6項目照会</span><span class="response-date">回答日未確認</span></summary><div class="record-tags"><span>PTA任意団体</span><span>会費徴収・委任契約</span><span>個人情報・名簿</span><span>教職員関与・服務</span><span>教委指導・是正</span><span class="flag">回答日未確認</span></div><pre class="response-body">日頃から本市教育行政に対しご理解ご協力を賜り感謝申し上げます。
+
+さて、先般お問い合わせいただきました
+
+「ＰＴＡ入会手続き等の法的見解について照会事項」につきまして、
+
+次のとおり回答いたします。
+
+ＰＴＡは、社会教育関係団体であり、その組織・運営・活動に関しては、
+
+それぞれの団体が主体的に判断するものであると考えております。
+
+鹿児島市教育委員会からの学校に対する指導としましては、
+
+市小・中・高等学校校長研修会や教頭研修会において
+
+・　ＰＴＡは任意の団体であり、入退会は保護者の自由であることを周知すること。
+
+・　ＰＴＡ会費の徴収に関しては、ＰＴＡ会長と校長による事務委任（準委任契約）を毎年行うこと。
+
+・　個人情報の取り扱いについては、個人情報を集める・保管する時のルール、個人情報の第三者に提供する時のルールについて、具体例を示して確認する。
+
+などについて指導をしているところです。
+
+※　鹿児島市ＰＴＡ連合会からの要請により、
+
+同内容を市Ｐ連主催のＰＴＡ会長研修会や理事会において指導・助言しております。</pre></details></div></details></section>
+</main>
+<script crossorigin="" src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+(function() {
+  var el = document.getElementById('board-map');
+  if (!el || typeof L === 'undefined') return;
+  var map = L.map('board-map').setView([36.4, 138.1], 5);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 18,
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+  var pts = [{"name": "いの町", "lat": 33.548, "lng": 133.427, "desc": "A / 回答本文 1件 / 回答日未確認", "url": "#muni-1"}, {"name": "さくら市", "lat": 36.685, "lng": 139.966, "desc": "A / 回答本文 1件 / 回答日未確認", "url": "#muni-2"}, {"name": "三戸町", "lat": 40.378, "lng": 141.258, "desc": "A / 回答本文 1件 / 回答日未確認", "url": "#muni-3"}, {"name": "三重県", "lat": 34.73, "lng": 136.508, "desc": "A, B / 回答本文 2件 / 回答日未確認", "url": "#muni-4"}, {"name": "三鷹市", "lat": 35.6835, "lng": 139.5596, "desc": "D / 回答本文 1件", "url": "#muni-5"}, {"name": "下妻市", "lat": 36.184, "lng": 139.967, "desc": "A / 回答本文 1件 / 回答日未確認", "url": "#muni-6"}, {"name": "中央市", "lat": 35.599, "lng": 138.517, "desc": "A, C / 回答本文 2件 / 回答日未確認, 添付資料確認推奨, 回答未了・延長等, 地教行法条文番号要確認", "url": "#muni-7"}, {"name": "亀岡市", "lat": 35.013, "lng": 135.573, "desc": "A / 回答本文 1件 / 回答日未確認", "url": "#muni-8"}, {"name": "京都市", "lat": 35.0116, "lng": 135.7681, "desc": "A / 回答本文 1件 / 回答日未確認", "url": "#muni-9"}, {"name": "仙台市", "lat": 38.2682, "lng": 140.8694, "desc": "A / 回答本文 1件", "url": "#muni-10"}, {"name": "兵庫県", "lat": 34.6901, "lng": 135.1955, "desc": "A, B / 回答本文 2件 / 回答日未確認", "url": "#muni-11"}, {"name": "兵庫県西脇市", "lat": 34.984, "lng": 134.969, "desc": "A, E / 回答本文 2件 / 回答日未確認, 地教行法条文番号要確認", "url": "#muni-12"}, {"name": "利根町", "lat": 35.857, "lng": 140.139, "desc": "A / 回答本文 1件 / 回答日未確認", "url": "#muni-13"}, {"name": "北九州市", "lat": 33.8834, "lng": 130.8751, "desc": "C / 回答本文 1件 / 回答日未確認", "url": "#muni-14"}, {"name": "千葉県鴨川市", "lat": 35.114, "lng": 140.098, "desc": "A / 回答本文 1件", "url": "#muni-15"}, {"name": "厚木市", "lat": 35.4431, "lng": 139.3625, "desc": "D / 回答本文 1件 / 回答日未確認", "url": "#muni-16"}, {"name": "只見町", "lat": 37.348, "lng": 139.314, "desc": "A / 回答本文 1件 / 添付資料確認推奨", "url": "#muni-17"}, {"name": "嘉麻市", "lat": 33.562, "lng": 130.711, "desc": "C / 回答本文 1件 / 回答日未確認, 回答未了・延長等", "url": "#muni-18"}, {"name": "土佐清水市", "lat": 32.781, "lng": 132.954, "desc": "B / 回答本文 1件 / 回答日未確認, 添付資料確認推奨", "url": "#muni-19"}, {"name": "堺市", "lat": 34.5733, "lng": 135.4831, "desc": "G / 回答本文 1件 / 回答日未確認, 回答未了・延長等", "url": "#muni-20"}, {"name": "多摩市", "lat": 35.637, "lng": 139.446, "desc": "A / 回答本文 1件 / 回答日未確認, 地教行法条文番号要確認", "url": "#muni-21"}, {"name": "大分県", "lat": 33.238, "lng": 131.613, "desc": "A, B, G / 回答本文 3件 / 添付資料確認推奨, 回答未了・延長等", "url": "#muni-22"}, {"name": "大阪市", "lat": 34.6937, "lng": 135.5023, "desc": "A / 回答本文 1件 / 回答日未確認, 添付資料確認推奨", "url": "#muni-23"}, {"name": "大阪府", "lat": 34.6863, "lng": 135.52, "desc": "A / 回答本文 1件", "url": "#muni-24"}, {"name": "姫路市", "lat": 34.8151, "lng": 134.6853, "desc": "A / 回答本文 1件 / 回答日未確認", "url": "#muni-25"}, {"name": "安曇野市", "lat": 36.303, "lng": 137.905, "desc": "A / 回答本文 1件 / 回答日未確認", "url": "#muni-26"}, {"name": "宝塚市", "lat": 34.799, "lng": 135.36, "desc": "A / 回答本文 1件 / 回答日未確認", "url": "#muni-27"}, {"name": "宮城県大崎市", "lat": 38.577, "lng": 140.956, "desc": "A / 回答本文 1件 / 回答日未確認", "url": "#muni-28"}, {"name": "宮城県白石市", "lat": 38.003, "lng": 140.619, "desc": "A, B, C, G / 回答本文 4件 / 回答日未確認, 本文短文・原資料確認, 回答未了・延長等, 添付資料確認推奨", "url": "#muni-29"}, {"name": "富岡町", "lat": 37.345, "lng": 141.009, "desc": "C / 回答本文 1件 / 回答日未確認", "url": "#muni-30"}, {"name": "寒川町", "lat": 35.372, "lng": 139.383, "desc": "C / 回答本文 1件", "url": "#muni-31"}, {"name": "尼崎市", "lat": 34.7337, "lng": 135.4064, "desc": "A / 回答本文 1件 / 回答日未確認, 回答未了・延長等", "url": "#muni-32"}, {"name": "山中湖村", "lat": 35.41, "lng": 138.86, "desc": "C / 回答本文 1件 / 回答日未確認", "url": "#muni-33"}, {"name": "山梨県鳴沢村", "lat": 35.481, "lng": 138.706, "desc": "C / 回答本文 1件", "url": "#muni-34"}, {"name": "岐阜県東白川村", "lat": 35.643, "lng": 137.323, "desc": "A / 回答本文 1件 / 回答日未確認", "url": "#muni-35"}, {"name": "岡山市", "lat": 34.6551, "lng": 133.9195, "desc": "A / 回答本文 1件 / 回答日未確認, 地教行法条文番号要確認", "url": "#muni-36"}, {"name": "岩手県九戸村", "lat": 40.211, "lng": 141.419, "desc": "A / 回答本文 1件 / 回答日未確認, 回答未了・延長等", "url": "#muni-37"}, {"name": "川口市", "lat": 35.8077, "lng": 139.7241, "desc": "A, E / 回答本文 2件 / 地教行法条文番号要確認", "url": "#muni-38"}, {"name": "川崎市", "lat": 35.5308, "lng": 139.7036, "desc": "B, D / 回答本文 2件", "url": "#muni-39"}, {"name": "平塚市", "lat": 35.3356, "lng": 139.3495, "desc": "A / 回答本文 1件 / 回答日未確認", "url": "#muni-40"}, {"name": "座間市", "lat": 35.4886, "lng": 139.4077, "desc": "C / 回答本文 1件 / 回答日未確認, 添付資料確認推奨", "url": "#muni-41"}, {"name": "徳島市", "lat": 34.0703, "lng": 134.5548, "desc": "A, B, C, E / 回答本文 4件 / 回答未了・延長等", "url": "#muni-42"}, {"name": "愛知県", "lat": 35.1802, "lng": 136.9066, "desc": "A, B / 回答本文 2件 / 回答日未確認, 添付資料確認推奨", "url": "#muni-43"}, {"name": "愛知県愛西市", "lat": 35.153, "lng": 136.728, "desc": "B, C / 回答本文 2件", "url": "#muni-44"}, {"name": "愛知県犬山市", "lat": 35.378, "lng": 136.944, "desc": "A, B / 回答本文 2件 / 回答日未確認, 本文短文・原資料確認", "url": "#muni-45"}, {"name": "愛知県豊橋市", "lat": 34.7692, "lng": 137.3915, "desc": "A / 回答本文 1件 / 回答日未確認", "url": "#muni-46"}, {"name": "日光市", "lat": 36.75, "lng": 139.61, "desc": "A, B, C, D, E / 回答本文 5件 / 回答日未確認", "url": "#muni-47"}, {"name": "東京都", "lat": 35.6895, "lng": 139.6917, "desc": "B / 回答本文 1件 / 回答日未確認", "url": "#muni-48"}, {"name": "東京都町田市", "lat": 35.546, "lng": 139.438, "desc": "A, B, E / 回答本文 3件 / 回答日未確認, 本文短文・原資料確認", "url": "#muni-49"}, {"name": "東大阪市", "lat": 34.6795, "lng": 135.6008, "desc": "A / 回答本文 1件", "url": "#muni-50"}, {"name": "東秩父村", "lat": 36.058, "lng": 139.189, "desc": "A / 回答本文 1件 / 回答日未確認", "url": "#muni-51"}, {"name": "横浜市", "lat": 35.4437, "lng": 139.638, "desc": "D / 回答本文 1件", "url": "#muni-52"}, {"name": "橋本市", "lat": 34.314, "lng": 135.605, "desc": "A / 回答本文 1件 / 回答日未確認", "url": "#muni-53"}, {"name": "海老名市", "lat": 35.4464, "lng": 139.3908, "desc": "A, F, G / 回答本文 2件 / 回答日未確認, 本文短文・原資料確認, 添付資料確認推奨, 回答未了・延長等", "url": "#muni-54"}, {"name": "玉名市", "lat": 32.928, "lng": 130.559, "desc": "A / 回答本文 1件 / 回答日未確認, 本文短文・原資料確認", "url": "#muni-55"}, {"name": "相模原市", "lat": 35.5714, "lng": 139.3732, "desc": "A, B, C, E / 回答本文 4件 / 添付資料確認推奨, 回答日未確認, 回答未了・延長等", "url": "#muni-56"}, {"name": "福島県国見町", "lat": 37.876, "lng": 140.549, "desc": "A / 回答本文 1件 / 回答日未確認", "url": "#muni-57"}, {"name": "秋田市", "lat": 39.7186, "lng": 140.1024, "desc": "G / 回答本文 1件 / 回答日未確認, 本文短文・原資料確認, 回答未了・延長等", "url": "#muni-58"}, {"name": "粟島浦村", "lat": 38.466, "lng": 139.257, "desc": "A / 回答本文 1件 / 回答日未確認", "url": "#muni-59"}, {"name": "茅ヶ崎市", "lat": 35.3339, "lng": 139.4047, "desc": "G / 回答本文 1件 / 回答日未確認, 回答未了・延長等", "url": "#muni-60"}, {"name": "茅野市", "lat": 35.995, "lng": 138.158, "desc": "A / 回答本文 1件 / 回答日未確認", "url": "#muni-61"}, {"name": "茨木市", "lat": 34.816, "lng": 135.568, "desc": "A, E / 回答本文 2件 / 回答日未確認", "url": "#muni-62"}, {"name": "蒲郡市", "lat": 34.826, "lng": 137.219, "desc": "A / 回答本文 1件", "url": "#muni-63"}, {"name": "西宮市", "lat": 34.7376, "lng": 135.3416, "desc": "A, B, D, E / 回答本文 4件 / 回答日未確認, 本文短文・原資料確認", "url": "#muni-64"}, {"name": "豊田市", "lat": 35.0824, "lng": 137.1563, "desc": "A / 回答本文 1件 / 回答日未確認", "url": "#muni-65"}, {"name": "野洲市", "lat": 35.067, "lng": 136.026, "desc": "C / 回答本文 1件 / 回答日未確認", "url": "#muni-66"}, {"name": "長野県", "lat": 36.6486, "lng": 138.1948, "desc": "A, B / 回答本文 2件 / 回答日未確認, 本文短文・原資料確認, 添付資料確認推奨", "url": "#muni-67"}, {"name": "門真市", "lat": 34.739, "lng": 135.586, "desc": "A / 回答本文 1件 / 回答日未確認", "url": "#muni-68"}, {"name": "青森県横浜町", "lat": 41.083, "lng": 141.251, "desc": "A, C / 回答本文 2件 / 回答日未確認", "url": "#muni-69"}, {"name": "静岡市", "lat": 34.9756, "lng": 138.3828, "desc": "D / 回答本文 1件 / 回答日未確認", "url": "#muni-70"}, {"name": "静岡県磐田市", "lat": 34.7179, "lng": 137.8515, "desc": "D / 回答本文 1件 / 回答日未確認", "url": "#muni-71"}, {"name": "須賀川市", "lat": 37.286, "lng": 140.373, "desc": "A, B, C / 回答本文 3件 / 回答日未確認", "url": "#muni-72"}, {"name": "高根沢町", "lat": 36.631, "lng": 139.986, "desc": "C / 回答本文 1件", "url": "#muni-73"}, {"name": "高槻市", "lat": 34.8462, "lng": 135.6173, "desc": "B / 回答本文 1件", "url": "#muni-74"}, {"name": "魚沼市", "lat": 37.23, "lng": 138.962, "desc": "A / 回答本文 1件 / 回答日未確認", "url": "#muni-75"}, {"name": "鹿児島市", "lat": 31.5966, "lng": 130.5571, "desc": "A / 回答本文 1件 / 回答日未確認", "url": "#muni-76"}];
+  pts.forEach(function(p) {
+    L.circleMarker([p.lat, p.lng], {radius:7, color:'#0b4f6c', fillColor:'#f0b429', fillOpacity:0.9, weight:2}).addTo(map)
+      .bindPopup('<strong>'+p.name+'</strong><br>'+p.desc+'<br><a href="'+p.url+'">全文へ移動</a>');
+  });
+})();
+</script>
+<div id="footermenu">
+<ul>
+<li class="title">基本情報</li>
+<li><a href="index.html">ホーム</a></li>
+<li><a href="about.html">委員会について</a></li>
+<li><a href="guidebook.html">ガイドブック第4版</a></li>
+</ul><ul>
+<li class="title">立場別</li>
+<li><a href="parents.html">保護者向け</a></li>
+<li><a href="officers.html">PTA役員向け</a></li>
+<li><a href="schools.html">学校関係者向け</a></li>
+<li><a href="boards.html">教育委員会向け</a></li>
+</ul><ul>
+<li class="title">資料</li>
+<li><a href="laws.html">法令・一次資料</a></li>
+<li><a href="article-pta-legal-structure.html">論考・研究ノート</a></li>
+<li><a href="board-responses.html">教育委員会の回答集</a></li>
+<li><a href="yokohama-notice-1965.html">横浜市教委通知1965号</a></li>
+<li><a href="documents.html">資料室</a></li>
+</ul><ul>
+<li class="title">連絡・支援</li>
+<li><a href="contact.html">お問い合わせ</a></li>
+<li><a href="support.html">支援・応援</a></li>
+</ul>
+</div>
+<footer>
+<small>Copyright© <a href="index.html">PTA適正化推進委員会</a> All Rights Reserved.</small>
+<small class="site-note">このサイトは学校公式サイトではありません。PTA運営の適正化に関する独立した情報サイトです。</small>
+<span class="pr"><a href="https://template-party.com/" rel="noopener" target="_blank">《Web Design:Template-Party》</a></span>
+</footer>
+</div>
+<div id="menubar_hdr"><span></span><span></span><span></span></div>
+<div class="pagetop"><a href="#"><i class="fas fa-angle-double-up"></i></a></div>
+<script>
+(function(){
+  function openTarget(hash){
+    if(!hash) return;
+    var el = document.querySelector(hash);
+    if(!el) return;
+    if(el.tagName && el.tagName.toLowerCase()==='details') el.open = true;
+    var parent = el.parentElement;
+    while(parent){
+      if(parent.tagName && parent.tagName.toLowerCase()==='details') parent.open = true;
+      parent = parent.parentElement;
+    }
+    setTimeout(function(){ el.scrollIntoView({block:'start'}); }, 30);
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a[href^="#muni-"]');
+    if(a) setTimeout(function(){ openTarget(a.getAttribute('href')); }, 0);
+  });
+  window.addEventListener('hashchange', function(){ openTarget(location.hash); });
+  document.addEventListener('DOMContentLoaded', function(){
+    openTarget(location.hash);
+    var openBtn = document.querySelector('.open-all-responses');
+    var closeBtn = document.querySelector('.close-all-responses');
+    if(openBtn) openBtn.addEventListener('click', function(){ document.querySelectorAll('.municipality-accordion,.response-accordion').forEach(function(d){d.open=true;}); });
+    if(closeBtn) closeBtn.addEventListener('click', function(){ document.querySelectorAll('.municipality-accordion,.response-accordion').forEach(function(d){d.open=false;}); });
+  });
+})();
+</script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
