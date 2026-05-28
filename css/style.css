@@ -448,3 +448,37 @@ button,input,select,textarea{font:inherit}
   .report-source-nav{grid-template-columns:1fr}
   .law-grid{grid-template-columns:1fr}
 }
+
+/* =================================================
+   MOBILE FIXES — 600px以下
+   ================================================= */
+@media(max-width:600px){
+  /* .pg ページ共通の2カラムインライングリッドを1カラム化 */
+  [style*="grid-template-columns:1fr 1fr"],
+  [style*="grid-template-columns: 1fr 1fr"]{
+    grid-template-columns:1fr!important;
+  }
+
+  /* .safes (施設・会費ページの公/私比較グリッド) */
+  .safes{grid-template-columns:1fr!important}
+
+  /* チェックテーブルの横スクロール許可 */
+  .check-table{font-size:.8rem;display:block;overflow-x:auto;white-space:nowrap}
+  .check-table th,.check-table td{padding:9px 10px}
+
+  /* ページヒーローのボタン縦並び */
+  .page-hero .hero-actions{flex-direction:column;align-items:flex-start}
+  .page-hero .hero-actions a{width:100%;text-align:center}
+
+  /* スコープグリッド(personnel.html OK/NG) */
+  .scope-grid{grid-template-columns:1fr!important}
+
+  /* フッターグリッド */
+  .footer-grid{grid-template-columns:1fr}
+
+  /* .pg セクション余白調整 */
+  .pg{padding:32px 0 64px}
+
+  /* alert グリッド内のリスト */
+  .alert ul{padding-left:14px}
+}

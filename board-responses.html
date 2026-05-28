@@ -7,7 +7,7 @@
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="canonical" href="https://ptaorg.github.io/board-responses.html">
   <meta property="og:title" content="全国教育委員会の回答 | PTA適正化推進委員会">
-  <meta property="og:description" content="全国の教育委員会への照会結果を地方別・アコーディオン形式で全文公開。地図付き。">
+  <meta property="og:description" content="全国約110の教育委員会への照会結果を地方別・アコーディオン形式で全文公開。地図付き。">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <title>全国教育委員会への照会結果 | PTA適正化推進委員会</title>
@@ -18,166 +18,277 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
   <style>
-/* ======================================================
-   統計
-   ====================================================== */
-.stats-section { background: #fff; padding: 64px 0; }
-.stats-grid {
-  display: grid; grid-template-columns: repeat(4,1fr);
-  gap: 18px; margin-top: 40px;
+/* ===== リードセクション ===== */
+.lead-section {
+  background: #fff;
+  padding: 72px 0 60px;
+  text-align: center;
+  border-bottom: 1px solid var(--line);
 }
-.stat-card {
-  background: var(--bg); border: 1px solid var(--line);
-  border-radius: var(--radius); padding: 26px; text-align: center;
+.lead-kicker {
+  display: inline-block;
+  font-size: .72rem;
+  font-weight: 900;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: rgba(212,175,55,.1);
+  padding: 5px 16px;
+  border-radius: 999px;
+  margin-bottom: 22px;
 }
+.lead-h1 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  color: var(--navy);
+  font-weight: 900;
+  line-height: 1.3;
+  margin-bottom: 22px;
+}
+.lead-text {
+  font-size: 1.02rem;
+  color: var(--text);
+  line-height: 1.95;
+  max-width: 700px;
+  margin: 0 auto 44px;
+}
+.stats-strip {
+  display: flex;
+  justify-content: center;
+  max-width: 700px;
+  margin: 0 auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.stat-item {
+  flex: 1;
+  min-width: 110px;
+  padding: 20px 14px;
+  border-right: 1px solid var(--line);
+  text-align: center;
+}
+.stat-item:last-child { border-right: none; }
 .stat-num {
-  font-family: 'Noto Serif JP',serif;
-  font-size: 2.4rem; font-weight: 900; color: var(--navy);
-  line-height: 1; margin-bottom: 6px;
+  display: block;
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: var(--navy);
+  line-height: 1;
+  margin-bottom: 7px;
 }
-.stat-em { font-size: 1.3rem; color: var(--gold); }
-.stat-label { font-size: .84rem; color: var(--text-soft); line-height: 1.5; }
+.stat-label { font-size: .72rem; color: var(--text-soft); line-height: 1.45; }
 
-/* ======================================================
-   横浜市通知
-   ====================================================== */
-.yokohama-section {
-  background: linear-gradient(145deg,var(--navy),#0e2236);
-  padding: 72px 0; color: #fff;
+/* ===== 地域別概覧 ===== */
+.region-overview-section {
+  background: var(--bg);
+  padding: 64px 0 56px;
 }
-.yk-inner { display: grid; grid-template-columns: 1fr 380px; gap: 40px; align-items: center; }
-.yk-card {
-  background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.14);
-  border-radius: var(--radius); padding: 28px;
+.region-cols {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+  margin-top: 36px;
 }
-.yk-card-header {
-  display: flex; align-items: center; gap: 16px;
-  padding-bottom: 16px; margin-bottom: 16px;
-  border-bottom: 1px solid rgba(255,255,255,.14);
+.region-col {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px 14px 14px;
 }
-.yk-badge {
-  background: var(--gold); color: var(--navy);
-  padding: 8px 14px; border-radius: 10px;
-  font-size: .7rem; font-weight: 900;
-  text-align: center; line-height: 1.4; white-space: nowrap;
+.region-col-head {
+  font-family: 'Noto Serif JP', serif;
+  font-size: .85rem;
+  font-weight: 900;
+  color: var(--navy);
+  margin-bottom: 12px;
+  padding-bottom: 9px;
+  border-bottom: 2px solid var(--gold);
+  white-space: nowrap;
 }
-.yk-card-title { font-family:'Noto Serif JP',serif; font-size: 1.05rem; font-weight: 900; color: #fff; line-height: 1.4; }
-.yk-item {
-  display: flex; align-items: flex-start; gap: 12px;
-  padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,.08);
+.region-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
-.yk-item:last-child { border-bottom: none; }
-.yk-check {
-  width: 22px; height: 22px; border-radius: 50%;
-  background: #dcfce7; color: #15803d;
-  display: grid; place-items: center; font-size: .75rem;
-  flex-shrink: 0; margin-top: 2px;
+.region-col ul li {
+  font-size: .79rem;
+  padding: 5px 0;
+  border-bottom: 1px solid var(--line);
+  line-height: 1.4;
 }
-.yk-item-text { font-size: .88rem; color: rgba(255,255,255,.88); line-height: 1.6; }
+.region-col ul li:last-child { border-bottom: none; }
+.region-col ul li a {
+  color: var(--text);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  transition: color .15s;
+}
+.region-col ul li a:hover { color: var(--navy); font-weight: 700; }
+.rc-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: inline-block;
+}
+.region-note {
+  text-align: center;
+  font-size: .78rem;
+  color: var(--text-soft);
+  margin-top: 20px;
+  line-height: 1.7;
+}
+.region-note a { color: var(--navy); font-weight: 700; }
 
-/* ======================================================
-   地図
-   ====================================================== */
-.map-section { background: var(--bg); padding: 72px 0; }
-#board-map { height: 52vh; min-height: 360px; border-radius: var(--radius); box-shadow: var(--shadow-md); margin-top: 32px; }
-.map-legend { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 14px; }
-.ml-item { display: flex; align-items: center; gap: 7px; font-size: .82rem; color: var(--text-soft); font-weight: 700; }
-.ml-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+/* 凡例 */
+.legend-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  margin-top: 14px;
+}
+.ls-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: .78rem;
+  color: var(--text-soft);
+  font-weight: 600;
+}
+.ls-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
 
-/* ======================================================
-   地方別スティッキーナビ
-   ====================================================== */
+/* ===== 地図 ===== */
+.map-section {
+  background: #fff;
+  padding: 64px 0;
+}
+#board-map {
+  height: 52vh;
+  min-height: 360px;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 16px rgba(0,0,0,.1);
+  margin-top: 28px;
+}
+
+/* ===== スティッキーナビ ===== */
 .region-nav-wrap {
-  background: #fff; border-bottom: 2px solid var(--line);
-  position: sticky; top: 64px; z-index: 90;
+  background: #fff;
+  border-bottom: 2px solid var(--line);
+  position: sticky;
+  top: 64px;
+  z-index: 90;
 }
 .region-nav {
   width: min(calc(100% - 40px), 1280px);
-  margin-inline: auto; display: flex;
-  overflow-x: auto; scrollbar-width: none;
+  margin-inline: auto;
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
 }
 .region-nav::-webkit-scrollbar { display: none; }
 .region-nav a {
-  padding: 13px 22px; font-size: .88rem; font-weight: 800;
-  color: var(--text-soft); text-decoration: none;
+  padding: 13px 22px;
+  font-size: .88rem;
+  font-weight: 800;
+  color: var(--text-soft);
+  text-decoration: none;
   white-space: nowrap;
-  border-bottom: 3px solid transparent; margin-bottom: -2px;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
   transition: color .2s, border-color .2s;
 }
 .region-nav a:hover, .region-nav a.rn-active {
-  color: var(--navy); border-bottom-color: var(--gold);
+  color: var(--navy);
+  border-bottom-color: var(--gold);
 }
 
-/* ======================================================
-   地方ブロック
-   ====================================================== */
-.responses-section { background: var(--bg); padding: 72px 0; }
-.region-block { margin-bottom: 80px; scroll-margin-top: 130px; }
+/* ===== アコーディオン ===== */
+.responses-section {
+  background: var(--bg);
+  padding: 72px 0;
+}
+.region-block {
+  margin-bottom: 64px;
+  scroll-margin-top: 130px;
+}
 .region-heading {
-  display: flex; align-items: center; flex-wrap: wrap;
-  gap: 14px; padding-bottom: 16px;
-  border-bottom: 2px solid var(--navy); margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--navy);
+  margin-bottom: 10px;
 }
 .region-label {
-  font-family: 'Noto Serif JP',serif;
-  font-size: 1.5rem; font-weight: 900; color: var(--navy); flex-shrink: 0;
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: var(--navy);
 }
 .region-count {
-  font-size: .8rem; font-weight: 800; color: var(--text-soft);
-  background: var(--bg); border: 1px solid var(--line);
-  padding: 3px 10px; border-radius: 999px;
+  font-size: .74rem;
+  font-weight: 800;
+  color: var(--text-soft);
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 2px 10px;
+  border-radius: 999px;
 }
-.region-chips { display: flex; flex-wrap: wrap; gap: 7px; margin-left: auto; }
-.region-chips a {
-  padding: 5px 14px; border-radius: 999px;
-  background: #fff; border: 1.5px solid var(--line);
-  color: var(--navy); font-size: .82rem; font-weight: 700;
-  text-decoration: none; transition: all .2s;
-}
-.region-chips a:hover { background: var(--navy); color: #fff; border-color: var(--navy); }
-.region-chips a.chip-jishu { border-color: #86efac; color: #15803d; }
-.region-chips a.chip-iinkai { border-color: #fdba74; color: #c2410c; }
-.region-chips a.chip-special { border-color: var(--gold); color: #92400e; background: rgba(212,175,55,.06); }
-.region-chips a.chip-violation { border-color: #fca5a5; color: #b91c1c; background: #fff5f5; }
 
-/* ======================================================
-   アコーディオン
-   ====================================================== */
+/* カード（折りたたみ） */
 .acc-item {
-  border: 1px solid var(--line); border-radius: var(--radius);
-  margin-bottom: 8px; overflow: hidden; background: #fff;
-  scroll-margin-top: 150px;
-  transition: box-shadow .2s;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  margin-bottom: 5px;
+  overflow: hidden;
+  transition: box-shadow .18s;
 }
-.acc-item:hover { box-shadow: var(--shadow-sm); }
-.acc-item.acc-yokohama { border-color: rgba(212,175,55,.4); }
-.acc-item.acc-violation { border-color: rgba(185,28,28,.35); border-width: 1.5px; }
+.acc-item:hover { box-shadow: 0 2px 10px rgba(0,0,0,.07); }
+.acc-item.acc-yokohama { border-color: rgba(212,175,55,.55); border-width: 1.5px; }
+.acc-item.acc-violation { border-color: rgba(185,28,28,.3); border-width: 1.5px; }
 .acc-item.acc-pending { background: var(--bg); border-style: dashed; }
 
 .acc-btn {
-  width: 100%; display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
-  padding: 16px 20px; background: transparent; border: none;
-  cursor: pointer; text-align: left; transition: background .18s;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background .15s;
 }
-.acc-btn:hover { background: rgba(5,17,31,.03); }
-.acc-btn.is-open { background: rgba(5,17,31,.03); border-bottom: 1px solid var(--line); }
-
-.acc-name { font-size: .97rem; font-weight: 800; color: var(--navy); flex: 1; min-width: 160px; }
-.acc-badge {
-  padding: 3px 10px; border-radius: 4px;
-  font-size: .7rem; font-weight: 900; white-space: nowrap; flex-shrink: 0;
+.acc-btn:hover { background: rgba(5,17,31,.025); }
+.acc-btn.is-open {
+  background: rgba(5,17,31,.03);
+  border-bottom: 1px solid var(--line);
 }
-.badge-jishu { background: #dcfce7; color: #15803d; }
-.badge-iinkai { background: #ffedd5; color: #c2410c; }
-.badge-misei { background: #f3f4f6; color: #6b7280; }
-.badge-special { background: #fef3c7; color: #92400e; }
-.badge-violation { background: #fee2e2; color: #b91c1c; }
-
-.acc-date { font-size: .74rem; color: var(--text-soft); white-space: nowrap; flex-shrink: 0; }
+.acc-dot {
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.acc-name {
+  font-size: .96rem;
+  font-weight: 700;
+  color: var(--navy);
+  flex: 1;
+}
 .acc-chevron {
-  width: 16px; height: 16px; flex-shrink: 0;
-  stroke: var(--text-soft); fill: none;
-  stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;
+  width: 16px; height: 16px;
+  flex-shrink: 0;
+  stroke: var(--text-soft);
+  fill: none;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
   transition: transform .25s;
 }
 .acc-btn.is-open .acc-chevron { transform: rotate(180deg); }
@@ -186,55 +297,58 @@
 .acc-body.is-open { display: block; }
 
 .acc-summary {
-  font-size: .92rem; font-weight: 800; color: var(--navy);
-  background: var(--bg); border-left: 4px solid var(--navy);
-  padding: 12px 16px; border-radius: 0 8px 8px 0; margin-bottom: 14px; line-height: 1.6;
+  font-size: .91rem;
+  font-weight: 800;
+  background: var(--bg);
+  border-left: 4px solid var(--navy);
+  color: var(--navy);
+  padding: 12px 16px;
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 14px;
+  line-height: 1.65;
 }
 .acc-summary.sum-green { border-left-color: #15803d; background: #f0fdf4; color: #14532d; }
 .acc-summary.sum-orange { border-left-color: #c2410c; background: #fff7ed; color: #7c2d12; }
 .acc-summary.sum-red { border-left-color: #b91c1c; background: #fff5f5; color: #7f1d1d; }
-.acc-summary.sum-gold { border-left-color: var(--gold); background: rgba(212,175,55,.08); color: #78350f; }
+.acc-summary.sum-gold { border-left-color: #c8a400; background: rgba(212,175,55,.08); color: #78350f; }
 
 .acc-content { font-size: .9rem; color: var(--text-soft); line-height: 1.9; margin-bottom: 14px; }
 .acc-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
 .acc-tag {
-  background: rgba(5,17,31,.07); color: var(--navy);
-  font-size: .72rem; font-weight: 800; padding: 3px 10px; border-radius: 999px;
+  background: rgba(5,17,31,.07);
+  color: var(--navy);
+  font-size: .71rem;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 999px;
 }
 .acc-source {
-  padding-top: 12px; border-top: 1px solid var(--line);
-  font-size: .78rem; color: var(--text-soft);
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  font-size: .78rem;
+  color: var(--text-soft);
 }
-.acc-source a { color: var(--blue); text-decoration: none; font-weight: 700; }
+.acc-source a { color: #1d4ed8; text-decoration: none; font-weight: 700; }
 .acc-source a:hover { text-decoration: underline; }
 
 .violation-inset {
-  margin-top: 12px; padding: 14px 16px;
-  background: #fff5f5; border: 1px solid #fecaca; border-radius: 10px;
+  margin-top: 12px;
+  padding: 14px 16px;
+  background: #fff5f5;
+  border: 1px solid #fecaca;
+  border-radius: 10px;
 }
 .violation-inset strong { display: block; color: #b91c1c; font-size: .88rem; margin-bottom: 6px; }
 .violation-inset p { font-size: .85rem; color: #374151; line-height: 1.7; margin: 0; }
 
-/* ページヒーロー */
-.page-hero { position: relative; overflow: hidden; }
-.page-hero-bg-img { position: absolute; inset: 0; z-index: 0; }
-.page-hero-bg-img img {
-  width: 100%; height: 100%; object-fit: cover;
-  filter: brightness(.22) saturate(0.7);
-}
-.page-hero-bg-img::after {
-  content: ''; position: absolute; inset: 0;
-  background: linear-gradient(160deg,rgba(5,17,31,.85) 0%,rgba(5,17,31,.6) 60%,rgba(5,17,31,.4) 100%);
-}
-.page-hero-inner { position: relative; z-index: 1; }
-
-@media(max-width:900px){
-  .stats-grid { grid-template-columns: repeat(2,1fr); }
-  .yk-inner { grid-template-columns: 1fr; }
-}
-@media(max-width:640px){
-  .region-chips { margin-left: 0; }
-  .acc-date { display: none; }
+/* ===== レスポンシブ ===== */
+@media(max-width:1100px) { .region-cols { grid-template-columns: repeat(3, 1fr); } }
+@media(max-width:680px) {
+  .region-cols { grid-template-columns: repeat(2, 1fr); }
+  .stats-strip { flex-wrap: wrap; }
+  .stat-item { min-width: 46%; border-bottom: 1px solid var(--line); }
+  .stat-item:nth-child(even) { border-right: none; }
+  .stat-item:nth-last-child(-n+2) { border-bottom: none; }
 }
   </style>
 </head>
@@ -326,109 +440,144 @@
   <div class="close-overlay" id="closeOverlay">CLOSE ×</div>
 </div>
 
-<!-- ヒーロー -->
-<section class="page-hero">
-  <div class="page-hero-bg-img" aria-hidden="true">
-    <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1400&q=80" alt="">
-  </div>
-  <div class="page-hero-inner">
-    <div class="page-hero-kicker">全国照会結果</div>
-    <h1>全国の教育委員会に照会した結果<br>をまとめています</h1>
-    <p>PTA会費の代行徴収・個人情報の提供・教職員関与など、各自治体が公式にどう回答したかを地方別・アコーディオン形式で確認できます。</p>
-    <div class="hero-actions">
-      <a href="national-archive.html" class="btn-gold">🗂️ 全国資料館を見る</a>
-      <a href="https://sites.google.com/view/ptatekiseika/" target="_blank" rel="noopener noreferrer" class="btn-outline">📂 PDF原本を見る</a>
-    </div>
-  </div>
-</section>
-
 <main>
 
-<!-- 統計 -->
-<section class="stats-section">
+<!-- ======================================================
+     リードセクション
+     ====================================================== -->
+<section class="lead-section">
+  <div class="wrap">
+    <div class="lead-kicker">全国照会結果</div>
+    <h1 class="lead-h1">全国教育委員会への照会結果</h1>
+    <p class="lead-text">PTA適正化推進委員会は全国約110の教育委員会に対し、PTA会費の代行徴収・個人情報の無断提供・教職員の勤務時間中の関与について照会・開示請求を行いました。その回答を地方別に整理し、全文を公開します。</p>
+    <div class="stats-strip">
+      <div class="stat-item">
+        <span class="stat-num">約110</span>
+        <span class="stat-label">照会先<br>自治体数</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">全国</span>
+        <span class="stat-label">北海道から<br>九州まで</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">多数</span>
+        <span class="stat-label">「不適切」と<br>認めた回答</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">全国初</span>
+        <span class="stat-label">横浜市通知<br>令和7年12月</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     地域別 市区町村一覧
+     ====================================================== -->
+<section class="region-overview-section">
   <div class="wrap">
     <div class="section-center">
-      <div class="section-kicker">調査規模</div>
-      <h2 class="section-title">照会・開示請求の実績</h2>
-      <p class="section-lead">保護者が教育委員会に「法的に何が問題か」を尋ねることは誰でもできます。当委員会はその照会を組織的に行い、回答を記録・公開しています。</p>
+      <div class="section-kicker">照会済み自治体</div>
+      <h2 class="section-title">地方別 市区町村一覧</h2>
+      <p class="section-lead">以下は当委員会が回答を取得・掲載している自治体です。市区町村名をクリックすると回答全文にジャンプします。</p>
     </div>
-    <div class="stats-grid">
-      <div class="stat-card">
-        <div class="stat-num">約100<span class="stat-em"></span></div>
-        <div class="stat-label">照会・要望書を送付した<br>自治体数（累計）</div>
+
+    <div class="region-cols">
+
+      <!-- 北海道・東北 -->
+      <div class="region-col">
+        <div class="region-col-head">北海道・東北</div>
+        <ul>
+          <li><a href="#muni-toyoura"><span class="rc-dot" style="background:#15803d"></span>豊浦町（北海道）</a></li>
+          <li><a href="#muni-sendai"><span class="rc-dot" style="background:#c2410c"></span>仙台市（宮城）</a></li>
+          <li><a href="#muni-osaki"><span class="rc-dot" style="background:#c2410c"></span>大崎市（宮城）</a></li>
+        </ul>
       </div>
-      <div class="stat-card">
-        <div class="stat-num">全国<span class="stat-em"></span></div>
-        <div class="stat-label">北海道から九州まで<br>各地域をカバー</div>
+
+      <!-- 関東 -->
+      <div class="region-col">
+        <div class="region-col-head">関東</div>
+        <ul>
+          <li><a href="#muni-yokohama"><span class="rc-dot" style="background:#d4af37"></span>横浜市（神奈川）</a></li>
+          <li><a href="#muni-kawasaki"><span class="rc-dot" style="background:#c2410c"></span>川崎市（神奈川）</a></li>
+          <li><a href="#muni-atsugi"><span class="rc-dot" style="background:#15803d"></span>厚木市（神奈川）</a></li>
+          <li><a href="#muni-fujisawa"><span class="rc-dot" style="background:#6b7280"></span>藤沢市（神奈川）</a></li>
+          <li><a href="#muni-sagamihara"><span class="rc-dot" style="background:#c2410c"></span>相模原市（神奈川）</a></li>
+          <li><a href="#muni-odawara"><span class="rc-dot" style="background:#c2410c"></span>小田原市（神奈川）</a></li>
+          <li><a href="#muni-mitaka"><span class="rc-dot" style="background:#6b7280"></span>三鷹市（東京）</a></li>
+          <li><a href="#muni-nikko"><span class="rc-dot" style="background:#6b7280"></span>日光市（栃木）</a></li>
+        </ul>
       </div>
-      <div class="stat-card">
-        <div class="stat-num">多数<span class="stat-em"></span></div>
-        <div class="stat-label">「強制・代行は不適切」と<br>認めた回答</div>
+
+      <!-- 中部・東海 -->
+      <div class="region-col">
+        <div class="region-col-head">中部・東海</div>
+        <ul>
+          <li><a href="#muni-shizuoka"><span class="rc-dot" style="background:#b91c1c"></span>静岡市（静岡）</a></li>
+          <li><a href="#muni-iwata"><span class="rc-dot" style="background:#15803d"></span>磐田市（静岡）</a></li>
+          <li><a href="#muni-nagakute"><span class="rc-dot" style="background:#15803d"></span>長久手市（愛知）</a></li>
+          <li><a href="#muni-nagano"><span class="rc-dot" style="background:#6b7280"></span>長野県</a></li>
+        </ul>
       </div>
-      <div class="stat-card">
-        <div class="stat-num">1<span class="stat-em">番</span></div>
-        <div class="stat-label">横浜市：全国初の<br>オプトイン義務化通知</div>
+
+      <!-- 近畿 -->
+      <div class="region-col">
+        <div class="region-col-head">近畿</div>
+        <ul>
+          <li><a href="#muni-kadoma"><span class="rc-dot" style="background:#15803d"></span>門真市（大阪）</a></li>
+          <li><a href="#muni-osaka"><span class="rc-dot" style="background:#c2410c"></span>大阪市（大阪）</a></li>
+          <li><a href="#muni-hyogo"><span class="rc-dot" style="background:#15803d"></span>兵庫県</a></li>
+          <li><a href="#muni-shiga"><span class="rc-dot" style="background:#6b7280"></span>滋賀県</a></li>
+        </ul>
       </div>
+
+      <!-- 中国・四国 -->
+      <div class="region-col">
+        <div class="region-col-head">中国・四国</div>
+        <ul>
+          <li><a href="#muni-tokushima"><span class="rc-dot" style="background:#6b7280"></span>徳島市（徳島）</a></li>
+        </ul>
+      </div>
+
+      <!-- 九州 -->
+      <div class="region-col">
+        <div class="region-col-head">九州</div>
+        <ul>
+          <li><a href="#muni-kagoshima"><span class="rc-dot" style="background:#6b7280"></span>鹿児島市（鹿児島）</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /region-cols -->
+
+    <p class="region-note">上記は詳細を掲載している自治体です。全照会先（約110）のPDF原本は<a href="https://sites.google.com/view/ptatekiseika/" target="_blank" rel="noopener">Googleサイト</a>で公開しています。</p>
+
+    <div class="legend-strip">
+      <div class="ls-item"><span class="ls-dot" style="background:#15803d"></span>適正化方針・自主徴収</div>
+      <div class="ls-item"><span class="ls-dot" style="background:#c2410c"></span>委任契約等で継続</div>
+      <div class="ls-item"><span class="ls-dot" style="background:#d4af37"></span>横浜市（全国初通知）</div>
+      <div class="ls-item"><span class="ls-dot" style="background:#b91c1c"></span>違反発覚</div>
+      <div class="ls-item"><span class="ls-dot" style="background:#6b7280"></span>整理中</div>
     </div>
   </div>
 </section>
 
-<!-- 横浜市通知 -->
-<section class="yokohama-section">
-  <div class="wrap">
-    <div class="yk-inner">
-      <div>
-        <div class="section-kicker" style="background:rgba(212,175,55,.15);color:var(--gold-lt)">全国初</div>
-        <h2 class="section-title" style="color:#fff">横浜市教育委員会通知<br>「学教第1965号」</h2>
-        <p style="color:rgba(255,255,255,.82);font-size:1rem;line-height:1.85;margin-bottom:20px">令和7年12月発出。全市立学校に対し、PTAへの自動加入を禁止し、入会届（オプトイン）の提出を必須とする方針を明記。全国の行政指針として先駆けとなった通知です。</p>
-        <a href="guide-board.html" class="btn-gold">通知の詳細分析を読む →</a>
-      </div>
-      <div class="yk-card">
-        <div class="yk-card-header">
-          <div class="yk-badge">令和7年<br>12月発出</div>
-          <div class="yk-card-title">横浜市教育委員会<br>「学教第1965号」</div>
-        </div>
-        <div class="yk-item">
-          <div class="yk-check">✓</div>
-          <div class="yk-item-text"><strong>オプトイン義務化</strong><br>入会届の提出を全市立校で必須化</div>
-        </div>
-        <div class="yk-item">
-          <div class="yk-check">✓</div>
-          <div class="yk-item-text"><strong>名簿提供の明示的禁止</strong><br>本人同意なき個人情報提供を厳禁</div>
-        </div>
-        <div class="yk-item">
-          <div class="yk-check">✓</div>
-          <div class="yk-item-text"><strong>非会員差別の禁止</strong><br>記念品不配布・登校班排除を人権侵害と明記</div>
-        </div>
-        <div class="yk-item">
-          <div class="yk-check">✓</div>
-          <div class="yk-item-text"><strong>会費適正化</strong><br>学校徴収金との分離・書面同意の義務化</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 地図 -->
+<!-- ======================================================
+     日本地図
+     ====================================================== -->
 <section class="map-section">
   <div class="wrap">
     <div class="section-center">
       <div class="section-kicker">全国マップ</div>
       <h2 class="section-title">照会先・回答状況マップ</h2>
-      <p class="section-lead">マーカーをクリックすると自治体名と回答状況が表示されます。色で回答の傾向を確認できます。</p>
+      <p class="section-lead">マーカーをクリックすると自治体名と回答状況が表示されます。</p>
     </div>
     <div id="board-map"></div>
-    <div class="map-legend">
-      <div class="ml-item"><span class="ml-dot" style="background:#15803d"></span>✅ 自主徴収へ移行・適正化方針</div>
-      <div class="ml-item"><span class="ml-dot" style="background:#c2410c"></span>⚠️ 委任契約等で関与継続</div>
-      <div class="ml-item"><span class="ml-dot" style="background:#d4af37"></span>🥇 横浜市（全国初・通知発出）</div>
-      <div class="ml-item"><span class="ml-dot" style="background:#b91c1c"></span>🚨 回答後に違反発覚</div>
-      <div class="ml-item"><span class="ml-dot" style="background:#6b7280"></span>📋 回答取得済み（調査継続中）</div>
-    </div>
   </div>
 </section>
 
-<!-- 地方別ナビ（スティッキー） -->
+<!-- ======================================================
+     スティッキーナビ
+     ====================================================== -->
 <div class="region-nav-wrap">
   <nav class="region-nav" id="regionNav" aria-label="地方別ジャンプ">
     <a href="#region-hokkaido-tohoku">北海道・東北</a>
@@ -440,36 +589,24 @@
   </nav>
 </div>
 
-<!-- 全国照会結果（地方別アコーディオン） -->
+<!-- ======================================================
+     全国照会結果（地方別アコーディオン）
+     ====================================================== -->
 <section class="responses-section">
   <div class="wrap">
 
-    <div class="section-center" style="margin-bottom:52px">
-      <div class="section-kicker">照会結果</div>
-      <h2 class="section-title">全国教育委員会への照会結果</h2>
-      <p class="section-lead">地方名をクリックするとその地方にジャンプします。各自治体名をクリックすると回答全文を開きます。PDF原本は<a href="https://sites.google.com/view/ptatekiseika/" target="_blank" rel="noopener">Googleサイト</a>で公開しています。</p>
-    </div>
-
-    <!-- ====================================================
-         北海道・東北
-         ==================================================== -->
+    <!-- ==================== 北海道・東北 ==================== -->
     <div class="region-block" id="region-hokkaido-tohoku">
       <div class="region-heading">
-        <div class="region-label">🌿 北海道・東北</div>
+        <div class="region-label">北海道・東北</div>
         <span class="region-count">3件</span>
-        <div class="region-chips">
-          <a href="#muni-toyoura" class="chip-jishu">豊浦町（北海道）</a>
-          <a href="#muni-sendai">仙台市（宮城）</a>
-          <a href="#muni-osaki">大崎市（宮城）</a>
-        </div>
       </div>
 
       <!-- 豊浦町 -->
       <div class="acc-item" id="muni-toyoura">
         <button class="acc-btn" onclick="toggleAcc(this)" aria-expanded="false">
+          <span class="acc-dot" style="background:#15803d"></span>
           <span class="acc-name">豊浦町教育委員会（北海道）</span>
-          <span class="acc-badge badge-jishu">✅ 関与しない立場</span>
-          <span class="acc-date">令和8年2月</span>
           <svg class="acc-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
         </button>
         <div class="acc-body">
@@ -488,9 +625,8 @@
       <!-- 仙台市 -->
       <div class="acc-item" id="muni-sendai">
         <button class="acc-btn" onclick="toggleAcc(this)" aria-expanded="false">
+          <span class="acc-dot" style="background:#c2410c"></span>
           <span class="acc-name">仙台市教育委員会（宮城県）</span>
-          <span class="acc-badge badge-iinkai">⚠️ 委任契約で継続</span>
-          <span class="acc-date">令和8年3月</span>
           <svg class="acc-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
         </button>
         <div class="acc-body">
@@ -512,9 +648,8 @@
       <!-- 大崎市 -->
       <div class="acc-item" id="muni-osaki">
         <button class="acc-btn" onclick="toggleAcc(this)" aria-expanded="false">
+          <span class="acc-dot" style="background:#c2410c"></span>
           <span class="acc-name">大崎市教育委員会（宮城県）</span>
-          <span class="acc-badge badge-iinkai">⚠️ 是正の必要性を認識</span>
-          <span class="acc-date">令和8年頃</span>
           <svg class="acc-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
         </button>
         <div class="acc-body">
@@ -531,31 +666,18 @@
       </div>
     </div><!-- /北海道・東北 -->
 
-    <!-- ====================================================
-         関東
-         ==================================================== -->
+    <!-- ==================== 関東 ==================== -->
     <div class="region-block" id="region-kanto">
       <div class="region-heading">
-        <div class="region-label">🏙️ 関東</div>
+        <div class="region-label">関東</div>
         <span class="region-count">8件</span>
-        <div class="region-chips">
-          <a href="#muni-yokohama" class="chip-special">横浜市（神奈川）</a>
-          <a href="#muni-kawasaki">川崎市（神奈川）</a>
-          <a href="#muni-atsugi" class="chip-jishu">厚木市（神奈川）</a>
-          <a href="#muni-fujisawa">藤沢市（神奈川）</a>
-          <a href="#muni-sagamihara">相模原市（神奈川）</a>
-          <a href="#muni-odawara">小田原市（神奈川）</a>
-          <a href="#muni-mitaka">三鷹市（東京）</a>
-          <a href="#muni-nikko">日光市（栃木）</a>
-        </div>
       </div>
 
       <!-- 横浜市 -->
       <div class="acc-item acc-yokohama" id="muni-yokohama">
         <button class="acc-btn" onclick="toggleAcc(this)" aria-expanded="false">
-          <span class="acc-name">横浜市教育委員会（神奈川県）</span>
-          <span class="acc-badge badge-special">🥇 全国初・通知発出</span>
-          <span class="acc-date">令和7年12月・令和8年3月</span>
+          <span class="acc-dot" style="background:#d4af37"></span>
+          <span class="acc-name">横浜市教育委員会（神奈川県）　— 全国初・行政通知発出</span>
           <svg class="acc-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
         </button>
         <div class="acc-body">
@@ -582,9 +704,8 @@
       <!-- 川崎市 -->
       <div class="acc-item" id="muni-kawasaki">
         <button class="acc-btn" onclick="toggleAcc(this)" aria-expanded="false">
+          <span class="acc-dot" style="background:#c2410c"></span>
           <span class="acc-name">川崎市教育委員会（神奈川県）</span>
-          <span class="acc-badge badge-iinkai">⚠️ 委任契約で校務化</span>
-          <span class="acc-date">令和8年4月</span>
           <svg class="acc-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
         </button>
         <div class="acc-body">
@@ -606,9 +727,8 @@
       <!-- 厚木市 -->
       <div class="acc-item" id="muni-atsugi">
         <button class="acc-btn" onclick="toggleAcc(this)" aria-expanded="false">
+          <span class="acc-dot" style="background:#15803d"></span>
           <span class="acc-name">厚木市教育委員会（神奈川県）</span>
-          <span class="acc-badge badge-jishu">✅ 自主徴収へ移行</span>
-          <span class="acc-date">令和8年4月</span>
           <svg class="acc-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
         </button>
         <div class="acc-body">
@@ -631,9 +751,8 @@
       <!-- 藤沢市 -->
       <div class="acc-item" id="muni-fujisawa">
         <button class="acc-btn" onclick="toggleAcc(this)" aria-expanded="false">
+          <span class="acc-dot" style="background:#6b7280"></span>
           <span class="acc-name">藤沢市教育委員会（神奈川県）</span>
-          <span class="acc-badge badge-misei">📋 検討中</span>
-          <span class="acc-date">令和8年3月</span>
           <svg class="acc-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
         </button>
         <div class="acc-body">
@@ -656,9 +775,8 @@
       <!-- 相模原市 -->
       <div class="acc-item" id="muni-sagamihara">
         <button class="acc-btn" onclick="toggleAcc(this)" aria-expanded="false">
+          <span class="acc-dot" style="background:#c2410c"></span>
           <span class="acc-name">相模原市教育委員会（神奈川県）</span>
-          <span class="acc-badge badge-iinkai">⚠️ 是正の方向性を示す</span>
-          <span class="acc-date">令和8年頃</span>
           <svg class="acc-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
         </button>
         <div class="acc-body">
@@ -677,9 +795,8 @@
       <!-- 小田原市 -->
       <div class="acc-item" id="muni-odawara">
         <button class="acc-btn" onclick="toggleAcc(this)" aria-expanded="false">
+          <span class="acc-dot" style="background:#c2410c"></span>
           <span class="acc-name">小田原市教育委員会（神奈川県）</span>
-          <span class="acc-badge badge-iinkai">⚠️ 是正の必要性を認める</span>
-          <span class="acc-date">令和8年頃</span>
           <svg class="acc-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
         </button>
         <div class="acc-body">
@@ -699,15 +816,12 @@
       <!-- 三鷹市 -->
       <div class="acc-item acc-pending" id="muni-mitaka">
         <button class="acc-btn" onclick="toggleAcc(this)" aria-expanded="false">
+          <span class="acc-dot" style="background:#6b7280"></span>
           <span class="acc-name">三鷹市教育委員会（東京都）</span>
-          <span class="acc-badge badge-misei">📋 回答取得・整理中</span>
-          <span class="acc-date">令和8年頃</span>
           <svg class="acc-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
         </button>
         <div class="acc-body">
-          <div class="acc-content">
-            照会・開示請求を行い、回答を取得しています。現在、詳細を整理・記録中です。PDF原本はGoogleサイトで公開済みのものをご参照ください。
-          </div>
+          <div class="acc-content">照会・開示請求を行い、回答を取得しています。現在、詳細を整理・記録中です。PDF原本はGoogleサイトで公開済みのものをご参照ください。</div>
           <div class="acc-source"><a href="https://sites.google.com/view/ptatekiseika/" target="_blank" rel="noopener">PDF原本を見る →</a></div>
         </div>
       </div>
@@ -715,43 +829,30 @@
       <!-- 日光市 -->
       <div class="acc-item acc-pending" id="muni-nikko">
         <button class="acc-btn" onclick="toggleAcc(this)" aria-expanded="false">
+          <span class="acc-dot" style="background:#6b7280"></span>
           <span class="acc-name">日光市教育委員会（栃木県）</span>
-          <span class="acc-badge badge-misei">📋 回答取得・整理中</span>
-          <span class="acc-date">令和8年頃</span>
           <svg class="acc-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
         </button>
         <div class="acc-body">
-          <div class="acc-content">
-            照会・開示請求を行い、回答を取得しています。現在、詳細を整理・記録中です。
-          </div>
+          <div class="acc-content">照会・開示請求を行い、回答を取得しています。現在、詳細を整理・記録中です。</div>
           <div class="acc-source"><a href="https://sites.google.com/view/ptatekiseika/" target="_blank" rel="noopener">PDF原本を見る →</a></div>
         </div>
       </div>
 
     </div><!-- /関東 -->
 
-    <!-- ====================================================
-         中部・東海
-         ==================================================== -->
+    <!-- ==================== 中部・東海 ==================== -->
     <div class="region-block" id="region-chubu">
       <div class="region-heading">
-        <div class="region-label">🗻 中部・東海</div>
+        <div class="region-label">中部・東海</div>
         <span class="region-count">4件</span>
-        <div class="region-chips">
-          <a href="#muni-shizuoka" class="chip-violation">静岡市（静岡）</a>
-          <a href="#muni-iwata" class="chip-jishu">磐田市（静岡）</a>
-          <a href="#muni-nagakute" class="chip-jishu">長久手市（愛知）</a>
-          <a href="#muni-nagano">長野県</a>
-        </div>
       </div>
 
       <!-- 静岡市 -->
       <div class="acc-item acc-violation" id="muni-shizuoka">
         <button class="acc-btn" onclick="toggleAcc(this)" aria-expanded="false">
-          <span class="acc-name">静岡市教育委員会（静岡県）</span>
-          <span class="acc-badge badge-jishu">✅ 回答当時：完全分離済</span>
-          <span class="acc-badge badge-violation" style="margin-left:4px">🚨 後に違反発覚</span>
-          <span class="acc-date">令和8年3月→4月</span>
+          <span class="acc-dot" style="background:#b91c1c"></span>
+          <span class="acc-name">静岡市教育委員会（静岡県）　— 回答後に違反発覚</span>
           <svg class="acc-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
         </button>
         <div class="acc-body">
@@ -777,9 +878,8 @@
       <!-- 磐田市 -->
       <div class="acc-item" id="muni-iwata">
         <button class="acc-btn" onclick="toggleAcc(this)" aria-expanded="false">
+          <span class="acc-dot" style="background:#15803d"></span>
           <span class="acc-name">磐田市教育委員会（静岡県）</span>
-          <span class="acc-badge badge-jishu">✅ 自主徴収へ移行検討</span>
-          <span class="acc-date">令和8年3月</span>
           <svg class="acc-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
         </button>
         <div class="acc-body">
@@ -803,9 +903,8 @@
       <!-- 長久手市 -->
       <div class="acc-item" id="muni-nagakute">
         <button class="acc-btn" onclick="toggleAcc(this)" aria-expanded="false">
+          <span class="acc-dot" style="background:#15803d"></span>
           <span class="acc-name">長久手市教育委員会（愛知県）</span>
-          <span class="acc-badge badge-jishu">✅ 名簿提供ゼロを明言</span>
-          <span class="acc-date">令和8年1月</span>
           <svg class="acc-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
         </button>
         <div class="acc-body">
@@ -830,8 +929,8 @@
       <!-- 長野県 -->
       <div class="acc-item acc-pending" id="muni-nagano">
         <button class="acc-btn" onclick="toggleAcc(this)" aria-expanded="false">
+          <span class="acc-dot" style="background:#6b7280"></span>
           <span class="acc-name">長野県教育委員会</span>
-          <span class="acc-badge badge-misei">📋 回答取得・整理中</span>
           <svg class="acc-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
         </button>
         <div class="acc-body">
@@ -842,27 +941,18 @@
 
     </div><!-- /中部・東海 -->
 
-    <!-- ====================================================
-         近畿
-         ==================================================== -->
+    <!-- ==================== 近畿 ==================== -->
     <div class="region-block" id="region-kinki">
       <div class="region-heading">
-        <div class="region-label">🌸 近畿</div>
+        <div class="region-label">近畿</div>
         <span class="region-count">4件</span>
-        <div class="region-chips">
-          <a href="#muni-kadoma" class="chip-jishu">門真市（大阪）</a>
-          <a href="#muni-osaka">大阪市（大阪）</a>
-          <a href="#muni-hyogo">兵庫県</a>
-          <a href="#muni-shiga">滋賀県</a>
-        </div>
       </div>
 
       <!-- 門真市 -->
       <div class="acc-item" id="muni-kadoma">
         <button class="acc-btn" onclick="toggleAcc(this)" aria-expanded="false">
+          <span class="acc-dot" style="background:#15803d"></span>
           <span class="acc-name">門真市教育委員会（大阪府）</span>
-          <span class="acc-badge badge-jishu">✅ 書面確認を明示・委任契約の明文化を指導</span>
-          <span class="acc-date">令和8年2月</span>
           <svg class="acc-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
         </button>
         <div class="acc-body">
@@ -887,9 +977,8 @@
       <!-- 大阪市 -->
       <div class="acc-item" id="muni-osaka">
         <button class="acc-btn" onclick="toggleAcc(this)" aria-expanded="false">
+          <span class="acc-dot" style="background:#c2410c"></span>
           <span class="acc-name">大阪市教育委員会（大阪府）</span>
-          <span class="acc-badge badge-iinkai">⚠️ 条件付き校務として継続</span>
-          <span class="acc-date">令和8年4月</span>
           <svg class="acc-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
         </button>
         <div class="acc-body">
@@ -911,11 +1000,10 @@
       </div>
 
       <!-- 兵庫県 -->
-      <div class="acc-item acc-pending" id="muni-hyogo">
+      <div class="acc-item" id="muni-hyogo">
         <button class="acc-btn" onclick="toggleAcc(this)" aria-expanded="false">
+          <span class="acc-dot" style="background:#15803d"></span>
           <span class="acc-name">兵庫県教育委員会</span>
-          <span class="acc-badge badge-jishu">✅ みなし加入は「不適切」と明言</span>
-          <span class="acc-date">令和7年12月</span>
           <svg class="acc-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
         </button>
         <div class="acc-body">
@@ -934,8 +1022,8 @@
       <!-- 滋賀県 -->
       <div class="acc-item acc-pending" id="muni-shiga">
         <button class="acc-btn" onclick="toggleAcc(this)" aria-expanded="false">
+          <span class="acc-dot" style="background:#6b7280"></span>
           <span class="acc-name">滋賀県教育委員会</span>
-          <span class="acc-badge badge-misei">📋 回答取得・整理中</span>
           <svg class="acc-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
         </button>
         <div class="acc-body">
@@ -946,23 +1034,18 @@
 
     </div><!-- /近畿 -->
 
-    <!-- ====================================================
-         中国・四国
-         ==================================================== -->
+    <!-- ==================== 中国・四国 ==================== -->
     <div class="region-block" id="region-chugoku-shikoku">
       <div class="region-heading">
-        <div class="region-label">🏯 中国・四国</div>
+        <div class="region-label">中国・四国</div>
         <span class="region-count">1件</span>
-        <div class="region-chips">
-          <a href="#muni-tokushima">徳島市（徳島）</a>
-        </div>
       </div>
 
       <!-- 徳島市 -->
       <div class="acc-item acc-pending" id="muni-tokushima">
         <button class="acc-btn" onclick="toggleAcc(this)" aria-expanded="false">
+          <span class="acc-dot" style="background:#6b7280"></span>
           <span class="acc-name">徳島市教育委員会（徳島県）</span>
-          <span class="acc-badge badge-misei">📋 回答取得・整理中</span>
           <svg class="acc-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
         </button>
         <div class="acc-body">
@@ -973,23 +1056,18 @@
 
     </div><!-- /中国・四国 -->
 
-    <!-- ====================================================
-         九州
-         ==================================================== -->
+    <!-- ==================== 九州 ==================== -->
     <div class="region-block" id="region-kyushu">
       <div class="region-heading">
-        <div class="region-label">🌺 九州</div>
+        <div class="region-label">九州</div>
         <span class="region-count">1件</span>
-        <div class="region-chips">
-          <a href="#muni-kagoshima">鹿児島市（鹿児島）</a>
-        </div>
       </div>
 
       <!-- 鹿児島市 -->
       <div class="acc-item acc-pending" id="muni-kagoshima">
         <button class="acc-btn" onclick="toggleAcc(this)" aria-expanded="false">
+          <span class="acc-dot" style="background:#6b7280"></span>
           <span class="acc-name">鹿児島市教育委員会（鹿児島県）</span>
-          <span class="acc-badge badge-misei">📋 回答取得・整理中</span>
           <svg class="acc-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
         </button>
         <div class="acc-body">
@@ -1004,14 +1082,14 @@
 </section>
 
 <!-- PDF原本リンク -->
-<section style="background:#fff;padding:56px 0;text-align:center">
+<section style="background:#fff;padding:56px 0;text-align:center;border-top:1px solid var(--line)">
   <div class="wrap">
     <div class="section-kicker">実物資料</div>
     <h2 class="section-title">PDF原本・実物文書はGoogleサイトに</h2>
     <p class="section-lead" style="margin:0 auto 24px">各自治体への開示請求で収集した実物のPDF文書群はGoogleサイトで公開しています。ここに掲載した内容の原文をご確認いただけます。</p>
     <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center">
-      <a href="https://sites.google.com/view/ptatekiseika/" target="_blank" rel="noopener noreferrer" class="btn-navy">📂 Googleサイトで原本を見る</a>
-      <a href="national-archive.html" class="btn-soft">🗂️ 全国資料館へ</a>
+      <a href="https://sites.google.com/view/ptatekiseika/" target="_blank" rel="noopener noreferrer" class="btn-navy">PDF原本を見る（Googleサイト）</a>
+      <a href="national-archive.html" class="btn-soft">全国資料館へ</a>
     </div>
   </div>
 </section>
@@ -1070,9 +1148,9 @@
 <script src="js/site.js"></script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
 <script>
-/* ====================================================
+/* =====================================================
    Leaflet 地図
-   ==================================================== */
+   ===================================================== */
 (function() {
   var map = L.map('board-map', { scrollWheelZoom: false }).setView([36.5, 137.5], 5);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -1115,28 +1193,35 @@
   markers.forEach(function(m) {
     L.marker([m.lat, m.lng], { icon: makeIcon(m.color) })
       .addTo(map)
-      .bindPopup('<strong>' + m.name + '</strong><br>' + m.status +
-        '<br><a href="#' + m.id + '" onclick="setTimeout(function(){document.getElementById(\'' + m.id + '\').scrollIntoView({behavior:\'smooth\'})},100)" style="color:#1d4ed8;font-weight:700">回答を見る →</a>')
-      .on('click', function() { this.openPopup(); });
+      .bindPopup(
+        '<strong>' + m.name + '</strong><br>' + m.status +
+        '<br><a href="#' + m.id + '" onclick="setTimeout(function(){' +
+        'var el=document.getElementById(\'' + m.id + '\');' +
+        'if(el){el.scrollIntoView({behavior:\'smooth\'});}' +
+        '},100)" style="color:#1d4ed8;font-weight:700">回答を見る →</a>'
+      );
   });
 })();
 
-/* ====================================================
+/* =====================================================
    アコーディオン
-   ==================================================== */
+   ===================================================== */
 function toggleAcc(btn) {
   var body = btn.nextElementSibling;
   var isOpen = btn.classList.contains('is-open');
   btn.classList.toggle('is-open', !isOpen);
-  btn.setAttribute('aria-expanded', !isOpen);
+  btn.setAttribute('aria-expanded', String(!isOpen));
   body.classList.toggle('is-open', !isOpen);
 }
 
-/* ====================================================
-   地方ナビのアクティブ状態（スクロール連動）
-   ==================================================== */
+/* =====================================================
+   地方ナビ スクロール連動
+   ===================================================== */
 (function() {
-  var regions = ['region-hokkaido-tohoku','region-kanto','region-chubu','region-kinki','region-chugoku-shikoku','region-kyushu'];
+  var regions = [
+    'region-hokkaido-tohoku', 'region-kanto', 'region-chubu',
+    'region-kinki', 'region-chugoku-shikoku', 'region-kyushu'
+  ];
   var navLinks = document.querySelectorAll('.region-nav a');
 
   function onScroll() {
@@ -1150,7 +1235,6 @@ function toggleAcc(btn) {
       a.classList.toggle('rn-active', a.getAttribute('href') === '#' + current);
     });
   }
-
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 })();

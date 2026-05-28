@@ -24,88 +24,109 @@
   <style>
 
 /* =============================================
-   HERO — フルスクリーン暗背景
+   HERO ① — スライドショー帯（写真のみ）
    ============================================= */
-.top-hero {
+.hero-slide-wrap {
   position: relative; overflow: hidden;
-  background: #010912; color: #fff;
-  min-height: 100svh;
-  display: flex; flex-direction: column;
+  width: 100%;
+  height: 62svh;
+  min-height: 360px;
+  max-height: 640px;
+  background: #04101e;
 }
-.hero-bg-layer {
+.hero-slideshow {
+  position: absolute; inset: 0; z-index: 0; overflow: hidden;
+}
+.slide {
   position: absolute; inset: 0;
-  background:
-    radial-gradient(ellipse 90% 60% at 100% 0%,   rgba(212,175,55,.13), transparent 55%),
-    radial-gradient(ellipse 60% 80% at 0%  100%,  rgba(185,28,28,.10),  transparent 50%),
-    linear-gradient(160deg, #010912 0%, #04101e 50%, #081828 100%);
+  background-size: cover; background-position: center;
+  opacity: 0;
+  transition: opacity 1.8s ease;
+  will-change: opacity, transform;
 }
-.hero-photo {
-  position: absolute; right: 0; top: 0; bottom: 0; width: 52%;
-  overflow: hidden;
+.slide.is-active { opacity: 1; }
+.slide.kb1.is-active { animation: kb1 12s ease-out both; }
+.slide.kb2.is-active { animation: kb2 12s ease-out both; }
+.slide.kb3.is-active { animation: kb3 12s ease-out both; }
+.slide.kb4.is-active { animation: kb4 12s ease-out both; }
+@keyframes kb1 { from{transform:scale(1.12) translate(1.5%,.5%)} to{transform:scale(1) translate(0%,0%)} }
+@keyframes kb2 { from{transform:scale(1) translate(0%,0%)} to{transform:scale(1.12) translate(-1.5%,-.5%)} }
+@keyframes kb3 { from{transform:scale(1.1) translate(-1%,-1%)} to{transform:scale(1) translate(.5%,.5%)} }
+@keyframes kb4 { from{transform:scale(1) translate(.5%,.5%)} to{transform:scale(1.1) translate(-1%,-.5%)} }
+
+/* オーバーレイなし — 写真をそのまま見せる */
+.slide-color-overlay { display: none; }
+/* 下部フェード → 白に溶ける */
+.slide-bottom-fade {
+  position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; height: 80px;
+  background: linear-gradient(to bottom, transparent 0%, #fff 100%);
+  pointer-events: none;
 }
-.hero-photo img {
-  width: 100%; height: 100%; object-fit: cover;
-  filter: brightness(.58) saturate(1.1);
-  animation: heroKenBurns 22s ease-in-out infinite;
+
+/* ── スライドナビ（ドット） ── */
+.slide-nav {
+  position: absolute; bottom: 28px; right: 36px; z-index: 10;
+  display: flex; gap: 9px; align-items: center;
 }
-.hero-photo::after {
-  content: ''; position: absolute; inset: 0;
-  background: linear-gradient(90deg, #010912 0%, rgba(1,9,18,.75) 50%, transparent 100%);
+.slide-dot {
+  width: 9px; height: 9px; border-radius: 50%;
+  background: rgba(255,255,255,.38); border: 1px solid rgba(255,255,255,.2);
+  cursor: pointer; padding: 0;
+  transition: all .35s ease; flex-shrink: 0;
 }
-.hero-grid {
-  position: absolute; inset: 0;
-  background-image:
-    linear-gradient(rgba(212,175,55,.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(212,175,55,.035) 1px, transparent 1px);
-  background-size: 72px 72px;
-  mask-image: radial-gradient(ellipse 70% 80% at 20% 50%, rgba(0,0,0,1) 40%, transparent 100%);
+.slide-dot.is-active {
+  background: #d4af37; border-color: #d4af37;
+  transform: scale(1.45);
+  box-shadow: 0 0 10px rgba(212,175,55,.7);
+}
+
+/* =============================================
+   HERO ② — コンテンツ帯（白背景）
+   ============================================= */
+.hero-content-wrap {
+  background: #fff;
+  padding: 40px 0 72px;
 }
 .hero-inner {
-  position: relative; z-index: 1;
   width: min(calc(100% - 40px), 1280px);
   margin-inline: auto;
-  padding: 100px 0 72px;
-  flex: 1; display: flex; flex-direction: column; justify-content: center;
 }
+.hero-text-row { margin-bottom: 48px; max-width: 720px; }
+
 .hero-eyebrow {
   display: inline-flex; align-items: center; gap: 8px;
   padding: 5px 16px; border-radius: 999px;
-  background: rgba(212,175,55,.12); border: 1px solid rgba(212,175,55,.35);
-  color: #d4af37; font-size: .72rem; font-weight: 900;
+  background: rgba(10,22,40,.06); border: 1px solid rgba(10,22,40,.18);
+  color: var(--navy); font-size: .72rem; font-weight: 900;
   letter-spacing: .12em; text-transform: uppercase; margin-bottom: 24px;
 }
 .hero-eyebrow::before {
   content: ''; width: 6px; height: 6px; border-radius: 50%;
-  background: #d4af37; animation: blink 2s ease infinite;
+  background: var(--gold); animation: blink 2s ease infinite;
 }
 @keyframes blink { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.3;transform:scale(.7)} }
-@keyframes heroKenBurns {
-  0%   { transform: scale(1.04) translateX(0); }
-  50%  { transform: scale(1.10) translateX(-2%); }
-  100% { transform: scale(1.04) translateX(0); }
-}
 .hero-h1 {
   font-family: 'Noto Serif JP', serif;
   font-size: clamp(1.55rem, 3.2vw, 2.5rem);
   font-weight: 900; line-height: 1.3; margin-bottom: 18px;
-  letter-spacing: -.01em;
+  color: var(--navy); letter-spacing: -.01em;
 }
-.hero-h1 .gold { color: #d4af37; }
+.hero-h1 .gold { color: var(--gold); }
 .hero-tagline {
   font-family: 'Noto Serif JP', serif;
-  font-size: clamp(.95rem, 1.6vw, 1.2rem);
-  color: rgba(255,255,255,.55); font-weight: 400;
-  margin-bottom: 28px; line-height: 1.65; max-width: 580px;
+  font-size: clamp(.95rem, 1.6vw, 1.15rem);
+  color: rgba(10,22,40,.6); font-weight: 400;
+  margin-bottom: 28px; line-height: 1.7; max-width: 580px;
 }
 .hero-lead {
-  color: rgba(255,255,255,.78); font-size: clamp(.88rem,1.15vw,.96rem);
+  color: rgba(10,22,40,.7); font-size: clamp(.88rem,1.15vw,.96rem);
   line-height: 1.9; max-width: 540px; margin-bottom: 36px;
 }
 
 /* 速報バー */
 .hero-flash {
   display: flex; align-items: center; gap: 12px;
-  background: rgba(185,28,28,.16); border: 1px solid rgba(185,28,28,.35);
+  background: rgba(185,28,28,.06); border: 1px solid rgba(185,28,28,.25);
   border-radius: 10px; padding: 12px 18px;
   max-width: 580px; margin-bottom: 32px;
 }
@@ -114,30 +135,30 @@
   font-size: .66rem; font-weight: 900; padding: 2px 9px;
   border-radius: 4px; white-space: nowrap; letter-spacing: .07em; flex-shrink: 0;
 }
-.flash-text { font-size: .83rem; color: rgba(255,255,255,.85); line-height: 1.55; }
+.flash-text { font-size: .83rem; color: rgba(10,22,40,.75); line-height: 1.55; }
 
 /* 統計帯 */
 .hero-stats {
   display: flex; flex-wrap: wrap; gap: 0;
-  border-top: 1px solid rgba(212,175,55,.2);
-  padding-top: 24px; margin-bottom: 52px;
+  border-top: 2px solid rgba(10,22,40,.1);
+  padding-top: 24px; margin-bottom: 48px;
 }
-.hero-stat { padding: 0 28px 0 0; border-right: 1px solid rgba(255,255,255,.1); }
+.hero-stat { padding: 0 28px 0 0; border-right: 1px solid rgba(10,22,40,.1); }
 .hero-stat:first-child { padding-left: 0; }
 .hero-stat:last-child { border-right: none; padding-right: 0; }
 .hero-stat strong {
   display: block; font-family: 'Noto Serif JP', serif;
-  font-size: 1.85rem; font-weight: 700; color: #d4af37;
+  font-size: 1.85rem; font-weight: 700; color: var(--navy);
   line-height: 1; margin-bottom: 4px;
 }
-.hero-stat span { font-size: .74rem; color: rgba(255,255,255,.48); font-weight: 600; }
+.hero-stat span { font-size: .74rem; color: rgba(10,22,40,.45); font-weight: 600; }
 
 /* =============================================
-   三者エントリーポータル — ヒーロー下部の核心
+   三者エントリーポータル
    ============================================= */
 .portal-label {
   font-size: .72rem; font-weight: 900; letter-spacing: .12em;
-  color: rgba(255,255,255,.35); text-transform: uppercase; margin-bottom: 14px;
+  color: rgba(10,22,40,.4); text-transform: uppercase; margin-bottom: 14px;
 }
 .portal-grid {
   display: grid;
@@ -161,13 +182,13 @@
 }
 .portal-img img {
   width: 100%; height: 100%; object-fit: cover;
-  filter: brightness(.45) saturate(1.15);
+  filter: brightness(.82) saturate(1.05);
   transition: transform .5s ease;
 }
 .portal-card:hover .portal-img img { transform: scale(1.08); }
 .portal-img-overlay {
   position: absolute; inset: 0;
-  background: linear-gradient(to bottom, transparent 40%, rgba(5,10,18,.95) 100%);
+  background: linear-gradient(to bottom, transparent 50%, rgba(5,10,18,.72) 100%);
 }
 .portal-num {
   position: absolute; top: 12px; left: 14px;
@@ -605,12 +626,19 @@
   .portal-grid { grid-template-columns: 1fr; max-width: 400px; }
   .portal-grid .portal-card:nth-child(3) { display: block; }
   .strength-grid { grid-template-columns: 1fr; }
-  .strength-card.featured { grid-column: span 1; }
+  .strength-grid > * { grid-column: 1 / -1 !important; }
+  .strength-card.featured { grid-column: 1 / -1 !important; }
+  .strength-card[style*="span 2"] { grid-column: 1 / -1 !important; flex-direction: column; gap: 16px; }
   .media-grid { grid-template-columns: 1fr; }
   .audio-banner { grid-column: span 1; flex-direction: column; text-align: center; }
   .docs-visual { gap: 24px; }
   .docs-image-stack { height: 220px; }
   .docs-stat-badge { right: 0; top: auto; bottom: -16px; transform: none; }
+  /* モバイル：ドットナビ位置調整 */
+  .slide-nav { bottom: 16px; right: 18px; }
+  /* スライドショー高さをモバイル用に調整 */
+  .hero-slide-wrap { height: 52svh; min-height: 260px; }
+  .hero-content-wrap { padding: 36px 0 56px; }
 }
   </style>
 </head>
@@ -705,19 +733,27 @@
 </div>
 
 <!-- =========================================
-     HERO
+     HERO ① — スライドショー（写真のみ・カバーなし）
      ========================================= -->
-<section class="top-hero">
-  <div class="hero-bg-layer"></div>
-  <div class="hero-grid"></div>
-  <div class="hero-photo">
-    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1600&q=80" alt="学校校舎">
+<section class="hero-slide-wrap">
+  <div class="hero-slideshow" id="heroSlideshow">
+    <div class="slide kb1 is-active" style="background-image:url('assets/slides/1.jpg')"></div>
+    <div class="slide kb2" style="background-image:url('assets/slides/2.jpg')"></div>
+    <div class="slide kb3" style="background-image:url('assets/slides/3.jpg')"></div>
   </div>
+  <div class="slide-color-overlay"></div>
+  <div class="slide-bottom-fade"></div>
+  <div class="slide-nav" id="slideNav"></div>
+</section>
 
+<!-- =========================================
+     HERO ② — キャッチコピー＋ポータル（スライド直下）
+     ========================================= -->
+<section class="hero-content-wrap">
   <div class="hero-inner">
-    <div style="max-width:680px">
-      <div class="hero-eyebrow">Research · Legal Evidence · Primary Sources</div>
 
+    <div class="hero-text-row">
+      <div class="hero-eyebrow">Research · Legal Evidence · Primary Sources</div>
       <h1 class="hero-h1">
         PTAのことで困ったとき、<br>
         ここに<span class="gold">事実と根拠</span>があります
@@ -741,14 +777,14 @@
     </div>
 
     <!-- 三者ポータル -->
-    <div>
+    <div class="hero-portal-row">
       <div class="portal-label">— あなたの立場から、直接入る</div>
       <div class="portal-grid">
 
         <!-- 保護者 -->
         <a href="guide-parent.html" class="portal-card">
           <div class="portal-img">
-            <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=700&q=80" alt="保護者">
+            <img src="assets/img/kids-yard.png" alt="保護者">
             <div class="portal-img-overlay"></div>
             <div class="portal-num">01</div>
             <div class="portal-role">
@@ -772,7 +808,7 @@
         <!-- 学校管理職 -->
         <a href="guide-board.html" class="portal-card">
           <div class="portal-img">
-            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=700&q=80" alt="学校管理職">
+            <img src="assets/img/library-study.png" alt="学校管理職">
             <div class="portal-img-overlay"></div>
             <div class="portal-num">02</div>
             <div class="portal-role">
@@ -796,7 +832,7 @@
         <!-- 教育委員会 -->
         <a href="board-responses.html" class="portal-card">
           <div class="portal-img">
-            <img src="https://images.unsplash.com/photo-1507842072343-583f20270319?auto=format&fit=crop&w=700&q=80" alt="教育委員会">
+            <img src="assets/img/meeting.png" alt="教育委員会">
             <div class="portal-img-overlay"></div>
             <div class="portal-num">03</div>
             <div class="portal-role">
@@ -819,6 +855,7 @@
 
       </div>
     </div>
+
   </div>
 </section>
 
@@ -1407,6 +1444,66 @@ document.querySelectorAll('.audience-tab[data-tab]').forEach(function(tab) {
     if (panel) panel.classList.add('active');
   });
 });
+
+/* ==========================================
+   Hero Slideshow — クロスフェード + Ken Burns
+   ========================================== */
+(function() {
+  var slides = document.querySelectorAll('#heroSlideshow .slide');
+  if (!slides.length) return;
+  var navEl = document.getElementById('slideNav');
+  var dots = [];
+  var current = 0;
+  var total = slides.length;
+  var INTERVAL = 6500; // 各スライドの表示時間(ms)
+  var timer;
+
+  // ドットを生成
+  if (navEl) {
+    for (var i = 0; i < total; i++) {
+      var btn = document.createElement('button');
+      btn.className = 'slide-dot' + (i === 0 ? ' is-active' : '');
+      btn.setAttribute('aria-label', (i + 1) + '枚目のスライド');
+      (function(idx) {
+        btn.addEventListener('click', function() { goTo(idx); });
+      })(i);
+      navEl.appendChild(btn);
+      dots.push(btn);
+    }
+  }
+
+  function goTo(idx) {
+    if (idx === current) return;
+    var prev = current;
+    current = idx;
+
+    // 前スライドを非表示（アニメーションもリセット）
+    slides[prev].classList.remove('is-active');
+    slides[prev].style.animation = 'none';
+    if (dots[prev]) dots[prev].classList.remove('is-active');
+
+    // 新スライドのKen Burnsをリスタート
+    slides[current].style.animation = 'none';
+    void slides[current].offsetWidth; // reflow
+    slides[current].style.animation = '';
+
+    slides[current].classList.add('is-active');
+    if (dots[current]) dots[current].classList.add('is-active');
+
+    // タイマーリセット
+    clearInterval(timer);
+    timer = setInterval(autoNext, INTERVAL);
+  }
+
+  function autoNext() {
+    goTo((current + 1) % total);
+  }
+
+  // 最初のスライドのKen Burnsをページ読み込み後に開始
+  void slides[0].offsetWidth;
+
+  timer = setInterval(autoNext, INTERVAL);
+})();
 </script>
 </body>
 </html>
