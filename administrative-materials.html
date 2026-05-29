@@ -22,6 +22,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>PTA行政実例・通知等整理ページ | PTA適正化推進委員会</title>
+    <style>
+      .page-hero{position:relative;overflow:hidden;}
+      .page-hero-bg-img{position:absolute;inset:0;z-index:0;}
+      .page-hero-bg-img img{width:100%;height:100%;object-fit:cover;filter:brightness(.82);}
+      .page-hero-bg-img::after{content:'';position:absolute;inset:0;background:linear-gradient(160deg,rgba(5,17,31,.58) 0%,rgba(5,17,31,.32) 60%,rgba(5,17,31,.15) 100%);}
+      .page-hero-inner{position:relative;z-index:1;}
+    </style>
 </head>
 <body>
   <header class="site-header">
@@ -53,6 +60,7 @@
               <h4>ツール</h4>
               <ul>
                 <li><a href="audit/index.html">監査システム</a></li>
+                <li><a href="guideline.html">適正化ガイドライン</a></li>
               </ul>
             </div>
           </div>
@@ -75,6 +83,7 @@
               <ul>
                 <li><a href="law-map.html">法制度マップ</a></li>
                 <li><a href="cases.html">判例整理</a></li>
+                <li><a href="timeline.html">PTA制度史</a></li>
               </ul>
             </div>
           </div>
@@ -119,7 +128,7 @@
   </div>
 <section class="page-hero">
     <div class="page-hero-bg-img" aria-hidden="true">
-      <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=80" alt="" onerror="this.parentElement.style.display='none'">
+      <img src="assets/img/building.png" alt="">
     </div>
     <div class="page-hero-inner">
       <div class="page-hero-kicker">Administrative Materials</div>
@@ -257,6 +266,13 @@
 
 <main class="report-page-main">
 
+  <div class="page-banner" style="background-image:url('assets/img/building.png')">
+    <div class="page-banner-content">
+      <div class="page-banner-kicker">Administrative Materials</div>
+      <div class="page-banner-title">行政資料・通知文</div>
+    </div>
+  </div>
+
   <!-- 文科省Sランク資料 -->
   <section style="background:#fff;padding:72px 0">
     <div style="width:min(calc(100% - 40px),960px);margin-inline:auto">
@@ -313,6 +329,35 @@
             </div>
           </div>
           <a href="https://www.mext.go.jp/b_menu/shingi/chukyo/chukyo3/079/sonota/1412985.htm" target="_blank" rel="noopener noreferrer" class="btn-soft" style="font-size:.84rem">📄 文科省公式ページを開く ↗</a>
+        </div>
+
+        <!-- 横浜市通知 -->
+        <div style="background:#fff;border:1px solid var(--line);border-left:5px solid #d4af37;border-radius:var(--radius);padding:26px;box-shadow:var(--shadow-sm)">
+          <div style="margin-bottom:12px">
+            <span style="background:rgba(212,175,55,.15);color:#92400e;font-size:.7rem;font-weight:900;padding:3px 9px;border-radius:4px;letter-spacing:.06em">Aランク・全国初</span>
+            <h3 style="font-family:'Noto Serif JP',serif;font-size:1.1rem;font-weight:900;color:var(--navy);margin:10px 0 6px;line-height:1.4">横浜市教育委員会 学教第1965号 通知（令和7年12月）</h3>
+            <div style="font-size:.78rem;color:var(--text-soft)">横浜市教育委員会 / 令和7年（2025年）12月発出</div>
+          </div>
+          <p style="font-size:.92rem;color:var(--text);line-height:1.85;margin-bottom:14px">全国で初めてPTA入会のオプトイン義務化・学校名簿提供禁止・非会員差別禁止・学校徴収金との一括引落禁止を全市立学校に通知した行政指針。<strong>他の教育委員会への働きかけの際に「先例」として引用できる唯一の行政通知</strong>。</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px">
+            <span class="law-tag">オプトイン義務化</span><span class="law-tag">名簿提供禁止</span><span class="law-tag">非会員差別禁止</span><span class="law-tag">会費分離</span><span class="law-tag">全国初</span>
+          </div>
+          <a href="assets/docs/yokohama-notice-1965.pdf" download class="btn-soft" style="font-size:.84rem">⬇ 通知PDFをダウンロード</a>
+          <a href="board-responses.html#muni-yokohama" class="btn-soft" style="font-size:.84rem;margin-left:8px">回答詳細を見る →</a>
+        </div>
+
+        <!-- PPC個人情報ガイダンス -->
+        <div style="background:#fff;border:1px solid var(--line);border-left:5px solid #1d4ed8;border-radius:var(--radius);padding:26px;box-shadow:var(--shadow-sm)">
+          <div style="margin-bottom:12px">
+            <span style="background:#eff6ff;color:#1d4ed8;font-size:.7rem;font-weight:900;padding:3px 9px;border-radius:4px;letter-spacing:.06em">Aランク・個人情報保護委員会</span>
+            <h3 style="font-family:'Noto Serif JP',serif;font-size:1.1rem;font-weight:900;color:var(--navy);margin:10px 0 6px;line-height:1.4">公立学校とPTAの間で個人情報のやりとりをするためのポイント（個人情報保護委員会）</h3>
+            <div style="font-size:.78rem;color:var(--text-soft)">個人情報保護委員会（PPC） / 官製ガイダンス資料</div>
+          </div>
+          <p style="font-size:.92rem;color:var(--text);line-height:1.85;margin-bottom:14px">個人情報保護委員会（行政機関）が公立学校とPTAの間の個人情報提供のルールを示したガイダンス資料。学校名簿・会員名簿のPTA提供に本人同意が必要であることを<strong>PPC自身が公式に整理</strong>している重要文書。照会・交渉時に「PPCガイダンスに従っていない」と指摘する根拠として機能します。</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px">
+            <span class="law-tag">個人情報保護法</span><span class="law-tag">名簿提供</span><span class="law-tag">本人同意</span><span class="law-tag">PPC公式</span>
+          </div>
+          <a href="assets/docs/ppc-personal-info-pta-schools.pdf" download class="btn-soft" style="font-size:.84rem">⬇ PPCガイダンスPDFをダウンロード</a>
         </div>
 
         <!-- 静岡市事案との接続 -->
@@ -536,6 +581,26 @@
                   <div><dt>このサイトでの位置づけ</dt><dd>制度説明や実務運用の補助資料</dd></div>
                 </dl>
                 <p>通知や参考資料は、学校現場で参照される実務資料として有用ですが、法令本文より下位に置いて読む必要があります。使うときは、<a href="law-map.html">法制度マップ</a>や各条文リンクと併読するのが安全です。</p>
+              </article>
+
+              <article class="case-detail-card" style="border-top:3px solid #d4af37">
+                <h3>横浜市学教第1965号（令和7年12月）</h3>
+                <dl class="case-meta-list">
+                  <div><dt>資料類型</dt><dd>行政通知・行政指針（全国初）</dd></div>
+                  <div><dt>日付</dt><dd>令和7年（2025年）12月</dd></div>
+                  <div><dt>このサイトでの位置づけ</dt><dd>PTA適正化に関する行政通知の先例として、他教委への照会・交渉に活用</dd></div>
+                </dl>
+                <p>オプトイン義務化・名簿提供禁止・非会員差別禁止を全市立校に通知した全国初の行政指針。<a href="assets/docs/yokohama-notice-1965.pdf" download>PDFダウンロード ⬇</a></p>
+              </article>
+
+              <article class="case-detail-card" style="border-top:3px solid #1d4ed8">
+                <h3>公立学校とPTAの間の個人情報のやりとりに関するポイント（PPC）</h3>
+                <dl class="case-meta-list">
+                  <div><dt>資料類型</dt><dd>行政ガイダンス（個人情報保護委員会）</dd></div>
+                  <div><dt>日付</dt><dd>個人情報保護委員会 公式資料</dd></div>
+                  <div><dt>このサイトでの位置づけ</dt><dd>学校名簿のPTA提供に本人同意が必要であることの行政機関による公式整理</dd></div>
+                </dl>
+                <p>個人情報保護委員会自身が作成したガイダンスで、学校→PTA間の個人情報提供に関する運用ルールを整理。<a href="assets/docs/ppc-personal-info-pta-schools.pdf" download>PPCガイダンスPDFをダウンロード ⬇</a></p>
               </article>
             </div>
           </section>

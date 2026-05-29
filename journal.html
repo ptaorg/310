@@ -119,6 +119,12 @@
 
     @media(max-width:1000px){.journal-layout{grid-template-columns:1fr}.sidebar-section{display:grid;grid-template-columns:1fr 1fr;gap:16px}}
     @media(max-width:700px){.ac-thumb{display:none}.sidebar-section{grid-template-columns:1fr}}
+
+    .page-hero{position:relative;overflow:hidden;}
+    .page-hero-bg-img{position:absolute;inset:0;z-index:0;}
+    .page-hero-bg-img img{width:100%;height:100%;object-fit:cover;filter:brightness(.82);}
+    .page-hero-bg-img::after{content:'';position:absolute;inset:0;background:linear-gradient(160deg,rgba(5,17,31,.58) 0%,rgba(5,17,31,.32) 60%,rgba(5,17,31,.15) 100%);}
+    .page-hero-inner{position:relative;z-index:1;}
   </style>
 </head>
 <body>
@@ -151,6 +157,7 @@
               <h4>ツール</h4>
               <ul>
                 <li><a href="audit/index.html">監査システム</a></li>
+                <li><a href="guideline.html">適正化ガイドライン</a></li>
               </ul>
             </div>
           </div>
@@ -173,6 +180,7 @@
               <ul>
                 <li><a href="law-map.html">法制度マップ</a></li>
                 <li><a href="cases.html">判例整理</a></li>
+                <li><a href="timeline.html">PTA制度史</a></li>
               </ul>
             </div>
           </div>
@@ -217,6 +225,9 @@
   </div>
 
   <section class="page-hero">
+    <div class="page-hero-bg-img" aria-hidden="true">
+      <img src="assets/img/library-study.png" alt="">
+    </div>
     <div class="page-hero-inner">
       <div class="page-hero-kicker">Journal</div>
       <h1>論考・<em>調査報告</em></h1>
@@ -225,6 +236,7 @@
   </section>
 
   <main>
+
     <div class="journal-layout">
       <!-- Main content -->
       <div>

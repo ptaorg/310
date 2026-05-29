@@ -119,6 +119,10 @@
     }
 
     @media(max-width:900px){.duty-diagram{grid-template-columns:1fr;gap:16px}.duty-arrow{transform:rotate(90deg)}.scope-grid{grid-template-columns:1fr}.mou-compare{grid-template-columns:1fr}}
+    .gb-2col{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .gb-3col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+    .gb-2col-sm{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media(max-width:720px){.gb-2col,.gb-3col,.gb-2col-sm{grid-template-columns:1fr}}
 
     .page-hero{position:relative;overflow:hidden;}
     .page-hero-bg-img{
@@ -126,11 +130,11 @@
     }
     .page-hero-bg-img img{
       width:100%;height:100%;object-fit:cover;
-      filter:brightness(.22) saturate(0.7);
+      filter:brightness(.82);
     }
     .page-hero-bg-img::after{
       content:'';position:absolute;inset:0;
-      background:linear-gradient(160deg,rgba(5,17,31,.85) 0%,rgba(5,17,31,.6) 60%,rgba(5,17,31,.4) 100%);
+      background:linear-gradient(160deg,rgba(5,17,31,.58) 0%,rgba(5,17,31,.32) 60%,rgba(5,17,31,.15) 100%);
     }
     .page-hero-inner{position:relative;z-index:1;}
   </style>
@@ -165,6 +169,7 @@
               <h4>ツール</h4>
               <ul>
                 <li><a href="audit/index.html">監査システム</a></li>
+                <li><a href="guideline.html">適正化ガイドライン</a></li>
               </ul>
             </div>
           </div>
@@ -187,6 +192,7 @@
               <ul>
                 <li><a href="law-map.html">法制度マップ</a></li>
                 <li><a href="cases.html">判例整理</a></li>
+                <li><a href="timeline.html">PTA制度史</a></li>
               </ul>
             </div>
           </div>
@@ -232,7 +238,7 @@
 
   <section class="page-hero">
     <div class="page-hero-bg-img" aria-hidden="true">
-      <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1400&q=80" alt="" onerror="this.parentElement.style.display='none'">
+      <img src="assets/img/classroom.png" alt="">
     </div>
     <div class="page-hero-inner">
       <div class="page-hero-kicker">For School Boards</div>
@@ -246,6 +252,21 @@
   </section>
 
   <main>
+
+    <!-- PDFガイドブックダウンロードバナー -->
+    <div style="background:linear-gradient(135deg,var(--navy),var(--navy-2));padding:24px 0;border-bottom:3px solid var(--gold)">
+      <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
+        <div style="display:flex;align-items:center;gap:16px">
+          <div style="font-size:2.2rem;line-height:1;flex-shrink:0">📄</div>
+          <div>
+            <div style="font-size:.7rem;font-weight:900;letter-spacing:.08em;color:var(--gold-lt);text-transform:uppercase;margin-bottom:3px">New — 第4版</div>
+            <div style="font-size:1rem;font-weight:900;color:#fff;line-height:1.35">PTA運営適正化ガイドブック（教育委員会・学校管理職向け）</div>
+            <div style="font-size:.8rem;color:rgba(255,255,255,.6);margin-top:3px">全27ページ ／ 消費者契約法・個人情報保護法・訴訟リスク・施策5ステップを収録</div>
+          </div>
+        </div>
+        <a href="assets/docs/guidebook-v4.pdf" download class="btn-gold" style="white-space:nowrap;flex-shrink:0">⬇ PDFをダウンロード</a>
+      </div>
+    </div>
 
     <!-- 職務専念義務の図解 -->
     <section class="duty-section">
@@ -316,6 +337,99 @@
       </div>
     </section>
 
+    <!-- 消費者契約法：PTA加入は「消費者契約」 -->
+    <section style="background:#fff;padding:80px 0;border-top:4px solid #d97706">
+      <div class="wrap">
+        <div class="section-kicker" style="background:#fffbeb;color:#92400e">消費者契約法</div>
+        <h2 class="section-title">PTA加入は「消費者契約」である<br>——消費者庁が公式に確認</h2>
+        <p class="section-lead">PTAは消費者庁の逐条解説で「事業者」として明示的に例示されています。入会勧誘・会費徴収には消費者契約法が直接適用されます。</p>
+
+        <div style="background:#fffbeb;border:2px solid #fbbf24;border-radius:var(--radius);padding:26px;margin:32px 0">
+          <div style="font-size:.74rem;font-weight:900;letter-spacing:.06em;color:#92400e;margin-bottom:10px">消費者庁「消費者契約法逐条解説」（令和5年9月改訂版）── 公式見解</div>
+          <p style="font-size:.9rem;color:#78350f;line-height:1.85;margin:0">「その他の団体」には、法人格を有しない社団又は財団が含まれる。各種の親善、社交等を目的とする団体、<strong>PTA</strong>、学会、同窓会等といった法人となることが可能であるがその手続を経ない各種の団体がこれに含まれる。</p>
+        </div>
+
+        <div class="gb-2col" style="margin:24px 0">
+          <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:var(--radius);padding:24px">
+            <div style="font-size:.74rem;font-weight:900;letter-spacing:.06em;color:#15803d;margin-bottom:12px">📋 適用が意味すること</div>
+            <div style="display:flex;flex-direction:column;gap:9px">
+              <div style="display:flex;gap:9px;font-size:.88rem;color:var(--text);line-height:1.65"><span style="color:#15803d;font-weight:900;flex-shrink:0">✓</span>任意加入であることの明示が義務（第3条）</div>
+              <div style="display:flex;gap:9px;font-size:.88rem;color:var(--text);line-height:1.65"><span style="color:#15803d;font-weight:900;flex-shrink:0">✓</span>誤認させる勧誘をした場合、取消しうる（第4条）</div>
+              <div style="display:flex;gap:9px;font-size:.88rem;color:var(--text);line-height:1.65"><span style="color:#15803d;font-weight:900;flex-shrink:0">✓</span>困惑させての契約締結は取消しうる（第4条第3項）</div>
+              <div style="display:flex;gap:9px;font-size:.88rem;color:var(--text);line-height:1.65"><span style="color:#15803d;font-weight:900;flex-shrink:0">✓</span>法人格の有無にかかわらず適用される</div>
+            </div>
+          </div>
+          <div style="background:#fff5f5;border:1px solid #fecaca;border-radius:var(--radius);padding:24px">
+            <div style="font-size:.74rem;font-weight:900;letter-spacing:.06em;color:#b91c1c;margin-bottom:12px">⚠ 典型的な違法状態</div>
+            <div style="display:flex;flex-direction:column;gap:9px">
+              <div style="display:flex;gap:9px;font-size:.88rem;color:var(--text);line-height:1.65"><span style="color:#b91c1c;font-weight:900;flex-shrink:0">✗</span>入学手続と一体化した「全員加入前提」の案内</div>
+              <div style="display:flex;gap:9px;font-size:.88rem;color:var(--text);line-height:1.65"><span style="color:#b91c1c;font-weight:900;flex-shrink:0">✗</span>任意加入であることを一切説明しない勧誘</div>
+              <div style="display:flex;gap:9px;font-size:.88rem;color:var(--text);line-height:1.65"><span style="color:#b91c1c;font-weight:900;flex-shrink:0">✗</span>非加入者の子どもを行事・情報から排除する構造</div>
+              <div style="display:flex;gap:9px;font-size:.88rem;color:var(--text);line-height:1.65"><span style="color:#b91c1c;font-weight:900;flex-shrink:0">✗</span>入会申込記録なしの会費徴収（不当利得・民法703条）</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:linear-gradient(135deg,#7f1d1d,#991b1b);border-radius:var(--radius);padding:24px 28px">
+          <div style="font-size:.74rem;font-weight:900;letter-spacing:.06em;color:rgba(255,255,255,.55);margin-bottom:12px">訴訟リスク — 学校・教育委員会も例外ではない</div>
+          <div class="gb-2col-sm">
+            <div style="background:rgba(255,255,255,.07);border-radius:8px;padding:12px 14px">
+              <div style="font-size:.85rem;color:#fca5a5;font-weight:700;margin-bottom:3px">不当利得返還請求（民法703条）</div>
+              <div style="font-size:.79rem;color:rgba(255,255,255,.55);line-height:1.6">入会申込記録なしに徴収した会費</div>
+            </div>
+            <div style="background:rgba(255,255,255,.07);border-radius:8px;padding:12px 14px">
+              <div style="font-size:.85rem;color:#fca5a5;font-weight:700;margin-bottom:3px">消費者契約法に基づく取消・返還請求</div>
+              <div style="font-size:.79rem;color:rgba(255,255,255,.55);line-height:1.6">誤認・困惑させての加入勧誘</div>
+            </div>
+            <div style="background:rgba(255,255,255,.07);border-radius:8px;padding:12px 14px">
+              <div style="font-size:.85rem;color:#fca5a5;font-weight:700;margin-bottom:3px">結社の自由侵害（憲法21条）</div>
+              <div style="font-size:.79rem;color:rgba(255,255,255,.55);line-height:1.6">消極的結社の自由への実質的侵害</div>
+            </div>
+            <div style="background:rgba(255,255,255,.07);border-radius:8px;padding:12px 14px">
+              <div style="font-size:.85rem;color:#fca5a5;font-weight:700;margin-bottom:3px">学校・教委への共同不法行為責任</div>
+              <div style="font-size:.79rem;color:rgba(255,255,255,.55);line-height:1.6">加入手続関与・会費管理・アプリ配信</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 個人情報保護法第69条 -->
+    <section style="background:var(--bg);padding:80px 0">
+      <div class="wrap">
+        <div class="section-kicker">個人情報保護法</div>
+        <h2 class="section-title">学校からPTAへの情報提供は<br>原則として禁じられている</h2>
+        <p class="section-lead">公立学校は行政機関です。個人情報保護法第69条により、保有する個人情報の目的外提供は原則禁止されています。「本人の同意があれば提供できる」という理解も、現場では機能しません。</p>
+
+        <div style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;margin:32px 0">
+          <div style="font-size:.74rem;font-weight:900;letter-spacing:.06em;color:var(--navy);margin-bottom:12px">個人情報の保護に関する法律 第69条（利用及び提供の制限）</div>
+          <p style="font-size:.92rem;color:var(--text);line-height:1.85;margin:0 0 12px"><strong>行政機関の長等は、法令に基づく場合を除き、利用目的以外の目的のために保有個人情報を自ら利用し、又は提供してはならない。</strong></p>
+          <p style="font-size:.82rem;color:var(--text-soft);line-height:1.7;margin:0">就学手続で取得した個人情報の利用目的は就学・在籍管理・安全確保・教育活動です。この情報をPTAに提供することは、目的外の第三者提供にあたります。</p>
+        </div>
+
+        <div class="gb-3col" style="margin:24px 0">
+          <div style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px">
+            <div style="font-size:.72rem;font-weight:900;letter-spacing:.06em;color:#b91c1c;margin-bottom:10px">① 「同意」例外の限界</div>
+            <p style="font-size:.86rem;color:var(--text);line-height:1.75;margin:0">一人でも同意しない保護者がいれば、その情報は提供できません。「全員同意」を前提とした一括提供は制度設計として成立しません。</p>
+          </div>
+          <div style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px">
+            <div style="font-size:.72rem;font-weight:900;letter-spacing:.06em;color:#b91c1c;margin-bottom:10px">② 入会記録なしでは対象者不明</div>
+            <p style="font-size:.86rem;color:var(--text);line-height:1.75;margin:0">誰が会員か特定できないため、誰に同意を求めるべきかも分かりません。同意取得の前提が崩れています。</p>
+          </div>
+          <div style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px">
+            <div style="font-size:.72rem;font-weight:900;letter-spacing:.06em;color:#b91c1c;margin-bottom:10px">③ 学校アプリの使用も不可</div>
+            <p style="font-size:.86rem;color:var(--text);line-height:1.75;margin:0">学校アプリで収集した連絡先をPTA通知に使うことは目的外利用。非加入者にも届く構造は「全員会員」の誤認を強化します。</p>
+          </div>
+        </div>
+
+        <div style="background:linear-gradient(135deg,var(--navy),var(--navy-2));border-radius:var(--radius);padding:26px 30px">
+          <div style="font-size:.74rem;font-weight:900;letter-spacing:.06em;color:var(--gold-lt);margin-bottom:10px">個人情報保護委員会「公立学校とPTAの間で個人情報のやり取りをするためのポイント」（令和8年3月）</div>
+          <p style="color:rgba(255,255,255,.9);font-size:.93rem;line-height:1.85;margin:0 0 10px"><strong style="color:var(--gold-lt)">PTAが必要な個人情報は、PTAが入会申込書を通じて、入会した会員本人から直接取得する。学校は一切関与しない。学校連絡ツールはPTA通知に使わない。</strong></p>
+          <p style="color:rgba(255,255,255,.6);font-size:.82rem;line-height:1.7;margin:0">同意を得られなかった個人情報は提供にあたって削除・マスキングが必要。同意は個人ごとに取得する必要があります。</p>
+        </div>
+      </div>
+    </section>
+
     <!-- 覚書問題 -->
     <section class="mou-section">
       <div class="wrap">
@@ -344,6 +458,44 @@
             <div class="mou-item"><span style="color:#15803d">✓</span>「教職員のPTA事務従事は渉外業務に限定する」</div>
             <p style="font-size:.82rem;color:#15803d;margin-top:10px;font-weight:700">→ 渉外業務の範囲だけを明文化し、それ以外の関与をゼロにする覚書が理想形です。</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 社会教育法第12条：「都合のいい使われ方」 -->
+    <section style="background:var(--bg);padding:80px 0;border-top:4px solid #3b82f6">
+      <div class="wrap">
+        <div class="section-kicker" style="background:#eff6ff;color:#1d4ed8">社会教育法第12条</div>
+        <h2 class="section-title">「都合のいい使われ方」と<br>「都合の悪い踏みにじり方」</h2>
+        <p class="section-lead">社会教育法第12条は、保護者への相談を「門前払い」する盾として使われる一方、学校自身のPTA統制的支配を放置する隠れ蓑とされてきました。この矛盾を直視してください。</p>
+
+        <div class="gb-2col" style="margin:36px 0">
+          <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:var(--radius);padding:24px">
+            <div style="font-size:.74rem;font-weight:900;letter-spacing:.06em;color:#1d4ed8;margin-bottom:14px">🛡 「都合のいい」使われ方（第12条を盾にして）</div>
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <div style="display:flex;align-items:flex-start;gap:9px;font-size:.88rem;color:var(--text);line-height:1.65"><span style="color:#1d4ed8;flex-shrink:0">▶</span>保護者がPTA問題を教委に相談すると「PTAは社会教育関係団体で独立した団体なので介入できない」と門前払い</div>
+              <div style="display:flex;align-items:flex-start;gap:9px;font-size:.88rem;color:var(--text);line-height:1.65"><span style="color:#1d4ed8;flex-shrink:0">▶</span>PTA強制加入・会費不正について是正を求めると「PTAの内部問題」として拒絶</div>
+              <div style="display:flex;align-items:flex-start;gap:9px;font-size:.88rem;color:var(--text);line-height:1.65"><span style="color:#1d4ed8;flex-shrink:0">▶</span>情報公開請求に対し「PTAは別団体なので文書は保有していない」と回答</div>
+            </div>
+          </div>
+          <div style="background:#fff5f5;border:1px solid #fecaca;border-radius:var(--radius);padding:24px">
+            <div style="font-size:.74rem;font-weight:900;letter-spacing:.06em;color:#b91c1c;margin-bottom:14px">⚠ 「都合の悪い」踏みにじり方（第12条を完全に無視して）</div>
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <div style="display:flex;align-items:flex-start;gap:9px;font-size:.88rem;color:var(--text);line-height:1.65"><span style="color:#b91c1c;flex-shrink:0">✗</span>校長・教頭がPTA役員に就任し、意思決定・財政・運営に直接参画（統制的支配）</div>
+              <div style="display:flex;align-items:flex-start;gap:9px;font-size:.88rem;color:var(--text);line-height:1.65"><span style="color:#b91c1c;flex-shrink:0">✗</span>学校がPTAの入会案内配布・会費徴収・名簿管理・文書作成を担う（事業への干渉）</div>
+              <div style="display:flex;align-items:flex-start;gap:9px;font-size:.88rem;color:var(--text);line-height:1.65"><span style="color:#b91c1c;flex-shrink:0">✗</span>学校がPTA通知を公式連絡と同格に扱い、学校の権威でPTAの権威を保護</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:linear-gradient(135deg,var(--navy),var(--navy-2));border-radius:var(--radius);padding:28px;text-align:center">
+          <p style="color:rgba(255,255,255,.9);font-size:.97rem;font-weight:700;line-height:1.85;margin:0">
+            「PTAは独立した団体だから教育委員会は関与できない」と言いながら、<br>
+            校長がPTA副会長を務め、教頭がPTA会計を担い、学校がPTA会費を徴収する<br>
+            ——<strong style="color:var(--gold-lt)">これは論理として成立しません。</strong><br><br>
+            第12条を正しく適用するなら結論は一つ。<br>
+            学校・教育委員会自身のPTAへの干渉・統制的支配をやめる根拠として使うべきです。
+          </p>
         </div>
       </div>
     </section>
@@ -549,6 +701,120 @@
       </div>
     </section>
 
+    <!-- 教育委員会が確認すべき文書（第9章） -->
+    <section style="background:var(--bg);padding:80px 0">
+      <div class="wrap">
+        <div class="section-kicker">確認文書チェックリスト</div>
+        <h2 class="section-title">教育委員会が今すぐ確認すべき<br>文書チェックリスト</h2>
+        <p class="section-lead">「実態を知らなかった」では、開示請求・住民監査請求・訴訟が起きた後には通りません。管下学校について次の文書の状況を確認してください。</p>
+
+        <div class="gb-2col" style="margin-top:36px">
+          <div style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px">
+            <div style="font-size:.76rem;font-weight:900;letter-spacing:.06em;color:var(--navy);margin-bottom:14px">📋 PTA・入会関係</div>
+            <div style="display:flex;flex-direction:column;gap:9px">
+              <label style="display:flex;align-items:flex-start;gap:9px;font-size:.86rem;color:var(--text);line-height:1.65;cursor:pointer"><input type="checkbox" style="margin-top:3px;accent-color:var(--navy);flex-shrink:0">PTA会則（役員規定に校長・教頭が組み込まれていないか、入会手続規定を確認）</label>
+              <label style="display:flex;align-items:flex-start;gap:9px;font-size:.86rem;color:var(--text);line-height:1.65;cursor:pointer"><input type="checkbox" style="margin-top:3px;accent-color:var(--navy);flex-shrink:0">PTA入会申込書の書式と保存状況（存在しない場合は施設利用許可の見直し・消費者契約法リスクの整理が必要）</label>
+              <label style="display:flex;align-items:flex-start;gap:9px;font-size:.86rem;color:var(--text);line-height:1.65;cursor:pointer"><input type="checkbox" style="margin-top:3px;accent-color:var(--navy);flex-shrink:0">PTA退会届の書式と保存状況</label>
+              <label style="display:flex;align-items:flex-start;gap:9px;font-size:.86rem;color:var(--text);line-height:1.65;cursor:pointer"><input type="checkbox" style="margin-top:3px;accent-color:var(--navy);flex-shrink:0">PTA入会案内文書（配布方法・任意加入の記載・提出先がPTAになっているか）</label>
+            </div>
+          </div>
+          <div style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px">
+            <div style="font-size:.76rem;font-weight:900;letter-spacing:.06em;color:var(--navy);margin-bottom:14px">💰 会費・会計関係</div>
+            <div style="display:flex;flex-direction:column;gap:9px">
+              <label style="display:flex;align-items:flex-start;gap:9px;font-size:.86rem;color:var(--text);line-height:1.65;cursor:pointer"><input type="checkbox" style="margin-top:3px;accent-color:var(--navy);flex-shrink:0">学校徴収金案内（PTA会費との分離状況──消費者契約法リスクと連動）</label>
+              <label style="display:flex;align-items:flex-start;gap:9px;font-size:.86rem;color:var(--text);line-height:1.65;cursor:pointer"><input type="checkbox" style="margin-top:3px;accent-color:var(--navy);flex-shrink:0">PTA会費徴収文書（徴収方法・振替先・学校関与の有無）</label>
+              <label style="display:flex;align-items:flex-start;gap:9px;font-size:.86rem;color:var(--text);line-height:1.65;cursor:pointer"><input type="checkbox" style="margin-top:3px;accent-color:var(--navy);flex-shrink:0">学校徴収金取扱要綱（PTA会費の取扱いが含まれる場合は上位法令との照合が必要）</label>
+              <label style="display:flex;align-items:flex-start;gap:9px;font-size:.86rem;color:var(--text);line-height:1.65;cursor:pointer"><input type="checkbox" style="margin-top:3px;accent-color:var(--navy);flex-shrink:0">PTA会計書類の保管場所（学校が保管している場合は問題）</label>
+            </div>
+          </div>
+          <div style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px">
+            <div style="font-size:.76rem;font-weight:900;letter-spacing:.06em;color:var(--navy);margin-bottom:14px">🔒 個人情報関係</div>
+            <div style="display:flex;flex-direction:column;gap:9px">
+              <label style="display:flex;align-items:flex-start;gap:9px;font-size:.86rem;color:var(--text);line-height:1.65;cursor:pointer"><input type="checkbox" style="margin-top:3px;accent-color:var(--navy);flex-shrink:0">PTA名簿（作成根拠・情報源・入会申込記録との突合）</label>
+              <label style="display:flex;align-items:flex-start;gap:9px;font-size:.86rem;color:var(--text);line-height:1.65;cursor:pointer"><input type="checkbox" style="margin-top:3px;accent-color:var(--navy);flex-shrink:0">個人情報提供に関する同意書（個別に取得されているか、強制的状況下での同意でないか）</label>
+              <label style="display:flex;align-items:flex-start;gap:9px;font-size:.86rem;color:var(--text);line-height:1.65;cursor:pointer"><input type="checkbox" style="margin-top:3px;accent-color:var(--navy);flex-shrink:0">学校アプリ運用規程（PTA通知配信の根拠が含まれているか、目的外利用になっていないか）</label>
+              <label style="display:flex;align-items:flex-start;gap:9px;font-size:.86rem;color:var(--text);line-height:1.65;cursor:pointer"><input type="checkbox" style="margin-top:3px;accent-color:var(--navy);flex-shrink:0">個人情報保護委員会「公立学校とPTAの間で個人情報のやり取りをするためのポイント」（令和8年3月）との整合性確認</label>
+            </div>
+          </div>
+          <div style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px">
+            <div style="font-size:.76rem;font-weight:900;letter-spacing:.06em;color:var(--navy);margin-bottom:14px">👩‍🏫 教職員関与・服務・施設</div>
+            <div style="display:flex;flex-direction:column;gap:9px">
+              <label style="display:flex;align-items:flex-start;gap:9px;font-size:.86rem;color:var(--text);line-height:1.65;cursor:pointer"><input type="checkbox" style="margin-top:3px;accent-color:var(--navy);flex-shrink:0">校務分掌表（PTA担当の位置づけ・校長教頭のPTA役員就任の有無）</label>
+              <label style="display:flex;align-items:flex-start;gap:9px;font-size:.86rem;color:var(--text);line-height:1.65;cursor:pointer"><input type="checkbox" style="margin-top:3px;accent-color:var(--navy);flex-shrink:0">職務専念義務免除（職専免）関係文書</label>
+              <label style="display:flex;align-items:flex-start;gap:9px;font-size:.86rem;color:var(--text);line-height:1.65;cursor:pointer"><input type="checkbox" style="margin-top:3px;accent-color:var(--navy);flex-shrink:0">兼職・兼業届出文書（校長・教頭等がPTA役員に就く場合は必須）</label>
+              <label style="display:flex;align-items:flex-start;gap:9px;font-size:.86rem;color:var(--text);line-height:1.65;cursor:pointer"><input type="checkbox" style="margin-top:3px;accent-color:var(--navy);flex-shrink:0">学校施設使用申請・許可記録（学校教育法第137条・社会教育法第44・45条に基づく許可があるか）</label>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:24px;background:#fff;border:2px solid var(--gold);border-radius:var(--radius);padding:20px 26px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+          <p style="font-size:.93rem;color:var(--navy);font-weight:700;margin:0">このガイドブック全文をPDFでご覧いただけます（全27ページ）</p>
+          <a href="assets/docs/guidebook-v4.pdf" download class="btn-gold" style="white-space:nowrap;flex-shrink:0">⬇ ガイドブックPDF（第4版）</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 教育委員会が講ずべき施策5ステップ（第10章） -->
+    <section style="background:#fff;padding:80px 0">
+      <div class="wrap">
+        <div class="section-kicker">是正の進め方</div>
+        <h2 class="section-title">教育委員会が講ずべき<br>施策5ステップ</h2>
+        <p class="section-lead">実態調査から是正計画の策定まで、教育委員会が取るべき行動を5ステップで整理します。今すぐ始めることが訴訟リスク低減の第一歩です。</p>
+
+        <div style="display:flex;flex-direction:column;gap:0;max-width:760px;margin:40px auto">
+          <div style="display:grid;grid-template-columns:56px 1fr">
+            <div style="display:flex;justify-content:center;padding-top:14px"><div style="width:38px;height:38px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.9rem;flex-shrink:0">1</div></div>
+            <div style="border-left:2px solid var(--line);padding:4px 0 28px 20px">
+              <div style="font-size:1rem;font-weight:900;color:var(--navy);margin-bottom:6px">各学校にPTA関係文書の提出・報告を求める</div>
+              <p style="font-size:.88rem;color:var(--text-soft);line-height:1.75;margin:0">会則・入会申込書・名簿・会費徴収文書・校務分掌表・職専免関係文書・施設利用許可記録など。</p>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:56px 1fr">
+            <div style="display:flex;justify-content:center;padding-top:14px"><div style="width:38px;height:38px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.9rem;flex-shrink:0">2</div></div>
+            <div style="border-left:2px solid var(--line);padding:4px 0 28px 20px">
+              <div style="font-size:1rem;font-weight:900;color:var(--navy);margin-bottom:6px">入会申込記録・個人情報提供・会費一体徴収等の実態を整理する</div>
+              <p style="font-size:.88rem;color:var(--text-soft);line-height:1.75;margin:0">校長教頭のPTA役員就任・個人情報提供・学校アプリ使用・会費一体徴収の有無をリストアップする。</p>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:56px 1fr">
+            <div style="display:flex;justify-content:center;padding-top:14px"><div style="width:38px;height:38px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.9rem;flex-shrink:0">3</div></div>
+            <div style="border-left:2px solid var(--line);padding:4px 0 28px 20px">
+              <div style="font-size:1rem;font-weight:900;color:var(--navy);margin-bottom:6px">上位法令との整合性を法令上確認する</div>
+              <p style="font-size:.88rem;color:var(--text-soft);line-height:1.75;margin:0">消費者契約法・個人情報保護法第69条・社会教育法第12条・地方公務員法第35条との整合性を確認する。</p>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:56px 1fr">
+            <div style="display:flex;justify-content:center;padding-top:14px"><div style="width:38px;height:38px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.9rem;flex-shrink:0">4</div></div>
+            <div style="border-left:2px solid var(--line);padding:4px 0 28px 20px">
+              <div style="font-size:1rem;font-weight:900;color:var(--navy);margin-bottom:6px">校長・教頭研修を実施し「学校とPTAの切り分け」を共通認識にする</div>
+              <p style="font-size:.88rem;color:var(--text-soft);line-height:1.75;margin:0">研修で明示すべき8項目は下記を参照。</p>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:56px 1fr">
+            <div style="display:flex;justify-content:center;padding-top:14px"><div style="width:38px;height:38px;border-radius:50%;background:#15803d;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.9rem;flex-shrink:0">5</div></div>
+            <div style="padding:4px 0 0 20px">
+              <div style="font-size:1rem;font-weight:900;color:#15803d;margin-bottom:6px">各学校・各PTAに対して是正を進める</div>
+              <p style="font-size:.88rem;color:var(--text-soft);line-height:1.75;margin:0">入会申込書の整備・学校関与の整理・連絡ツール使用の見直しを段階的に進める。横浜市通知（令和7年12月）の内容を参考に是正計画を策定する。</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);padding:28px">
+          <div style="font-size:.76rem;font-weight:900;letter-spacing:.06em;color:var(--navy);margin-bottom:16px">📚 校長・教頭研修で明示すべき8項目</div>
+          <div class="gb-2col-sm">
+            <div style="display:flex;align-items:flex-start;gap:9px;font-size:.87rem;color:var(--text);line-height:1.65;background:#fff;padding:12px 14px;border-radius:8px;border:1px solid var(--line)"><span style="color:var(--navy);font-weight:900;flex-shrink:0">①</span>PTAは社会教育関係団体であり学校補助団体ではない</div>
+            <div style="display:flex;align-items:flex-start;gap:9px;font-size:.87rem;color:var(--text);line-height:1.65;background:#fff;padding:12px 14px;border-radius:8px;border:1px solid var(--line)"><span style="color:var(--navy);font-weight:900;flex-shrink:0">②</span>PTA加入は消費者契約であり、消費者契約法が適用される（PTAは「事業者」）</div>
+            <div style="display:flex;align-items:flex-start;gap:9px;font-size:.87rem;color:var(--text);line-height:1.65;background:#fff;padding:12px 14px;border-radius:8px;border:1px solid var(--line)"><span style="color:var(--navy);font-weight:900;flex-shrink:0">③</span>学校からPTAへの個人情報提供には個人情報保護法第69条の制約がある</div>
+            <div style="display:flex;align-items:flex-start;gap:9px;font-size:.87rem;color:var(--text);line-height:1.65;background:#fff;padding:12px 14px;border-radius:8px;border:1px solid var(--line)"><span style="color:var(--navy);font-weight:900;flex-shrink:0">④</span>学校連絡ツールはPTA通知配信に使えない</div>
+            <div style="display:flex;align-items:flex-start;gap:9px;font-size:.87rem;color:var(--text);line-height:1.65;background:#fff;padding:12px 14px;border-radius:8px;border:1px solid var(--line)"><span style="color:var(--navy);font-weight:900;flex-shrink:0">⑤</span>校長・教頭のPTA役員就任は利益相反であり、社会教育法第12条との関係で問題がある</div>
+            <div style="display:flex;align-items:flex-start;gap:9px;font-size:.87rem;color:var(--text);line-height:1.65;background:#fff;padding:12px 14px;border-radius:8px;border:1px solid var(--line)"><span style="color:var(--navy);font-weight:900;flex-shrink:0">⑥</span>学校がPTAに関与できるのは連絡調整まで（文科省業務の3分類）</div>
+            <div style="display:flex;align-items:flex-start;gap:9px;font-size:.87rem;color:var(--text);line-height:1.65;background:#fff;padding:12px 14px;border-radius:8px;border:1px solid var(--line)"><span style="color:var(--navy);font-weight:900;flex-shrink:0">⑦</span>学校徴収金の徴収・管理でさえ学校以外が担うべき業務とされている</div>
+            <div style="display:flex;align-items:flex-start;gap:9px;font-size:.87rem;color:var(--text);line-height:1.65;background:#fff;padding:12px 14px;border-radius:8px;border:1px solid var(--line)"><span style="color:var(--navy);font-weight:900;flex-shrink:0">⑧</span>現状の放置は訴訟リスクにつながる</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- FAQ for board -->
     <section style="background:var(--bg);padding:64px 0">
       <div class="wrap wrap-narrow">
@@ -560,7 +826,7 @@
               <div class="faq-q-text" style="font-size:.97rem;font-weight:700;color:var(--navy);flex:1">「慣例でずっとやってきた」は免責理由になりますか？</div>
               <span class="faq-toggle" style="color:var(--text-soft)">▼</span>
             </div>
-            <div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">なりません。熊本PTA裁判（2016年）では「PTAの違法運用を認識しながら放置した学校長の責任」が問われました。「今までやってきたから」「他もやっているから」は法廷において一切の免罪符にならないと司法が示しています。</p></div>
+            <div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">なりません。熊本PTA裁判（2016年）では「PTAの違法運用を認識しながら放置した学校長の責任」が問われました。「今までやってきたから」「他もやっているから」は法廷において一切の免罪符にならないと司法が示しています。慣行は法律を上書きしません。</p></div>
           </div>
           <div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden">
             <div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none">
@@ -575,6 +841,41 @@
               <span class="faq-toggle" style="color:var(--text-soft)">▼</span>
             </div>
             <div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">移行期間を設けた段階的な分離が現実的です。①まず入会届の整備とPTA独自名簿の構築、②次にPTA専用口座の開設と会費徴収の分離、③最後に配布・印刷業務のPTAへの移管——の順で進めることで、混乱を最小化しながら適正化できます。横浜市通知もこうした段階的移行を想定した内容になっています。</p></div>
+          </div>
+          <div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden">
+            <div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none">
+              <div class="faq-q-text" style="font-size:.97rem;font-weight:700;color:var(--navy);flex:1">PTAは「法人でもない任意団体」なので、消費者契約法のような法律は関係ないのでは？</div>
+              <span class="faq-toggle" style="color:var(--text-soft)">▼</span>
+            </div>
+            <div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">関係します。消費者契約法第2条第2項は事業者を「法人その他の団体」と定めており、消費者庁の逐条解説は「その他の団体」の例として明示的に「PTA」を挙げています。PTAは法人格の有無にかかわらず消費者契約法上の「事業者」にあたり、保護者との加入契約には消費者契約法が適用されます。</p></div>
+          </div>
+          <div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden">
+            <div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none">
+              <div class="faq-q-text" style="font-size:.97rem;font-weight:700;color:var(--navy);flex:1">全員から同意を取れば、学校の個人情報をPTAに提供できますか？</div>
+              <span class="faq-toggle" style="color:var(--text-soft)">▼</span>
+            </div>
+            <div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">理論上は同意があれば提供できますが（個人情報保護法第69条第2項第1号）、「全員から同意を取る」ことは、一人でも拒否した時点で不可能になります。同意しない保護者の情報は提供できず、削除・マスキングが必要です（個人情報保護委員会・令和8年3月）。「全員同意」を前提にした一括提供の仕組みは制度設計として成立しません。PTAが必要な情報は、PTAが入会申込書を通じて会員本人から直接取得するしかありません。</p></div>
+          </div>
+          <div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden">
+            <div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none">
+              <div class="faq-q-text" style="font-size:.97rem;font-weight:700;color:var(--navy);flex:1">学校アプリでPTA通知を送ることの何が問題なのですか？</div>
+              <span class="faq-toggle" style="color:var(--text-soft)">▼</span>
+            </div>
+            <div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">三つの問題があります。①学校アプリで収集した保護者の連絡先情報をPTA通知配信に使うことは、収集目的外の利用（個人情報保護法上の問題）。②学校公式システムとPTA通知が混在することで、保護者がPTA通知を学校の公式連絡と誤認する構造が生まれる（消費者契約法上の誤認を助長）。③PTA非加入者にもPTA通知が届くことで「全員がPTA会員」という前提が強化される（任意加入の形骸化）。これらは「協力」ではなく「癒着」であり、法令上の問題です。</p></div>
+          </div>
+          <div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden">
+            <div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none">
+              <div class="faq-q-text" style="font-size:.97rem;font-weight:700;color:var(--navy);flex:1">保護者からPTAに関する苦情が来た場合、「PTAの問題なので学校・教育委員会では対応できない」と回答してよいですか？</div>
+              <span class="faq-toggle" style="color:var(--text-soft)">▼</span>
+            </div>
+            <div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">学校が関与している部分——入会案内の配布・会費の一体徴収・教職員によるPTA事務・学校アプリによる通知——については学校・教育委員会の確認対象です。「PTAの問題だから」という一言で門前払いすることは、社会教育法第12条を保護者への盾として使いながら、学校・教育委員会自身の問題から目を逸らすことになります。また、そのような対応が行政不服申立や訴訟のきっかけになる可能性もあります。</p></div>
+          </div>
+          <div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden">
+            <div class="faq-q" style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;gap:12px;user-select:none">
+              <div class="faq-q-text" style="font-size:.97rem;font-weight:700;color:var(--navy);flex:1">入会申込書がなくても、長年全員が会員として運営してきたのだから問題ないのでは？</div>
+              <span class="faq-toggle" style="color:var(--text-soft)">▼</span>
+            </div>
+            <div class="faq-a" style="padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease"><p style="font-size:.93rem;color:var(--text);line-height:1.85;margin:0;padding-top:12px;border-top:1px solid var(--line)">慣行は法律を上書きしません。入会申込記録がない場合、誰が会員かを証明できず、会費請求・名簿・議決権・役員選出・個人情報利用のすべての根拠が失われます。さらに、消費者契約法上の取消リスク・不当利得返還リスクも生じます。「長年続いてきた」ことは正当であることの証明にはなりません。長年問題が放置されてきたことを意味するだけです。</p></div>
           </div>
         </div>
       </div>
